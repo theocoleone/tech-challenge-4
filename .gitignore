@@ -1,0 +1,35 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Jupyter / IDEs
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# Dados: a base Olist vem do Kaggle e não é versionada
+data/*
+!data/README.md
+
+# Índice vetorial gerado (reconstruído pelo pipeline)
+index/
+*.faiss
+chroma/
+
+# Credenciais e chaves de API
+secrets/
+*credentials*.json
+*-key.json
+
+# Material local (guideline, roteiro, teleprompter)
+docs/*.pdf
+local/
+
+# Vídeo (publicar no YouTube, não no git)
+*.mp4

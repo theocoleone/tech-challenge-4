@@ -1,0 +1,2 @@
+# Dependências do pipeline RAG — preencher conforme as escolhas de embeddings, banco vetorial e LLM.
+pandas
