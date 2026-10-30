@@ -18,7 +18,7 @@ data/*
 !data/README.md
 
 # Índice vetorial gerado (reconstruído pelo pipeline)
-index/
+/index/
 *.faiss
 chroma/
 
@@ -33,3 +33,6 @@ local/
 
 # Vídeo (publicar no YouTube, não no git)
 *.mp4
+
+# Traces de execução (podem conter perguntas e trechos de avaliações)
+logs/
