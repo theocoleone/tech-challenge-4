@@ -21,6 +21,8 @@ class Settings(BaseSettings):
 
     aws_profile: str = "fiap-tech-challenge"
     aws_region: str = "us-east-1"
+    # Conta pessoal do curso. Qualquer outra (ex.: contas de trabalho) aborta a execução.
+    aws_account_id: str = "286958704145"
 
     llm_provider: Literal["bedrock", "local"] = "bedrock"
     emb_provider: Literal["bedrock", "local"] = "bedrock"
@@ -40,10 +42,35 @@ def get_settings() -> Settings:
     return Settings()
 
 
+class ContaAwsErrada(RuntimeError):
+    """A credencial resolvida não pertence à conta esperada do projeto."""
+
+
+@lru_cache
+def check_aws_account() -> str:
+    """Confere, uma vez por processo, que a credencial é da conta do curso.
+
+    Fail closed: se a conta for outra, ou se não der para descobrir, nenhuma
+    chamada ao Bedrock acontece.
+    """
+    import boto3
+
+    s = get_settings()
+    session = boto3.Session(profile_name=s.aws_profile, region_name=s.aws_region)
+    conta = session.client("sts").get_caller_identity()["Account"]
+    if conta != s.aws_account_id:
+        raise ContaAwsErrada(
+            f"profile '{s.aws_profile}' resolveu para a conta {conta}, "
+            f"mas o TC4 só roda na conta {s.aws_account_id}"
+        )
+    return conta
+
+
 def get_llm(model_id: str | None = None):
     s = get_settings()
     if s.llm_provider == "local":
         raise NotImplementedError("LLM local (plano B2) entra só se o Bedrock continuar bloqueado")
+    check_aws_account()
     from langchain_aws import ChatBedrockConverse
 
     return ChatBedrockConverse(
@@ -58,6 +85,7 @@ def get_embeddings():
     s = get_settings()
     if s.emb_provider == "local":
         raise NotImplementedError("Embeddings locais (plano B2) entram só se o Bedrock continuar bloqueado")
+    check_aws_account()
     from langchain_aws import BedrockEmbeddings
 
     return BedrockEmbeddings(
