@@ -15,6 +15,10 @@ langchain-aws==1.9.1
 langchain-community==0.4.2
 langchain-chroma==1.1.0
 
+# Análise exploratória
+matplotlib==3.11.2
+langdetect==1.0.9
+
 # Recuperação
 chromadb==1.5.9
 rank-bm25==0.2.2
@@ -31,3 +35,5 @@ uvicorn[standard]==0.54.0
 # Desenvolvimento
 pytest==9.2.0
 ipykernel==7.4.0
+nbformat==5.11.1
+nbclient==0.11.0
