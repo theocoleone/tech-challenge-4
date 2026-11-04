@@ -1,2 +1,33 @@
-# Dependências do pipeline RAG — preencher conforme as escolhas de embeddings, banco vetorial e LLM.
-pandas
+# Python 3.12. Versões fixadas para reprodutibilidade (pip install -r requirements.txt).
+# Novas dependências entram na fase que as usa (ex.: BERTopic no F6).
+
+# Dados
+pandas==3.1.0
+pyarrow==26.0.1
+
+# AWS / Bedrock
+boto3==1.43.123
+
+# LangChain (orquestração do RAG)
+langchain==1.4.9
+langchain-core==1.7.5
+langchain-aws==1.9.1
+langchain-community==0.4.2
+langchain-chroma==1.1.0
+
+# Recuperação
+chromadb==1.5.9
+rank-bm25==0.2.2
+scikit-learn==1.9.1
+
+# Configuração
+pydantic-settings==2.16.2
+python-dotenv==1.2.4
+
+# API
+fastapi==0.162.0
+uvicorn[standard]==0.54.0
+
+# Desenvolvimento
+pytest==9.2.0
+ipykernel==7.4.0
