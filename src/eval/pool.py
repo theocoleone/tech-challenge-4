@@ -2,7 +2,7 @@
 
 Para cada pergunta com evidência e com filtro do golden set, junta o top-20 de
 três buscadores diferentes (BM25, Titan e modelo local). O Theo marca cada par
-pergunta x avaliação como relevante (1) ou não (0). Com isso dá para medir
+pergunta x avaliação como relevante (1) ou não (0), na coluna "relevante". Com isso dá para medir
 recall e MRR de qualquer configuração depois, sem rotular a base inteira.
 
 O recall medido é relativo a esse conjunto ("pool"): uma avaliação relevante que
@@ -60,11 +60,11 @@ def main() -> None:
     novo = pd.DataFrame(linhas)
     arquivo = ROOT / "eval" / "julgamentos.csv"
     if arquivo.exists():  # preserva o que já foi marcado
-        antigo = pd.read_csv(arquivo, dtype=str).fillna("")
+        antigo = pd.read_csv(arquivo, dtype=str, sep=";", encoding="utf-8-sig").fillna("")
         marcados = antigo[antigo.relevante != ""].set_index(["pergunta_id", "review_id"]).relevante
         chave = list(zip(novo.pergunta_id, novo.review_id))
         novo["relevante"] = [marcados.get(c, "") for c in chave]
-    novo.to_csv(arquivo, index=False)
+    novo.to_csv(arquivo, index=False, sep=";", encoding="utf-8-sig")  # abre direto no Excel em português
     print(f"\n{len(novo)} pares em {arquivo.relative_to(ROOT)} ({(novo.relevante != '').sum()} já marcados)")
 
 
