@@ -8,7 +8,7 @@ recall e MRR de qualquer configuração depois, sem rotular a base inteira.
 O recall medido é relativo a esse conjunto ("pool"): uma avaliação relevante que
 nenhum dos três encontrou não entra na conta. Isso é declarado no README.
 
-Uso: python -m src.eval.pool        (gera eval/julgamentos.csv; não sobrescreve marcações)
+Uso: python -m src.eval.pool   (gera eval/julgamentos.xlsx e .csv; não apaga marcações)
 """
 import random
 
@@ -18,6 +18,7 @@ import pandas as pd
 from src.config import ROOT, get_settings
 from src.data.clean import normalizar
 from src.eval.check_golden import carregar
+from src.eval.julgamentos import escrever, ler
 from src.index.bm25 import IndiceBM25
 from src.index.build_index import colecao
 from src.index.embeddings import get_embedder
@@ -58,15 +59,12 @@ def main() -> None:
         print(f"{p['id']}: {len(ids)} avaliações para julgar")
 
     novo = pd.DataFrame(linhas)
-    arquivo = ROOT / "eval" / "julgamentos.csv"
-    if arquivo.exists():  # preserva o que já foi marcado
-        antigo = pd.read_csv(arquivo, dtype=str, sep=";", encoding="utf-8-sig").fillna("")
+    antigo = ler()
+    if len(antigo):  # preserva o que já foi marcado
         marcados = antigo[antigo.relevante != ""].set_index(["pergunta_id", "review_id"]).relevante
-        chave = list(zip(novo.pergunta_id, novo.review_id))
-        novo["relevante"] = [marcados.get(c, "") for c in chave]
-    novo.to_csv(arquivo, index=False, sep=";", encoding="utf-8-sig")  # abre direto no Excel em português
-    print(f"\n{len(novo)} pares em {arquivo.relative_to(ROOT)} ({(novo.relevante != '').sum()} já marcados)")
-
+        novo["relevante"] = [marcados.get(c, "") for c in zip(novo.pergunta_id, novo.review_id)]
+    escrever(novo)
+    print(f"\n{len(novo)} pares em eval/julgamentos.xlsx ({(novo.relevante != '').sum()} já marcados)")
 
 if __name__ == "__main__":
     main()
