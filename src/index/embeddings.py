@@ -8,12 +8,15 @@ As duas classes seguem a interface de embeddings do LangChain
 (embed_documents / embed_query), então servem direto para o Chroma.
 """
 import json
+import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
+from botocore.exceptions import BotoCoreError, ClientError
 from langchain_core.embeddings import Embeddings
+from urllib3.exceptions import ReadTimeoutError
 
 from src.config import check_aws_account, get_settings
 
@@ -37,13 +40,25 @@ class TitanEmbeddings(Embeddings):
         self.workers = workers
         self.client = boto3.Session(profile_name=s.aws_profile, region_name=s.aws_region).client(
             "bedrock-runtime",
-            config=Config(retries={"mode": "adaptive", "max_attempts": 10}, max_pool_connections=workers * 2),
+            config=Config(
+                retries={"mode": "adaptive", "max_attempts": 10},
+                read_timeout=120,
+                max_pool_connections=workers * 2,
+            ),
         )
 
-    def _um(self, texto: str) -> list[float]:
+    def _um(self, texto: str, tentativas: int = 6) -> list[float]:
         corpo = json.dumps({"inputText": texto, "dimensions": self.dimensoes, "normalize": True})
-        resposta = self.client.invoke_model(modelId=self.model_id, body=corpo)
-        return json.loads(resposta["body"].read())["embedding"]
+        for tentativa in range(tentativas):
+            try:
+                resposta = self.client.invoke_model(modelId=self.model_id, body=corpo)
+                return json.loads(resposta["body"].read())["embedding"]
+            except (ReadTimeoutError, BotoCoreError, ClientError) as erro:
+                # O retry do boto3 cobre a chamada, mas não a leitura do corpo da
+                # resposta; um timeout ali derrubava o processo inteiro.
+                if tentativa == tentativas - 1:
+                    raise
+                time.sleep(2 ** tentativa)
 
     def embed_documents(self, textos: list[str]) -> list[list[float]]:
         with ThreadPoolExecutor(self.workers) as ex:
