@@ -1,0 +1,44 @@
+{"id": "E01", "pergunta": "O que os clientes relatam sobre atraso na entrega?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "E02", "pergunta": "Quais relatos existem de clientes que não receberam o produto?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "E03", "pergunta": "O que os clientes dizem quando recebem um produto diferente do anunciado?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "E04", "pergunta": "Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "E05", "pergunta": "O que os clientes comentam sobre a embalagem dos produtos?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "E06", "pergunta": "Como os clientes avaliam o atendimento do vendedor ou da loja?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "E07", "pergunta": "O que os clientes elogiam quando a entrega é rápida?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "E08", "pergunta": "O que os clientes elogiam na qualidade dos produtos?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "E09", "pergunta": "Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "E10", "pergunta": "O que os clientes reclamam sobre a nota fiscal?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "E11", "pergunta": "Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "E12", "pergunta": "O que os clientes comentam sobre o valor do frete?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "F01", "pergunta": "Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_banho?", "tipo": "filtro", "status_esperado": "ok", "filtros_esperados": {"review_score": 1, "categoria_pt": "cama_mesa_banho"}}
+{"id": "F02", "pergunta": "O que os clientes elogiaram nas compras feitas em 2018?", "tipo": "filtro", "status_esperado": "ok", "filtros_esperados": {"ano_mes_compra_min": 201801, "ano_mes_compra_max": 201812, "review_score_min": 4}}
+{"id": "F03", "pergunta": "Quais temas aparecem nas avaliações de pedidos entregues com atraso?", "tipo": "filtro", "status_esperado": "ok", "filtros_esperados": {"entregue_com_atraso": true}}
+{"id": "F04", "pergunta": "Quais problemas aparecem em pedidos cancelados?", "tipo": "filtro", "status_esperado": "ok", "filtros_esperados": {"order_status": "canceled"}}
+{"id": "F05", "pergunta": "O que reclamam os clientes em pedidos acima de R$ 500?", "tipo": "filtro", "status_esperado": "ok", "filtros_esperados": {"valor_min": 500, "review_score_max": 2}}
+{"id": "F06", "pergunta": "O que os clientes de informatica_acessorios elogiam?", "tipo": "filtro", "status_esperado": "ok", "filtros_esperados": {"categoria_pt": "informatica_acessorios", "review_score_min": 4}}
+{"id": "A01", "pergunta": "Quais são os principais problemas relatados pelos clientes?", "tipo": "agregada", "status_esperado": "ok"}
+{"id": "A02", "pergunta": "O que os clientes mais elogiam em suas experiências de compra?", "tipo": "agregada", "status_esperado": "ok"}
+{"id": "A03", "pergunta": "Quais padrões podem ser identificados nas avaliações de clientes insatisfeitos?", "tipo": "agregada", "status_esperado": "ok"}
+{"id": "A04", "pergunta": "Quais aspectos da experiência de compra são mais elogiados pelos clientes?", "tipo": "agregada", "status_esperado": "ok"}
+{"id": "A05", "pergunta": "Existem padrões recorrentes nas avaliações relacionadas à qualidade dos produtos?", "tipo": "agregada", "status_esperado": "ok"}
+{"id": "A06", "pergunta": "Quais reclamações relacionadas à entrega aparecem com maior frequência?", "tipo": "agregada", "status_esperado": "ok"}
+{"id": "A07", "pergunta": "O que os clientes mais reclamam do atendimento?", "tipo": "agregada", "status_esperado": "ok"}
+{"id": "I01", "pergunta": "O que os clientes acham dos drones vendidos na loja?", "tipo": "insuficiente", "status_esperado": "evidencia_fraca", "termos_verificacao": ["\\bdrone"], "observacao": "3 avaliações citam drone"}
+{"id": "I02", "pergunta": "Quais problemas os clientes relatam com login ou senha no site?", "tipo": "insuficiente", "status_esperado": "evidencia_fraca", "termos_verificacao": ["\\blogin|senha"], "observacao": "4 avaliações"}
+{"id": "I03", "pergunta": "Como os clientes avaliam o atendimento pelo WhatsApp?", "tipo": "insuficiente", "status_esperado": "evidencia_fraca", "termos_verificacao": ["whatsapp"], "observacao": "3 avaliações"}
+{"id": "I04", "pergunta": "Os clientes de Roraima reclamam mais de atraso do que os de São Paulo?", "tipo": "insuficiente", "status_esperado": "evidencia_fraca", "filtros_esperados": {"uf_cliente": "RR"}, "observacao": "RR tem 22 avaliações com texto; não sustenta comparação"}
+{"id": "V01", "pergunta": "O que reclamaram os clientes que compraram em novembro de 2016?", "tipo": "filtro_vazio", "status_esperado": "filtro_sem_resultado", "filtros_esperados": {"ano_mes_compra": 201611}, "observacao": "nenhuma compra em 201611"}
+{"id": "V02", "pergunta": "Quais problemas foram relatados em compras de pc_gamer feitas em 2017?", "tipo": "filtro_vazio", "status_esperado": "filtro_sem_resultado", "filtros_esperados": {"categoria_pt": "pc_gamer", "ano_mes_compra_min": 201701, "ano_mes_compra_max": 201712}, "observacao": "pc_gamer só tem compras em 2018"}
+{"id": "S01", "pergunta": "Quais reclamações existem sobre pagamento via Pix?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["\\bpix\\b"]}
+{"id": "S02", "pergunta": "O que os clientes acham do provador de realidade aumentada no aplicativo?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["realidade aumentada"]}
+{"id": "S03", "pergunta": "Como os clientes avaliam o programa de cashback?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["cashback"]}
+{"id": "S04", "pergunta": "Quais problemas os clientes relatam com o chatbot de atendimento?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["chatbot"]}
+{"id": "S05", "pergunta": "O que os clientes reclamam sobre a cobrança de juros no parcelamento?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["\\bjuros\\b"]}
+{"id": "S06", "pergunta": "Os clientes reclamam do clube de assinatura mensal?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["clube de assinatura|assinatura mensal"]}
+{"id": "S07", "pergunta": "O que os clientes comentam sobre a compra de NFTs na loja?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["\\bnft"]}
+{"id": "S08", "pergunta": "Quais reclamações existem sobre pagamento com bitcoin?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["bitcoin|cripto"]}
+{"id": "S09", "pergunta": "Quais são os principais problemas com pagamento via Pix?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["\\bpix\\b"], "observacao": "formulada como agregada"}
+{"id": "S10", "pergunta": "O que os clientes mais reclamam do cashback?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["cashback"], "observacao": "formulada como agregada"}
+{"id": "X01", "pergunta": "Qual é a capital da França?", "tipo": "fora_escopo", "status_esperado": "fora_escopo"}
+{"id": "X02", "pergunta": "Qual será a cotação do dólar na semana que vem?", "tipo": "fora_escopo", "status_esperado": "fora_escopo"}
+{"id": "X03", "pergunta": "Escreva um poema sobre o mar.", "tipo": "fora_escopo", "status_esperado": "fora_escopo"}

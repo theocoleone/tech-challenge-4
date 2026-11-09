@@ -1,0 +1,40 @@
+{"id": "C01", "pergunta": "O que os clientes dizem sobre os Correios?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "C02", "pergunta": "Quais reclamações existem sobre a garantia dos produtos?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "C03", "pergunta": "O que os clientes relatam sobre a voltagem dos aparelhos?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "C04", "pergunta": "Como os clientes avaliam o tamanho dos produtos?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "C05", "pergunta": "O que os clientes comentam sobre a cor do produto?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "C06", "pergunta": "Quais relatos existem sobre produtos falsificados ou que não são originais?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "C07", "pergunta": "O que os clientes dizem sobre a transportadora?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "C08", "pergunta": "O que os clientes comentam sobre o entregador?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "C09", "pergunta": "Quais problemas existem com pagamento por boleto?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "C10", "pergunta": "O que os clientes relatam sobre pagamento com cartão de crédito?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "C11", "pergunta": "Quais reclamações existem sobre a montagem dos móveis?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "C12", "pergunta": "O que os clientes dizem sobre o manual de instruções?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "C13", "pergunta": "Quais relatos existem sobre cobrança indevida?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "C14", "pergunta": "O que os clientes dizem sobre o cancelamento de pedidos?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "C15", "pergunta": "Os clientes comentam sobre produtos que chegaram usados?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "C16", "pergunta": "O que os clientes falam sobre o prazo de entrega informado no site?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "C17", "pergunta": "Quais elogios os clientes fazem ao vendedor?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "C18", "pergunta": "O que os clientes dizem sobre o preço dos produtos?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "C19", "pergunta": "O que os clientes falam sobre recomprar na loja?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "C20", "pergunta": "Quais relatos existem sobre produtos que pararam de funcionar depois de pouco tempo?", "tipo": "especifica", "status_esperado": "ok"}
+{"id": "N01", "pergunta": "Os clientes reclamam do metaverso da loja?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["metaverso"]}
+{"id": "N02", "pergunta": "Como os clientes avaliam as lives de vendas?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["\\blive\\b"]}
+{"id": "N03", "pergunta": "O que os clientes acham da cobertura 5G dos produtos?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["\\b5g\\b"]}
+{"id": "N04", "pergunta": "Quais reclamações existem sobre a recarga de carros elétricos?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["carro el[eé]trico|carros el[eé]tricos"]}
+{"id": "N05", "pergunta": "O que os clientes dizem do assistente com inteligência artificial?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["intelig[eê]ncia artificial|chatgpt"]}
+{"id": "N06", "pergunta": "Quais problemas os clientes relatam ao pagar com PayPal?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["paypal"]}
+{"id": "N07", "pergunta": "Quais problemas existem com o pagamento por reconhecimento facial?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["reconhecimento facial"]}
+{"id": "N08", "pergunta": "O que os clientes acham do teste grátis de 30 dias da assinatura?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["teste gr[aá]tis"]}
+{"id": "N09", "pergunta": "Os clientes reclamam da moeda virtual da loja?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["moeda virtual"]}
+{"id": "N10", "pergunta": "Como os clientes avaliam o provador virtual de roupas?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["provador virtual"]}
+{"id": "N11", "pergunta": "O que os clientes comentam sobre o seguro de celular oferecido no checkout?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["seguro de celular"]}
+{"id": "N12", "pergunta": "Quais reclamações existem sobre o resgate de milhas aéreas?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["milhas"]}
+{"id": "N13", "pergunta": "O que os clientes dizem sobre pagar com Apple Pay ou Google Pay?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["apple pay|google pay|samsung pay"]}
+{"id": "N14", "pergunta": "Como os clientes avaliam o atendimento por videochamada?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["videochamada|v[ií]deo chamada"]}
+{"id": "N15", "pergunta": "Os clientes reclamam do aplicativo de relógio inteligente da loja?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["aplicativo de rel[oó]gio"]}
+{"id": "N16", "pergunta": "Quais relatos existem sobre pagamento parcelado no Pix?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["\\bpix\\b"]}
+{"id": "N17", "pergunta": "O que os clientes acham do frete pago em criptomoeda?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["criptomoeda"]}
+{"id": "N18", "pergunta": "Como os clientes avaliam os armários inteligentes de retirada?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["arm[aá]rio inteligente|armarios inteligentes"]}
+{"id": "N19", "pergunta": "Quais reclamações existem sobre a assinatura de streaming incluída na compra?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["streaming"]}
+{"id": "N20", "pergunta": "O que os clientes falam sobre o cashback em dobro na Black Friday?", "tipo": "sem_evidencia", "status_esperado": "sem_evidencia", "termos_verificacao": ["cashback"]}
