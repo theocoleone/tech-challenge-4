@@ -12,7 +12,8 @@ from src.config import ROOT
 
 XLSX = ROOT / "eval" / "julgamentos.xlsx"
 CSV = ROOT / "eval" / "julgamentos.csv"
-COLUNAS = ["pergunta_id", "pergunta", "review_id", "nota", "categoria", "texto", "relevante", "encontrado_por"]
+COLUNAS = ["pergunta_id", "pergunta", "review_id", "nota", "categoria", "texto", "relevante", "julgado_por",
+           "revisar", "encontrado_por"]
 
 
 def ler() -> pd.DataFrame:
@@ -24,6 +25,9 @@ def ler() -> pd.DataFrame:
     else:
         return pd.DataFrame(columns=COLUNAS)
     df = df.fillna("")
+    for col in COLUNAS:
+        if col not in df:
+            df[col] = ""
     df["relevante"] = df["relevante"].str.strip().str.replace(r"\.0$", "", regex=True)
     return df[COLUNAS]
 
@@ -34,18 +38,20 @@ def escrever(df: pd.DataFrame) -> None:
     with pd.ExcelWriter(XLSX, engine="openpyxl") as w:
         df.to_excel(w, index=False, sheet_name="julgamentos")
         ws = w.sheets["julgamentos"]
-        larguras = {"A": 11, "B": 45, "C": 14, "D": 6, "E": 22, "F": 90, "G": 11, "H": 18}
+        larguras = {"A": 11, "B": 45, "C": 14, "D": 6, "E": 22, "F": 90, "G": 11, "H": 12, "I": 45, "J": 18}
         for col, largura in larguras.items():
             ws.column_dimensions[col].width = largura
         for cel in ws[1]:
             cel.font = Font(bold=True)
         for linha in ws.iter_rows(min_row=2):
             for cel in linha:
-                cel.alignment = Alignment(wrap_text=cel.column_letter in ("B", "F"), vertical="top")
+                cel.alignment = Alignment(wrap_text=cel.column_letter in ("B", "F", "I"), vertical="top")
             linha[6].fill = PatternFill("solid", fgColor="FFF2CC")  # coluna a preencher
+            if linha[8].value:
+                linha[8].fill = PatternFill("solid", fgColor="F8CBAD")  # divergência a decidir
         ws.freeze_panes = "A2"
         ws.auto_filter.ref = ws.dimensions
-        ws.column_dimensions["H"].hidden = True  # quem encontrou fica oculto para não influenciar
+        ws.column_dimensions["J"].hidden = True  # quem encontrou fica oculto para não influenciar
         dv = DataValidation(type="list", formula1='"0,1"', allow_blank=True)
         dv.add(f"G2:G{len(df) + 1}")
         ws.add_data_validation(dv)
@@ -55,6 +61,8 @@ def sincronizar_csv() -> None:
     df = ler()
     df.to_csv(CSV, index=False)
     marcados = (df.relevante != "").sum()
+    print("por quem:", df[df.relevante != ""].julgado_por.replace("", "sem registro").value_counts().to_dict())
+    print("divergências ainda abertas:", (df.revisar != "").sum())
     invalidos = df[~df.relevante.isin(["", "0", "1"])]
     print(f"{CSV.relative_to(ROOT)} atualizado: {marcados}/{len(df)} marcados")
     if len(invalidos):
