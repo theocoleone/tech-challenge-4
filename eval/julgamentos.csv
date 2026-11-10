@@ -51,14 +51,14 @@ E01,O que os clientes relatam sobre atraso na entrega?,c27e122fd5da1aa3c9b9f801d
 E01,O que os clientes relatam sobre atraso na entrega?,65e3d04aef73660b0b2145ef3d5762cd,5,eletronicos,A entrega atrasou,1,
 E01,O que os clientes relatam sobre atraso na entrega?,7eaac7481400e495ddfc2f5398aba896,1,utilidades_domesticas,A entrega esta atrasada.,1,
 E01,O que os clientes relatam sobre atraso na entrega?,7c1ecd8b639b567c0d1b29ac9a0f7781,1,informatica_acessorios,ATRASO NA ENTREGA,1,
-E01,O que os clientes relatam sobre atraso na entrega?,cc7aa30132ae7195c15ac60a6d96f63d,3,artes,Um prazo de entrega demorado,,reescrita+rerank (re-pool)
-E01,O que os clientes relatam sobre atraso na entrega?,adc92c58a60ad8ab3a9bb76476dc320d,3,eletronicos,Atrasou a entrega,,reescrita+rerank (re-pool)
-E01,O que os clientes relatam sobre atraso na entrega?,d58e4a045e87101c547aa0eeb1c0424c,2,moveis_decoracao,Demorou para chegar.,,reescrita+rerank (re-pool)
-E01,O que os clientes relatam sobre atraso na entrega?,b0dc5081d2e12913db2a62789fb27ac1,3,brinquedos,Demorou a entrega..,,reescrita+rerank (re-pool)
-E01,O que os clientes relatam sobre atraso na entrega?,136463ae3844928f9f275f177bbc2430,4,telefonia,Demorou para chegar,,reescrita+rerank (re-pool)
-E01,O que os clientes relatam sobre atraso na entrega?,7bd67c9f0c746f0a461fe4766d4b96fb,2,esporte_lazer,Entrega bastante demorada,,reescrita+rerank (re-pool)
-E01,O que os clientes relatam sobre atraso na entrega?,e74598307b6209e21d6514a830224b76,1,relogios_presentes,Entrega atrasada.,,reescrita+rerank (re-pool)
-E01,O que os clientes relatam sobre atraso na entrega?,038fef592fcd504c704c34cadbc0bfd3,3,perfumaria,Demorou para entregar,,reescrita+rerank (re-pool)
+E01,O que os clientes relatam sobre atraso na entrega?,cc7aa30132ae7195c15ac60a6d96f63d,3,artes,Um prazo de entrega demorado,0,reescrita+rerank (re-pool)
+E01,O que os clientes relatam sobre atraso na entrega?,adc92c58a60ad8ab3a9bb76476dc320d,3,eletronicos,Atrasou a entrega,1,reescrita+rerank (re-pool)
+E01,O que os clientes relatam sobre atraso na entrega?,d58e4a045e87101c547aa0eeb1c0424c,2,moveis_decoracao,Demorou para chegar.,0,reescrita+rerank (re-pool)
+E01,O que os clientes relatam sobre atraso na entrega?,b0dc5081d2e12913db2a62789fb27ac1,3,brinquedos,Demorou a entrega..,0,reescrita+rerank (re-pool)
+E01,O que os clientes relatam sobre atraso na entrega?,136463ae3844928f9f275f177bbc2430,4,telefonia,Demorou para chegar,0,reescrita+rerank (re-pool)
+E01,O que os clientes relatam sobre atraso na entrega?,7bd67c9f0c746f0a461fe4766d4b96fb,2,esporte_lazer,Entrega bastante demorada,0,reescrita+rerank (re-pool)
+E01,O que os clientes relatam sobre atraso na entrega?,e74598307b6209e21d6514a830224b76,1,relogios_presentes,Entrega atrasada.,1,reescrita+rerank (re-pool)
+E01,O que os clientes relatam sobre atraso na entrega?,038fef592fcd504c704c34cadbc0bfd3,3,perfumaria,Demorou para entregar,0,reescrita+rerank (re-pool)
 E02,Quais relatos existem de clientes que não receberam o produto?,609897c9ce2332a5fb6fee096d32ec87,1,brinquedos,"Bom dia eu não recebi meu produto, gostaria de saber o que aconteceu",1,
 E02,Quais relatos existem de clientes que não receberam o produto?,3bf7d2cd2bcbc856ee6a8c2730117d4e,4,automotivo,Parabéns pelo comprometimento com seus clientes.,0,
 E02,Quais relatos existem de clientes que não receberam o produto?,2685a4800004a12ec09d27264ff1915f,5,perfumaria,Recomendo a todos os clientes,0,
@@ -124,16 +124,16 @@ E02,Quais relatos existem de clientes que não receberam o produto?,23ee6bc24928
 E02,Quais relatos existem de clientes que não receberam o produto?,6962ebf3d6a10809eed1d05a2dbfbdc5,1,moveis_decoracao,Não recebemos o produto,1,rerank/hibrida (re-pool)
 E02,Quais relatos existem de clientes que não receberam o produto?,634421fc06a99aed1d28ee3bd8649c76,1,cama_mesa_banho,Não recebi meu produto.,1,rerank/hibrida (re-pool)
 E02,Quais relatos existem de clientes que não receberam o produto?,091d0a45cde9d3d50a654c09e8fc3bbb,1,alimentos,Não recebi meu produto.,1,rerank/hibrida (re-pool)
-E02,Quais relatos existem de clientes que não receberam o produto?,29ffb6f92601615e450be1a608cf5d2a,1,moveis_decoracao,Não recebi o produto.,,reescrita+rerank (re-pool)
-E02,Quais relatos existem de clientes que não receberam o produto?,b29b505c1b5099a0ecc76b2cfa96e140,1,market_place,não recebi o produto,,reescrita+rerank (re-pool)
-E02,Quais relatos existem de clientes que não receberam o produto?,9fdf51ed03ffa1995fd22d514e8bda64,1,cama_mesa_banho,não recebi o produto,,reescrita+rerank (re-pool)
-E02,Quais relatos existem de clientes que não receberam o produto?,10002fb54ca944273e324ebebb5f0a83,1,fashion_bolsas_e_acessorios,não recebi o produto,,reescrita+rerank (re-pool)
-E02,Quais relatos existem de clientes que não receberam o produto?,1f02ce9eac84bfa55ed84f4e69e54026,2,papelaria,não recebi o produto,,reescrita+rerank (re-pool)
-E02,Quais relatos existem de clientes que não receberam o produto?,41bc38b25abfdd9f9058992860bc43cc,1,informatica_acessorios,não recebi o produto,,reescrita+rerank (re-pool)
-E02,Quais relatos existem de clientes que não receberam o produto?,f5bafefb9b5c5f0a85d23300e5975524,1,relogios_presentes,não recebi o produto,,reescrita+rerank (re-pool)
-E02,Quais relatos existem de clientes que não receberam o produto?,89f9126a67b7d1d2db75a0da8176906b,1,informatica_acessorios,não recebi o produto,,reescrita+rerank (re-pool)
-E02,Quais relatos existem de clientes que não receberam o produto?,00397dc753e8c52a2dd4d73a20b88ae7,1,relogios_presentes,não recebi o produto,,reescrita+rerank (re-pool)
-E02,Quais relatos existem de clientes que não receberam o produto?,3f2e235eb284ac958e47a1de21cf5705,1,eletroportateis,não recebi o produto,,reescrita+rerank (re-pool)
+E02,Quais relatos existem de clientes que não receberam o produto?,29ffb6f92601615e450be1a608cf5d2a,1,moveis_decoracao,Não recebi o produto.,1,reescrita+rerank (re-pool)
+E02,Quais relatos existem de clientes que não receberam o produto?,b29b505c1b5099a0ecc76b2cfa96e140,1,market_place,não recebi o produto,1,reescrita+rerank (re-pool)
+E02,Quais relatos existem de clientes que não receberam o produto?,9fdf51ed03ffa1995fd22d514e8bda64,1,cama_mesa_banho,não recebi o produto,1,reescrita+rerank (re-pool)
+E02,Quais relatos existem de clientes que não receberam o produto?,10002fb54ca944273e324ebebb5f0a83,1,fashion_bolsas_e_acessorios,não recebi o produto,1,reescrita+rerank (re-pool)
+E02,Quais relatos existem de clientes que não receberam o produto?,1f02ce9eac84bfa55ed84f4e69e54026,2,papelaria,não recebi o produto,1,reescrita+rerank (re-pool)
+E02,Quais relatos existem de clientes que não receberam o produto?,41bc38b25abfdd9f9058992860bc43cc,1,informatica_acessorios,não recebi o produto,1,reescrita+rerank (re-pool)
+E02,Quais relatos existem de clientes que não receberam o produto?,f5bafefb9b5c5f0a85d23300e5975524,1,relogios_presentes,não recebi o produto,1,reescrita+rerank (re-pool)
+E02,Quais relatos existem de clientes que não receberam o produto?,89f9126a67b7d1d2db75a0da8176906b,1,informatica_acessorios,não recebi o produto,1,reescrita+rerank (re-pool)
+E02,Quais relatos existem de clientes que não receberam o produto?,00397dc753e8c52a2dd4d73a20b88ae7,1,relogios_presentes,não recebi o produto,1,reescrita+rerank (re-pool)
+E02,Quais relatos existem de clientes que não receberam o produto?,3f2e235eb284ac958e47a1de21cf5705,1,eletroportateis,não recebi o produto,1,reescrita+rerank (re-pool)
 E03,O que os clientes dizem quando recebem um produto diferente do anunciado?,c7ec696973fa83b3b208b576666ca048,5,beleza_saude,"Efetue a compra de um produto e acabei recebendo outro, totalmente diferente.",1,
 E03,O que os clientes dizem quando recebem um produto diferente do anunciado?,0b1a393b7eb2c62cbb3fc7983b2cde52,3,relogios_presentes,"Bom. Achei diferente do anunciado,mas tá valendo pelo custo benefício!",1,
 E03,O que os clientes dizem quando recebem um produto diferente do anunciado?,c099aafb6db35704451859b711b53425,1,informatica_acessorios,"O produto anunciado é um e o produto entregue é outro e de baixissima qualidade. Inadimissivel esse tipo de atitude que fere o codigo de defesa do consumidor, entregar produto diferente do anunciado",1,
@@ -186,7 +186,7 @@ E03,O que os clientes dizem quando recebem um produto diferente do anunciado?,61
 E03,O que os clientes dizem quando recebem um produto diferente do anunciado?,08528f70f579f0c830189efc523d2182,1,sem_categoria,"Produto errado. Entrega do produto diferente do solicitado
 Aguardo orientação para a troca",1,
 E03,O que os clientes dizem quando recebem um produto diferente do anunciado?,bc4ba3d061074cb490a4a32223963018,4,telefonia,O produto que recebi não era o anunciado.,1,rerank/hibrida (re-pool)
-E03,O que os clientes dizem quando recebem um produto diferente do anunciado?,00ce8865795823c7ceb6234fc4e046ed,1,brinquedos,"Produto muito diferente do anunciado. Costura mal feita, enchimento torto que deixa a cabeça dos filhotes com uma aparência muito estranha. Um veio até de cor diferente do personagem.",,reescrita+rerank (re-pool)
+E03,O que os clientes dizem quando recebem um produto diferente do anunciado?,00ce8865795823c7ceb6234fc4e046ed,1,brinquedos,"Produto muito diferente do anunciado. Costura mal feita, enchimento torto que deixa a cabeça dos filhotes com uma aparência muito estranha. Um veio até de cor diferente do personagem.",1,reescrita+rerank (re-pool)
 E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?,206fcd0c7e9d3248ff891f31205ae6ee,3,moveis_decoracao,"O produto veio quebrado. Um os produtos veio quebrado, estou tentando trocar ou devolver.",1,
 E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?,074c39cb5e90578eaeb560e6f632ae1e,1,cama_mesa_banho,Produto de péssima qualidade e acabamento.,0,
 E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?,8f2b628682e6ffa13fe7a46d65bab97a,3,esporte_lazer,Já comprei produtos e chegaram no prazo só esse que não chegou ainda,0,
@@ -252,9 +252,9 @@ E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com def
 E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?,fb9d26ae601018d2c1253e9af35b14e7,1,cama_mesa_banho,"Produto entregue não condiz com o produto comprado, péssima qualidade, assessório veio quebrado.",1,
 E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?,ea13f408f9f91e78274f1caa2c9663d2,1,moveis_decoracao,"Produto chegou quebrado, ficaram de trocar",1,
 E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?,29978e0295beaafa1d774ee406272040,1,eletronicos,O produto estava quebrado.,1,rerank/hibrida (re-pool)
-E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?,cb3ac9ac65081886c88485829c53c90b,1,utilidades_domesticas,O produto está quebrado,,reescrita+rerank (re-pool)
-E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?,00eb718f8b71a61b99580b4201d7aac5,1,relogios_presentes,Produto quebrado,,reescrita+rerank (re-pool)
-E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?,11b54d6b032c22b3219b4c3030795d95,1,eletrodomesticos,Produto com defeito.,,reescrita+rerank (re-pool)
+E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?,cb3ac9ac65081886c88485829c53c90b,1,utilidades_domesticas,O produto está quebrado,1,reescrita+rerank (re-pool)
+E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?,00eb718f8b71a61b99580b4201d7aac5,1,relogios_presentes,Produto quebrado,1,reescrita+rerank (re-pool)
+E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?,11b54d6b032c22b3219b4c3030795d95,1,eletrodomesticos,Produto com defeito.,1,reescrita+rerank (re-pool)
 E05,O que os clientes comentam sobre a embalagem dos produtos?,d44b85fda6987ad606e1b7c62dd481e4,4,cama_mesa_banho,produto entregue conforme anunciado.,0,
 E05,O que os clientes comentam sobre a embalagem dos produtos?,83d24d478d948b180721be139af82c2b,4,sem_categoria,produto entregue conforme anunciado,0,
 E05,O que os clientes comentam sobre a embalagem dos produtos?,7994a347d0e9f242b59fed402399182a,5,cama_mesa_banho,"Parabéns, lojas lannister, produtos de qualidade, entrega no prazo e respeito com os clientes!!",0,
@@ -318,16 +318,16 @@ E05,O que os clientes comentam sobre a embalagem dos produtos?,139d5416c4599a199
 E05,O que os clientes comentam sobre a embalagem dos produtos?,97784f9b8b324aaf69a19483ec5d29e8,5,esporte_lazer,"Recomendo a todos. Produto conforme anunciado, é entregue dentro do prazo recomendo a todos a loja e o produto!",0,
 E05,O que os clientes comentam sobre a embalagem dos produtos?,24d46a7a87b49cc958edeb55bf7f4970,2,utilidades_domesticas,2. A caixa veio totalmente deformada/estragada. Alguns produtos desencaixados. Melhorar a embalagem dos produtos. Achei o produto/material fraco,1,
 E05,O que os clientes comentam sobre a embalagem dos produtos?,649979a424f1736947f84216c21e661f,5,relogios_presentes,"Super recomendo. Adorei o cuidado com a embalagem do produto, demonstrando carinho com o cliente.",1,rerank/hibrida (re-pool)
-E05,O que os clientes comentam sobre a embalagem dos produtos?,3d70b1b461aab947083d20ce859433af,5,informatica_acessorios,produto bom bem embalado,,reescrita+rerank (re-pool)
-E05,O que os clientes comentam sobre a embalagem dos produtos?,eba1df892bf36449b9f5b43f162f614b,4,beleza_saude,Produto veio bem embalado.,,reescrita+rerank (re-pool)
-E05,O que os clientes comentam sobre a embalagem dos produtos?,cedb92a344fff7ba05e4b6f812231234,4,ferramentas_jardim,Bem embalado,,reescrita+rerank (re-pool)
-E05,O que os clientes comentam sobre a embalagem dos produtos?,fd4ade0e4851bf98c2efe5422fd49f1d,4,livros_tecnicos,"Entrega rápida, produto bem embalado.",,reescrita+rerank (re-pool)
-E05,O que os clientes comentam sobre a embalagem dos produtos?,e60dff83f96b0012a5fc3f692962ee0a,5,esporte_lazer,"Entrega rápida, produto bem embalado.",,reescrita+rerank (re-pool)
-E05,O que os clientes comentam sobre a embalagem dos produtos?,7471c5d22c59186544077ad694d363fb,5,moveis_decoracao,Produto bem embalado e de ótima qualidade.,,reescrita+rerank (re-pool)
-E05,O que os clientes comentam sobre a embalagem dos produtos?,1e4c04c7653024e3e745ea6a090699e2,3,informatica_acessorios,Produto chegou com a embalagem bem suja e empoeirada. Deu até a impressão que era falsificado ou que a embalagem já havia sido aberta.,,reescrita+rerank (re-pool)
-E05,O que os clientes comentam sobre a embalagem dos produtos?,971059bf78e48033a2a35275046922a8,5,beleza_saude,Entrega rápida.. produto bem embalado..,,reescrita+rerank (re-pool)
-E05,O que os clientes comentam sobre a embalagem dos produtos?,b2352c2f691ac17ef875f5fa7d7d64d4,2,cama_mesa_banho,"PRODUTO FORA DE EMBALAGEM. Produto sem embalagem e etiqueta. Não entendi a proposta. Creio que veio de uma tecelagem, pois os lençóis vieram sem embalagem do produto e etiqueta.",,reescrita+rerank (re-pool)
-E05,O que os clientes comentam sobre a embalagem dos produtos?,2664c1ec63af9e74f416f3522921326e,5,bebes,entrega rápida... produto bem embalado,,reescrita+rerank (re-pool)
+E05,O que os clientes comentam sobre a embalagem dos produtos?,3d70b1b461aab947083d20ce859433af,5,informatica_acessorios,produto bom bem embalado,1,reescrita+rerank (re-pool)
+E05,O que os clientes comentam sobre a embalagem dos produtos?,eba1df892bf36449b9f5b43f162f614b,4,beleza_saude,Produto veio bem embalado.,1,reescrita+rerank (re-pool)
+E05,O que os clientes comentam sobre a embalagem dos produtos?,cedb92a344fff7ba05e4b6f812231234,4,ferramentas_jardim,Bem embalado,1,reescrita+rerank (re-pool)
+E05,O que os clientes comentam sobre a embalagem dos produtos?,fd4ade0e4851bf98c2efe5422fd49f1d,4,livros_tecnicos,"Entrega rápida, produto bem embalado.",1,reescrita+rerank (re-pool)
+E05,O que os clientes comentam sobre a embalagem dos produtos?,e60dff83f96b0012a5fc3f692962ee0a,5,esporte_lazer,"Entrega rápida, produto bem embalado.",1,reescrita+rerank (re-pool)
+E05,O que os clientes comentam sobre a embalagem dos produtos?,7471c5d22c59186544077ad694d363fb,5,moveis_decoracao,Produto bem embalado e de ótima qualidade.,1,reescrita+rerank (re-pool)
+E05,O que os clientes comentam sobre a embalagem dos produtos?,1e4c04c7653024e3e745ea6a090699e2,3,informatica_acessorios,Produto chegou com a embalagem bem suja e empoeirada. Deu até a impressão que era falsificado ou que a embalagem já havia sido aberta.,1,reescrita+rerank (re-pool)
+E05,O que os clientes comentam sobre a embalagem dos produtos?,971059bf78e48033a2a35275046922a8,5,beleza_saude,Entrega rápida.. produto bem embalado..,1,reescrita+rerank (re-pool)
+E05,O que os clientes comentam sobre a embalagem dos produtos?,b2352c2f691ac17ef875f5fa7d7d64d4,2,cama_mesa_banho,"PRODUTO FORA DE EMBALAGEM. Produto sem embalagem e etiqueta. Não entendi a proposta. Creio que veio de uma tecelagem, pois os lençóis vieram sem embalagem do produto e etiqueta.",1,reescrita+rerank (re-pool)
+E05,O que os clientes comentam sobre a embalagem dos produtos?,2664c1ec63af9e74f416f3522921326e,5,bebes,entrega rápida... produto bem embalado,1,reescrita+rerank (re-pool)
 E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,d8efea9a133de6c33139b28cc18d97ef,5,utilidades_domesticas,"Avaliação do vendedor. Na verdade não sei se indicaria está loja , pois o pedido da pomada Santa chegou sem problemas , mas o outro produto foi pago sendo que não tinha o produto",1,
 E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,8d764e6df440be059c28fef5e0f41cfa,5,utilidades_domesticas,"Em relação a loja que vendeu entregou tudo direitinho e rápido. Ainda não testei o produto, mas em relação a compra e entrega recomendo.",1,
 E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,bf5addc377d443c3ccb64d0595a5d89b,5,relogios_presentes,Vendedor e produto. Vendedor pontual e o produto satisfez minha expectativa.,1,
@@ -384,13 +384,13 @@ E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,9aea405ac411a
 Comprei o produto a mais de um mês e não recebi, o mesmo ficou de entrar em contato comigo e não me respondeu.",1,
 E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,162be7af72150512d0f5033c45115e06,1,relogios_presentes,"Produto errado. Mais responsabilidade com os clientes quanto origem do produto,qualidade,certeza de que o produto entregue é de acordo com o pedido",1,
 E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,5314907858f212671086cc0f42225be2,4,brinquedos,"Adorei o produto, vendedor atencioso...produto entregue dentro do prazo estabelecido. Recomendo a todos os clientes das Lojas lannister.",1,rerank/hibrida (re-pool)
-E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,e3093053992f15fd8088e4d52117bff7,5,cool_stuff,Loja de confiança! Vendedor atencioso ligou para tirar dúvida sobre a voltagem antes do envio do produto,,reescrita+rerank (re-pool)
-E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,7028aff10ae46f0f85f3ba54351b782c,5,moveis_decoracao,Vendedor super atencioso! Loja super completa! O vendedor é atencioso e super ágil nos prazo! Vale a pena,,reescrita+rerank (re-pool)
-E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,bac2b98e54278198133281d7e7e16b1d,5,eletrodomesticos,Vendedor atencioso e produtos OK,,reescrita+rerank (re-pool)
-E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,ae9d19f932d50181e0b07daaa5c4963a,5,automotivo,"A loja é confiável. Apesar do produto vir errado, a loja foi super bacana no atendimento da troca.",,reescrita+rerank (re-pool)
-E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,360a1e5aad702ed976352462c4d1dfa6,5,beleza_saude,"Excelente compra. Vendedor ótimo em honestidade e dignidade, atendimento impecável, voltarei a comprar grato.",,reescrita+rerank (re-pool)
-E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,421b90794347f4ea084c71c95d4ebd82,5,moveis_decoracao,Super recomendo. A loja tem ótimo atendimento.O produto chegou antes do prazo previsto e além do mais são atenciosos.Parabéns!!,,reescrita+rerank (re-pool)
-E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,af9e4ef240e152378b2aaac76a63eff1,5,malas_acessorios,Muito bom o atendimento da loja. Recebi o produto antes do prazo.,,reescrita+rerank (re-pool)
+E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,e3093053992f15fd8088e4d52117bff7,5,cool_stuff,Loja de confiança! Vendedor atencioso ligou para tirar dúvida sobre a voltagem antes do envio do produto,1,reescrita+rerank (re-pool)
+E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,7028aff10ae46f0f85f3ba54351b782c,5,moveis_decoracao,Vendedor super atencioso! Loja super completa! O vendedor é atencioso e super ágil nos prazo! Vale a pena,1,reescrita+rerank (re-pool)
+E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,bac2b98e54278198133281d7e7e16b1d,5,eletrodomesticos,Vendedor atencioso e produtos OK,1,reescrita+rerank (re-pool)
+E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,ae9d19f932d50181e0b07daaa5c4963a,5,automotivo,"A loja é confiável. Apesar do produto vir errado, a loja foi super bacana no atendimento da troca.",1,reescrita+rerank (re-pool)
+E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,360a1e5aad702ed976352462c4d1dfa6,5,beleza_saude,"Excelente compra. Vendedor ótimo em honestidade e dignidade, atendimento impecável, voltarei a comprar grato.",1,reescrita+rerank (re-pool)
+E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,421b90794347f4ea084c71c95d4ebd82,5,moveis_decoracao,Super recomendo. A loja tem ótimo atendimento.O produto chegou antes do prazo previsto e além do mais são atenciosos.Parabéns!!,1,reescrita+rerank (re-pool)
+E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,af9e4ef240e152378b2aaac76a63eff1,5,malas_acessorios,Muito bom o atendimento da loja. Recebi o produto antes do prazo.,1,reescrita+rerank (re-pool)
 E07,O que os clientes elogiam quando a entrega é rápida?,435e11365958e2b3954fb4694a2e60cd,5,casa_conforto,Excelente entrega rápida ótimos produtos continuam assim parabéns,1,
 E07,O que os clientes elogiam quando a entrega é rápida?,839e322084914d7014db936307bf5481,5,construcao_ferramentas_construcao,Sempre tem compromisso com seus clientes rapidez e educacao,1,
 E07,O que os clientes elogiam quando a entrega é rápida?,ce68db80d80267c04096e59a65a6b18f,5,automotivo,Compromisso e respeito para com os clientes,0,
@@ -451,14 +451,14 @@ E07,O que os clientes elogiam quando a entrega é rápida?,f6853e4f1d0f639a934b6
 E07,O que os clientes elogiam quando a entrega é rápida?,be004b49c5739bd3cb276460fc5c302c,5,ferramentas_jardim,Já recebi ótima entrega é rápida que você continue assim,1,
 E07,O que os clientes elogiam quando a entrega é rápida?,cd9fb06d00b75ca597b1567d52d52fc7,5,eletronicos,"Entrega rápida, parabéns!",1,rerank/hibrida (re-pool)
 E07,O que os clientes elogiam quando a entrega é rápida?,d3ecaf8994a53008b772f263f5454664,5,ferramentas_jardim,A entrega foi muito rápida.,1,rerank/hibrida (re-pool)
-E07,O que os clientes elogiam quando a entrega é rápida?,c2398ffc712a6b357c625a63ebeda77d,5,bebes,Entrega rápida.,,reescrita+rerank (re-pool)
-E07,O que os clientes elogiam quando a entrega é rápida?,bbcb1ced9cc97134cf3e11062af6091f,5,cama_mesa_banho,Entrega rápida.,,reescrita+rerank (re-pool)
-E07,O que os clientes elogiam quando a entrega é rápida?,9b400369d9345be469f2dcc9567d53cc,5,moveis_decoracao,Entrega rápida,,reescrita+rerank (re-pool)
-E07,O que os clientes elogiam quando a entrega é rápida?,26e8721b8700ae8f7aaea99d683649c3,5,automotivo,Entrega rápida,,reescrita+rerank (re-pool)
-E07,O que os clientes elogiam quando a entrega é rápida?,82eb0fb7d5120d03fa88be020ba9f513,5,instrumentos_musicais,Entrega rápida,,reescrita+rerank (re-pool)
-E07,O que os clientes elogiam quando a entrega é rápida?,1df69fff4c65d87ffb77890b8e92d8dd,5,brinquedos,Entrega rápida,,reescrita+rerank (re-pool)
-E07,O que os clientes elogiam quando a entrega é rápida?,ab17ae0c17d13e6f833a8300c56bb966,5,perfumaria,Entrega rápida,,reescrita+rerank (re-pool)
-E07,O que os clientes elogiam quando a entrega é rápida?,8f90b386a65eaebe318a981f81402c95,5,bebes,Entrega rápida,,reescrita+rerank (re-pool)
+E07,O que os clientes elogiam quando a entrega é rápida?,c2398ffc712a6b357c625a63ebeda77d,5,bebes,Entrega rápida.,1,reescrita+rerank (re-pool)
+E07,O que os clientes elogiam quando a entrega é rápida?,bbcb1ced9cc97134cf3e11062af6091f,5,cama_mesa_banho,Entrega rápida.,1,reescrita+rerank (re-pool)
+E07,O que os clientes elogiam quando a entrega é rápida?,9b400369d9345be469f2dcc9567d53cc,5,moveis_decoracao,Entrega rápida,1,reescrita+rerank (re-pool)
+E07,O que os clientes elogiam quando a entrega é rápida?,26e8721b8700ae8f7aaea99d683649c3,5,automotivo,Entrega rápida,1,reescrita+rerank (re-pool)
+E07,O que os clientes elogiam quando a entrega é rápida?,82eb0fb7d5120d03fa88be020ba9f513,5,instrumentos_musicais,Entrega rápida,1,reescrita+rerank (re-pool)
+E07,O que os clientes elogiam quando a entrega é rápida?,1df69fff4c65d87ffb77890b8e92d8dd,5,brinquedos,Entrega rápida,1,reescrita+rerank (re-pool)
+E07,O que os clientes elogiam quando a entrega é rápida?,ab17ae0c17d13e6f833a8300c56bb966,5,perfumaria,Entrega rápida,1,reescrita+rerank (re-pool)
+E07,O que os clientes elogiam quando a entrega é rápida?,8f90b386a65eaebe318a981f81402c95,5,bebes,Entrega rápida,1,reescrita+rerank (re-pool)
 E08,O que os clientes elogiam na qualidade dos produtos?,3bf7d2cd2bcbc856ee6a8c2730117d4e,4,automotivo,Parabéns pelo comprometimento com seus clientes.,0,
 E08,O que os clientes elogiam na qualidade dos produtos?,ae448fc7207c85ab3045092e2ee0d1e7,3,perfumaria,produtos de ótima qualidade,1,
 E08,O que os clientes elogiam na qualidade dos produtos?,2685a4800004a12ec09d27264ff1915f,5,perfumaria,Recomendo a todos os clientes,0,
@@ -509,16 +509,16 @@ E08,O que os clientes elogiam na qualidade dos produtos?,15c72b68259c35ea984ed16
 E08,O que os clientes elogiam na qualidade dos produtos?,c48a1fae422668d45757e1b833faa9ce,5,informatica_acessorios,o produto de boa qualidade,1,
 E08,O que os clientes elogiam na qualidade dos produtos?,81a3a61c1dafa84947901d9eeec4e605,4,informatica_acessorios,"Produtos de qualidade, prazo de entrega excelente, recomendo",1,
 E08,O que os clientes elogiam na qualidade dos produtos?,07a4c0fd1d3bc16284492825bdd62bff,5,moveis_escritorio,Elogio. Entrega bem antes do prazo. Produto de excelente qualidade. Recomendo o produto e a loja.,1,rerank/hibrida (re-pool)
-E08,O que os clientes elogiam na qualidade dos produtos?,f2381710774b1b64dd8e6aae23fab4d4,5,consoles_games,Produto de qualidade,,reescrita+rerank (re-pool)
-E08,O que os clientes elogiam na qualidade dos produtos?,8391b58b3753800575c95a618dec4de8,5,papelaria,Produto de qualidade,,reescrita+rerank (re-pool)
-E08,O que os clientes elogiam na qualidade dos produtos?,15c59390693f6b2df5f37d29bbfb6dfa,5,construcao_ferramentas_iluminacao,Produto de qualidade,,reescrita+rerank (re-pool)
-E08,O que os clientes elogiam na qualidade dos produtos?,e389d74039f87f9c773fc76c6b9c77ab,5,brinquedos,Produto de qualidade,,reescrita+rerank (re-pool)
-E08,O que os clientes elogiam na qualidade dos produtos?,14c64fb4227238b38b7e3c3ae73f9c1e,5,fashion_bolsas_e_acessorios,Produto de qualidade,,reescrita+rerank (re-pool)
-E08,O que os clientes elogiam na qualidade dos produtos?,29ad4fdb4a7882c05c29dd06fa28d416,5,esporte_lazer,Produto de qualidade,,reescrita+rerank (re-pool)
-E08,O que os clientes elogiam na qualidade dos produtos?,6f253f407faa2e422128f634f07a497c,5,eletrodomesticos,Produto de qualidade,,reescrita+rerank (re-pool)
-E08,O que os clientes elogiam na qualidade dos produtos?,e471c0c7ec2a52a6dc896ac8cab3527b,5,esporte_lazer,Produto de qualidade,,reescrita+rerank (re-pool)
-E08,O que os clientes elogiam na qualidade dos produtos?,6bc5d6697ddfbc8063aedc3363c81730,5,informatica_acessorios,Produto de qualidade,,reescrita+rerank (re-pool)
-E08,O que os clientes elogiam na qualidade dos produtos?,4e9abe9089cf9049a144f94ece070330,4,beleza_saude,Produto com qualidade,,reescrita+rerank (re-pool)
+E08,O que os clientes elogiam na qualidade dos produtos?,f2381710774b1b64dd8e6aae23fab4d4,5,consoles_games,Produto de qualidade,1,reescrita+rerank (re-pool)
+E08,O que os clientes elogiam na qualidade dos produtos?,8391b58b3753800575c95a618dec4de8,5,papelaria,Produto de qualidade,1,reescrita+rerank (re-pool)
+E08,O que os clientes elogiam na qualidade dos produtos?,15c59390693f6b2df5f37d29bbfb6dfa,5,construcao_ferramentas_iluminacao,Produto de qualidade,1,reescrita+rerank (re-pool)
+E08,O que os clientes elogiam na qualidade dos produtos?,e389d74039f87f9c773fc76c6b9c77ab,5,brinquedos,Produto de qualidade,1,reescrita+rerank (re-pool)
+E08,O que os clientes elogiam na qualidade dos produtos?,14c64fb4227238b38b7e3c3ae73f9c1e,5,fashion_bolsas_e_acessorios,Produto de qualidade,1,reescrita+rerank (re-pool)
+E08,O que os clientes elogiam na qualidade dos produtos?,29ad4fdb4a7882c05c29dd06fa28d416,5,esporte_lazer,Produto de qualidade,1,reescrita+rerank (re-pool)
+E08,O que os clientes elogiam na qualidade dos produtos?,6f253f407faa2e422128f634f07a497c,5,eletrodomesticos,Produto de qualidade,1,reescrita+rerank (re-pool)
+E08,O que os clientes elogiam na qualidade dos produtos?,e471c0c7ec2a52a6dc896ac8cab3527b,5,esporte_lazer,Produto de qualidade,1,reescrita+rerank (re-pool)
+E08,O que os clientes elogiam na qualidade dos produtos?,6bc5d6697ddfbc8063aedc3363c81730,5,informatica_acessorios,Produto de qualidade,1,reescrita+rerank (re-pool)
+E08,O que os clientes elogiam na qualidade dos produtos?,4e9abe9089cf9049a144f94ece070330,4,beleza_saude,Produto com qualidade,1,reescrita+rerank (re-pool)
 E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,73825c944419be59995fdf5755400ba0,3,relogios_presentes,"Troca / devolução. a experiência de compra on-line e a entrega foram boas, porém o produto não atendeu às expectativas e estou tendo dificuldades com a troca /devolução.",1,
 E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,bbc36eaacdc8b5d25ae856796c824d19,3,beleza_saude,"Um dos produtos veio incorreto, eu pedi 3 produtos iguais e veio um diferente, estou no aguardo para resolver esta troca.",1,
 E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,4ae065a9ed27676994e75f0f0f3bab4c,2,moveis_sala,"Produto com Defeito. O produto adquirido não pode ser utilizado, o mesmo apresentou problemas de montagem, Aguardando a troca do produto.....",1,
@@ -584,15 +584,15 @@ E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?
 E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,2f88ed5378af93b3fe40c77ad5eff7cc,1,instrumentos_musicais,"Primeiro: estou tentando devolver um produto mais não me dão soluções...
 Segundo : me dão vale sem primeiro pegarem minha devolução e sem contar o produto que pedi não ter chegado..",1,rerank/hibrida (re-pool)
 E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,b33f57b813383749cf0ae0f0b64c64ee,3,telefonia,"Como faço para devolver o produto,",1,rerank/hibrida (re-pool)
-E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,a2ac4221870e9c8bdf6976817df6d5fe,1,telefonia,Quero devolve-lo,,reescrita+rerank (re-pool)
-E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,91559a9c610b44fbc2680b8109bc3a91,1,automotivo,"Problema. Infelizmente tive um problema com o aparelho,e o mesmo terá que ser feito troca.",,reescrita+rerank (re-pool)
-E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,d1a96b4468ca0611a6ae0f2d197c91c4,1,agro_industria_e_comercio,O detector esta com defeito solicito uma troca,,reescrita+rerank (re-pool)
-E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,86428e1c716345964325a3f595c260b0,1,relogios_presentes,Quero devolver o produto,,reescrita+rerank (re-pool)
-E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,f04f0103c3f9918d10b2f82068c18329,3,telefonia,"Preciso devolver, produto veio errado",,reescrita+rerank (re-pool)
+E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,a2ac4221870e9c8bdf6976817df6d5fe,1,telefonia,Quero devolve-lo,0,reescrita+rerank (re-pool)
+E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,91559a9c610b44fbc2680b8109bc3a91,1,automotivo,"Problema. Infelizmente tive um problema com o aparelho,e o mesmo terá que ser feito troca.",0,reescrita+rerank (re-pool)
+E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,d1a96b4468ca0611a6ae0f2d197c91c4,1,agro_industria_e_comercio,O detector esta com defeito solicito uma troca,0,reescrita+rerank (re-pool)
+E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,86428e1c716345964325a3f595c260b0,1,relogios_presentes,Quero devolver o produto,0,reescrita+rerank (re-pool)
+E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,f04f0103c3f9918d10b2f82068c18329,3,telefonia,"Preciso devolver, produto veio errado",0,reescrita+rerank (re-pool)
 E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,ab2a7a5b86afdac6192523b81cf562b6,1,moveis_decoracao,"Produto com defeito 
-Preciso trocar",,reescrita+rerank (re-pool)
-E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,b9677c5ecaf9a9030e9ce79b23539688,2,informatica_acessorios,Muito ruim na hora de devolver o dinheiro,,reescrita+rerank (re-pool)
-E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,9a398a569312f6e58b054b0136c91260,1,moveis_decoracao,quero devolver o produto,,reescrita+rerank (re-pool)
+Preciso trocar",0,reescrita+rerank (re-pool)
+E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,b9677c5ecaf9a9030e9ce79b23539688,2,informatica_acessorios,Muito ruim na hora de devolver o dinheiro,1,reescrita+rerank (re-pool)
+E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,9a398a569312f6e58b054b0136c91260,1,moveis_decoracao,quero devolver o produto,0,reescrita+rerank (re-pool)
 E10,O que os clientes reclamam sobre a nota fiscal?,a0bd563623eaf9dcdff034eadcc62987,3,moveis_escritorio,Ficou faltando a nota fiscal,1,
 E10,O que os clientes reclamam sobre a nota fiscal?,3440af42822145c52b3008af14b98ea1,3,telefonia_fixa,"Não vem com nota fiscal, porquê???",1,
 E10,O que os clientes reclamam sobre a nota fiscal?,8fc74bf8b221b8c88a629942d4a670a7,1,moveis_escritorio,"- a compra foi efetuada em 30/01
@@ -661,13 +661,13 @@ E10,O que os clientes reclamam sobre a nota fiscal?,5ddce69d8c7299396d38442a29e6
 E10,O que os clientes reclamam sobre a nota fiscal?,30592db4d4b8e6ad84a5663103847af7,5,portateis_cozinha_e_preparadores_de_alimentos,"Nota fiscal. Boa noite
 O único problema foi que a nota fiscal não mostra o pagamento do frete, que deveria.
 Grato.
-Gilson",,reescrita+rerank (re-pool)
-E10,O que os clientes reclamam sobre a nota fiscal?,b67a1ed874193e8d5f4c6f4083c2c906,3,beleza_saude,"Problema na nota fiscal. Gostaria de saber pq recebi a nota no valor de 14,20 se na realidade nao foi esse preço q eu paguei?",,reescrita+rerank (re-pool)
+Gilson",1,reescrita+rerank (re-pool)
+E10,O que os clientes reclamam sobre a nota fiscal?,b67a1ed874193e8d5f4c6f4083c2c906,3,beleza_saude,"Problema na nota fiscal. Gostaria de saber pq recebi a nota no valor de 14,20 se na realidade nao foi esse preço q eu paguei?",1,reescrita+rerank (re-pool)
 E10,O que os clientes reclamam sobre a nota fiscal?,076cef9939f65f154352e846a9c94bab,1,construcao_ferramentas_construcao,"Reclamação. Comprei dois itens. E só foi entregue um. Nota fiscal consta dois produtos. 
-Entregue apenas 1.",,reescrita+rerank (re-pool)
-E10,O que os clientes reclamam sobre a nota fiscal?,052c5a33299681185642259725a73992,1,beleza_saude,Reclamação. Só tem um problema. Ela está marcando errado,,reescrita+rerank (re-pool)
-E10,O que os clientes reclamam sobre a nota fiscal?,b28309e8253951a954123e039d3242f7,1,brinquedos,Produto não foi entregue. Não foi enviada nota fiscal. Telefone para reclamação não funciona.,,reescrita+rerank (re-pool)
-E10,O que os clientes reclamam sobre a nota fiscal?,964536484513ff51faa34e0bb5332744,1,beleza_saude,"Estou com problemas. O produto que veio não é o que eu comprei, inclusive a nota fiscal veio em nome de outra pessoa, e não consigo contato para resolver o problema",,reescrita+rerank (re-pool)
+Entregue apenas 1.",0,reescrita+rerank (re-pool)
+E10,O que os clientes reclamam sobre a nota fiscal?,052c5a33299681185642259725a73992,1,beleza_saude,Reclamação. Só tem um problema. Ela está marcando errado,0,reescrita+rerank (re-pool)
+E10,O que os clientes reclamam sobre a nota fiscal?,b28309e8253951a954123e039d3242f7,1,brinquedos,Produto não foi entregue. Não foi enviada nota fiscal. Telefone para reclamação não funciona.,1,reescrita+rerank (re-pool)
+E10,O que os clientes reclamam sobre a nota fiscal?,964536484513ff51faa34e0bb5332744,1,beleza_saude,"Estou com problemas. O produto que veio não é o que eu comprei, inclusive a nota fiscal veio em nome de outra pessoa, e não consigo contato para resolver o problema",1,reescrita+rerank (re-pool)
 E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",247e5873bde75f075031ff46770972d3,1,malas_acessorios,"O pedido foi entregue no prazo
 Mais o pedido tem o acabamento e a qualidade ruim e a mala pequena veio com defeito",0,
 E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",f25924d100cd9a430d943efe35460eba,1,cama_mesa_banho,Fiz um pedido com vários ítens os outros já chegaram e este AINDA NÃO CHEGOU NEM TEM COMO RASTREAR,1,
@@ -728,11 +728,11 @@ E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltand
 E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",b58e2301da4520a8c8daa021646f2a7b,1,moveis_decoracao,"Recebi o meu pedido incompleto, sendo que, na nota fiscal estão todos os itens. Vou pagar por algo que eu não recebi. Estou tentando contato via e-mail e via telefone e não tive nenhuma resposta.",1,
 E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",21669c0b1d532d754a411e09973d118d,1,automotivo,"Produto entregue errado, reclamação realizada, solicitado de troca aberta a mais de uma semana e nem sinal da empresa",0,
 E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",dba5197f90198999eebfa0aef3112681,1,ferramentas_jardim,"meu pedido veio faltando um produto, preciso resolver",1,rerank/hibrida (re-pool)
-E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",0afdaef42f4cef6492069412f42443d3,1,beleza_saude,"Recebi o produto incompleto, faltou 01 item!",,reescrita+rerank (re-pool)
-E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",d4af5e95b270e8db1b31d2bbb53f5312,1,moveis_decoracao,Falta entregar 1 item.,,reescrita+rerank (re-pool)
-E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",27b253190f9b1d25530dde5f035520e3,3,bebes,"Falta produtos. Olá, o pedido chegou incompleto estou aguardando chegar o restante dos produtos conforme o pedido no ato da compra. Falta o Carrinho de bebê do kit. Só veio a Base e o bebê conforto. Estou no aguardo!",,reescrita+rerank (re-pool)
-E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",96b9f6a6bda6908a59c0a0c9a6141d2c,3,casa_construcao,"Pedido Incompleto. Meu produto foi entregue parcialmente, falta 01 produto e consta no status que foi entregue.",,reescrita+rerank (re-pool)
-E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",433295438d1a1b4d1655d6cec93251c5,3,utilidades_domesticas,Ainda falta entregar um pedido,,reescrita+rerank (re-pool)
+E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",0afdaef42f4cef6492069412f42443d3,1,beleza_saude,"Recebi o produto incompleto, faltou 01 item!",1,reescrita+rerank (re-pool)
+E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",d4af5e95b270e8db1b31d2bbb53f5312,1,moveis_decoracao,Falta entregar 1 item.,1,reescrita+rerank (re-pool)
+E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",27b253190f9b1d25530dde5f035520e3,3,bebes,"Falta produtos. Olá, o pedido chegou incompleto estou aguardando chegar o restante dos produtos conforme o pedido no ato da compra. Falta o Carrinho de bebê do kit. Só veio a Base e o bebê conforto. Estou no aguardo!",1,reescrita+rerank (re-pool)
+E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",96b9f6a6bda6908a59c0a0c9a6141d2c,3,casa_construcao,"Pedido Incompleto. Meu produto foi entregue parcialmente, falta 01 produto e consta no status que foi entregue.",1,reescrita+rerank (re-pool)
+E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",433295438d1a1b4d1655d6cec93251c5,3,utilidades_domesticas,Ainda falta entregar um pedido,0,reescrita+rerank (re-pool)
 E12,O que os clientes comentam sobre o valor do frete?,21ce70c1fdc9f840ad7aff98de6c2703,5,beleza_saude,"gostei muito de compra com voces, so gostaria de saber o valor mesmo do frete de Benevides,quando eu coloco venda no carinho vai mundando o valor do frete, teve frete que a te 160,mim pata de compra",1,
 E12,O que os clientes comentam sobre o valor do frete?,ac0e0c8a72798f2bff7c7fa81f257a30,4,beleza_saude,"Cliente assíduo poderia ter vantagem, como desconto",0,
 E12,O que os clientes comentam sobre o valor do frete?,0c7571f1c198dee0435fe204ea197a84,3,cool_stuff,"vcs podiam abaixar o valor do frete e colocar de vez enquando frete gratis,seu frete e muito caro!!!!",1,
@@ -794,8 +794,8 @@ Mas chegou tudo certo conforme a descrição.",1,rerank/hibrida (re-pool)
 E12,O que os clientes comentam sobre o valor do frete?,8e06903374b7ee0504efcc83be9ae806,1,beleza_saude,"Paguei frete e tive que buscar o produto. Sem falar q o frete foi caro. Demorou para chegar.
 Só acho que o frete tinha que ser mas barato. O frete acaba saindo no valor do produto ou mas caro.",1,rerank/hibrida (re-pool)
 E12,O que os clientes comentam sobre o valor do frete?,bfb704388d9333cef09a4fd69bdbd774,3,beleza_saude,"O que achei péssimo foi cobrar dois frete para duas unidades do mesmo produto, vierem em caixas separadas, o valor do frete foi um pouco a menos que o valor de uma unidade do produto. Absurdo",1,rerank/hibrida (re-pool)
-E12,O que os clientes comentam sobre o valor do frete?,915385577eaf9b7f239992efcb1bdb62,2,moveis_escritorio,"O processo ocorreu direito, mas durante todo o período da compra aparecia uma valor de frete promocional de 18,00 reais e quando eu fechei a compra o valor subiu para 56,00.",,reescrita+rerank (re-pool)
-E12,O que os clientes comentam sobre o valor do frete?,3e90497651d17074e61895e395d581eb,2,informatica_acessorios,frete muito alto.,,reescrita+rerank (re-pool)
+E12,O que os clientes comentam sobre o valor do frete?,915385577eaf9b7f239992efcb1bdb62,2,moveis_escritorio,"O processo ocorreu direito, mas durante todo o período da compra aparecia uma valor de frete promocional de 18,00 reais e quando eu fechei a compra o valor subiu para 56,00.",1,reescrita+rerank (re-pool)
+E12,O que os clientes comentam sobre o valor do frete?,3e90497651d17074e61895e395d581eb,2,informatica_acessorios,frete muito alto.,1,reescrita+rerank (re-pool)
 F01,Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_banho?,df40fa92b61bc641eec28061fdec8ffe,1,cama_mesa_banho,"O produto não é de boa qualidade.
 Estou arrependida em ter adquirido toalhas tão ruins. Estou acostumada com buddemeyer.
 Nao recomendo as toalhas citadas.",1,
@@ -867,11 +867,11 @@ F01,Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_
 F01,Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_banho?,ecd30ad71b1a6be967f483f490915fb1,1,cama_mesa_banho,"Você paga 2 e recebe 1. ROUBO! Na nota fiscal são 2 unidades mas no embrulho vem apenas UMA.
 Querem cobrar sem entregar?",1,
 F01,Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_banho?,85e43a8bc028ca11bad4d83cc4054a12,1,cama_mesa_banho,"Muito ruim. Comprei 2 saias para cama box,o sedex trouxe 1 só e a nota fiscal dizia que eu estava recebendo as duas,não aceitei a entrega,no dia seguinte vieram entregar a segunda nas mesmas condições da primeira",1,rerank/hibrida (re-pool)
-F01,Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_banho?,9fd8de7d9ef7590e39acd2f7148b6d5e,1,cama_mesa_banho,"Péssimo. Além de não entregar o produto, fiz uma reclamação é não deram nenhuma satisfação.",,reescrita+rerank (re-pool)
-F01,Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_banho?,90988cd04fde47aa06f5d327ef3cd6e8,1,cama_mesa_banho,Ola estou muito descontente com o serviço o produto e de pequeno porte e ate momento n chegou na minha casa já comprei objetos de maior valores e nunca tive problema já este,,reescrita+rerank (re-pool)
-F01,Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_banho?,014bb9d880369a341aec44c060de24d5,1,cama_mesa_banho,Meu produtor n foi entreg. Meu produto não foi entregue ainda. E o vendedor não me dar nenhuma satisfação eu já mandamei vários email msg de reclamação é até agora nada foi feito,,reescrita+rerank (re-pool)
-F01,Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_banho?,9c7e8cb49484cadce2bcc143729438af,1,cama_mesa_banho,recebi o produto errado ja fiz reclamaçao e nao fui atendida pelo contrario a funcionaria ANDRESSA dava risada da minha cara por telefone PESSIMO ATENDIMENTO E COMPLETAMENTE INSATISFEITA,,reescrita+rerank (re-pool)
-F01,Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_banho?,3cd2863aa22cf5e980423c285bbc94c3,1,cama_mesa_banho,"RECLAMAÇÃO. O TAPETE NÃO VEIO, SOMENTE O MOSQUITEIRO.",,reescrita+rerank (re-pool)
+F01,Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_banho?,9fd8de7d9ef7590e39acd2f7148b6d5e,1,cama_mesa_banho,"Péssimo. Além de não entregar o produto, fiz uma reclamação é não deram nenhuma satisfação.",1,reescrita+rerank (re-pool)
+F01,Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_banho?,90988cd04fde47aa06f5d327ef3cd6e8,1,cama_mesa_banho,Ola estou muito descontente com o serviço o produto e de pequeno porte e ate momento n chegou na minha casa já comprei objetos de maior valores e nunca tive problema já este,1,reescrita+rerank (re-pool)
+F01,Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_banho?,014bb9d880369a341aec44c060de24d5,1,cama_mesa_banho,Meu produtor n foi entreg. Meu produto não foi entregue ainda. E o vendedor não me dar nenhuma satisfação eu já mandamei vários email msg de reclamação é até agora nada foi feito,1,reescrita+rerank (re-pool)
+F01,Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_banho?,9c7e8cb49484cadce2bcc143729438af,1,cama_mesa_banho,recebi o produto errado ja fiz reclamaçao e nao fui atendida pelo contrario a funcionaria ANDRESSA dava risada da minha cara por telefone PESSIMO ATENDIMENTO E COMPLETAMENTE INSATISFEITA,1,reescrita+rerank (re-pool)
+F01,Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_banho?,3cd2863aa22cf5e980423c285bbc94c3,1,cama_mesa_banho,"RECLAMAÇÃO. O TAPETE NÃO VEIO, SOMENTE O MOSQUITEIRO.",1,reescrita+rerank (re-pool)
 F02,O que os clientes elogiaram nas compras feitas em 2018?,42dbe1261ffa4f8bf21d8d8185b13ff1,5,brinquedos,10. Gostei muito parabéns pelo compromisso com.o consumidor.,1,
 F02,O que os clientes elogiaram nas compras feitas em 2018?,93dc965496f438c53eddca89681da4e9,5,informatica_acessorios,Uma das melhores compras que já fiz,0,
 F02,O que os clientes elogiaram nas compras feitas em 2018?,98c802e13fb032f446ffd35ed08ff9b8,5,moveis_decoracao,"Nota 10. Parabéns pela loja. Ótimo produto, ótimo preço, ótimo prazo de entrega.",1,
@@ -934,16 +934,16 @@ F02,O que os clientes elogiaram nas compras feitas em 2018?,f6853e4f1d0f639a934b
 F02,O que os clientes elogiaram nas compras feitas em 2018?,382d855ffdd4f5e66594dbfb1566e96f,5,moveis_decoracao,10. Cada vez que compro mais fico satisfeita parabéns pela honestidade com seus clientes 👏👏👏👏?,1,
 F02,O que os clientes elogiaram nas compras feitas em 2018?,40fd52232fb6c446d128808d676a9e3b,5,moveis_decoracao,"Juliana. Amei minha compra..chegou antes do prazo.Acabamento dos quadros perfeito.
 Parabéns lojas lannister e parceiros..",1,rerank/hibrida (re-pool)
-F02,O que os clientes elogiaram nas compras feitas em 2018?,962c502f0c52e65021282cd0a6931a51,4,cama_mesa_banho,"Gostei. Ótimo produto, recomendo",,reescrita+rerank (re-pool)
-F02,O que os clientes elogiaram nas compras feitas em 2018?,9e6bbfd1b9997320e7d2d9dd765681c5,5,beleza_saude,Recomendo ótimo produto,,reescrita+rerank (re-pool)
-F02,O que os clientes elogiaram nas compras feitas em 2018?,c0bd60643097684ab01b5532edf1d459,5,esporte_lazer,gostei do produto e da entrega,,reescrita+rerank (re-pool)
-F02,O que os clientes elogiaram nas compras feitas em 2018?,f436d913b24e86f7520f537fc803c88b,5,cama_mesa_banho,Gostei muito. Recomendo!Produto de qualidade e entrega rápida.,,reescrita+rerank (re-pool)
-F02,O que os clientes elogiaram nas compras feitas em 2018?,02bc7560638893ea3d61a3f775ce7c5d,5,bebes,"RECOMENDO. ótimo produto, ótimo atendimento, entrega..",,reescrita+rerank (re-pool)
-F02,O que os clientes elogiaram nas compras feitas em 2018?,8bb45fbd1d428e36f2966f9da39e69b7,5,relogios_presentes,"Gostei muito! Muito boa a entrega, recomendo .",,reescrita+rerank (re-pool)
-F02,O que os clientes elogiaram nas compras feitas em 2018?,24444f20002558c0482a322723ea7deb,4,cama_mesa_banho,Òtimo produto! Gostei do produto e da agilidade de entrega.,,reescrita+rerank (re-pool)
-F02,O que os clientes elogiaram nas compras feitas em 2018?,2fcb8a18b3e3f8e09c5a2628386b29fd,5,perfumaria,"recomendado. Otimo, gostei.",,reescrita+rerank (re-pool)
-F02,O que os clientes elogiaram nas compras feitas em 2018?,55d0b61275bc3713cb6e0bde2bd3e07f,5,ferramentas_jardim,"Ótimo, gostei. Produto muito Bom,entrega muito rápido e um ótimo atendimento,recomendo.",,reescrita+rerank (re-pool)
-F02,O que os clientes elogiaram nas compras feitas em 2018?,29d1bc9fd592a4ff50bb770602d3af9e,5,automotivo,"RECOMENDO. Otimo produto, entregue dentro do prazo.",,reescrita+rerank (re-pool)
+F02,O que os clientes elogiaram nas compras feitas em 2018?,962c502f0c52e65021282cd0a6931a51,4,cama_mesa_banho,"Gostei. Ótimo produto, recomendo",1,reescrita+rerank (re-pool)
+F02,O que os clientes elogiaram nas compras feitas em 2018?,9e6bbfd1b9997320e7d2d9dd765681c5,5,beleza_saude,Recomendo ótimo produto,1,reescrita+rerank (re-pool)
+F02,O que os clientes elogiaram nas compras feitas em 2018?,c0bd60643097684ab01b5532edf1d459,5,esporte_lazer,gostei do produto e da entrega,1,reescrita+rerank (re-pool)
+F02,O que os clientes elogiaram nas compras feitas em 2018?,f436d913b24e86f7520f537fc803c88b,5,cama_mesa_banho,Gostei muito. Recomendo!Produto de qualidade e entrega rápida.,1,reescrita+rerank (re-pool)
+F02,O que os clientes elogiaram nas compras feitas em 2018?,02bc7560638893ea3d61a3f775ce7c5d,5,bebes,"RECOMENDO. ótimo produto, ótimo atendimento, entrega..",1,reescrita+rerank (re-pool)
+F02,O que os clientes elogiaram nas compras feitas em 2018?,8bb45fbd1d428e36f2966f9da39e69b7,5,relogios_presentes,"Gostei muito! Muito boa a entrega, recomendo .",1,reescrita+rerank (re-pool)
+F02,O que os clientes elogiaram nas compras feitas em 2018?,24444f20002558c0482a322723ea7deb,4,cama_mesa_banho,Òtimo produto! Gostei do produto e da agilidade de entrega.,1,reescrita+rerank (re-pool)
+F02,O que os clientes elogiaram nas compras feitas em 2018?,2fcb8a18b3e3f8e09c5a2628386b29fd,5,perfumaria,"recomendado. Otimo, gostei.",0,reescrita+rerank (re-pool)
+F02,O que os clientes elogiaram nas compras feitas em 2018?,55d0b61275bc3713cb6e0bde2bd3e07f,5,ferramentas_jardim,"Ótimo, gostei. Produto muito Bom,entrega muito rápido e um ótimo atendimento,recomendo.",1,reescrita+rerank (re-pool)
+F02,O que os clientes elogiaram nas compras feitas em 2018?,29d1bc9fd592a4ff50bb770602d3af9e,5,automotivo,"RECOMENDO. Otimo produto, entregue dentro do prazo.",1,reescrita+rerank (re-pool)
 F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,dd6e0f7168d75cd78769333f7630a036,3,moveis_decoracao,O atraso na entrega prejudicou a obra,1,
 F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,7953d5b5a32a351be8dccd293f49a9a0,1,beleza_saude,"atraso. Com atraso, até agora nada de notícias!",1,
 F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,2285b2497d2e49bce8b5aa0812fb3bf9,1,cool_stuff,"Até o momento não recebi o pedido, também não recebi informações do atraso de entrega do pedido.",1,
@@ -1002,11 +1002,11 @@ Aguardo",1,
 F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,a553875413fd30a7f78cd701b0064a6f,5,construcao_ferramentas_ferramentas,"Recomendo o produto e o fornecedor, pois o atraso na entrega foi causado pelos serviços dos Correios.",1,
 F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,86cb30e96939f06396356768082e8c97,3,esporte_lazer,Tive atraso na entrega,1,rerank/hibrida (re-pool)
 F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,8692515cb18ecfbfc9a57777ddcef331,1,relogios_presentes,O produto está em atraso.,1,rerank/hibrida (re-pool)
-F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,e74598307b6209e21d6514a830224b76,1,relogios_presentes,Entrega atrasada.,,reescrita+rerank (re-pool)
-F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,5193565d8ef972341e963399fedec040,1,cama_mesa_banho,Entrega atrasada,,reescrita+rerank (re-pool)
-F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,4ca57be78a2cfd23b8b341521800054f,3,telefonia,Entrega atrasada,,reescrita+rerank (re-pool)
-F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,7eaac7481400e495ddfc2f5398aba896,1,utilidades_domesticas,A entrega esta atrasada.,,reescrita+rerank (re-pool)
-F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,7c0de218885cc260013e84382ecff66c,1,construcao_ferramentas_iluminacao,Entrega atrasada!,,reescrita+rerank (re-pool)
+F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,e74598307b6209e21d6514a830224b76,1,relogios_presentes,Entrega atrasada.,1,reescrita+rerank (re-pool)
+F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,5193565d8ef972341e963399fedec040,1,cama_mesa_banho,Entrega atrasada,1,reescrita+rerank (re-pool)
+F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,4ca57be78a2cfd23b8b341521800054f,3,telefonia,Entrega atrasada,1,reescrita+rerank (re-pool)
+F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,7eaac7481400e495ddfc2f5398aba896,1,utilidades_domesticas,A entrega esta atrasada.,1,reescrita+rerank (re-pool)
+F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,7c0de218885cc260013e84382ecff66c,1,construcao_ferramentas_iluminacao,Entrega atrasada!,1,reescrita+rerank (re-pool)
 F04,Quais problemas aparecem em pedidos cancelados?,860f30b8604aae49d7df4145f09bd2b1,1,sem_categoria,Solicitei cancelamento da compra. Prazo de entrega muito demorado,1,
 F04,Quais problemas aparecem em pedidos cancelados?,36c1ce034b007259eadba974829421d8,1,bebes,"Pessimo atendimento ...depois de 1 mes da compra, entro no ""meus pedidos"" e aparece que meu pedido esta indisponivel..e muita palhacada!!",1,
 F04,Quais problemas aparecem em pedidos cancelados?,6a91e35dd43fa13587108e698937cef8,1,telefonia,"Não sei quem foi a responsável pelo transtorno, mas mendiguei atenção sobre esse pedido. Tentei cancelá-lo inúmeras vezes. Espero a fatura do mês que vem para saber se realmente o cancelaram.",1,
@@ -1048,8 +1048,8 @@ F04,Quais problemas aparecem em pedidos cancelados?,d7aab6a7134b55c71503d87cb1bf
 F04,Quais problemas aparecem em pedidos cancelados?,92884384448a83b05970a80735f2ff8c,1,cool_stuff,"Loja recusou a entregar. Loja disse que não tinha mercadoria em estoque, após 3 semanas do pedido, e simplesmente cancelou o pedido!",1,
 F04,Quais problemas aparecem em pedidos cancelados?,20787e5ce2d5175a20135e52e3a701e8,2,sem_categoria,Problemas com entrega. Não chegou ainda estou na esperando ainda,1,
 F04,Quais problemas aparecem em pedidos cancelados?,7ff8cf0f6098e87be8509d287509c08b,1,sem_categoria,Cancelei o pedido.,0,rerank/hibrida (re-pool)
-F04,Quais problemas aparecem em pedidos cancelados?,04556f8ef8d3b42ce0947c1b77c2c56b,1,moveis_decoracao,não quero mais ese produto. solicito cancelamento,,reescrita+rerank (re-pool)
-F04,Quais problemas aparecem em pedidos cancelados?,c00b1a92c8643de86fef532ea9f244e9,1,sem_categoria,acredito que a compra tenha sido cancelada.,,reescrita+rerank (re-pool)
+F04,Quais problemas aparecem em pedidos cancelados?,04556f8ef8d3b42ce0947c1b77c2c56b,1,moveis_decoracao,não quero mais ese produto. solicito cancelamento,0,reescrita+rerank (re-pool)
+F04,Quais problemas aparecem em pedidos cancelados?,c00b1a92c8643de86fef532ea9f244e9,1,sem_categoria,acredito que a compra tenha sido cancelada.,0,reescrita+rerank (re-pool)
 F05,O que reclamam os clientes em pedidos acima de R$ 500?,7e32a365664dc66252d04c52e5483d4b,1,relogios_presentes,O tipo de entrega (pac) é muito demorado.,1,
 F05,O que reclamam os clientes em pedidos acima de R$ 500?,1ccb2f28e60b0ccb56e3f643af45b715,1,bebes,quero mais atenção para com os clientes. quero fala com alguém e não com uma máquina,1,
 F05,O que reclamam os clientes em pedidos acima de R$ 500?,2e2302a45980152064ce595716ec7dec,1,instrumentos_musicais,Falta de consideração com o cliente!,1,
@@ -1101,13 +1101,13 @@ F05,O que reclamam os clientes em pedidos acima de R$ 500?,86c917ec7c07573968fb6
 F05,O que reclamam os clientes em pedidos acima de R$ 500?,a49e16a5cdf1e2320bf8ac81deef225f,1,cool_stuff,"Ja mandei o cancelamento e pedido de devolução, pois paguei pelo Kraken 7.1 V2 e recebi o Kraken 7.1 Chroma em média 200 reais mais barato",1,
 F05,O que reclamam os clientes em pedidos acima de R$ 500?,db2ad68a772d476d92bae6d8c9a8eb18,2,casa_construcao,"Produto recebido divergente ao comprado, gerando frustração e perda de oferta de outras opções analisadas.",1,
 F05,O que reclamam os clientes em pedidos acima de R$ 500?,1f1ebe1eea75db8105f4110f54b696f9,1,bebes,exijo as devidas providen. não recebi meu pedido completo por gentileza alguem tome as providencias,1,rerank/hibrida (re-pool)
-F05,O que reclamam os clientes em pedidos acima de R$ 500?,4e59b7fcf3afce07567b17ba8cf3e548,1,papelaria,"RECLAMAÇÃO. NÃO RECEBI OS PRODUTOS MENCIONADOS NO E-MAIL. RECEBI, COMO JÁ DISSE, UMA CAIXA DE PAPELÃO VAZIA, SEM NENHUM CONTEÚDO. COMO NAS OUTRAS MENSAGENS QUE JÁ ENVIEI, ESPERO QUE MEU PROBLEMA SEJA RESOLVIDO.",,reescrita+rerank (re-pool)
-F05,O que reclamam os clientes em pedidos acima de R$ 500?,e6486a0db23e2f1e8b7e2e1853fcc76c,1,esporte_lazer,Quero que resolvam o meu problema!!!,,reescrita+rerank (re-pool)
-F05,O que reclamam os clientes em pedidos acima de R$ 500?,2879228ce4ffb2d7afea24f8e52f3d30,1,cool_stuff,"Incompleto. Produto veio incompleto, faltando certidão de nascimento e a fralda e não encontrei nenhum telefone ou e-mail de contato para reclamação.",,reescrita+rerank (re-pool)
-F05,O que reclamam os clientes em pedidos acima de R$ 500?,cf06fb4b5903b5e3ddc76f482d626e51,1,portateis_casa_forno_e_cafe,"Foi informado que seria enviado um produto bivolt e enviaram um produto 127v, resultando mais tempo sem cafeteira, reclamação realizada ao site e já se foram 48 horas e nenhum contato realizado.",,reescrita+rerank (re-pool)
-F05,O que reclamam os clientes em pedidos acima de R$ 500?,dc110fcada8f6c43e6cef5741eb11fb6,1,relogios_presentes,"O produto teve um problema na entrega no dia 08/12/2017, e até agora dia 13/12/2017, Não tive nenhuma resposta do vendedor e nem do cite das lannister de como vai ficar a situação da mercadoria.",,reescrita+rerank (re-pool)
-F05,O que reclamam os clientes em pedidos acima de R$ 500?,a0de9a38b1a31959931ed9fe07bcac4c,1,beleza_saude,"Produto com problema. O produto apresentou problema no cabo de alimentação de energia, o mesmo liga e desliga diversas vezes durante o uso, nem pudemos testar ele na verdade, optamos por devolvê-lo, infelizmente!",,reescrita+rerank (re-pool)
-F05,O que reclamam os clientes em pedidos acima de R$ 500?,4488aeefe49359f73c6b65bb6c831bff,2,moveis_escritorio,"Fiz duas compras uma chegou e a outra estou com problema na entrega, não consigo contato por e-mail ou por telefone para reclamar.",,reescrita+rerank (re-pool)
+F05,O que reclamam os clientes em pedidos acima de R$ 500?,4e59b7fcf3afce07567b17ba8cf3e548,1,papelaria,"RECLAMAÇÃO. NÃO RECEBI OS PRODUTOS MENCIONADOS NO E-MAIL. RECEBI, COMO JÁ DISSE, UMA CAIXA DE PAPELÃO VAZIA, SEM NENHUM CONTEÚDO. COMO NAS OUTRAS MENSAGENS QUE JÁ ENVIEI, ESPERO QUE MEU PROBLEMA SEJA RESOLVIDO.",1,reescrita+rerank (re-pool)
+F05,O que reclamam os clientes em pedidos acima de R$ 500?,e6486a0db23e2f1e8b7e2e1853fcc76c,1,esporte_lazer,Quero que resolvam o meu problema!!!,0,reescrita+rerank (re-pool)
+F05,O que reclamam os clientes em pedidos acima de R$ 500?,2879228ce4ffb2d7afea24f8e52f3d30,1,cool_stuff,"Incompleto. Produto veio incompleto, faltando certidão de nascimento e a fralda e não encontrei nenhum telefone ou e-mail de contato para reclamação.",1,reescrita+rerank (re-pool)
+F05,O que reclamam os clientes em pedidos acima de R$ 500?,cf06fb4b5903b5e3ddc76f482d626e51,1,portateis_casa_forno_e_cafe,"Foi informado que seria enviado um produto bivolt e enviaram um produto 127v, resultando mais tempo sem cafeteira, reclamação realizada ao site e já se foram 48 horas e nenhum contato realizado.",1,reescrita+rerank (re-pool)
+F05,O que reclamam os clientes em pedidos acima de R$ 500?,dc110fcada8f6c43e6cef5741eb11fb6,1,relogios_presentes,"O produto teve um problema na entrega no dia 08/12/2017, e até agora dia 13/12/2017, Não tive nenhuma resposta do vendedor e nem do cite das lannister de como vai ficar a situação da mercadoria.",1,reescrita+rerank (re-pool)
+F05,O que reclamam os clientes em pedidos acima de R$ 500?,a0de9a38b1a31959931ed9fe07bcac4c,1,beleza_saude,"Produto com problema. O produto apresentou problema no cabo de alimentação de energia, o mesmo liga e desliga diversas vezes durante o uso, nem pudemos testar ele na verdade, optamos por devolvê-lo, infelizmente!",1,reescrita+rerank (re-pool)
+F05,O que reclamam os clientes em pedidos acima de R$ 500?,4488aeefe49359f73c6b65bb6c831bff,2,moveis_escritorio,"Fiz duas compras uma chegou e a outra estou com problema na entrega, não consigo contato por e-mail ou por telefone para reclamar.",1,reescrita+rerank (re-pool)
 F06,O que os clientes de informatica_acessorios elogiam?,50bc312af328ce91d50fb9ddc14b11ed,5,informatica_acessorios,"Excelente. Gosto muito de Comprar nas lannister, pela qualidade na entrega dos produtos, recomendo pode confiar",1,
 F06,O que os clientes de informatica_acessorios elogiam?,5bfab930e0c40d84276aeaa3c99455c3,5,informatica_acessorios,Recomendo a loja por sua rapidez e eficiência.,1,
 F06,O que os clientes de informatica_acessorios elogiam?,eed9e0d30e4a88e8ef3a60b8808e7c74,5,informatica_acessorios,Otimo. Bom produto recomendo chegou certinho.,1,
@@ -1155,13 +1155,13 @@ F06,O que os clientes de informatica_acessorios elogiam?,0b0f44daa70755caf4883dc
 ótimo atendimento, entrega no prazo.
  estou muito satisfeito.....",1,
 F06,O que os clientes de informatica_acessorios elogiam?,0f17bbdc1b8c7dd65620b3ed0e75c391,4,informatica_acessorios,"Muito bom. O sistema é prático, e procura tirar as duvidas do cliente. Com várias opções.",1,rerank/hibrida (re-pool)
-F06,O que os clientes de informatica_acessorios elogiam?,2a1ee3533e2cf6a79f13e12b5f51faa7,5,informatica_acessorios,recomendo. ótimo produto,,reescrita+rerank (re-pool)
-F06,O que os clientes de informatica_acessorios elogiam?,c4bc11d45c181de6ef39f4153eadf019,4,informatica_acessorios,recomendado. produto bom e entrega no prazo.,,reescrita+rerank (re-pool)
-F06,O que os clientes de informatica_acessorios elogiam?,eb5ec9e1d98e96bb0968f500bf1fe5b3,5,informatica_acessorios,Produto de ótima qualidade e entrega rápida. Recomendo.,,reescrita+rerank (re-pool)
-F06,O que os clientes de informatica_acessorios elogiam?,5dfe6e8683be94f410b153d358599a2b,5,informatica_acessorios,Ótimo produto recomendo,,reescrita+rerank (re-pool)
-F06,O que os clientes de informatica_acessorios elogiam?,b4329e8ea138094db0568b16dca9c99b,5,informatica_acessorios,"Ótimo produto, Recomendo.",,reescrita+rerank (re-pool)
-F06,O que os clientes de informatica_acessorios elogiam?,2823474d30f845dd4a59e5826cea590f,5,informatica_acessorios,"excelente ótimo produto entrega no prazo recomendo a todos ,,",,reescrita+rerank (re-pool)
-F06,O que os clientes de informatica_acessorios elogiam?,19cab11455aa9f57d98e4a9eb4c261c5,5,informatica_acessorios,Produto ótimo chegou antes do prazo eu recomendo,,reescrita+rerank (re-pool)
-F06,O que os clientes de informatica_acessorios elogiam?,1141a3bd3af73ef3a4368d68cbae04f0,5,informatica_acessorios,Ótimo produto,,reescrita+rerank (re-pool)
-F06,O que os clientes de informatica_acessorios elogiam?,5a6d8b5c8d7c634e73b19116082128af,5,informatica_acessorios,Ótimo produto,,reescrita+rerank (re-pool)
-F06,O que os clientes de informatica_acessorios elogiam?,e7ffb821bbd8d9fb0a6695dbf786ec4c,5,informatica_acessorios,Ótimo produto,,reescrita+rerank (re-pool)
+F06,O que os clientes de informatica_acessorios elogiam?,2a1ee3533e2cf6a79f13e12b5f51faa7,5,informatica_acessorios,recomendo. ótimo produto,1,reescrita+rerank (re-pool)
+F06,O que os clientes de informatica_acessorios elogiam?,c4bc11d45c181de6ef39f4153eadf019,4,informatica_acessorios,recomendado. produto bom e entrega no prazo.,1,reescrita+rerank (re-pool)
+F06,O que os clientes de informatica_acessorios elogiam?,eb5ec9e1d98e96bb0968f500bf1fe5b3,5,informatica_acessorios,Produto de ótima qualidade e entrega rápida. Recomendo.,1,reescrita+rerank (re-pool)
+F06,O que os clientes de informatica_acessorios elogiam?,5dfe6e8683be94f410b153d358599a2b,5,informatica_acessorios,Ótimo produto recomendo,1,reescrita+rerank (re-pool)
+F06,O que os clientes de informatica_acessorios elogiam?,b4329e8ea138094db0568b16dca9c99b,5,informatica_acessorios,"Ótimo produto, Recomendo.",1,reescrita+rerank (re-pool)
+F06,O que os clientes de informatica_acessorios elogiam?,2823474d30f845dd4a59e5826cea590f,5,informatica_acessorios,"excelente ótimo produto entrega no prazo recomendo a todos ,,",1,reescrita+rerank (re-pool)
+F06,O que os clientes de informatica_acessorios elogiam?,19cab11455aa9f57d98e4a9eb4c261c5,5,informatica_acessorios,Produto ótimo chegou antes do prazo eu recomendo,1,reescrita+rerank (re-pool)
+F06,O que os clientes de informatica_acessorios elogiam?,1141a3bd3af73ef3a4368d68cbae04f0,5,informatica_acessorios,Ótimo produto,1,reescrita+rerank (re-pool)
+F06,O que os clientes de informatica_acessorios elogiam?,5a6d8b5c8d7c634e73b19116082128af,5,informatica_acessorios,Ótimo produto,1,reescrita+rerank (re-pool)
+F06,O que os clientes de informatica_acessorios elogiam?,e7ffb821bbd8d9fb0a6695dbf786ec4c,5,informatica_acessorios,Ótimo produto,1,reescrita+rerank (re-pool)

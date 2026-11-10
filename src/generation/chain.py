@@ -41,7 +41,7 @@ PROMPTS = Path(__file__).resolve().parent / "prompts"
 K_CANDIDATOS = 30  # candidatos da busca híbrida que vão para o rerank
 K_DETALHADAS = 15  # candidatos extras só entre avaliações detalhadas
 MIN_PALAVRAS_DETALHE = 10
-LIMIAR_RERANK = 0.30  # calibrado em eval/calibracao.jsonl (ver eval/results/*_calibracao_limiar.json)
+LIMIAR_RERANK = 0.39  # calibrado em eval/calibracao.jsonl (ver eval/results/*_calibracao_limiar.json)
 MIN_ACIMA_LIMIAR = 3  # abaixo disso, a evidência é considerada insuficiente
 VERSAO_PROMPTS = "analise_v1+resposta_v1"
 N_CONTEXTO = 8     # avaliações que vão para o LLM
@@ -73,45 +73,65 @@ def _analisar(estado: dict) -> dict:
 
 
 def _buscar(estado: dict) -> dict:
+    """Busca e ordenação com a pergunta original; portão de relevância com a reescrita.
+
+    Na avaliação com o pool de julgamentos, buscar e ordenar pela pergunta original
+    deu precisão@8 de 0,951, contra 0,853 usando a pergunta reescrita. Já para
+    decidir se existe evidência, a nota do rerank contra a reescrita (só o assunto)
+    separa muito melhor as perguntas com e sem resposta. Por isso cada uma é usada
+    onde é melhor.
+    """
     t = time.time()
     b = _buscador()
     a = estado["analise"]
-    candidatos = b.hibrida(a.consulta_reescrita, K_CANDIDATOS, estado["filtros"])
+    pergunta = estado["pergunta"]
+    candidatos = b.hibrida(pergunta, K_CANDIDATOS, estado["filtros"])
     # Segunda busca só entre avaliações detalhadas: sem ela, os candidatos ficam cheios de
     # frases curtas ("Atraso na entrega") e a resposta não tem o que contar.
-    detalhadas = b.hibrida(a.consulta_reescrita, K_DETALHADAS, {**estado["filtros"], "n_palavras_min": MIN_PALAVRAS_DETALHE})
+    detalhadas = b.hibrida(pergunta, K_DETALHADAS, {**estado["filtros"], "n_palavras_min": MIN_PALAVRAS_DETALHE})
     vistos = {r.review_id for r in candidatos}
     candidatos += [r for r in detalhadas if r.review_id not in vistos]
     texto = b.por_id.texto_original
-    # o rerank compara com a busca reescrita (só o assunto); a pergunta original vai para a geração
-    ordenados = reordenar(a.consulta_reescrita, [(r.review_id, texto[r.review_id]) for r in candidatos])
+    pares = [(r.review_id, texto[r.review_id]) for r in candidatos]
+    ordenados = reordenar(pergunta, pares)
+    # o portão olha também o que a busca reescrita encontra
+    extras = [r for r in b.hibrida(a.consulta_reescrita, K_CANDIDATOS, estado["filtros"]) if r.review_id not in vistos]
+    portao = dict(reordenar(a.consulta_reescrita, pares + [(r.review_id, texto[r.review_id]) for r in extras]))
     ids, scores = [rid for rid, _ in ordenados], [sc for _, sc in ordenados]
     # Avaliações com mais detalhe rendem respostas mais concretas: o rerank sozinho
-    # prefere frases curtas e literais ("Atraso na entrega"). Um bônus pequeno pelo
-    # tamanho (até 25 palavras) desempata a favor de quem explica o que aconteceu.
+    # prefere frases curtas e literais. Um bônus pequeno pelo tamanho (até 25 palavras)
+    # desempata a favor de quem explica o que aconteceu.
     palavras = b.por_id.loc[ids, "n_palavras"].clip(upper=25).to_numpy() / 25 if ids else []
     pesos = [sc + PESO_DETALHE * w for sc, w in zip(scores, palavras)]
     escolhidos = mmr(ids, pesos, b.vetores(ids), N_CONTEXTO, LAMBDA_MMR) if ids else []
     escolhidos.sort(key=lambda i: scores[i], reverse=True)  # no contexto, do mais ao menos relevante
     estado["tempos"]["busca"] = time.time() - t
-    return {**estado, "selecionados": [ordenados[i] for i in escolhidos]}
+    return {**estado, "selecionados": [ordenados[i] for i in escolhidos],
+            "portao_top1": max(portao.values(), default=0.0),
+            "n_acima_portao": sum(sc >= LIMIAR_RERANK for sc in portao.values()),
+            "portao": portao}
 
 
 def _gerar(estado: dict) -> dict:
     sel = estado["selecionados"]
-    acima = [rid for rid, sc in sel if sc >= LIMIAR_RERANK]
+    acima = [rid for rid, _ in sel if estado["portao"].get(rid, 0.0) >= LIMIAR_RERANK]
+    n_acima = estado.get("n_acima_portao", len(acima))
     # Pergunta sem assunto próprio ("problemas nas avaliações nota 1 de X"): o recorte
     # vem dos filtros e toda avaliação dele é evidência; o limiar de relevância do rerank
     # (que compara com uma busca genérica) não se aplica.
     so_recorte = bool(sel) and bool(estado["filtros"]) and not tem_assunto_proprio(estado["analise"])
     if not so_recorte:
-        if not sel or sel[0][1] < LIMIAR_RERANK:
+        if not sel or estado["portao_top1"] < LIMIAR_RERANK:
             return _saida(estado, "sem_evidencia", "Não encontrei avaliações que tratem desse assunto na base "
                           "(nenhuma passou do limiar de relevância).", [])
-        if len(acima) < MIN_ACIMA_LIMIAR:
-            return _saida(estado, "evidencia_fraca", f"Só {len(acima)} avaliação(ões) tratam desse assunto, o que é "
+        if n_acima < MIN_ACIMA_LIMIAR:
+            # as poucas avaliações acima do limiar viram as evidências mostradas (e citadas)
+            poucas = [(rid, sc) for rid, sc in sorted(estado["portao"].items(), key=lambda x: -x[1]) if sc >= LIMIAR_RERANK]
+            estado = {**estado, "selecionados": poucas}
+            return _saida(estado, "evidencia_fraca", f"Só {n_acima} avaliação(ões) tratam desse assunto, o que é "
                           "pouco para tirar uma conclusão. Elas estão listadas nas evidências.",
-                          [{"afirmacao": "Avaliações encontradas sobre o assunto (sem generalização).", "review_ids": acima}])
+                          [{"afirmacao": "Avaliações encontradas sobre o assunto (sem generalização).",
+                            "review_ids": [rid for rid, _ in poucas]}])
 
     t = time.time()
     b = _buscador()
@@ -160,7 +180,10 @@ def _registrar_trace(saida: dict, estado: dict) -> None:
         "trace_id": saida["trace_id"], "quando": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "pergunta": saida["pergunta"], "pergunta_reescrita": saida["pergunta_reescrita"], "tipo": saida["tipo"],
         "filtros": saida["filtros_aplicados"], "n_no_recorte": saida["n_no_recorte"], "status": saida["status"],
-        "selecionados": [{"review_id": e["review_id"], "score_rerank": e["score_rerank"]} for e in saida["evidencias"]],
+        "selecionados": [{"review_id": e["review_id"], "score_rerank": e["score_rerank"],
+                          "score_portao": round(estado.get("portao", {}).get(e["review_id"], 0.0), 3)} for e in saida["evidencias"]],
+        "n_acima_portao": estado.get("n_acima_portao"),
+        "portao_top1": round(estado.get("portao_top1", 0.0), 3),
         "citados": sorted({rid for i in saida["insights"] for rid in i["review_ids"]}),
         "validacao": estado.get("validacao"), "limiar": LIMIAR_RERANK, "prompts": VERSAO_PROMPTS,
         "modelos": {"analise": s.llm_model_id, "geracao": s.gen_model_id, "embedding": s.emb_model_id},

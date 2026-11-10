@@ -1,25 +1,25 @@
 {
  "data": "2026-11-10",
- "limiar": 0.3,
+ "limiar": 0.39,
  "n_com_evidencia": 20,
  "n_sem_evidencia": 20,
  "no_limiar": {
-  "limiar": 0.3,
-  "precisao_recusa": 0.95,
-  "recall_recusa": 0.95,
-  "f1": 0.95,
-  "falsa_recusa": 0.05
+  "limiar": 0.39,
+  "precisao_recusa": 0.909,
+  "recall_recusa": 1.0,
+  "f1": 0.952,
+  "falsa_recusa": 0.1
  },
- "pares_relevantes_mediana": 0.2630344331264496,
- "pares_nao_relevantes_mediana": 0.0015385645674541593,
- "pares_relevantes_acima_do_limiar": 0.4859437751004016,
- "pares_nao_relevantes_acima_do_limiar": 0.13615023474178403,
+ "pares_relevantes_mediana": 0.3283777981996536,
+ "pares_nao_relevantes_mediana": 0.0019247595919296145,
+ "pares_relevantes_acima_do_limiar": 0.4822274881516588,
+ "pares_nao_relevantes_acima_do_limiar": 0.13304721030042918,
  "perguntas": [
   {
    "id": "C01",
    "pergunta": "O que os clientes dizem sobre os Correios?",
    "sem_evidencia": false,
-   "top1": 0.9993345141410828
+   "top1": 0.9998075366020203
   },
   {
    "id": "C02",
@@ -103,13 +103,13 @@
    "id": "C15",
    "pergunta": "Os clientes comentam sobre produtos que chegaram usados?",
    "sem_evidencia": false,
-   "top1": 0.9969815611839294
+   "top1": 0.9863726496696472
   },
   {
    "id": "C16",
    "pergunta": "O que os clientes falam sobre o prazo de entrega informado no site?",
    "sem_evidencia": false,
-   "top1": 0.9994781613349915
+   "top1": 0.9996378421783447
   },
   {
    "id": "C17",
@@ -139,7 +139,7 @@
    "id": "N01",
    "pergunta": "Os clientes reclamam do metaverso da loja?",
    "sem_evidencia": true,
-   "top1": 0.05664513632655144
+   "top1": 0.02923569828271866
   },
   {
    "id": "N02",
@@ -151,7 +151,7 @@
    "id": "N03",
    "pergunta": "O que os clientes acham da cobertura 5G dos produtos?",
    "sem_evidencia": true,
-   "top1": 0.5480904579162598
+   "top1": 0.03034881316125393
   },
   {
    "id": "N04",
@@ -169,13 +169,13 @@
    "id": "N06",
    "pergunta": "Quais problemas os clientes relatam ao pagar com PayPal?",
    "sem_evidencia": true,
-   "top1": 0.016608288511633873
+   "top1": 0.3374236226081848
   },
   {
    "id": "N07",
    "pergunta": "Quais problemas existem com o pagamento por reconhecimento facial?",
    "sem_evidencia": true,
-   "top1": 0.0019462372874841094
+   "top1": 0.03238251432776451
   },
   {
    "id": "N08",
@@ -187,7 +187,7 @@
    "id": "N09",
    "pergunta": "Os clientes reclamam da moeda virtual da loja?",
    "sem_evidencia": true,
-   "top1": 0.10283396393060684
+   "top1": 0.007877381518483162
   },
   {
    "id": "N10",
@@ -205,7 +205,7 @@
    "id": "N12",
    "pergunta": "Quais reclamações existem sobre o resgate de milhas aéreas?",
    "sem_evidencia": true,
-   "top1": 0.0002467324666213244
+   "top1": 0.008770814165472984
   },
   {
    "id": "N13",
@@ -217,7 +217,7 @@
    "id": "N14",
    "pergunta": "Como os clientes avaliam o atendimento por videochamada?",
    "sem_evidencia": true,
-   "top1": 0.22207380831241608
+   "top1": 0.36490294337272644
   },
   {
    "id": "N15",
@@ -235,7 +235,7 @@
    "id": "N17",
    "pergunta": "O que os clientes acham do frete pago em criptomoeda?",
    "sem_evidencia": true,
-   "top1": 0.1715284138917923
+   "top1": 0.1605549305677414
   },
   {
    "id": "N18",

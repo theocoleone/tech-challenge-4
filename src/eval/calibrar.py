@@ -2,9 +2,10 @@
 
 Para cada pergunta de eval/calibracao.jsonl (20 com evidência, 20 sem), roda a
 análise da pergunta, a busca e o rerank (sem gerar resposta) e guarda a maior
-nota do rerank. O rerank compara as avaliações com a busca reescrita (só o
-assunto), como na chain: com a pergunta inteira ("Quais reclamações existem
-sobre...") as notas ficavam baixas até para perguntas com evidência. O limiar escolhido é o que melhor separa os dois grupos (maior F1
+nota do rerank. Como na chain, a busca usa a pergunta original e o portão de
+relevância compara as avaliações com a busca reescrita (só o assunto): com a
+pergunta inteira ("Quais reclamações existem sobre...") as notas ficavam baixas
+até para perguntas com evidência. O limiar escolhido é o que melhor separa os dois grupos (maior F1
 da recusa). O golden set não é usado aqui: ele fica só para o teste final.
 
 Também mede, no nível do par (pergunta, avaliação), a nota do rerank das
@@ -31,9 +32,11 @@ def top_rerank(pergunta: str) -> float:
     b = _buscador()
     a = analisar(pergunta)
     filtros = a.filtros.como_dict()
-    candidatos = b.hibrida(a.consulta_reescrita, K_CANDIDATOS, filtros)
+    # mesmos candidatos do portão da chain: busca com a pergunta original + busca reescrita
+    candidatos = {r.review_id: r for r in b.hibrida(pergunta, K_CANDIDATOS, filtros)}
+    candidatos.update({r.review_id: r for r in b.hibrida(a.consulta_reescrita, K_CANDIDATOS, filtros)})
     texto = b.por_id.texto_original
-    ordenados = reordenar(a.consulta_reescrita, [(r.review_id, texto[r.review_id]) for r in candidatos])
+    ordenados = reordenar(a.consulta_reescrita, [(rid, texto[rid]) for rid in candidatos])
     return ordenados[0][1] if ordenados else 0.0
 
 
@@ -50,9 +53,10 @@ def melhor_limiar(scores: np.ndarray, sem_evidencia: np.ndarray) -> tuple[float,
         linhas.append({"limiar": limiar, "precisao_recusa": prec, "recall_recusa": rec, "f1": f1,
                        "falsa_recusa": fp / max(1, (~sem_evidencia).sum())})
     curva = pd.DataFrame(linhas)
-    melhor = curva[curva.f1 == curva.f1.max()]
-    # entre empates, o ponto do meio do intervalo é o mais robusto
-    return float(melhor.limiar.iloc[len(melhor) // 2]), curva
+    # Com 40 perguntas a curva é ruidosa e tem um platô largo; pegar o máximo exato seria
+    # ajustar ao ruído. Escolhe o centro dos limiares com F1 até 0,03 abaixo do máximo.
+    plato = curva[curva.f1 >= curva.f1.max() - 0.03]
+    return float(np.round(plato.limiar.median(), 2)), curva
 
 
 def main() -> None:
