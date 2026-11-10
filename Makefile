@@ -1,6 +1,6 @@
 PY := .venv/bin/python
 
-.PHONY: setup test smoke data notebooks index golden pool julgamentos
+.PHONY: setup test smoke data notebooks index golden pool julgamentos eval-busca
 
 setup:  ## cria o venv e instala as dependências
 	test -d .venv || ~/.local/bin/python3.12 -m venv .venv
@@ -19,7 +19,7 @@ notebooks: ## reexecuta os notebooks do F1 salvando as saídas
 	$(PY) -m src.run_notebook notebooks/01_base_conhecimento.ipynb
 	$(PY) -m src.run_notebook notebooks/02_eda_reviews.ipynb
 
-index:  ## gera os índices BM25 e Chroma (titan + local), com cache de embeddings
+index:  ## gera os índices BM25 e vetoriais (titan + local), com cache de embeddings
 	$(PY) -m src.index.build_index
 
 golden: ## confere os rótulos do golden set e da calibração contra a base
@@ -30,3 +30,6 @@ pool:   ## monta eval/julgamentos.xlsx para marcar relevância (preserva marcaç
 
 julgamentos: ## copia as marcações do Excel para eval/julgamentos.csv (o que vai para o git)
 	$(PY) -m src.eval.julgamentos
+
+eval-busca: ## compara BM25, denso, híbrida e híbrida + rerank (eval/results/)
+	$(PY) -m src.eval.eval_retrieval

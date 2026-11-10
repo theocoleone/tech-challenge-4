@@ -3,8 +3,8 @@ import pandas as pd
 
 import src.index.embeddings as emb
 from src.index.bm25 import IndiceBM25, tokenizar
-from src.index.build_index import metadados_chroma
-from src.retrieval.filters import mascara, para_chroma
+from src.index.vector_store import IndiceVetorial
+from src.retrieval.filters import mascara
 
 
 def test_tokenizar_mantem_negacao_e_tira_acento_e_stop_words():
@@ -19,26 +19,21 @@ def test_bm25_diferencia_negacao_e_respeita_mascara():
     assert [r for r, _ in idx.buscar("chegou", k=3, mascara=so_c)] == []
 
 
-def test_filtros_viram_where_do_chroma_e_mascara():
+def test_filtros_viram_mascara():
     f = {"review_score_max": 2, "categoria_pt": "telefonia", "valor_min": 500}
-    assert para_chroma(f) == {"$and": [
-        {"review_score": {"$lte": 2}}, {"categoria_pt": {"$eq": "telefonia"}}, {"valor_total": {"$gte": 500}}]}
-    assert para_chroma({"entregue_com_atraso": True}) == {"entregue_com_atraso": {"$eq": True}}
-    assert para_chroma(None) is None
     docs = pd.DataFrame({"review_score": [1, 5, 2], "categoria_pt": ["telefonia"] * 3, "valor_total": [600.0, 700.0, 100.0]})
     assert mascara(docs, f).tolist() == [True, False, False]
+    assert mascara(docs, None).tolist() == [True, True, True]
 
 
-def test_metadados_chroma_omite_vazios_e_converte_tipos():
-    linha = {k: None for k in ["review_score", "data_avaliacao", "data_envio_pesquisa", "ano_mes_compra", "order_status",
-                               "valor_total", "multi_pedido", "entregue", "dias_atraso", "entregue_com_atraso",
-                               "categoria_pt", "categoria_en", "multi_categoria", "n_itens", "uf_cliente",
-                               "n_palavras", "order_ids"]}
-    linha.update(review_score=np.int64(1), entregue=np.bool_(False), dias_atraso=pd.NA, valor_total=np.float64(10.5),
-                 categoria_pt="telefonia")
-    m = metadados_chroma(linha)
-    assert m == {"review_score": 1, "entregue": False, "valor_total": 10.5, "categoria_pt": "telefonia"}
-    assert type(m["review_score"]) is int and type(m["entregue"]) is bool
+def test_indice_vetorial_busca_exata_com_e_sem_recorte(tmp_path):
+    idx = IndiceVetorial(["a", "b", "c"], np.array([[1, 0], [0.7, 0.7], [0, 1]], dtype=np.float32))
+    assert [r for r, _ in idx.buscar(np.array([1, 0.1]), k=2)] == ["a", "b"]
+    assert [r for r, _ in idx.buscar(np.array([1, 0.1]), k=2, mascara=np.array([False, True, True]))] == ["b", "c"]
+    assert idx.buscar(np.array([1, 0]), k=2, mascara=np.array([False, False, False])) == []
+    idx.salvar(tmp_path, "t")
+    novo = IndiceVetorial.carregar(tmp_path, "t")
+    assert novo.ids == idx.ids and np.allclose(novo.vetores_de(["c"]), [[0, 1]])
 
 
 class _Falso:
@@ -59,3 +54,11 @@ def test_cache_so_calcula_textos_novos(tmp_path, monkeypatch):
     assert np.allclose(v2[:2], v1)
     emb.embeddings_com_cache("fake", ["a"], ["oi editado"], tmp_path)
     assert _Falso.chamadas == 4  # texto mudou: recalcula
+
+
+def test_mmr_evita_quase_duplicatas():
+    from src.retrieval.diversity import mmr
+    vetores = np.array([[1, 0], [0.99, 0.01], [0, 1], [0.5, 0.5]], dtype=np.float32)  # 0 e 1 quase iguais
+    scores = [0.9, 0.89, 0.88, 0.5]
+    assert mmr(list("abcd"), scores, vetores, n=2) == [0, 2]  # pula a quase cópia
+    assert mmr(list("abcd"), scores, vetores, n=2, lambda_=1.0) == [0, 1]  # só relevância
