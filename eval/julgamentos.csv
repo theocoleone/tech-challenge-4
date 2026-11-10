@@ -113,6 +113,9 @@ E02,Quais relatos existem de clientes que não receberam o produto?,3ea9e0d27e1f
 E02,Quais relatos existem de clientes que não receberam o produto?,bfb4d7f7e81154ccdccb9ac0edbfa2bd,5,telefonia,Parabéns pelo atenção com os clientes... 😚,0,claude,,
 E02,Quais relatos existem de clientes que não receberam o produto?,f69a39cfba2c1ff7f112adf45a44e1ae,1,cool_stuff,Não recebi meu produto,1,theo,,
 E02,Quais relatos existem de clientes que não receberam o produto?,23ee6bc2492808dca0e807e131ec9aeb,1,utilidades_domesticas,"são muito mal para atener os seus clientes, não entregam a mercadoria no prazo.",0,claude,,
+E02,Quais relatos existem de clientes que não receberam o produto?,6962ebf3d6a10809eed1d05a2dbfbdc5,1,moveis_decoracao,Não recebemos o produto,1,claude,,rerank/hibrida (re-pool)
+E02,Quais relatos existem de clientes que não receberam o produto?,634421fc06a99aed1d28ee3bd8649c76,1,cama_mesa_banho,Não recebi meu produto.,1,claude,,rerank/hibrida (re-pool)
+E02,Quais relatos existem de clientes que não receberam o produto?,091d0a45cde9d3d50a654c09e8fc3bbb,1,alimentos,Não recebi meu produto.,1,claude,,rerank/hibrida (re-pool)
 E03,O que os clientes dizem quando recebem um produto diferente do anunciado?,c7ec696973fa83b3b208b576666ca048,5,beleza_saude,"Efetue a compra de um produto e acabei recebendo outro, totalmente diferente.",1,theo,,
 E03,O que os clientes dizem quando recebem um produto diferente do anunciado?,0b1a393b7eb2c62cbb3fc7983b2cde52,3,relogios_presentes,"Bom. Achei diferente do anunciado,mas tá valendo pelo custo benefício!",1,theo,,
 E03,O que os clientes dizem quando recebem um produto diferente do anunciado?,c099aafb6db35704451859b711b53425,1,informatica_acessorios,"O produto anunciado é um e o produto entregue é outro e de baixissima qualidade. Inadimissivel esse tipo de atitude que fere o codigo de defesa do consumidor, entregar produto diferente do anunciado",1,theo,,
@@ -164,6 +167,7 @@ E03,O que os clientes dizem quando recebem um produto diferente do anunciado?,0e
 E03,O que os clientes dizem quando recebem um produto diferente do anunciado?,6137736e63c63b146f3012dd3419e657,1,beleza_saude,Recebi o produto diferente do que foi anunciado e comprado.,1,theo,,
 E03,O que os clientes dizem quando recebem um produto diferente do anunciado?,08528f70f579f0c830189efc523d2182,1,sem_categoria,"Produto errado. Entrega do produto diferente do solicitado
 Aguardo orientação para a troca",1,theo,,
+E03,O que os clientes dizem quando recebem um produto diferente do anunciado?,bc4ba3d061074cb490a4a32223963018,4,telefonia,O produto que recebi não era o anunciado.,1,claude,,rerank/hibrida (re-pool)
 E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?,206fcd0c7e9d3248ff891f31205ae6ee,3,moveis_decoracao,"O produto veio quebrado. Um os produtos veio quebrado, estou tentando trocar ou devolver.",1,theo,,
 E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?,074c39cb5e90578eaeb560e6f632ae1e,1,cama_mesa_banho,Produto de péssima qualidade e acabamento.,0,theo,,
 E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?,8f2b628682e6ffa13fe7a46d65bab97a,3,esporte_lazer,Já comprei produtos e chegaram no prazo só esse que não chegou ainda,0,theo,,
@@ -228,6 +232,7 @@ E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com def
 E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?,1f9abf59f4b7b1ccfcb945f669ffad9a,1,brinquedos,o produto veio quebrado,1,theo,,
 E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?,fb9d26ae601018d2c1253e9af35b14e7,1,cama_mesa_banho,"Produto entregue não condiz com o produto comprado, péssima qualidade, assessório veio quebrado.",1,theo,,
 E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?,ea13f408f9f91e78274f1caa2c9663d2,1,moveis_decoracao,"Produto chegou quebrado, ficaram de trocar",1,theo,,
+E04,Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?,29978e0295beaafa1d774ee406272040,1,eletronicos,O produto estava quebrado.,1,claude,,rerank/hibrida (re-pool)
 E05,O que os clientes comentam sobre a embalagem dos produtos?,d44b85fda6987ad606e1b7c62dd481e4,4,cama_mesa_banho,produto entregue conforme anunciado.,0,theo,,
 E05,O que os clientes comentam sobre a embalagem dos produtos?,83d24d478d948b180721be139af82c2b,4,sem_categoria,produto entregue conforme anunciado,0,theo,,
 E05,O que os clientes comentam sobre a embalagem dos produtos?,7994a347d0e9f242b59fed402399182a,5,cama_mesa_banho,"Parabéns, lojas lannister, produtos de qualidade, entrega no prazo e respeito com os clientes!!",0,theo,,
@@ -290,6 +295,7 @@ E05,O que os clientes comentam sobre a embalagem dos produtos?,2e85094a5645024b6
 E05,O que os clientes comentam sobre a embalagem dos produtos?,139d5416c4599a19930485d2d749a65e,5,cama_mesa_banho,Gostei muito ! Parabéns pela dedicação aos clientes...,0,theo,,
 E05,O que os clientes comentam sobre a embalagem dos produtos?,97784f9b8b324aaf69a19483ec5d29e8,5,esporte_lazer,"Recomendo a todos. Produto conforme anunciado, é entregue dentro do prazo recomendo a todos a loja e o produto!",0,theo,,
 E05,O que os clientes comentam sobre a embalagem dos produtos?,24d46a7a87b49cc958edeb55bf7f4970,2,utilidades_domesticas,2. A caixa veio totalmente deformada/estragada. Alguns produtos desencaixados. Melhorar a embalagem dos produtos. Achei o produto/material fraco,1,theo,,
+E05,O que os clientes comentam sobre a embalagem dos produtos?,649979a424f1736947f84216c21e661f,5,relogios_presentes,"Super recomendo. Adorei o cuidado com a embalagem do produto, demonstrando carinho com o cliente.",1,claude,,rerank/hibrida (re-pool)
 E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,d8efea9a133de6c33139b28cc18d97ef,5,utilidades_domesticas,"Avaliação do vendedor. Na verdade não sei se indicaria está loja , pois o pedido da pomada Santa chegou sem problemas , mas o outro produto foi pago sendo que não tinha o produto",1,theo,,
 E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,8d764e6df440be059c28fef5e0f41cfa,5,utilidades_domesticas,"Em relação a loja que vendeu entregou tudo direitinho e rápido. Ainda não testei o produto, mas em relação a compra e entrega recomendo.",1,claude,,
 E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,bf5addc377d443c3ccb64d0595a5d89b,5,relogios_presentes,Vendedor e produto. Vendedor pontual e o produto satisfez minha expectativa.,1,theo,,
@@ -345,6 +351,7 @@ E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,eebfdf7cf3787
 E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,9aea405ac411a6ec4e9d0c228b53ce57,1,informatica_acessorios,"Venho expressar a minha grande insatisfação pela loja e vendedor do produto.
 Comprei o produto a mais de um mês e não recebi, o mesmo ficou de entrar em contato comigo e não me respondeu.",1,theo,,
 E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,162be7af72150512d0f5033c45115e06,1,relogios_presentes,"Produto errado. Mais responsabilidade com os clientes quanto origem do produto,qualidade,certeza de que o produto entregue é de acordo com o pedido",1,claude,,
+E06,Como os clientes avaliam o atendimento do vendedor ou da loja?,5314907858f212671086cc0f42225be2,4,brinquedos,"Adorei o produto, vendedor atencioso...produto entregue dentro do prazo estabelecido. Recomendo a todos os clientes das Lojas lannister.",1,claude,,rerank/hibrida (re-pool)
 E07,O que os clientes elogiam quando a entrega é rápida?,435e11365958e2b3954fb4694a2e60cd,5,casa_conforto,Excelente entrega rápida ótimos produtos continuam assim parabéns,1,claude,,
 E07,O que os clientes elogiam quando a entrega é rápida?,839e322084914d7014db936307bf5481,5,construcao_ferramentas_construcao,Sempre tem compromisso com seus clientes rapidez e educacao,1,theo,,
 E07,O que os clientes elogiam quando a entrega é rápida?,ce68db80d80267c04096e59a65a6b18f,5,automotivo,Compromisso e respeito para com os clientes,0,claude,,
@@ -403,6 +410,8 @@ E07,O que os clientes elogiam quando a entrega é rápida?,8e5c7b999fdacb28aba7e
 E07,O que os clientes elogiam quando a entrega é rápida?,ab5eb9da75ecd65a0b708c27345d6eb1,5,papelaria,Parabéns entrega rápida !,1,claude,,
 E07,O que os clientes elogiam quando a entrega é rápida?,f6853e4f1d0f639a934b661f2787aa6f,5,construcao_ferramentas_jardim,Parabéns pelo compromisso com os clientes,0,claude,,
 E07,O que os clientes elogiam quando a entrega é rápida?,be004b49c5739bd3cb276460fc5c302c,5,ferramentas_jardim,Já recebi ótima entrega é rápida que você continue assim,1,claude,,
+E07,O que os clientes elogiam quando a entrega é rápida?,cd9fb06d00b75ca597b1567d52d52fc7,5,eletronicos,"Entrega rápida, parabéns!",1,claude,,rerank/hibrida (re-pool)
+E07,O que os clientes elogiam quando a entrega é rápida?,d3ecaf8994a53008b772f263f5454664,5,ferramentas_jardim,A entrega foi muito rápida.,1,claude,,rerank/hibrida (re-pool)
 E08,O que os clientes elogiam na qualidade dos produtos?,3bf7d2cd2bcbc856ee6a8c2730117d4e,4,automotivo,Parabéns pelo comprometimento com seus clientes.,0,claude,,
 E08,O que os clientes elogiam na qualidade dos produtos?,ae448fc7207c85ab3045092e2ee0d1e7,3,perfumaria,produtos de ótima qualidade,1,claude,,
 E08,O que os clientes elogiam na qualidade dos produtos?,2685a4800004a12ec09d27264ff1915f,5,perfumaria,Recomendo a todos os clientes,0,claude,,
@@ -452,6 +461,7 @@ E08,O que os clientes elogiam na qualidade dos produtos?,be29016f816daa6c0ef6264
 E08,O que os clientes elogiam na qualidade dos produtos?,15c72b68259c35ea984ed16bf7633730,4,ferramentas_jardim,produto de qualidade,1,claude,,
 E08,O que os clientes elogiam na qualidade dos produtos?,c48a1fae422668d45757e1b833faa9ce,5,informatica_acessorios,o produto de boa qualidade,1,claude,,
 E08,O que os clientes elogiam na qualidade dos produtos?,81a3a61c1dafa84947901d9eeec4e605,4,informatica_acessorios,"Produtos de qualidade, prazo de entrega excelente, recomendo",1,claude,,
+E08,O que os clientes elogiam na qualidade dos produtos?,07a4c0fd1d3bc16284492825bdd62bff,5,moveis_escritorio,Elogio. Entrega bem antes do prazo. Produto de excelente qualidade. Recomendo o produto e a loja.,1,claude,,rerank/hibrida (re-pool)
 E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,73825c944419be59995fdf5755400ba0,3,relogios_presentes,"Troca / devolução. a experiência de compra on-line e a entrega foram boas, porém o produto não atendeu às expectativas e estou tendo dificuldades com a troca /devolução.",1,theo,,
 E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,bbc36eaacdc8b5d25ae856796c824d19,3,beleza_saude,"Um dos produtos veio incorreto, eu pedi 3 produtos iguais e veio um diferente, estou no aguardo para resolver esta troca.",1,theo,,
 E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,4ae065a9ed27676994e75f0f0f3bab4c,2,moveis_sala,"Produto com Defeito. O produto adquirido não pode ser utilizado, o mesmo apresentou problemas de montagem, Aguardando a troca do produto.....",1,theo,,
@@ -514,6 +524,9 @@ E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?
 E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,04df66564d6b34f0008b7393cf7f5e72,3,audio,Produto veio quebrado como fazer a troca ????,1,theo,,
 E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,0e0b79d9fc0ee15927ba7dc8d4f3918c,1,pet_shop,"O produto enviado é diferente do produto comprado, solicito a troca do produto.",1,theo,,
 E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,0cf3369f069c5f82123fe37c668d39b9,3,brinquedos,Prazo de entrega absurdo e demora no retorno do vendedor,0,theo,,
+E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,2f88ed5378af93b3fe40c77ad5eff7cc,1,instrumentos_musicais,"Primeiro: estou tentando devolver um produto mais não me dão soluções...
+Segundo : me dão vale sem primeiro pegarem minha devolução e sem contar o produto que pedi não ter chegado..",1,claude,,rerank/hibrida (re-pool)
+E09,Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?,b33f57b813383749cf0ae0f0b64c64ee,3,telefonia,"Como faço para devolver o produto,",1,claude,,rerank/hibrida (re-pool)
 E10,O que os clientes reclamam sobre a nota fiscal?,a0bd563623eaf9dcdff034eadcc62987,3,moveis_escritorio,Ficou faltando a nota fiscal,1,theo,,
 E10,O que os clientes reclamam sobre a nota fiscal?,3440af42822145c52b3008af14b98ea1,3,telefonia_fixa,"Não vem com nota fiscal, porquê???",1,theo,,
 E10,O que os clientes reclamam sobre a nota fiscal?,8fc74bf8b221b8c88a629942d4a670a7,1,moveis_escritorio,"- a compra foi efetuada em 30/01
@@ -575,6 +588,10 @@ E10,O que os clientes reclamam sobre a nota fiscal?,b5c740c823b348cfeb5edebc623e
  que já foi emitida ,e não recebi de maneira nem uma , fico no aguardo ...",1,theo,,
 E10,O que os clientes reclamam sobre a nota fiscal?,f0797ab1b53feea89f2bb993625f62cb,3,pet_shop,"Tudo certo, produto recebido e nota fiscal enviada com o mesmo.",0,theo,,
 E10,O que os clientes reclamam sobre a nota fiscal?,9bf9371d5e4969976c27e4a4920b94d6,3,beleza_saude,Nao recebi a nota fuscal.Preciso que me enviem a Nota fiscal do produto,1,theo,,
+E10,O que os clientes reclamam sobre a nota fiscal?,96faee6246db4fec85c3133dfd7a8b4f,1,sem_categoria,"Meu produto não foi entregue e não há informação sequer se foi emitida a nota fiscal. Não recomendo a loja, não dá assistência ao cliente.",0,claude,,rerank/hibrida (re-pool)
+E10,O que os clientes reclamam sobre a nota fiscal?,aef964d084474abc8acac0c638cd8bf3,5,fashion_bolsas_e_acessorios,"A única coisa que eu não gostei, foi que o produto venho sem a nota fiscal.",1,claude,,rerank/hibrida (re-pool)
+E10,O que os clientes reclamam sobre a nota fiscal?,8cf9038ea96defde8a44b2e7012f04c0,1,sem_categoria,"Fiz o pedido a mais de um mês, não chegou se quer a nota fiscal eles emitiram! Não deram uma satisfação! Péssimo!",1,claude,,rerank/hibrida (re-pool)
+E10,O que os clientes reclamam sobre a nota fiscal?,5ddce69d8c7299396d38442a29e6ff55,5,informatica_acessorios,"tranquilo, só nunca consigo imprimir a nota fiscal ....",1,claude,,rerank/hibrida (re-pool)
 E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",247e5873bde75f075031ff46770972d3,1,malas_acessorios,"O pedido foi entregue no prazo
 Mais o pedido tem o acabamento e a qualidade ruim e a mala pequena veio com defeito",0,theo,,
 E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",f25924d100cd9a430d943efe35460eba,1,cama_mesa_banho,Fiz um pedido com vários ítens os outros já chegaram e este AINDA NÃO CHEGOU NEM TEM COMO RASTREAR,1,theo,,
@@ -634,6 +651,7 @@ Como apenas um número de pedido foi gerado, agora consta como se tudo tivesse s
 E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",58f2a64617ca91372c2dd0fa2b6e1a58,1,moveis_decoracao,"1. Sou cliente da lannister a muito conforme comprova nos pedidos agora receboo meu pedido faltando itens. Comprei 6 itens e veio apenas 5, como que envia faltando. Quero uma solução rápida e imediato.",1,theo,,
 E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",b58e2301da4520a8c8daa021646f2a7b,1,moveis_decoracao,"Recebi o meu pedido incompleto, sendo que, na nota fiscal estão todos os itens. Vou pagar por algo que eu não recebi. Estou tentando contato via e-mail e via telefone e não tive nenhuma resposta.",1,theo,,
 E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",21669c0b1d532d754a411e09973d118d,1,automotivo,"Produto entregue errado, reclamação realizada, solicitado de troca aberta a mais de uma semana e nem sinal da empresa",0,theo,,
+E11,"Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",dba5197f90198999eebfa0aef3112681,1,ferramentas_jardim,"meu pedido veio faltando um produto, preciso resolver",1,claude,,rerank/hibrida (re-pool)
 E12,O que os clientes comentam sobre o valor do frete?,21ce70c1fdc9f840ad7aff98de6c2703,5,beleza_saude,"gostei muito de compra com voces, so gostaria de saber o valor mesmo do frete de Benevides,quando eu coloco venda no carinho vai mundando o valor do frete, teve frete que a te 160,mim pata de compra",1,theo,,
 E12,O que os clientes comentam sobre o valor do frete?,ac0e0c8a72798f2bff7c7fa81f257a30,4,beleza_saude,"Cliente assíduo poderia ter vantagem, como desconto",0,theo,,
 E12,O que os clientes comentam sobre o valor do frete?,0c7571f1c198dee0435fe204ea197a84,3,cool_stuff,"vcs podiam abaixar o valor do frete e colocar de vez enquando frete gratis,seu frete e muito caro!!!!",1,theo,,
@@ -688,6 +706,13 @@ E12,O que os clientes comentam sobre o valor do frete?,cc81654642803eb21f0a164e4
 E12,O que os clientes comentam sobre o valor do frete?,0b43d64edf7d5be4581f9e5dc2314389,5,informatica_acessorios,"Na minha opinião, esse vendedor corresponde às expectativas do cliente. Eu recomendo, nota 10",0,theo,,
 E12,O que os clientes comentam sobre o valor do frete?,1621e329cd9d39762dada45d504a2f30,3,informatica_acessorios,Por se tratar de um produto de simples transporte e ter o valor do frete maior que o valor do produto. E desestimulante a compra,1,theo,,
 E12,O que os clientes comentam sobre o valor do frete?,b42ad905e6961e0e3f1899ffa979438b,4,informatica_acessorios,Tudo perfeitamente executado. Apenas acho o valor do frete elevado,1,theo,,
+E12,O que os clientes comentam sobre o valor do frete?,d67fd1f0f0dd4f25eb5342e1cee7ef5c,5,automotivo,"O serviço pela internet que vocês oferecem e muito bom. Só discordo com o valor do frete, muito alto. Eu ia comprar um tonner e umas canetas para cd, acabei desistindo. Daqui pra frente, só na loja.",1,claude,,rerank/hibrida (re-pool)
+E12,O que os clientes comentam sobre o valor do frete?,6ed25b76ef4db72e7e854f158b7f25b8,4,cool_stuff,"10. Só acho o frete aqui pra minha cidade caro, algumas coisas desisto de comprar por causa do valor do frete. Mas fora isso tudo beleza",1,claude,,rerank/hibrida (re-pool)
+E12,O que os clientes comentam sobre o valor do frete?,581bebeac6205c1ed53d5ac804452a3c,5,informatica_acessorios,"Valor do frete é um absurdo...mas ainda bem que chegou antes do prazo que era de um mês.
+Mas chegou tudo certo conforme a descrição.",1,claude,,rerank/hibrida (re-pool)
+E12,O que os clientes comentam sobre o valor do frete?,8e06903374b7ee0504efcc83be9ae806,1,beleza_saude,"Paguei frete e tive que buscar o produto. Sem falar q o frete foi caro. Demorou para chegar.
+Só acho que o frete tinha que ser mas barato. O frete acaba saindo no valor do produto ou mas caro.",1,claude,,rerank/hibrida (re-pool)
+E12,O que os clientes comentam sobre o valor do frete?,bfb704388d9333cef09a4fd69bdbd774,3,beleza_saude,"O que achei péssimo foi cobrar dois frete para duas unidades do mesmo produto, vierem em caixas separadas, o valor do frete foi um pouco a menos que o valor de uma unidade do produto. Absurdo",1,claude,,rerank/hibrida (re-pool)
 F01,Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_banho?,df40fa92b61bc641eec28061fdec8ffe,1,cama_mesa_banho,"O produto não é de boa qualidade.
 Estou arrependida em ter adquirido toalhas tão ruins. Estou acostumada com buddemeyer.
 Nao recomendo as toalhas citadas.",1,theo,,
@@ -758,6 +783,7 @@ F01,Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_
 F01,Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_banho?,08d16ad2ea09975f96fded1dd8d6453f,1,cama_mesa_banho,AINDA NÃO RECEBI O PRODUTO E O STATUS DIZ QUE FOI ENTREGUE. ESSA É A 4A. RECLAMAÇÃO. NENHUMA FOI RESPONDIDA.,1,theo,,
 F01,Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_banho?,ecd30ad71b1a6be967f483f490915fb1,1,cama_mesa_banho,"Você paga 2 e recebe 1. ROUBO! Na nota fiscal são 2 unidades mas no embrulho vem apenas UMA.
 Querem cobrar sem entregar?",1,theo,,
+F01,Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_banho?,85e43a8bc028ca11bad4d83cc4054a12,1,cama_mesa_banho,"Muito ruim. Comprei 2 saias para cama box,o sedex trouxe 1 só e a nota fiscal dizia que eu estava recebendo as duas,não aceitei a entrega,no dia seguinte vieram entregar a segunda nas mesmas condições da primeira",1,claude,,rerank/hibrida (re-pool)
 F02,O que os clientes elogiaram nas compras feitas em 2018?,42dbe1261ffa4f8bf21d8d8185b13ff1,5,brinquedos,10. Gostei muito parabéns pelo compromisso com.o consumidor.,1,theo,,
 F02,O que os clientes elogiaram nas compras feitas em 2018?,93dc965496f438c53eddca89681da4e9,5,informatica_acessorios,Uma das melhores compras que já fiz,0,theo,,
 F02,O que os clientes elogiaram nas compras feitas em 2018?,98c802e13fb032f446ffd35ed08ff9b8,5,moveis_decoracao,"Nota 10. Parabéns pela loja. Ótimo produto, ótimo preço, ótimo prazo de entrega.",1,theo,,
@@ -818,6 +844,8 @@ F02,O que os clientes elogiaram nas compras feitas em 2018?,00d08db32e963156fe77
 F02,O que os clientes elogiaram nas compras feitas em 2018?,1ce693daaac37dce7decd434d717818f,5,eletroportateis,super recomendo. a lojas esta de parabéns,0,theo,,
 F02,O que os clientes elogiaram nas compras feitas em 2018?,f6853e4f1d0f639a934b661f2787aa6f,5,construcao_ferramentas_jardim,Parabéns pelo compromisso com os clientes,1,theo,,
 F02,O que os clientes elogiaram nas compras feitas em 2018?,382d855ffdd4f5e66594dbfb1566e96f,5,moveis_decoracao,10. Cada vez que compro mais fico satisfeita parabéns pela honestidade com seus clientes 👏👏👏👏?,1,theo,,
+F02,O que os clientes elogiaram nas compras feitas em 2018?,40fd52232fb6c446d128808d676a9e3b,5,moveis_decoracao,"Juliana. Amei minha compra..chegou antes do prazo.Acabamento dos quadros perfeito.
+Parabéns lojas lannister e parceiros..",1,claude,,rerank/hibrida (re-pool)
 F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,dd6e0f7168d75cd78769333f7630a036,3,moveis_decoracao,O atraso na entrega prejudicou a obra,1,claude,,
 F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,7953d5b5a32a351be8dccd293f49a9a0,1,beleza_saude,"atraso. Com atraso, até agora nada de notícias!",1,claude,,
 F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,2285b2497d2e49bce8b5aa0812fb3bf9,1,cool_stuff,"Até o momento não recebi o pedido, também não recebi informações do atraso de entrega do pedido.",1,claude,,
@@ -874,6 +902,8 @@ F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,cbed3
 1 não chegou
 Aguardo",1,claude,,
 F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,a553875413fd30a7f78cd701b0064a6f,5,construcao_ferramentas_ferramentas,"Recomendo o produto e o fornecedor, pois o atraso na entrega foi causado pelos serviços dos Correios.",1,claude,,
+F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,86cb30e96939f06396356768082e8c97,3,esporte_lazer,Tive atraso na entrega,1,claude,,rerank/hibrida (re-pool)
+F03,Quais temas aparecem nas avaliações de pedidos entregues com atraso?,8692515cb18ecfbfc9a57777ddcef331,1,relogios_presentes,O produto está em atraso.,1,claude,,rerank/hibrida (re-pool)
 F04,Quais problemas aparecem em pedidos cancelados?,860f30b8604aae49d7df4145f09bd2b1,1,sem_categoria,Solicitei cancelamento da compra. Prazo de entrega muito demorado,1,claude,,
 F04,Quais problemas aparecem em pedidos cancelados?,36c1ce034b007259eadba974829421d8,1,bebes,"Pessimo atendimento ...depois de 1 mes da compra, entro no ""meus pedidos"" e aparece que meu pedido esta indisponivel..e muita palhacada!!",1,claude,,
 F04,Quais problemas aparecem em pedidos cancelados?,6a91e35dd43fa13587108e698937cef8,1,telefonia,"Não sei quem foi a responsável pelo transtorno, mas mendiguei atenção sobre esse pedido. Tentei cancelá-lo inúmeras vezes. Espero a fatura do mês que vem para saber se realmente o cancelaram.",1,claude,,
@@ -914,6 +944,7 @@ F04,Quais problemas aparecem em pedidos cancelados?,49ef8de8e52ee16303f159ce6208
 F04,Quais problemas aparecem em pedidos cancelados?,d7aab6a7134b55c71503d87cb1bf2206,1,pet_shop,"Cade meu PEDIDO ??? No pedido esta como cancelado confome pedido, mas eu nao pedi. Desejo meu PRODUTO.. segunda entrarei em contato com o PROCON",1,claude,,
 F04,Quais problemas aparecem em pedidos cancelados?,92884384448a83b05970a80735f2ff8c,1,cool_stuff,"Loja recusou a entregar. Loja disse que não tinha mercadoria em estoque, após 3 semanas do pedido, e simplesmente cancelou o pedido!",1,claude,,
 F04,Quais problemas aparecem em pedidos cancelados?,20787e5ce2d5175a20135e52e3a701e8,2,sem_categoria,Problemas com entrega. Não chegou ainda estou na esperando ainda,1,claude,,
+F04,Quais problemas aparecem em pedidos cancelados?,7ff8cf0f6098e87be8509d287509c08b,1,sem_categoria,Cancelei o pedido.,0,claude,,rerank/hibrida (re-pool)
 F05,O que reclamam os clientes em pedidos acima de R$ 500?,7e32a365664dc66252d04c52e5483d4b,1,relogios_presentes,O tipo de entrega (pac) é muito demorado.,1,claude,,
 F05,O que reclamam os clientes em pedidos acima de R$ 500?,1ccb2f28e60b0ccb56e3f643af45b715,1,bebes,quero mais atenção para com os clientes. quero fala com alguém e não com uma máquina,1,claude,,
 F05,O que reclamam os clientes em pedidos acima de R$ 500?,2e2302a45980152064ce595716ec7dec,1,instrumentos_musicais,Falta de consideração com o cliente!,1,claude,,
@@ -964,6 +995,7 @@ F05,O que reclamam os clientes em pedidos acima de R$ 500?,7aa233fd42c2a8ec0d3b7
 F05,O que reclamam os clientes em pedidos acima de R$ 500?,86c917ec7c07573968fb6a568647b8e2,1,papelaria,Péssimo. Eu quero o meu produto. Eu paguei. E nao recebi.,1,claude,,
 F05,O que reclamam os clientes em pedidos acima de R$ 500?,a49e16a5cdf1e2320bf8ac81deef225f,1,cool_stuff,"Ja mandei o cancelamento e pedido de devolução, pois paguei pelo Kraken 7.1 V2 e recebi o Kraken 7.1 Chroma em média 200 reais mais barato",1,claude,,
 F05,O que reclamam os clientes em pedidos acima de R$ 500?,db2ad68a772d476d92bae6d8c9a8eb18,2,casa_construcao,"Produto recebido divergente ao comprado, gerando frustração e perda de oferta de outras opções analisadas.",1,claude,,
+F05,O que reclamam os clientes em pedidos acima de R$ 500?,1f1ebe1eea75db8105f4110f54b696f9,1,bebes,exijo as devidas providen. não recebi meu pedido completo por gentileza alguem tome as providencias,1,claude,,rerank/hibrida (re-pool)
 F06,O que os clientes de informatica_acessorios elogiam?,50bc312af328ce91d50fb9ddc14b11ed,5,informatica_acessorios,"Excelente. Gosto muito de Comprar nas lannister, pela qualidade na entrega dos produtos, recomendo pode confiar",1,claude,,
 F06,O que os clientes de informatica_acessorios elogiam?,5bfab930e0c40d84276aeaa3c99455c3,5,informatica_acessorios,Recomendo a loja por sua rapidez e eficiência.,1,claude,,
 F06,O que os clientes de informatica_acessorios elogiam?,eed9e0d30e4a88e8ef3a60b8808e7c74,5,informatica_acessorios,Otimo. Bom produto recomendo chegou certinho.,1,claude,,
@@ -1010,3 +1042,4 @@ Espero que continuem assim,visando sempre o melhor para os clientes!",1,claude,,
 F06,O que os clientes de informatica_acessorios elogiam?,0b0f44daa70755caf4883dc0a300b19e,5,informatica_acessorios,"super recomendo. produto muito bom...
 ótimo atendimento, entrega no prazo.
  estou muito satisfeito.....",1,claude,,
+F06,O que os clientes de informatica_acessorios elogiam?,0f17bbdc1b8c7dd65620b3ed0e75c391,4,informatica_acessorios,"Muito bom. O sistema é prático, e procura tirar as duvidas do cliente. Com várias opções.",1,claude,,rerank/hibrida (re-pool)
