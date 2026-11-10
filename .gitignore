@@ -36,3 +36,6 @@ local/
 
 # Traces de execução (podem conter perguntas e trechos de avaliações)
 logs/
+
+# Arquivos temporários do Excel (planilha aberta)
+~$*
