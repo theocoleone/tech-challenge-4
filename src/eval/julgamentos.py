@@ -1,8 +1,5 @@
 """Leitura e escrita da planilha de julgamentos de relevância.
 
-Todos os rótulos foram revisados pelo autor; parte deles partiu de uma pré-marcação
-feita com apoio de IA (ver README, seção de avaliação).
-
 O Theo marca em eval/julgamentos.xlsx (abre certo no Excel em qualquer idioma).
 eval/julgamentos.csv é a cópia em texto simples, versionada no git e lida pelas
 métricas. `make julgamentos` atualiza o CSV a partir do Excel.
