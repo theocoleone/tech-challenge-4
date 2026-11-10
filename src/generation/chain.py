@@ -71,7 +71,8 @@ def _buscar(estado: dict) -> dict:
     vistos = {r.review_id for r in candidatos}
     candidatos += [r for r in detalhadas if r.review_id not in vistos]
     texto = b.por_id.texto_original
-    ordenados = reordenar(estado["pergunta"], [(r.review_id, texto[r.review_id]) for r in candidatos])
+    # o rerank compara com a busca reescrita (só o assunto); a pergunta original vai para a geração
+    ordenados = reordenar(a.consulta_reescrita, [(r.review_id, texto[r.review_id]) for r in candidatos])
     ids, scores = [rid for rid, _ in ordenados], [sc for _, sc in ordenados]
     # Avaliações com mais detalhe rendem respostas mais concretas: o rerank sozinho
     # prefere frases curtas e literais ("Atraso na entrega"). Um bônus pequeno pelo
