@@ -28,9 +28,11 @@ class Settings(BaseSettings):
     llm_provider: Literal["bedrock", "local"] = "bedrock"
     emb_provider: Literal["bedrock", "local"] = "bedrock"
 
-    llm_model_id: str = "us.amazon.nova-lite-v1:0"
+    llm_model_id: str = "us.amazon.nova-lite-v1:0"   # análise da pergunta (rápida e barata)
+    gen_model_id: str = "us.amazon.nova-pro-v1:0"    # escreve a resposta (mais fiel ao contexto)
     # Reserva usada quando o modelo principal demora ou é limitado (throttling)
     llm_fallback_model_id: str = "us.amazon.nova-pro-v1:0"
+    gen_fallback_model_id: str = "us.amazon.nova-lite-v1:0"
     llm_timeout_s: int = 20
     judge_model_id: str = "us.amazon.nova-pro-v1:0"
     emb_model_id: str = "amazon.titan-embed-text-v2:0"
@@ -93,7 +95,7 @@ def _chat_bedrock(model_id: str):
     )
 
 
-def get_llm(model_id: str | None = None, estruturado=None):
+def get_llm(model_id: str | None = None, estruturado=None, papel: str = "analise"):
     """LLM do projeto. Com `estruturado` (um modelo pydantic), devolve saída estruturada.
 
     O modelo principal tem uma reserva (`llm_fallback_model_id`) para quando ele
@@ -103,10 +105,11 @@ def get_llm(model_id: str | None = None, estruturado=None):
     if s.llm_provider == "local":
         raise NotImplementedError("LLM local (plano B2) entra só se o Bedrock continuar bloqueado")
     check_aws_account()
-    principal = _chat_bedrock(model_id or s.llm_model_id)
+    padrao, fallback = (s.gen_model_id, s.gen_fallback_model_id) if papel == "geracao" else (s.llm_model_id, s.llm_fallback_model_id)
+    principal = _chat_bedrock(model_id or padrao)
     if model_id:  # modelo escolhido explicitamente (ex.: o juiz): sem reserva
         return principal.with_structured_output(estruturado) if estruturado else principal
-    reserva = _chat_bedrock(s.llm_fallback_model_id)
+    reserva = _chat_bedrock(fallback)
     if estruturado:
         return principal.with_structured_output(estruturado).with_fallbacks([reserva.with_structured_output(estruturado)])
     return principal.with_fallbacks([reserva])

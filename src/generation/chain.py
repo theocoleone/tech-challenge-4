@@ -30,8 +30,11 @@ from src.retrieval.rerank import reordenar
 
 PROMPTS = Path(__file__).resolve().parent / "prompts"
 K_CANDIDATOS = 30  # candidatos da busca híbrida que vão para o rerank
+K_DETALHADAS = 15  # candidatos extras só entre avaliações detalhadas
+MIN_PALAVRAS_DETALHE = 10
 N_CONTEXTO = 8     # avaliações que vão para o LLM
 LAMBDA_MMR = 0.5   # peso da relevância contra a diversidade na seleção
+PESO_DETALHE = 0.3 # bônus para avaliações mais detalhadas (ver _buscar)
 
 
 @lru_cache
@@ -45,7 +48,7 @@ def _gerador():
         ("system", (PROMPTS / "resposta_v1.md").read_text()),
         ("human", "{contexto}\n\nPergunta do gestor: {pergunta}"),
     ])
-    return prompt | get_llm(estruturado=RespostaVoC)
+    return prompt | get_llm(estruturado=RespostaVoC, papel="geracao")
 
 
 def _analisar(estado: dict) -> dict:
@@ -62,10 +65,20 @@ def _buscar(estado: dict) -> dict:
     b = _buscador()
     a = estado["analise"]
     candidatos = b.hibrida(a.consulta_reescrita, K_CANDIDATOS, estado["filtros"])
+    # Segunda busca só entre avaliações detalhadas: sem ela, os candidatos ficam cheios de
+    # frases curtas ("Atraso na entrega") e a resposta não tem o que contar.
+    detalhadas = b.hibrida(a.consulta_reescrita, K_DETALHADAS, {**estado["filtros"], "n_palavras_min": MIN_PALAVRAS_DETALHE})
+    vistos = {r.review_id for r in candidatos}
+    candidatos += [r for r in detalhadas if r.review_id not in vistos]
     texto = b.por_id.texto_original
     ordenados = reordenar(estado["pergunta"], [(r.review_id, texto[r.review_id]) for r in candidatos])
     ids, scores = [rid for rid, _ in ordenados], [sc for _, sc in ordenados]
-    escolhidos = mmr(ids, scores, b.vetores(ids), N_CONTEXTO, LAMBDA_MMR) if ids else []
+    # Avaliações com mais detalhe rendem respostas mais concretas: o rerank sozinho
+    # prefere frases curtas e literais ("Atraso na entrega"). Um bônus pequeno pelo
+    # tamanho (até 25 palavras) desempata a favor de quem explica o que aconteceu.
+    palavras = b.por_id.loc[ids, "n_palavras"].clip(upper=25).to_numpy() / 25 if ids else []
+    pesos = [sc + PESO_DETALHE * w for sc, w in zip(scores, palavras)]
+    escolhidos = mmr(ids, pesos, b.vetores(ids), N_CONTEXTO, LAMBDA_MMR) if ids else []
     escolhidos.sort(key=lambda i: scores[i], reverse=True)  # no contexto, do mais ao menos relevante
     estado["tempos"]["busca"] = time.time() - t
     return {**estado, "selecionados": [ordenados[i] for i in escolhidos]}
