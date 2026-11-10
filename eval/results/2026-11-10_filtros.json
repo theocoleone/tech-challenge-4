@@ -1,0 +1,102 @@
+{
+ "resumo": [
+  {
+   "modo": "com filtro",
+   "conformidade": 1.0,
+   "precisao@8": 0.958,
+   "julgado@8": 1.0
+  },
+  {
+   "modo": "sem filtro",
+   "conformidade": 0.167,
+   "precisao@8": 1.0,
+   "julgado@8": 0.167
+  }
+ ],
+ "por_pergunta": [
+  {
+   "pergunta": "F01",
+   "modo": "com filtro",
+   "conformidade": 1.0,
+   "precisao@8": 1.0,
+   "julgado@8": 1.0
+  },
+  {
+   "pergunta": "F01",
+   "modo": "sem filtro",
+   "conformidade": 0.0,
+   "precisao@8": NaN,
+   "julgado@8": 0.0
+  },
+  {
+   "pergunta": "F02",
+   "modo": "com filtro",
+   "conformidade": 1.0,
+   "precisao@8": 0.875,
+   "julgado@8": 1.0
+  },
+  {
+   "pergunta": "F02",
+   "modo": "sem filtro",
+   "conformidade": 0.5,
+   "precisao@8": 1.0,
+   "julgado@8": 0.5
+  },
+  {
+   "pergunta": "F03",
+   "modo": "com filtro",
+   "conformidade": 1.0,
+   "precisao@8": 1.0,
+   "julgado@8": 1.0
+  },
+  {
+   "pergunta": "F03",
+   "modo": "sem filtro",
+   "conformidade": 0.375,
+   "precisao@8": 1.0,
+   "julgado@8": 0.375
+  },
+  {
+   "pergunta": "F04",
+   "modo": "com filtro",
+   "conformidade": 1.0,
+   "precisao@8": 0.875,
+   "julgado@8": 1.0
+  },
+  {
+   "pergunta": "F04",
+   "modo": "sem filtro",
+   "conformidade": 0.125,
+   "precisao@8": 1.0,
+   "julgado@8": 0.125
+  },
+  {
+   "pergunta": "F05",
+   "modo": "com filtro",
+   "conformidade": 1.0,
+   "precisao@8": 1.0,
+   "julgado@8": 1.0
+  },
+  {
+   "pergunta": "F05",
+   "modo": "sem filtro",
+   "conformidade": 0.0,
+   "precisao@8": NaN,
+   "julgado@8": 0.0
+  },
+  {
+   "pergunta": "F06",
+   "modo": "com filtro",
+   "conformidade": 1.0,
+   "precisao@8": 1.0,
+   "julgado@8": 1.0
+  },
+  {
+   "pergunta": "F06",
+   "modo": "sem filtro",
+   "conformidade": 0.0,
+   "precisao@8": NaN,
+   "julgado@8": 0.0
+  }
+ ]
+}
