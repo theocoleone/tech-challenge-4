@@ -2,36 +2,48 @@
 
 pergunta
   -> análise (escopo, tipo, filtros, busca reescrita)       [LLM]
-  -> ramo: fora do escopo  -> recusa
-           filtro vazio    -> recusa ("nenhuma avaliação nesse recorte")
-           busca           -> híbrida (Titan + BM25) -> rerank -> seleção diversa (MMR)
+  -> ramo A: fora do escopo                 -> recusa
+     ramo D: filtro sem nenhuma avaliação   -> recusa
+     busca: híbrida (Titan + BM25) -> rerank -> seleção diversa (MMR)
+       ramo B: maior nota do rerank abaixo do limiar     -> sem evidência
+       ramo C: poucas avaliações acima do limiar         -> evidência insuficiente
   -> contexto com as avaliações em tags <review>
   -> resposta estruturada com citações                        [LLM]
+  -> validação: citações, linguagem de frequência (guard.py)
+     ramo C também quando o modelo diz que não há evidência ou nenhuma citação é válida
+
+Cada resposta gera um trace em logs/traces.jsonl.
 
 Uso: python -m src.generation.chain "O que os clientes reclamam da entrega?"
 """
 import json
 import sys
 import time
+import uuid
+from datetime import datetime, timezone
 from functools import lru_cache
 from pathlib import Path
 
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnableBranch, RunnableLambda
 
-from src.config import get_llm
+from src.config import ROOT, get_llm, get_settings
 from src.generation.context import montar_contexto
+from src.generation.guard import limpar_ids, validar
 from src.generation.schemas import RespostaVoC
 from src.retrieval.diversity import mmr
 from src.retrieval.filters import mascara
 from src.retrieval.hybrid import Buscador
-from src.retrieval.query_transform import analisar
+from src.retrieval.query_transform import analisar, tem_assunto_proprio
 from src.retrieval.rerank import reordenar
 
 PROMPTS = Path(__file__).resolve().parent / "prompts"
 K_CANDIDATOS = 30  # candidatos da busca híbrida que vão para o rerank
 K_DETALHADAS = 15  # candidatos extras só entre avaliações detalhadas
 MIN_PALAVRAS_DETALHE = 10
+LIMIAR_RERANK = 0.30  # calibrado em eval/calibracao.jsonl (ver eval/results/*_calibracao_limiar.json)
+MIN_ACIMA_LIMIAR = 3  # abaixo disso, a evidência é considerada insuficiente
+VERSAO_PROMPTS = "analise_v1+resposta_v1"
 N_CONTEXTO = 8     # avaliações que vão para o LLM
 LAMBDA_MMR = 0.5   # peso da relevância contra a diversidade na seleção
 PESO_DETALHE = 0.3 # bônus para avaliações mais detalhadas (ver _buscar)
@@ -86,13 +98,38 @@ def _buscar(estado: dict) -> dict:
 
 
 def _gerar(estado: dict) -> dict:
+    sel = estado["selecionados"]
+    acima = [rid for rid, sc in sel if sc >= LIMIAR_RERANK]
+    # Pergunta sem assunto próprio ("problemas nas avaliações nota 1 de X"): o recorte
+    # vem dos filtros e toda avaliação dele é evidência; o limiar de relevância do rerank
+    # (que compara com uma busca genérica) não se aplica.
+    so_recorte = bool(sel) and bool(estado["filtros"]) and not tem_assunto_proprio(estado["analise"])
+    if not so_recorte:
+        if not sel or sel[0][1] < LIMIAR_RERANK:
+            return _saida(estado, "sem_evidencia", "Não encontrei avaliações que tratem desse assunto na base "
+                          "(nenhuma passou do limiar de relevância).", [])
+        if len(acima) < MIN_ACIMA_LIMIAR:
+            return _saida(estado, "evidencia_fraca", f"Só {len(acima)} avaliação(ões) tratam desse assunto, o que é "
+                          "pouco para tirar uma conclusão. Elas estão listadas nas evidências.",
+                          [{"afirmacao": "Avaliações encontradas sobre o assunto (sem generalização).", "review_ids": acima}])
+
     t = time.time()
     b = _buscador()
-    ids = [rid for rid, _ in estado["selecionados"]]
-    resposta = _gerador().invoke({"contexto": montar_contexto(ids, b.por_id), "pergunta": estado["pergunta"]})
+    ids = [rid for rid, _ in sel]
+    entrada = {"contexto": montar_contexto(ids, b.por_id, estado["filtros"]), "pergunta": estado["pergunta"]}
+    resposta = _gerador().invoke(entrada)
+    v = validar(resposta.resposta, [i.model_dump() for i in resposta.insights], set(ids))
+    estado["validacao"] = {"citacoes_invalidas": v.citacoes_invalidas, "frequencia": v.linguagem_de_frequencia, "refeita": False}
+    if v.linguagem_de_frequencia and estado["analise"].tipo == "especifica":
+        aviso = (f"\n\nAtenção: a resposta anterior usou {v.linguagem_de_frequencia}. Estas avaliações são uma amostra "
+                 "da busca, não a base inteira: reescreva sem termos de frequência nem percentuais.")
+        resposta = _gerador().invoke({**entrada, "pergunta": entrada["pergunta"] + aviso})
+        v = validar(resposta.resposta, [i.model_dump() for i in resposta.insights], set(ids))
+        estado["validacao"].update(refeita=True, frequencia_depois=v.linguagem_de_frequencia)
     estado["tempos"]["geracao"] = time.time() - t
-    return _saida(estado, "ok" if resposta.tem_evidencia else "sem_evidencia", resposta.resposta,
-                  [i.model_dump() for i in resposta.insights])
+    if not resposta.tem_evidencia or not v.insights:
+        return _saida(estado, "evidencia_fraca", limpar_ids(resposta.resposta), v.insights)
+    return _saida(estado, "ok", limpar_ids(resposta.resposta), v.insights)
 
 
 def _recusa(status: str, mensagem: str):
@@ -108,10 +145,31 @@ def _saida(estado: dict, status: str, resposta: str, insights: list) -> dict:
                            "categoria": d.categoria_pt, "mes_compra": int(d.ano_mes_compra),
                            "entregue_com_atraso": bool(d.entregue_com_atraso), "score_rerank": round(score, 3)})
     a = estado["analise"]
-    return {"pergunta": estado["pergunta"], "status": status, "resposta": resposta, "insights": insights,
-            "evidencias": evidencias, "tipo": a.tipo, "pergunta_reescrita": a.consulta_reescrita,
-            "filtros_aplicados": estado["filtros"], "n_no_recorte": estado["n_no_recorte"],
-            "tempos": {k: round(v, 2) for k, v in estado["tempos"].items()}}
+    saida = {"trace_id": uuid.uuid4().hex[:12], "pergunta": estado["pergunta"], "status": status,
+             "resposta": resposta, "insights": insights, "evidencias": evidencias, "tipo": a.tipo,
+             "pergunta_reescrita": a.consulta_reescrita, "filtros_aplicados": estado["filtros"],
+             "n_no_recorte": estado["n_no_recorte"], "tempos": {k: round(v, 2) for k, v in estado["tempos"].items()}}
+    _registrar_trace(saida, estado)
+    return saida
+
+
+def _registrar_trace(saida: dict, estado: dict) -> None:
+    """Uma linha por resposta em logs/traces.jsonl (pasta fora do git)."""
+    s = get_settings()
+    registro = {
+        "trace_id": saida["trace_id"], "quando": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "pergunta": saida["pergunta"], "pergunta_reescrita": saida["pergunta_reescrita"], "tipo": saida["tipo"],
+        "filtros": saida["filtros_aplicados"], "n_no_recorte": saida["n_no_recorte"], "status": saida["status"],
+        "selecionados": [{"review_id": e["review_id"], "score_rerank": e["score_rerank"]} for e in saida["evidencias"]],
+        "citados": sorted({rid for i in saida["insights"] for rid in i["review_ids"]}),
+        "validacao": estado.get("validacao"), "limiar": LIMIAR_RERANK, "prompts": VERSAO_PROMPTS,
+        "modelos": {"analise": s.llm_model_id, "geracao": s.gen_model_id, "embedding": s.emb_model_id},
+        "tempos": saida["tempos"],
+    }
+    pasta = ROOT / "logs"
+    pasta.mkdir(exist_ok=True)
+    with open(pasta / "traces.jsonl", "a") as f:
+        f.write(json.dumps(registro, ensure_ascii=False) + "\n")
 
 
 def montar_chain():

@@ -44,6 +44,7 @@ class AnaliseDaPergunta(BaseModel):
     temas_alvo: list[str] = Field(default_factory=list, description="assuntos citados na pergunta, ex.: ['entrega']")
 
 
+
 class Insight(BaseModel):
     afirmacao: str = Field(description="uma conclusão curta sustentada pelas avaliações")
     review_ids: list[str] = Field(description="IDs das avaliações que sustentam a afirmação (1 a 3)")
