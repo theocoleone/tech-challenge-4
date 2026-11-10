@@ -9,6 +9,7 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Literal
 
+from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -28,13 +29,22 @@ class Settings(BaseSettings):
     emb_provider: Literal["bedrock", "local"] = "bedrock"
 
     llm_model_id: str = "us.amazon.nova-lite-v1:0"
+    # Reserva usada quando o modelo principal demora ou é limitado (throttling)
+    llm_fallback_model_id: str = "us.amazon.nova-pro-v1:0"
+    llm_timeout_s: int = 20
     judge_model_id: str = "us.amazon.nova-pro-v1:0"
     emb_model_id: str = "amazon.titan-embed-text-v2:0"
     llm_temperature: float = 0.0
 
     data_raw: Path = ROOT / "data" / "raw"
     data_processed: Path = ROOT / "data" / "processed"
+    # Pasta dos índices (BM25, vetores e cache de embeddings); pode ficar fora do repo.
     index_dir: Path = ROOT / "index"
+
+    @field_validator("data_raw", "data_processed", "index_dir", mode="before")
+    @classmethod
+    def _expandir_til(cls, v):
+        return Path(v).expanduser()
 
 
 @lru_cache
@@ -66,19 +76,40 @@ def check_aws_account() -> str:
     return conta
 
 
-def get_llm(model_id: str | None = None):
+def _chat_bedrock(model_id: str):
+    from botocore.config import Config
+    from langchain_aws import ChatBedrockConverse
+
+    s = get_settings()
+    return ChatBedrockConverse(
+        model_id=model_id,
+        region_name=s.aws_region,
+        credentials_profile_name=s.aws_profile,
+        temperature=s.llm_temperature,
+        # Sem isto, uma resposta lenta do Bedrock espera 60 s e é repetida várias vezes
+        # (vimos chamadas de 3 a 9 minutos). Melhor falhar rápido e ir para a reserva.
+        config=Config(read_timeout=s.llm_timeout_s, connect_timeout=5,
+                      retries={"mode": "adaptive", "max_attempts": 2}),
+    )
+
+
+def get_llm(model_id: str | None = None, estruturado=None):
+    """LLM do projeto. Com `estruturado` (um modelo pydantic), devolve saída estruturada.
+
+    O modelo principal tem uma reserva (`llm_fallback_model_id`) para quando ele
+    demora ou é limitado; o trace registra qual modelo respondeu.
+    """
     s = get_settings()
     if s.llm_provider == "local":
         raise NotImplementedError("LLM local (plano B2) entra só se o Bedrock continuar bloqueado")
     check_aws_account()
-    from langchain_aws import ChatBedrockConverse
-
-    return ChatBedrockConverse(
-        model_id=model_id or s.llm_model_id,
-        region_name=s.aws_region,
-        credentials_profile_name=s.aws_profile,
-        temperature=s.llm_temperature,
-    )
+    principal = _chat_bedrock(model_id or s.llm_model_id)
+    if model_id:  # modelo escolhido explicitamente (ex.: o juiz): sem reserva
+        return principal.with_structured_output(estruturado) if estruturado else principal
+    reserva = _chat_bedrock(s.llm_fallback_model_id)
+    if estruturado:
+        return principal.with_structured_output(estruturado).with_fallbacks([reserva.with_structured_output(estruturado)])
+    return principal.with_fallbacks([reserva])
 
 
 def get_embeddings():

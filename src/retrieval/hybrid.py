@@ -8,15 +8,15 @@ precisar comparar escalas de score diferentes.
 """
 from dataclasses import dataclass, field
 
-import chromadb
+import numpy as np
 import pandas as pd
 
 from src.config import get_settings
 from src.data.clean import normalizar
 from src.index.bm25 import IndiceBM25
-from src.index.build_index import colecao
 from src.index.embeddings import get_embedder
-from src.retrieval.filters import mascara, para_chroma
+from src.index.vector_store import IndiceVetorial
+from src.retrieval.filters import mascara
 
 RRF_K = 60  # constante padrão do RRF (Cormack et al., 2009)
 
@@ -47,19 +47,22 @@ class Buscador:
         self.bm25 = IndiceBM25.carregar(s.index_dir / "bm25.pkl")
         self.modelo_denso = modelo_denso
         self.embedder = get_embedder(modelo_denso)
-        self.colecao = chromadb.PersistentClient(path=str(s.index_dir / "chroma")).get_collection(colecao(modelo_denso))
+        self.vetorial = IndiceVetorial.carregar(s.index_dir, modelo_denso)
 
     def lexical(self, consulta: str, k: int = 30, filtros: dict | None = None) -> list[str]:
         return [rid for rid, _ in self.bm25.buscar(normalizar(consulta), k, mascara(self.docs, filtros))]
 
     def denso(self, consulta: str, k: int = 30, filtros: dict | None = None) -> list[str]:
         vetor = self.embedder.embed_query(normalizar(consulta))
-        r = self.colecao.query(query_embeddings=[vetor], n_results=k, where=para_chroma(filtros))
-        return r["ids"][0]
+        return [rid for rid, _ in self.vetorial.buscar(vetor, k, mascara(self.docs, filtros) if filtros else None)]
 
     def hibrida(self, consulta: str, k: int = 30, filtros: dict | None = None, dedupe: bool = True) -> list[Resultado]:
         fundidos = rrf({"denso": self.denso(consulta, k, filtros), "bm25": self.lexical(consulta, k, filtros)})
         return self.deduplicar(fundidos) if dedupe else fundidos
+
+    def vetores(self, ids: list[str]) -> np.ndarray:
+        """Vetores já calculados das avaliações (não chama o Bedrock de novo)."""
+        return self.vetorial.vetores_de(ids)
 
     def deduplicar(self, resultados: list[Resultado]) -> list[Resultado]:
         """Textos idênticos ("muito bom", "atraso na entrega") ocupariam várias posições:

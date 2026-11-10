@@ -11,51 +11,51 @@
    "MRR": 0.895,
    "Precisão@8": 0.739,
    "Julgado@8": 1.0,
-   "seg/pergunta": 0.029
+   "seg/pergunta": 0.027
   },
   {
    "Configuração": "Denso (Titan)",
    "Recall@10": 0.234,
-   "Recall@20": 0.459,
-   "RecallN@8": 0.944,
-   "RecallN@20": 0.928,
+   "Recall@20": 0.455,
+   "RecallN@8": 0.938,
+   "RecallN@20": 0.919,
    "MRR": 0.972,
    "Precisão@8": 0.944,
-   "Julgado@8": 1.0,
-   "seg/pergunta": 0.432
+   "Julgado@8": 0.993,
+   "seg/pergunta": 0.332
   },
   {
    "Configuração": "Denso (local)",
-   "Recall@10": 0.186,
-   "Recall@20": 0.359,
+   "Recall@10": 0.184,
+   "Recall@20": 0.36,
    "RecallN@8": 0.764,
-   "RecallN@20": 0.756,
+   "RecallN@20": 0.758,
    "MRR": 0.835,
    "Precisão@8": 0.764,
    "Julgado@8": 1.0,
-   "seg/pergunta": 0.088
+   "seg/pergunta": 0.028
   },
   {
    "Configuração": "Híbrida (Titan + BM25)",
    "Recall@10": 0.218,
-   "Recall@20": 0.414,
+   "Recall@20": 0.413,
    "RecallN@8": 0.91,
-   "RecallN@20": 0.839,
+   "RecallN@20": 0.836,
    "MRR": 1.0,
    "Precisão@8": 0.91,
    "Julgado@8": 1.0,
-   "seg/pergunta": 0.409
+   "seg/pergunta": 0.313
   },
   {
    "Configuração": "Híbrida + rerank",
-   "Recall@10": 0.237,
-   "Recall@20": 0.414,
-   "RecallN@8": 0.951,
-   "RecallN@20": 0.839,
+   "Recall@10": 0.236,
+   "Recall@20": 0.413,
+   "RecallN@8": 0.944,
+   "RecallN@20": 0.836,
    "MRR": 0.944,
    "Precisão@8": 0.951,
-   "Julgado@8": 1.0,
-   "seg/pergunta": 4.154
+   "Julgado@8": 0.993,
+   "seg/pergunta": 3.417
   }
  ],
  "por_pergunta": [
@@ -305,9 +305,9 @@
    "config": "Denso (Titan)",
    "pergunta_id": "E05",
    "Recall@10": 0.3448275862068966,
-   "Recall@20": 0.6896551724137931,
+   "Recall@20": 0.6551724137931034,
    "RecallN@8": 1.0,
-   "RecallN@20": 1.0,
+   "RecallN@20": 0.95,
    "MRR": 1.0,
    "Precisão@8": 1.0,
    "Julgado@8": 1.0
@@ -349,9 +349,9 @@
    "config": "Denso (Titan)",
    "pergunta_id": "E09",
    "Recall@10": 0.22857142857142856,
-   "Recall@20": 0.45714285714285713,
+   "Recall@20": 0.42857142857142855,
    "RecallN@8": 0.875,
-   "RecallN@20": 0.8,
+   "RecallN@20": 0.75,
    "MRR": 1.0,
    "Precisão@8": 0.875,
    "Julgado@8": 1.0
@@ -404,12 +404,12 @@
    "config": "Denso (Titan)",
    "pergunta_id": "F02",
    "Recall@10": 0.21428571428571427,
-   "Recall@20": 0.3333333333333333,
-   "RecallN@8": 1.0,
-   "RecallN@20": 0.7,
+   "Recall@20": 0.30952380952380953,
+   "RecallN@8": 0.875,
+   "RecallN@20": 0.65,
    "MRR": 1.0,
    "Precisão@8": 1.0,
-   "Julgado@8": 1.0
+   "Julgado@8": 0.875
   },
   {
    "config": "Denso (Titan)",
@@ -557,7 +557,7 @@
   {
    "config": "Denso (local)",
    "pergunta_id": "E10",
-   "Recall@10": 0.13157894736842105,
+   "Recall@10": 0.10526315789473684,
    "Recall@20": 0.2894736842105263,
    "RecallN@8": 0.5,
    "RecallN@20": 0.55,
@@ -579,10 +579,10 @@
   {
    "config": "Denso (local)",
    "pergunta_id": "E12",
-   "Recall@10": 0.05405405405405406,
-   "Recall@20": 0.08108108108108109,
+   "Recall@10": 0.08108108108108109,
+   "Recall@20": 0.10810810810810811,
    "RecallN@8": 0.25,
-   "RecallN@20": 0.15,
+   "RecallN@20": 0.2,
    "MRR": 0.2,
    "Precisão@8": 0.25,
    "Julgado@8": 1.0
@@ -645,7 +645,7 @@
   {
    "config": "Denso (local)",
    "pergunta_id": "F06",
-   "Recall@10": 0.23529411764705882,
+   "Recall@10": 0.20588235294117646,
    "Recall@20": 0.4117647058823529,
    "RecallN@8": 0.75,
    "RecallN@20": 0.7,
@@ -800,9 +800,9 @@
    "config": "Híbrida (Titan + BM25)",
    "pergunta_id": "F02",
    "Recall@10": 0.21428571428571427,
-   "Recall@20": 0.35714285714285715,
+   "Recall@20": 0.3333333333333333,
    "RecallN@8": 0.875,
-   "RecallN@20": 0.75,
+   "RecallN@20": 0.7,
    "MRR": 1.0,
    "Precisão@8": 0.875,
    "Julgado@8": 1.0
@@ -932,9 +932,9 @@
    "config": "Híbrida + rerank",
    "pergunta_id": "E08",
    "Recall@10": 0.2631578947368421,
-   "Recall@20": 0.47368421052631576,
+   "Recall@20": 0.42105263157894735,
    "RecallN@8": 1.0,
-   "RecallN@20": 0.9,
+   "RecallN@20": 0.8,
    "MRR": 1.0,
    "Precisão@8": 1.0,
    "Julgado@8": 1.0
@@ -942,13 +942,13 @@
   {
    "config": "Híbrida + rerank",
    "pergunta_id": "E09",
-   "Recall@10": 0.2857142857142857,
+   "Recall@10": 0.2571428571428571,
    "Recall@20": 0.45714285714285713,
-   "RecallN@8": 1.0,
+   "RecallN@8": 0.875,
    "RecallN@20": 0.8,
    "MRR": 1.0,
    "Precisão@8": 1.0,
-   "Julgado@8": 1.0
+   "Julgado@8": 0.875
   },
   {
    "config": "Híbrida + rerank",
@@ -965,9 +965,9 @@
    "config": "Híbrida + rerank",
    "pergunta_id": "E11",
    "Recall@10": 0.30303030303030304,
-   "Recall@20": 0.42424242424242425,
+   "Recall@20": 0.45454545454545453,
    "RecallN@8": 1.0,
-   "RecallN@20": 0.7,
+   "RecallN@20": 0.75,
    "MRR": 1.0,
    "Precisão@8": 1.0,
    "Julgado@8": 1.0

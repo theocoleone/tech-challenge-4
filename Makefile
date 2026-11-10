@@ -19,7 +19,7 @@ notebooks: ## reexecuta os notebooks do F1 salvando as saídas
 	$(PY) -m src.run_notebook notebooks/01_base_conhecimento.ipynb
 	$(PY) -m src.run_notebook notebooks/02_eda_reviews.ipynb
 
-index:  ## gera os índices BM25 e Chroma (titan + local), com cache de embeddings
+index:  ## gera os índices BM25 e vetoriais (titan + local), com cache de embeddings
 	$(PY) -m src.index.build_index
 
 golden: ## confere os rótulos do golden set e da calibração contra a base

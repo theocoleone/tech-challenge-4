@@ -12,7 +12,6 @@ Uso: python -m src.eval.pool   (gera eval/julgamentos.xlsx e .csv; não apaga ma
 """
 import random
 
-import chromadb
 import pandas as pd
 
 from src.config import ROOT, get_settings
@@ -20,9 +19,8 @@ from src.data.clean import normalizar
 from src.eval.check_golden import carregar
 from src.eval.julgamentos import escrever, ler
 from src.index.bm25 import IndiceBM25
-from src.index.build_index import colecao
-from src.index.embeddings import get_embedder
-from src.retrieval.filters import mascara, para_chroma
+from src.retrieval.filters import mascara
+from src.retrieval.hybrid import Buscador
 
 K = 20
 TIPOS = {"especifica", "filtro"}
@@ -33,8 +31,7 @@ def main() -> None:
     docs = pd.read_parquet(s.data_processed / "documents.parquet").set_index("review_id", drop=False)
     perguntas = [p for p in carregar(ROOT / "eval" / "golden_set.jsonl") if p["tipo"] in TIPOS]
     bm25 = IndiceBM25.carregar(s.index_dir / "bm25.pkl")
-    cliente = chromadb.PersistentClient(path=str(s.index_dir / "chroma"))
-    densos = {m: (get_embedder(m), cliente.get_collection(colecao(m))) for m in ("titan", "local")}
+    densos = {m: Buscador(m) for m in ("titan", "local")}
 
     linhas = []
     for p in perguntas:
@@ -43,9 +40,8 @@ def main() -> None:
         fontes: dict[str, set[str]] = {}
         for rid, _ in bm25.buscar(consulta, K, mascara(docs, filtros)):
             fontes.setdefault(rid, set()).add("bm25")
-        for nome, (emb, col) in densos.items():
-            r = col.query(query_embeddings=[emb.embed_query(consulta)], n_results=K, where=para_chroma(filtros))
-            for rid in r["ids"][0]:
+        for nome, buscador in densos.items():
+            for rid in buscador.denso(p["pergunta"], K, filtros):
                 fontes.setdefault(rid, set()).add(nome)
         ids = list(fontes)
         random.Random(p["id"]).shuffle(ids)  # embaralha para a ordem não sugerir qual buscador achou
