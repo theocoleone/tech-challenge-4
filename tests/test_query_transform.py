@@ -6,13 +6,23 @@ def _a(consulta, **filtros):
     return AnaliseDaPergunta(escopo="dominio", tipo="especifica", consulta_reescrita=consulta, filtros=FiltroReviews(**filtros))
 
 
+CATS = ("cama_mesa_banho", "eletronicos", "informatica_acessorios")
+
+
 def test_categoria_nao_citada_na_pergunta_e_descartada():
-    a = corrigir_categoria("O que os clientes acham dos drones?", _a("drones", categoria_pt="eletronicos"))
+    a = corrigir_categoria("O que os clientes acham dos drones?", _a("drones", categoria_pt="eletronicos"), CATS)
     assert a.filtros.categoria_pt is None
-    a = corrigir_categoria("Problemas em cama_mesa_banho?", _a("problema", categoria_pt="cama_mesa_banho"))
+    a = corrigir_categoria("Problemas em cama_mesa_banho?", _a("problema", categoria_pt="cama_mesa_banho"), CATS)
     assert a.filtros.categoria_pt == "cama_mesa_banho"
-    a = corrigir_categoria("Problemas em cama, mesa e banho?", _a("problema", categoria_pt="cama_mesa_banho"))
+    a = corrigir_categoria("Problemas em cama, mesa e banho?", _a("problema", categoria_pt="cama_mesa_banho"), CATS)
     assert a.filtros.categoria_pt == "cama_mesa_banho"
+
+
+def test_categoria_fora_da_lista_vira_a_mais_parecida_ou_some():
+    a = corrigir_categoria("Problemas em cama mesa e banho?", _a("problema", categoria_pt="cama_mesa_e_banho"), CATS)
+    assert a.filtros.categoria_pt == "cama_mesa_banho"
+    a = corrigir_categoria("Problemas com brinquedos?", _a("problema", categoria_pt="brinquedos_infantis"), CATS)
+    assert a.filtros.categoria_pt is None
 
 
 def test_pergunta_sem_assunto_proprio():

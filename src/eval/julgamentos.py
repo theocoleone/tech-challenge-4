@@ -12,7 +12,7 @@ from src.config import ROOT
 
 XLSX = ROOT / "eval" / "julgamentos.xlsx"
 CSV = ROOT / "eval" / "julgamentos.csv"
-COLUNAS = ["pergunta_id", "pergunta", "review_id", "nota", "categoria", "texto", "relevante", "encontrado_por"]
+COLUNAS = ["pergunta_id", "pergunta", "review_id", "nota", "categoria", "pedido", "texto", "relevante", "encontrado_por"]
 
 
 def ler() -> pd.DataFrame:
@@ -31,26 +31,38 @@ def ler() -> pd.DataFrame:
     return df[COLUNAS]
 
 
+def descrever_pedido(d) -> str:
+    """Recorte de cada avaliação, para julgar perguntas com filtro (mês, valor, status, atraso)."""
+    atraso = "com atraso" if d.entregue_com_atraso else ("no prazo" if d.entregue else "não entregue")
+    return f"compra {str(d.ano_mes_compra)[:4]}-{str(d.ano_mes_compra)[4:]} | R$ {d.valor_total:.0f} | {d.order_status} | {atraso}"
+
+
 def escrever(df: pd.DataFrame) -> None:
+    if "pedido" not in df or (df["pedido"].fillna("") == "").any():
+        from src.config import get_settings
+
+        docs = pd.read_parquet(get_settings().data_processed / "documents.parquet").set_index("review_id")
+        df = df.copy()
+        df["pedido"] = [descrever_pedido(docs.loc[r]) if r in docs.index else "" for r in df.review_id]
     df = df[COLUNAS]
     df.to_csv(CSV, index=False)
     with pd.ExcelWriter(XLSX, engine="openpyxl") as w:
         df.to_excel(w, index=False, sheet_name="julgamentos")
         ws = w.sheets["julgamentos"]
-        larguras = {"A": 11, "B": 45, "C": 14, "D": 6, "E": 22, "F": 90, "G": 11, "H": 18}
+        larguras = {"A": 11, "B": 45, "C": 14, "D": 6, "E": 22, "F": 34, "G": 90, "H": 11, "I": 18}
         for col, largura in larguras.items():
             ws.column_dimensions[col].width = largura
         for cel in ws[1]:
             cel.font = Font(bold=True)
         for linha in ws.iter_rows(min_row=2):
             for cel in linha:
-                cel.alignment = Alignment(wrap_text=cel.column_letter in ("B", "F"), vertical="top")
-            linha[6].fill = PatternFill("solid", fgColor="FFF2CC")  # coluna a preencher
+                cel.alignment = Alignment(wrap_text=cel.column_letter in ("B", "F", "G"), vertical="top")
+            linha[7].fill = PatternFill("solid", fgColor="FFF2CC")  # coluna a preencher
         ws.freeze_panes = "A2"
         ws.auto_filter.ref = ws.dimensions
-        ws.column_dimensions["H"].hidden = True  # quem encontrou fica oculto para não influenciar
+        ws.column_dimensions["I"].hidden = True  # quem encontrou fica oculto para não influenciar
         dv = DataValidation(type="list", formula1='"0,1"', allow_blank=True)
-        dv.add(f"G2:G{len(df) + 1}")
+        dv.add(f"H2:H{len(df) + 1}")
         ws.add_data_validation(dv)
 
 
