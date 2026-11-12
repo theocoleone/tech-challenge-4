@@ -1,0 +1,259 @@
+{
+ "data": "2026-11-10",
+ "limiar": 0.39,
+ "n_com_evidencia": 20,
+ "n_sem_evidencia": 20,
+ "no_limiar": {
+  "limiar": 0.39,
+  "precisao_recusa": 0.909,
+  "recall_recusa": 1.0,
+  "f1": 0.952,
+  "falsa_recusa": 0.1
+ },
+ "pares_relevantes_mediana": 0.3283777981996536,
+ "pares_nao_relevantes_mediana": 0.0019247595919296145,
+ "pares_relevantes_acima_do_limiar": 0.4822274881516588,
+ "pares_nao_relevantes_acima_do_limiar": 0.13304721030042918,
+ "perguntas": [
+  {
+   "id": "C01",
+   "pergunta": "O que os clientes dizem sobre os Correios?",
+   "sem_evidencia": false,
+   "top1": 0.9998075366020203
+  },
+  {
+   "id": "C02",
+   "pergunta": "Quais reclamações existem sobre a garantia dos produtos?",
+   "sem_evidencia": false,
+   "top1": 0.9263192415237427
+  },
+  {
+   "id": "C03",
+   "pergunta": "O que os clientes relatam sobre a voltagem dos aparelhos?",
+   "sem_evidencia": false,
+   "top1": 0.41242504119873047
+  },
+  {
+   "id": "C04",
+   "pergunta": "Como os clientes avaliam o tamanho dos produtos?",
+   "sem_evidencia": false,
+   "top1": 0.9661070704460144
+  },
+  {
+   "id": "C05",
+   "pergunta": "O que os clientes comentam sobre a cor do produto?",
+   "sem_evidencia": false,
+   "top1": 0.9727177619934082
+  },
+  {
+   "id": "C06",
+   "pergunta": "Quais relatos existem sobre produtos falsificados ou que não são originais?",
+   "sem_evidencia": false,
+   "top1": 0.9996159076690674
+  },
+  {
+   "id": "C07",
+   "pergunta": "O que os clientes dizem sobre a transportadora?",
+   "sem_evidencia": false,
+   "top1": 0.9331737756729126
+  },
+  {
+   "id": "C08",
+   "pergunta": "O que os clientes comentam sobre o entregador?",
+   "sem_evidencia": false,
+   "top1": 0.9347010254859924
+  },
+  {
+   "id": "C09",
+   "pergunta": "Quais problemas existem com pagamento por boleto?",
+   "sem_evidencia": false,
+   "top1": 0.194132462143898
+  },
+  {
+   "id": "C10",
+   "pergunta": "O que os clientes relatam sobre pagamento com cartão de crédito?",
+   "sem_evidencia": false,
+   "top1": 0.32411476969718933
+  },
+  {
+   "id": "C11",
+   "pergunta": "Quais reclamações existem sobre a montagem dos móveis?",
+   "sem_evidencia": false,
+   "top1": 0.8852671384811401
+  },
+  {
+   "id": "C12",
+   "pergunta": "O que os clientes dizem sobre o manual de instruções?",
+   "sem_evidencia": false,
+   "top1": 0.8017600774765015
+  },
+  {
+   "id": "C13",
+   "pergunta": "Quais relatos existem sobre cobrança indevida?",
+   "sem_evidencia": false,
+   "top1": 0.5027757287025452
+  },
+  {
+   "id": "C14",
+   "pergunta": "O que os clientes dizem sobre o cancelamento de pedidos?",
+   "sem_evidencia": false,
+   "top1": 0.9918036460876465
+  },
+  {
+   "id": "C15",
+   "pergunta": "Os clientes comentam sobre produtos que chegaram usados?",
+   "sem_evidencia": false,
+   "top1": 0.9863726496696472
+  },
+  {
+   "id": "C16",
+   "pergunta": "O que os clientes falam sobre o prazo de entrega informado no site?",
+   "sem_evidencia": false,
+   "top1": 0.9996378421783447
+  },
+  {
+   "id": "C17",
+   "pergunta": "Quais elogios os clientes fazem ao vendedor?",
+   "sem_evidencia": false,
+   "top1": 0.9772093892097473
+  },
+  {
+   "id": "C18",
+   "pergunta": "O que os clientes dizem sobre o preço dos produtos?",
+   "sem_evidencia": false,
+   "top1": 0.8203835487365723
+  },
+  {
+   "id": "C19",
+   "pergunta": "O que os clientes falam sobre recomprar na loja?",
+   "sem_evidencia": false,
+   "top1": 0.9951699376106262
+  },
+  {
+   "id": "C20",
+   "pergunta": "Quais relatos existem sobre produtos que pararam de funcionar depois de pouco tempo?",
+   "sem_evidencia": false,
+   "top1": 0.9771694540977478
+  },
+  {
+   "id": "N01",
+   "pergunta": "Os clientes reclamam do metaverso da loja?",
+   "sem_evidencia": true,
+   "top1": 0.02923569828271866
+  },
+  {
+   "id": "N02",
+   "pergunta": "Como os clientes avaliam as lives de vendas?",
+   "sem_evidencia": true,
+   "top1": 0.2624492347240448
+  },
+  {
+   "id": "N03",
+   "pergunta": "O que os clientes acham da cobertura 5G dos produtos?",
+   "sem_evidencia": true,
+   "top1": 0.03034881316125393
+  },
+  {
+   "id": "N04",
+   "pergunta": "Quais reclamações existem sobre a recarga de carros elétricos?",
+   "sem_evidencia": true,
+   "top1": 0.09344134479761124
+  },
+  {
+   "id": "N05",
+   "pergunta": "O que os clientes dizem do assistente com inteligência artificial?",
+   "sem_evidencia": true,
+   "top1": 0.001522708567790687
+  },
+  {
+   "id": "N06",
+   "pergunta": "Quais problemas os clientes relatam ao pagar com PayPal?",
+   "sem_evidencia": true,
+   "top1": 0.3374236226081848
+  },
+  {
+   "id": "N07",
+   "pergunta": "Quais problemas existem com o pagamento por reconhecimento facial?",
+   "sem_evidencia": true,
+   "top1": 0.03238251432776451
+  },
+  {
+   "id": "N08",
+   "pergunta": "O que os clientes acham do teste grátis de 30 dias da assinatura?",
+   "sem_evidencia": true,
+   "top1": 0.19511525332927704
+  },
+  {
+   "id": "N09",
+   "pergunta": "Os clientes reclamam da moeda virtual da loja?",
+   "sem_evidencia": true,
+   "top1": 0.007877381518483162
+  },
+  {
+   "id": "N10",
+   "pergunta": "Como os clientes avaliam o provador virtual de roupas?",
+   "sem_evidencia": true,
+   "top1": 0.17808537185192108
+  },
+  {
+   "id": "N11",
+   "pergunta": "O que os clientes comentam sobre o seguro de celular oferecido no checkout?",
+   "sem_evidencia": true,
+   "top1": 0.18035316467285156
+  },
+  {
+   "id": "N12",
+   "pergunta": "Quais reclamações existem sobre o resgate de milhas aéreas?",
+   "sem_evidencia": true,
+   "top1": 0.008770814165472984
+  },
+  {
+   "id": "N13",
+   "pergunta": "O que os clientes dizem sobre pagar com Apple Pay ou Google Pay?",
+   "sem_evidencia": true,
+   "top1": 0.0022652370389550924
+  },
+  {
+   "id": "N14",
+   "pergunta": "Como os clientes avaliam o atendimento por videochamada?",
+   "sem_evidencia": true,
+   "top1": 0.36490294337272644
+  },
+  {
+   "id": "N15",
+   "pergunta": "Os clientes reclamam do aplicativo de relógio inteligente da loja?",
+   "sem_evidencia": true,
+   "top1": 0.18003606796264648
+  },
+  {
+   "id": "N16",
+   "pergunta": "Quais relatos existem sobre pagamento parcelado no Pix?",
+   "sem_evidencia": true,
+   "top1": 0.06514136493206024
+  },
+  {
+   "id": "N17",
+   "pergunta": "O que os clientes acham do frete pago em criptomoeda?",
+   "sem_evidencia": true,
+   "top1": 0.1605549305677414
+  },
+  {
+   "id": "N18",
+   "pergunta": "Como os clientes avaliam os armários inteligentes de retirada?",
+   "sem_evidencia": true,
+   "top1": 0.035844866186380386
+  },
+  {
+   "id": "N19",
+   "pergunta": "Quais reclamações existem sobre a assinatura de streaming incluída na compra?",
+   "sem_evidencia": true,
+   "top1": 0.006498528178781271
+  },
+  {
+   "id": "N20",
+   "pergunta": "O que os clientes falam sobre o cashback em dobro na Black Friday?",
+   "sem_evidencia": true,
+   "top1": 0.009947992861270905
+  }
+ ]
+}

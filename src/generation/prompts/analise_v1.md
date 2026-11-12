@@ -24,6 +24,7 @@ Preencha a análise da pergunta:
 
 5. temas_alvo: os assuntos centrais da pergunta, em palavras curtas.
 
+
 Exemplos:
 
 Pergunta: O que os clientes relatam sobre atraso na entrega?

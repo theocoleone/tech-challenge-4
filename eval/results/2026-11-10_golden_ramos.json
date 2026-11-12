@@ -1,0 +1,4757 @@
+{
+ "resumo_por_ramo": [
+  {
+   "ramo": "fora_escopo",
+   "n_esperado": 3,
+   "n_obtido": 4,
+   "precisao": 0.75,
+   "recall": 1.0
+  },
+  {
+   "ramo": "filtro_sem_resultado",
+   "n_esperado": 2,
+   "n_obtido": 2,
+   "precisao": 1.0,
+   "recall": 1.0
+  },
+  {
+   "ramo": "sem_evidencia",
+   "n_esperado": 10,
+   "n_obtido": 13,
+   "precisao": 0.615,
+   "recall": 0.8
+  },
+  {
+   "ramo": "evidencia_fraca",
+   "n_esperado": 4,
+   "n_obtido": 2,
+   "precisao": 0.0,
+   "recall": 0.0
+  },
+  {
+   "ramo": "ok",
+   "n_esperado": 25,
+   "n_obtido": 23,
+   "precisao": 1.0,
+   "recall": 0.92
+  }
+ ],
+ "por_pergunta": [
+  {
+   "id": "E01",
+   "tipo": "especifica",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 6,
+   "citacoes_validas": true,
+   "segundos": 34.7
+  },
+  {
+   "id": "E02",
+   "tipo": "especifica",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 3,
+   "citacoes_validas": true,
+   "segundos": 14.7
+  },
+  {
+   "id": "E03",
+   "tipo": "especifica",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 8,
+   "citacoes_validas": true,
+   "segundos": 15.4
+  },
+  {
+   "id": "E04",
+   "tipo": "especifica",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 8,
+   "citacoes_validas": true,
+   "segundos": 16.6
+  },
+  {
+   "id": "E05",
+   "tipo": "especifica",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 6,
+   "citacoes_validas": true,
+   "segundos": 15.8
+  },
+  {
+   "id": "E06",
+   "tipo": "especifica",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 3,
+   "citacoes_validas": true,
+   "segundos": 14.4
+  },
+  {
+   "id": "E07",
+   "tipo": "especifica",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 9,
+   "citacoes_validas": true,
+   "segundos": 14.2
+  },
+  {
+   "id": "E08",
+   "tipo": "especifica",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 7,
+   "citacoes_validas": true,
+   "segundos": 12.0
+  },
+  {
+   "id": "E09",
+   "tipo": "especifica",
+   "esperado": "ok",
+   "obtido": "evidencia_fraca",
+   "acertou": false,
+   "n_citacoes": 2,
+   "citacoes_validas": false,
+   "segundos": 13.1
+  },
+  {
+   "id": "E10",
+   "tipo": "especifica",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 5,
+   "citacoes_validas": true,
+   "segundos": 13.2
+  },
+  {
+   "id": "E11",
+   "tipo": "especifica",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 8,
+   "citacoes_validas": true,
+   "segundos": 19.4
+  },
+  {
+   "id": "E12",
+   "tipo": "especifica",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 8,
+   "citacoes_validas": true,
+   "segundos": 13.4
+  },
+  {
+   "id": "F01",
+   "tipo": "filtro",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 7,
+   "citacoes_validas": true,
+   "segundos": 17.7
+  },
+  {
+   "id": "F02",
+   "tipo": "filtro",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 7,
+   "citacoes_validas": true,
+   "segundos": 17.8
+  },
+  {
+   "id": "F03",
+   "tipo": "filtro",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 5,
+   "citacoes_validas": true,
+   "segundos": 13.7
+  },
+  {
+   "id": "F04",
+   "tipo": "filtro",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 7,
+   "citacoes_validas": true,
+   "segundos": 11.3
+  },
+  {
+   "id": "F05",
+   "tipo": "filtro",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 8,
+   "citacoes_validas": true,
+   "segundos": 16.9
+  },
+  {
+   "id": "F06",
+   "tipo": "filtro",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 6,
+   "citacoes_validas": true,
+   "segundos": 11.3
+  },
+  {
+   "id": "A01",
+   "tipo": "agregada",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 7,
+   "citacoes_validas": true,
+   "segundos": 15.7
+  },
+  {
+   "id": "A02",
+   "tipo": "agregada",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 5,
+   "citacoes_validas": true,
+   "segundos": 11.6
+  },
+  {
+   "id": "A03",
+   "tipo": "agregada",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 6,
+   "citacoes_validas": true,
+   "segundos": 14.9
+  },
+  {
+   "id": "A04",
+   "tipo": "agregada",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 6,
+   "citacoes_validas": true,
+   "segundos": 10.0
+  },
+  {
+   "id": "A05",
+   "tipo": "agregada",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 3,
+   "citacoes_validas": true,
+   "segundos": 10.6
+  },
+  {
+   "id": "A06",
+   "tipo": "agregada",
+   "esperado": "ok",
+   "obtido": "ok",
+   "acertou": true,
+   "n_citacoes": 3,
+   "citacoes_validas": true,
+   "segundos": 11.5
+  },
+  {
+   "id": "A07",
+   "tipo": "agregada",
+   "esperado": "ok",
+   "obtido": "sem_evidencia",
+   "acertou": false,
+   "n_citacoes": 0,
+   "citacoes_validas": true,
+   "segundos": 8.3
+  },
+  {
+   "id": "I01",
+   "tipo": "insuficiente",
+   "esperado": "evidencia_fraca",
+   "obtido": "sem_evidencia",
+   "acertou": false,
+   "n_citacoes": 0,
+   "citacoes_validas": true,
+   "segundos": 7.8
+  },
+  {
+   "id": "I02",
+   "tipo": "insuficiente",
+   "esperado": "evidencia_fraca",
+   "obtido": "sem_evidencia",
+   "acertou": false,
+   "n_citacoes": 0,
+   "citacoes_validas": true,
+   "segundos": 9.5
+  },
+  {
+   "id": "I03",
+   "tipo": "insuficiente",
+   "esperado": "evidencia_fraca",
+   "obtido": "sem_evidencia",
+   "acertou": false,
+   "n_citacoes": 0,
+   "citacoes_validas": true,
+   "segundos": 7.0
+  },
+  {
+   "id": "I04",
+   "tipo": "insuficiente",
+   "esperado": "evidencia_fraca",
+   "obtido": "sem_evidencia",
+   "acertou": false,
+   "n_citacoes": 0,
+   "citacoes_validas": true,
+   "segundos": 3.4
+  },
+  {
+   "id": "V01",
+   "tipo": "filtro_vazio",
+   "esperado": "filtro_sem_resultado",
+   "obtido": "filtro_sem_resultado",
+   "acertou": true,
+   "n_citacoes": 0,
+   "citacoes_validas": true,
+   "segundos": 1.3
+  },
+  {
+   "id": "V02",
+   "tipo": "filtro_vazio",
+   "esperado": "filtro_sem_resultado",
+   "obtido": "filtro_sem_resultado",
+   "acertou": true,
+   "n_citacoes": 0,
+   "citacoes_validas": true,
+   "segundos": 1.0
+  },
+  {
+   "id": "S01",
+   "tipo": "sem_evidencia",
+   "esperado": "sem_evidencia",
+   "obtido": "sem_evidencia",
+   "acertou": true,
+   "n_citacoes": 0,
+   "citacoes_validas": true,
+   "segundos": 8.7
+  },
+  {
+   "id": "S02",
+   "tipo": "sem_evidencia",
+   "esperado": "sem_evidencia",
+   "obtido": "sem_evidencia",
+   "acertou": true,
+   "n_citacoes": 0,
+   "citacoes_validas": true,
+   "segundos": 7.6
+  },
+  {
+   "id": "S03",
+   "tipo": "sem_evidencia",
+   "esperado": "sem_evidencia",
+   "obtido": "evidencia_fraca",
+   "acertou": false,
+   "n_citacoes": 0,
+   "citacoes_validas": true,
+   "segundos": 10.1
+  },
+  {
+   "id": "S04",
+   "tipo": "sem_evidencia",
+   "esperado": "sem_evidencia",
+   "obtido": "sem_evidencia",
+   "acertou": true,
+   "n_citacoes": 0,
+   "citacoes_validas": true,
+   "segundos": 10.9
+  },
+  {
+   "id": "S05",
+   "tipo": "sem_evidencia",
+   "esperado": "sem_evidencia",
+   "obtido": "sem_evidencia",
+   "acertou": true,
+   "n_citacoes": 0,
+   "citacoes_validas": true,
+   "segundos": 11.1
+  },
+  {
+   "id": "S06",
+   "tipo": "sem_evidencia",
+   "esperado": "sem_evidencia",
+   "obtido": "sem_evidencia",
+   "acertou": true,
+   "n_citacoes": 0,
+   "citacoes_validas": true,
+   "segundos": 11.6
+  },
+  {
+   "id": "S07",
+   "tipo": "sem_evidencia",
+   "esperado": "sem_evidencia",
+   "obtido": "fora_escopo",
+   "acertou": false,
+   "n_citacoes": 0,
+   "citacoes_validas": true,
+   "segundos": 1.1
+  },
+  {
+   "id": "S08",
+   "tipo": "sem_evidencia",
+   "esperado": "sem_evidencia",
+   "obtido": "sem_evidencia",
+   "acertou": true,
+   "n_citacoes": 0,
+   "citacoes_validas": true,
+   "segundos": 10.0
+  },
+  {
+   "id": "S09",
+   "tipo": "sem_evidencia",
+   "esperado": "sem_evidencia",
+   "obtido": "sem_evidencia",
+   "acertou": true,
+   "n_citacoes": 0,
+   "citacoes_validas": true,
+   "segundos": 10.4
+  },
+  {
+   "id": "S10",
+   "tipo": "sem_evidencia",
+   "esperado": "sem_evidencia",
+   "obtido": "sem_evidencia",
+   "acertou": true,
+   "n_citacoes": 0,
+   "citacoes_validas": true,
+   "segundos": 11.8
+  },
+  {
+   "id": "X01",
+   "tipo": "fora_escopo",
+   "esperado": "fora_escopo",
+   "obtido": "fora_escopo",
+   "acertou": true,
+   "n_citacoes": 0,
+   "citacoes_validas": true,
+   "segundos": 0.8
+  },
+  {
+   "id": "X02",
+   "tipo": "fora_escopo",
+   "esperado": "fora_escopo",
+   "obtido": "fora_escopo",
+   "acertou": true,
+   "n_citacoes": 0,
+   "citacoes_validas": true,
+   "segundos": 0.7
+  },
+  {
+   "id": "X03",
+   "tipo": "fora_escopo",
+   "esperado": "fora_escopo",
+   "obtido": "fora_escopo",
+   "acertou": true,
+   "n_citacoes": 0,
+   "citacoes_validas": true,
+   "segundos": 0.9
+  }
+ ],
+ "respostas": [
+  {
+   "id": "E01",
+   "trace_id": "273d1fc33fde",
+   "pergunta": "O que os clientes relatam sobre atraso na entrega?",
+   "status": "ok",
+   "resposta": "As avaliações recuperadas mostram que os clientes relatam atrasos na entrega de seus pedidos, com alguns mencionando falta de satisfação e comunicação por parte da loja.",
+   "insights": [
+    {
+     "afirmacao": "Tive atraso na entrega",
+     "review_ids": [
+      "86cb30e96939f06396356768082e8c97"
+     ]
+    },
+    {
+     "afirmacao": "Demora na entrega",
+     "review_ids": [
+      "c5fd78541a0902a1180fac12a8129dc1"
+     ]
+    },
+    {
+     "afirmacao": "Entrega em atraso",
+     "review_ids": [
+      "06de6ba90c81c318f9f08196c369ded5"
+     ]
+    },
+    {
+     "afirmacao": "Aguardando a entrega. Entrega em atraso.",
+     "review_ids": [
+      "364e74a2d89a35fa3fad2beaf96d8f17"
+     ]
+    },
+    {
+     "afirmacao": "Atraso na entrega sem dar satisfação ao cliente",
+     "review_ids": [
+      "2d0a07007cc84621a2bc694505be4036"
+     ]
+    },
+    {
+     "afirmacao": "Muito atraso na entrega de um produto simples e pequeno. Até hoje não recebi nem o produto, nem uma satisfação sobre o assunto.",
+     "review_ids": [
+      "c99bd47a251c0fef5b5933b293acea03"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "86cb30e96939f06396356768082e8c97",
+     "texto": "Tive atraso na entrega",
+     "nota": 3,
+     "categoria": "esporte_lazer",
+     "mes_compra": 201712,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.954
+    },
+    {
+     "review_id": "69228c9ea08f4e0d8b591cc2309f4a5d",
+     "texto": "Atraso na entrega.",
+     "nota": 4,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201802,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.904
+    },
+    {
+     "review_id": "c5fd78541a0902a1180fac12a8129dc1",
+     "texto": "Demora na entrega.",
+     "nota": 1,
+     "categoria": "pet_shop",
+     "mes_compra": 201803,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.853
+    },
+    {
+     "review_id": "06de6ba90c81c318f9f08196c369ded5",
+     "texto": "Entrega em atraso",
+     "nota": 2,
+     "categoria": "sem_categoria",
+     "mes_compra": 201803,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.848
+    },
+    {
+     "review_id": "364e74a2d89a35fa3fad2beaf96d8f17",
+     "texto": "Aguardando a entrega. Entrega em atraso.",
+     "nota": 1,
+     "categoria": "moveis_escritorio",
+     "mes_compra": 201807,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.792
+    },
+    {
+     "review_id": "71029cd75d18487840d04f34c94601b9",
+     "texto": "ATRASO NA ENTREGA. ATRASO NA ENTREGA",
+     "nota": 2,
+     "categoria": "relogios_presentes",
+     "mes_compra": 201804,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.565
+    },
+    {
+     "review_id": "2d0a07007cc84621a2bc694505be4036",
+     "texto": "Atraso na entrega sem dar satisfação ao cliente, que com certeza escolheu o produto com cuidado e com as melhores expectativas. Falta de consideração.",
+     "nota": 1,
+     "categoria": "moveis_decoracao",
+     "mes_compra": 201711,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.457
+    },
+    {
+     "review_id": "c99bd47a251c0fef5b5933b293acea03",
+     "texto": "Muito atraso na entrega de um produto simples e pequeno. Até hoje não recebi nem o produto, nem uma satisfação sobre o assunto.",
+     "nota": 1,
+     "categoria": "sem_categoria",
+     "mes_compra": 201702,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.293
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "entrega atrasada demorou para chegar",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 5.67,
+    "busca": 23.25,
+    "geracao": 5.72
+   }
+  },
+  {
+   "id": "E02",
+   "trace_id": "06975da30cda",
+   "pergunta": "Quais relatos existem de clientes que não receberam o produto?",
+   "status": "ok",
+   "resposta": "As avaliações recuperadas mostram que os clientes não receberam os produtos que compraram. Os clientes relatam que os produtos não foram entregues e que não há previsão de recebimento.",
+   "insights": [
+    {
+     "afirmacao": "O cliente não recebeu o produto e não há previsão de recebimento.",
+     "review_ids": [
+      "e884f18df1f1eaf5cd40c370ca2d7387"
+     ]
+    },
+    {
+     "afirmacao": "O cliente não recebeu o produto e a compra foi realizada em 30/07.",
+     "review_ids": [
+      "1b3b554186c17b4b95292ce62d710f07"
+     ]
+    },
+    {
+     "afirmacao": "O cliente não recebeu o produto e o prazo de entrega não foi cumprido.",
+     "review_ids": [
+      "986820c39b1a0f1c99bf0592080078bd"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "352609f0f2d34ce5d3b8de817ee948d5",
+     "texto": "Não recebi o produto.",
+     "nota": 3,
+     "categoria": "moveis_escritorio",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.911
+    },
+    {
+     "review_id": "0340049ad5abcf4d0f5ee2445ca09ce0",
+     "texto": "Até agora não recebi o produto",
+     "nota": 1,
+     "categoria": "cool_stuff",
+     "mes_compra": 201801,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.838
+    },
+    {
+     "review_id": "8d697839be8221452e9d4f96347d0612",
+     "texto": "PRODUTO NÃO RECEBIDO",
+     "nota": 1,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201708,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.774
+    },
+    {
+     "review_id": "3a76bdb3b01eca6666dc56b203afe3e4",
+     "texto": "Produto não foi entregue.",
+     "nota": 1,
+     "categoria": "esporte_lazer",
+     "mes_compra": 201704,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.762
+    },
+    {
+     "review_id": "36bd621a02212295073a4410ad8beb0c",
+     "texto": "Não entregaram o meu produto",
+     "nota": 1,
+     "categoria": "malas_acessorios",
+     "mes_compra": 201711,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.621
+    },
+    {
+     "review_id": "986820c39b1a0f1c99bf0592080078bd",
+     "texto": "Não cumpriram o prazo de entrega,ainda não recebi o produto",
+     "nota": 1,
+     "categoria": "relogios_presentes",
+     "mes_compra": 201802,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.58
+    },
+    {
+     "review_id": "1b3b554186c17b4b95292ce62d710f07",
+     "texto": "Não recebi o produto. Realizei a compra em 30/07 e até agora não recebi o produto.",
+     "nota": 1,
+     "categoria": "alimentos_bebidas",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.557
+    },
+    {
+     "review_id": "e884f18df1f1eaf5cd40c370ca2d7387",
+     "texto": "Sem comprometimento. Sem previsão de recebimento, a lannister deveria não fazer qualquer tipo de negócio e prezar pelo clientes da lannister que são fiéis.",
+     "nota": 1,
+     "categoria": "moveis_decoracao",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "não recebi o produto",
+   "filtros_aplicados": {
+    "order_status": "canceled"
+   },
+   "n_no_recorte": 404,
+   "tempos": {
+    "analise": 0.88,
+    "busca": 11.15,
+    "geracao": 2.68
+   }
+  },
+  {
+   "id": "E03",
+   "trace_id": "73e7290925ae",
+   "pergunta": "O que os clientes dizem quando recebem um produto diferente do anunciado?",
+   "status": "ok",
+   "resposta": "As avaliações recuperadas mostram que os clientes relatam ter recebido produtos diferentes dos anunciados, com alguns especificando que o produto recebido não correspondia às descrições do site, como a presença de lactose em um produto anunciado como zero lactose.",
+   "insights": [
+    {
+     "afirmacao": "O produto chegou diferente do anunciado.",
+     "review_ids": [
+      "f85ae141a0d912defb1c690f27ce57ce"
+     ]
+    },
+    {
+     "afirmacao": "Recebi o produto diferente do que foi anunciado e comprado.",
+     "review_ids": [
+      "6137736e63c63b146f3012dd3419e657"
+     ]
+    },
+    {
+     "afirmacao": "O produto que recebi é diferente do produto anunciado.",
+     "review_ids": [
+      "4e7db7d9bdafdd99952285cc366d108a"
+     ]
+    },
+    {
+     "afirmacao": "O produto que recebi não era o anunciado.",
+     "review_ids": [
+      "bc4ba3d061074cb490a4a32223963018"
+     ]
+    },
+    {
+     "afirmacao": "Recebi um produto totalmente diferente da compra realizada.",
+     "review_ids": [
+      "124417371f543ee236aef75b02bdee6d"
+     ]
+    },
+    {
+     "afirmacao": "produto diferente do anunciado",
+     "review_ids": [
+      "51a1578250f045f0a1044b653ee9b3be"
+     ]
+    },
+    {
+     "afirmacao": "Há divergência entre o produto apresentado e o entregue.",
+     "review_ids": [
+      "6651d31e8f40b2444a4601ca46433649"
+     ]
+    },
+    {
+     "afirmacao": "o produto anunciado é diferente do entregue. No rotulo no site diz: zero lactose. O produto possui lactose.",
+     "review_ids": [
+      "bbab8347323754372b7ba067e0a0f1d4"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "f85ae141a0d912defb1c690f27ce57ce",
+     "texto": "O produto chegou diferente do anunciado.",
+     "nota": 1,
+     "categoria": "automotivo",
+     "mes_compra": 201709,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.996
+    },
+    {
+     "review_id": "6137736e63c63b146f3012dd3419e657",
+     "texto": "Recebi o produto diferente do que foi anunciado e comprado.",
+     "nota": 1,
+     "categoria": "beleza_saude",
+     "mes_compra": 201711,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.994
+    },
+    {
+     "review_id": "4e7db7d9bdafdd99952285cc366d108a",
+     "texto": "Produto Diferente. O produto que recebi é diferente do produto anunciado.",
+     "nota": 1,
+     "categoria": "telefonia",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.992
+    },
+    {
+     "review_id": "bc4ba3d061074cb490a4a32223963018",
+     "texto": "O produto que recebi não era o anunciado.",
+     "nota": 4,
+     "categoria": "telefonia",
+     "mes_compra": 201802,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.975
+    },
+    {
+     "review_id": "124417371f543ee236aef75b02bdee6d",
+     "texto": "Recebi um produto totalmente diferente da compra realizada",
+     "nota": 1,
+     "categoria": "brinquedos",
+     "mes_compra": 201706,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.904
+    },
+    {
+     "review_id": "51a1578250f045f0a1044b653ee9b3be",
+     "texto": "produto diferente do anunciado",
+     "nota": 1,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201802,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.899
+    },
+    {
+     "review_id": "6651d31e8f40b2444a4601ca46433649",
+     "texto": "Há divergência entre o produto apresentado e o entregue.",
+     "nota": 4,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201803,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.773
+    },
+    {
+     "review_id": "bbab8347323754372b7ba067e0a0f1d4",
+     "texto": "o produto anunciado é diferente do entregue. No rotulo no site diz: zero lactose. O produto possui lactose.",
+     "nota": 1,
+     "categoria": "esporte_lazer",
+     "mes_compra": 201711,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.379
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "produto diferente do anunciado",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.82,
+    "busca": 9.86,
+    "geracao": 4.73
+   }
+  },
+  {
+   "id": "E04",
+   "trace_id": "746c4fc75db2",
+   "pergunta": "Quais reclamações existem sobre produtos que chegaram quebrados ou com defeito?",
+   "status": "ok",
+   "resposta": "As avaliações recuperadas mostram que alguns clientes receberam produtos quebrados ou com defeito. Esses problemas ocorreram em diversas categorias, como automotivo, relógios e presentes, brinquedos, utilidades domésticas, sem categoria e móveis e decoração. Os clientes relataram que os produtos chegaram quebrados ou com defeito, e em alguns casos, a embalagem não garantiu a integridade dos itens.",
+   "insights": [
+    {
+     "afirmacao": "Produto com defeito. Produto veio quebrado",
+     "review_ids": [
+      "13dcde46c1a250aaed407dd6d5a53b77"
+     ]
+    },
+    {
+     "afirmacao": "O produto chegou quebrado.",
+     "review_ids": [
+      "85d756e4f54d11953b9a055b6d3a6bd5"
+     ]
+    },
+    {
+     "afirmacao": "Produto veio quebrado",
+     "review_ids": [
+      "03a673dc9858b1fe77fc26a3900c129a"
+     ]
+    },
+    {
+     "afirmacao": "Minha queixa é que o produto chegou com defeito.",
+     "review_ids": [
+      "390c78a5aa8b87a0e74a827fd5736078"
+     ]
+    },
+    {
+     "afirmacao": "O produto veio quebrado. Quero a troca.",
+     "review_ids": [
+      "87e27b28502790db98956163815abb52"
+     ]
+    },
+    {
+     "afirmacao": "Todos os produtos chegaram quebrados e um absurdo isso eles foram muito mau embalados e não tinha especificação na caixa falando q era produto frágil as 3 panelas de barro q comprei chegaram quebradas",
+     "review_ids": [
+      "86b2d291de4ad5e739da3f61c91d45da"
+     ]
+    },
+    {
+     "afirmacao": "Alguns cabides chegaram quebrados",
+     "review_ids": [
+      "4ac67e7aa938e616ce81a747734ed89f"
+     ]
+    },
+    {
+     "afirmacao": "Produto chegou quebrado, em uma avaliação inicial nos pareceu ser uma embalagem que não garante a integridade de um produto feito em vidro.",
+     "review_ids": [
+      "714b8f899b9e039e4fb59ff083935f67"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "13dcde46c1a250aaed407dd6d5a53b77",
+     "texto": "Produto com defeito. Produto veio quebrado",
+     "nota": 3,
+     "categoria": "automotivo",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.984
+    },
+    {
+     "review_id": "85d756e4f54d11953b9a055b6d3a6bd5",
+     "texto": "O produto chegou quebrado.",
+     "nota": 1,
+     "categoria": "relogios_presentes",
+     "mes_compra": 201711,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.972
+    },
+    {
+     "review_id": "03a673dc9858b1fe77fc26a3900c129a",
+     "texto": "Produto veio quebrado",
+     "nota": 2,
+     "categoria": "brinquedos",
+     "mes_compra": 201804,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.972
+    },
+    {
+     "review_id": "390c78a5aa8b87a0e74a827fd5736078",
+     "texto": "Minha queixa é que o produto chegou com defeito.",
+     "nota": 3,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201801,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.95
+    },
+    {
+     "review_id": "87e27b28502790db98956163815abb52",
+     "texto": "Reclamação. Bom dia.\r\nO produto veio quebrado. \r\nQuero a troca.",
+     "nota": 1,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201807,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.764
+    },
+    {
+     "review_id": "86b2d291de4ad5e739da3f61c91d45da",
+     "texto": "Todos os produtos chegaram quebrados e um absurdo isso eles foram muito mau embalados e não tinha especificação na caixa falando q era produto frágil as 3 panelas de barro q comprei chegaram quebradas",
+     "nota": 1,
+     "categoria": "sem_categoria",
+     "mes_compra": 201804,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.748
+    },
+    {
+     "review_id": "4ac67e7aa938e616ce81a747734ed89f",
+     "texto": "Alguns cabides chegaram quebrados",
+     "nota": 3,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201803,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.575
+    },
+    {
+     "review_id": "714b8f899b9e039e4fb59ff083935f67",
+     "texto": "Produto chegou quebrado, em uma avaliação inicial nos pareceu ser uma embalagem que não garante a integridade de um produto feito em vidro.",
+     "nota": 1,
+     "categoria": "moveis_decoracao",
+     "mes_compra": 201711,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.567
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "produto quebrado defeito",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.84,
+    "busca": 10.81,
+    "geracao": 4.94
+   }
+  },
+  {
+   "id": "E05",
+   "trace_id": "bf3f58784aa5",
+   "pergunta": "O que os clientes comentam sobre a embalagem dos produtos?",
+   "status": "ok",
+   "resposta": "As avaliações recuperadas mostram que os clientes comentam sobre a embalagem dos produtos de forma variada. Alguns elogiam o cuidado e a qualidade da embalagem, enquanto outros relatam problemas como embalagens amassadas, frágeis ou quebradas.",
+   "insights": [
+    {
+     "afirmacao": "Alguns clientes elogiam o cuidado e a qualidade da embalagem.",
+     "review_ids": [
+      "ef0cb49c494b34d55782e4c91bdc8730",
+      "649979a424f1736947f84216c21e661f",
+      "6ec6279e3883f19972abfe28cd9c0336"
+     ]
+    },
+    {
+     "afirmacao": "Outros clientes relatam problemas com a embalagem, como amassada, frágil ou quebrada.",
+     "review_ids": [
+      "31c31deec344ce8c892f9bd3c6a1b478",
+      "08a7e78fd4551af536b748e8acf904ec",
+      "1c53ce123176254cfb615f19f07bfb8e"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "ef0cb49c494b34d55782e4c91bdc8730",
+     "texto": "Adorei a embalagem e o atendimento. Produto maravilhoso. Sempre darei preferência para compras desse lojista. Amei.",
+     "nota": 5,
+     "categoria": "pet_shop",
+     "mes_compra": 201701,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.266
+    },
+    {
+     "review_id": "649979a424f1736947f84216c21e661f",
+     "texto": "Super recomendo. Adorei o cuidado com a embalagem do produto, demonstrando carinho com o cliente.",
+     "nota": 5,
+     "categoria": "relogios_presentes",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.255
+    },
+    {
+     "review_id": "6ec6279e3883f19972abfe28cd9c0336",
+     "texto": "Confiança, ,. Adoro comprar aqui.\r\nTenho o que necessito, em prazo mínimo. É de se ressaltar o zelo dos funcionários na embalagem dos produtos , e no trato com os clientes. Nota Mil !",
+     "nota": 5,
+     "categoria": "esporte_lazer",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.244
+    },
+    {
+     "review_id": "31c31deec344ce8c892f9bd3c6a1b478",
+     "texto": "Embalagem. Produto de boa qualidade , entrega rápida, infelizmente não foi bem embalado e chegou com um produto quebrado !",
+     "nota": 3,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.179
+    },
+    {
+     "review_id": "08a7e78fd4551af536b748e8acf904ec",
+     "texto": "Ponto positivo e negativo. O produto chegou antes do prazo. Isso é muito bom! Mas tenho uma reclamação a fazer. A embalagem do produto (lata) veio amassada. Não apresentou nenhuma avaria no produto, apenas na embalagem (lata).",
+     "nota": 4,
+     "categoria": "relogios_presentes",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.128
+    },
+    {
+     "review_id": "1c53ce123176254cfb615f19f07bfb8e",
+     "texto": "Só a embalagem que não achei mto segura, veio numa caixa frágil, sem proteção em cima do produto e a caixa do Sedex chegou um pouco amassada... obrigada",
+     "nota": 4,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.032
+    },
+    {
+     "review_id": "208dbc60bf7f8a8da8388d32666b1194",
+     "texto": "Meus produtos nao vieram completos comprei 3 produtos e vieram somente um e estou aguardando uma resposta do stark sobre o ocorrido quero saber se vao devolver meu dinheiro ou mandar os produtos",
+     "nota": 1,
+     "categoria": "beleza_saude",
+     "mes_compra": 201803,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "c27e122fd5da1aa3c9b9f801dcd68ece",
+     "texto": "Atraso em cima de atras, nenhuma informação sobre eles e nenhuma retratação: total falta de comprometimento com clientes.",
+     "nota": 1,
+     "categoria": "fashion_bolsas_e_acessorios",
+     "mes_compra": 201803,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "embalagem dos produtos",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.93,
+    "busca": 11.44,
+    "geracao": 3.46
+   }
+  },
+  {
+   "id": "E06",
+   "trace_id": "25682418b934",
+   "pergunta": "Como os clientes avaliam o atendimento do vendedor ou da loja?",
+   "status": "ok",
+   "resposta": "As avaliações recuperadas mostram que alguns clientes estão satisfeitos com o atendimento da loja e do vendedor, enquanto outros expressam insatisfação e dificuldades em obter suporte.",
+   "insights": [
+    {
+     "afirmacao": "O cliente ficou satisfeito com o atendimento na loja e o tempo de espera estabelecido.",
+     "review_ids": [
+      "dd2e222d7f3c46e5d83dcaa47dc72fe9"
+     ]
+    },
+    {
+     "afirmacao": "O cliente expressou insatisfação com a falta de resposta do vendedor.",
+     "review_ids": [
+      "9aea405ac411a6ec4e9d0c228b53ce57"
+     ]
+    },
+    {
+     "afirmacao": "O cliente precisa urgentemente de contato com o atendimento ou com o vendedor.",
+     "review_ids": [
+      "e9c7b21eae49f95d880790cc9805bc68"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "f6362b9da08c0cb3093dd517f5217e39",
+     "texto": "Avaliação do vendedor",
+     "nota": 5,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201808,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.697
+    },
+    {
+     "review_id": "dd2e222d7f3c46e5d83dcaa47dc72fe9",
+     "texto": "Fico grato pelo atendimento na loja e principalmente no tempo de espera estabelido pela loja, ja é a terceira vez que compro no saite da loja e não tive nenhum transtorno com a entrega ,grato.👍",
+     "nota": 4,
+     "categoria": "cool_stuff",
+     "mes_compra": 201711,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.079
+    },
+    {
+     "review_id": "d8efea9a133de6c33139b28cc18d97ef",
+     "texto": "Avaliação do vendedor. Na verdade não sei se indicaria está loja , pois o pedido da pomada Santa chegou sem problemas , mas o outro produto foi pago sendo que não tinha o produto",
+     "nota": 5,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.073
+    },
+    {
+     "review_id": "9fa707f7e2c69e301be475cb5266cb30",
+     "texto": "Infelizmente não tenho como avaliar pois não sei se o atraso na entrega foi culpa do vendedor ou dos correios, acho que as lojas tem que procurar outra alternativa além dos correios.",
+     "nota": 3,
+     "categoria": "pet_shop",
+     "mes_compra": 201802,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.064
+    },
+    {
+     "review_id": "6450dd4d6a7fa805d2103edd325a159b",
+     "texto": "Tanto loja quanto o vendedor e lixeira muito bom, recomendo tudo.Entrega super rápido, chegou muito antes do prazo.Amei tudo",
+     "nota": 5,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201801,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.052
+    },
+    {
+     "review_id": "9aea405ac411a6ec4e9d0c228b53ce57",
+     "texto": "Venho expressar a minha grande insatisfação pela loja e vendedor do produto.\r\nComprei o produto a mais de um mês e não recebi, o mesmo ficou de entrar em contato comigo e não me respondeu.",
+     "nota": 1,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201712,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.015
+    },
+    {
+     "review_id": "e9c7b21eae49f95d880790cc9805bc68",
+     "texto": "Preciso de números telefones de contato com o atendimento baratheon ou do vendedor.\r\nURGENTE",
+     "nota": 1,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201705,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "4e45a1f2c9a633fec1ed244a875b8a96",
+     "texto": "A loja está optando por um meio de transporte sabidamente com problemas estruturais, sem compromisso com os clientes.",
+     "nota": 1,
+     "categoria": "esporte_lazer",
+     "mes_compra": 201801,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "atendimento vendedor loja",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 1.54,
+    "busca": 10.4,
+    "geracao": 2.41
+   }
+  },
+  {
+   "id": "E07",
+   "trace_id": "47dd632e71f1",
+   "pergunta": "O que os clientes elogiam quando a entrega é rápida?",
+   "status": "ok",
+   "resposta": "Os clientes elogiam a rapidez na entrega e a satisfação com o atendimento, além de destacar que os produtos atendem às expectativas.",
+   "insights": [
+    {
+     "afirmacao": "Os clientes elogiam a rapidez na entrega.",
+     "review_ids": [
+      "c8b0501e131a56ea364c59c0d4ec0b4f",
+      "dddcf84aeb8b7c7739df6690f7b1a419",
+      "1adbf471f5b16ba38eb5fc64f7fb0432",
+      "4bf8bfe705774172915797981bb200cc",
+      "6974ab908c4bd81bd5fb903124343b56",
+      "13e2ccc2a17670658f41e39fe8332b24",
+      "da2fc63ce74855f2717261dbaaac1bff"
+     ]
+    },
+    {
+     "afirmacao": "Os clientes destacam a satisfação com o atendimento.",
+     "review_ids": [
+      "8d3a6b6abcc00cbea9b9b18d112cd9f5"
+     ]
+    },
+    {
+     "afirmacao": "Os clientes mencionam que os produtos atendem às expectativas.",
+     "review_ids": [
+      "da2fc63ce74855f2717261dbaaac1bff"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "c8b0501e131a56ea364c59c0d4ec0b4f",
+     "texto": "Parabéns pela rapidez na entrega.",
+     "nota": 5,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201711,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.786
+    },
+    {
+     "review_id": "dddcf84aeb8b7c7739df6690f7b1a419",
+     "texto": "Parabéns a entrega rápida",
+     "nota": 4,
+     "categoria": "beleza_saude",
+     "mes_compra": 201703,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.682
+    },
+    {
+     "review_id": "1adbf471f5b16ba38eb5fc64f7fb0432",
+     "texto": "Feliz pelo produto e a entrega rápida.",
+     "nota": 5,
+     "categoria": "beleza_saude",
+     "mes_compra": 201711,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.63
+    },
+    {
+     "review_id": "4bf8bfe705774172915797981bb200cc",
+     "texto": "Entrega foi rápida...",
+     "nota": 4,
+     "categoria": "relogios_presentes",
+     "mes_compra": 201801,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.612
+    },
+    {
+     "review_id": "6974ab908c4bd81bd5fb903124343b56",
+     "texto": "Entrega rápida. Adorei o relógio, é a entrega foi super rápida.",
+     "nota": 5,
+     "categoria": "relogios_presentes",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.568
+    },
+    {
+     "review_id": "13e2ccc2a17670658f41e39fe8332b24",
+     "texto": "Entrega rápida. Entrega rápida",
+     "nota": 5,
+     "categoria": "artigos_de_natal",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.515
+    },
+    {
+     "review_id": "8d3a6b6abcc00cbea9b9b18d112cd9f5",
+     "texto": "rápida entrega é bom atendimento",
+     "nota": 5,
+     "categoria": "perfumaria",
+     "mes_compra": 201803,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.507
+    },
+    {
+     "review_id": "da2fc63ce74855f2717261dbaaac1bff",
+     "texto": "Muito bom, entrega rápida. Produto atendeu as expectativas e a entrega foi rápida.",
+     "nota": 5,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201804,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.477
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "entrega rápida",
+   "filtros_aplicados": {
+    "review_score_min": 4
+   },
+   "n_no_recorte": 27682,
+   "tempos": {
+    "analise": 0.9,
+    "busca": 9.86,
+    "geracao": 3.42
+   }
+  },
+  {
+   "id": "E08",
+   "trace_id": "4cf99c96319e",
+   "pergunta": "O que os clientes elogiam na qualidade dos produtos?",
+   "status": "ok",
+   "resposta": "As avaliações recuperadas mostram que os clientes elogiam a qualidade dos produtos, mencionando que são de excelente qualidade e recomendam tanto o produto quanto a loja.",
+   "insights": [
+    {
+     "afirmacao": "Os clientes elogiam a qualidade dos produtos.",
+     "review_ids": [
+      "dcebfef07ae5bad804471747a19338e0",
+      "07a4c0fd1d3bc16284492825bdd62bff",
+      "de7b244e5a8fb3ea3c76f1f9fe4e5c96",
+      "b3d919d72cc9aaba9f80678d6230c650",
+      "ff77e689593e261a118f2227b72976f3",
+      "dec446be74c5c9dd2a1c6e3042f7ef92",
+      "2e85094a5645024b6f09f5516bc704bf"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "dcebfef07ae5bad804471747a19338e0",
+     "texto": "Estão de parabéns pela pontualidade e qualidade dos produtos.",
+     "nota": 5,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201804,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.844
+    },
+    {
+     "review_id": "07a4c0fd1d3bc16284492825bdd62bff",
+     "texto": "Elogio. Entrega bem antes do prazo. Produto de excelente qualidade. Recomendo o produto e a loja.",
+     "nota": 5,
+     "categoria": "moveis_escritorio",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.767
+    },
+    {
+     "review_id": "de7b244e5a8fb3ea3c76f1f9fe4e5c96",
+     "texto": "Elogio. Muito satisfeita, produto de ótima quelidade, entrega rápida. Recomendo.",
+     "nota": 5,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201804,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.66
+    },
+    {
+     "review_id": "b3d919d72cc9aaba9f80678d6230c650",
+     "texto": "Produtos de boa qualidade.",
+     "nota": 5,
+     "categoria": "telefonia",
+     "mes_compra": 201706,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.392
+    },
+    {
+     "review_id": "ff77e689593e261a118f2227b72976f3",
+     "texto": "Já sou cliente a um bom tempo e entendo o atraso mais esse deveria ser o diferencial os produtos já sabemos da qualidade exelente...",
+     "nota": 2,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201711,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.028
+    },
+    {
+     "review_id": "dec446be74c5c9dd2a1c6e3042f7ef92",
+     "texto": "Recebi o produto no prazo e o material de qualidade ficou muito bonita na cozinha eu recomendo para outros clientes !",
+     "nota": 5,
+     "categoria": "moveis_decoracao",
+     "mes_compra": 201702,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.011
+    },
+    {
+     "review_id": "162be7af72150512d0f5033c45115e06",
+     "texto": "Produto errado. Mais responsabilidade com os clientes quanto origem do produto,qualidade,certeza de que o produto entregue é de acordo com o pedido",
+     "nota": 1,
+     "categoria": "relogios_presentes",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.011
+    },
+    {
+     "review_id": "2e85094a5645024b6f09f5516bc704bf",
+     "texto": "sempre mantendo o compromisso com os clientes",
+     "nota": 5,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201710,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "qualidade produto",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.74,
+    "busca": 7.99,
+    "geracao": 3.22
+   }
+  },
+  {
+   "id": "E09",
+   "trace_id": "592f92676e95",
+   "pergunta": "Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?",
+   "status": "evidencia_fraca",
+   "resposta": "Só 2 avaliação(ões) tratam desse assunto, o que é pouco para tirar uma conclusão. Elas estão listadas nas evidências.",
+   "insights": [
+    {
+     "afirmacao": "Avaliações encontradas sobre o assunto (sem generalização).",
+     "review_ids": [
+      "a2ac4221870e9c8bdf6976817df6d5fe",
+      "91559a9c610b44fbc2680b8109bc3a91"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "73825c944419be59995fdf5755400ba0",
+     "texto": "Troca / devolução. a experiência de compra on-line e a entrega foram boas, porém o produto não atendeu às expectativas e estou tendo dificuldades com a troca /devolução.",
+     "nota": 3,
+     "categoria": "relogios_presentes",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.608
+    },
+    {
+     "review_id": "507b807c70276a11b8a95b74cc9de366",
+     "texto": "Trocar de produto. Comprei cobre leito e recebi lençol como se fosse colcha fiquei triste.Estou tentando estorna a compra ou devolver produto ou trocar ninguém retorna contato.",
+     "nota": 1,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.288
+    },
+    {
+     "review_id": "ce1c2770d9a0f9e3742fc266bd52f4ff",
+     "texto": "Devolução complicada. Além do produto chegar errado, a devolução é feita pelo cliente, que tem de ir até uma agência dos Correios que aceite aquele tamanho de encomenda. Muito trabalhoso! Nunca mais.",
+     "nota": 4,
+     "categoria": "moveis_escritorio",
+     "mes_compra": 201804,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.283
+    },
+    {
+     "review_id": "2f88ed5378af93b3fe40c77ad5eff7cc",
+     "texto": "Primeiro: estou tentando devolver um produto mais não me dão soluções...\r\nSegundo : me dão vale sem primeiro pegarem minha devolução e sem contar o produto que pedi não ter chegado..",
+     "nota": 1,
+     "categoria": "instrumentos_musicais",
+     "mes_compra": 201801,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.222
+    },
+    {
+     "review_id": "26a88078cce2d9bd73845342e6a30d26",
+     "texto": "O. A loja me entregou um produto trocado ,inferior ao valor q paguei na compra, quero a devoluçao do produto e meu dinheiro de volta. Descaso com o cliente !\r\n Procurar o procon.",
+     "nota": 1,
+     "categoria": "relogios_presentes",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.141
+    },
+    {
+     "review_id": "4168903f9864812397d0a9847f90e829",
+     "texto": "RECLAMAÇÃO. A EMPRESA NÃO TINHA O PRODUTO QUE COMPREI E MANDOU UM OUTRO SEM NEM ME CONTACTAR PARA SABER SE EU QUERIA! RECEBI O PRODUTO E TIVE QUE DEVOLVER PARA TROCAR.",
+     "nota": 3,
+     "categoria": "relogios_presentes",
+     "mes_compra": 201808,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.112
+    },
+    {
+     "review_id": "be57dce9160cb235e385096168002428",
+     "texto": "produto veio quebrado e, ao tentar trocar, foi simplesmente impossível pelo site da baratheon, enviei e-mails que não foram retornados e, por fim, paguei por algo que não usarei.",
+     "nota": 1,
+     "categoria": "telefonia",
+     "mes_compra": 201708,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.099
+    },
+    {
+     "review_id": "6857009ff1dfc9ebb2675f2e94fec7b5",
+     "texto": "Falta de comprometimento. Comprei e as cores vieram todas erradas e escolhe com tanto cuidado e veio td diferente não compro mais pq ate vc tentar e conseguir trocar muita dor de cabeça",
+     "nota": 1,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201804,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.057
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "troca devolver problema",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.8,
+    "busca": 12.35
+   }
+  },
+  {
+   "id": "E10",
+   "trace_id": "11542d6224e2",
+   "pergunta": "O que os clientes reclamam sobre a nota fiscal?",
+   "status": "ok",
+   "resposta": "Os clientes reclamam de problemas com a nota fiscal, como falta de informação sobre o pagamento do frete, nota fiscal não emitida ou não recebida, valores incorretos na nota fiscal e falta de assistência ao cliente em relação à nota fiscal.",
+   "insights": [
+    {
+     "afirmacao": "A nota fiscal não mostra o pagamento do frete.",
+     "review_ids": [
+      "30592db4d4b8e6ad84a5663103847af7"
+     ]
+    },
+    {
+     "afirmacao": "A nota fiscal não chegou com o produto e não foi recebida por e-mail.",
+     "review_ids": [
+      "b5c740c823b348cfeb5edebc623e9c8a"
+     ]
+    },
+    {
+     "afirmacao": "O produto não foi entregue e não há informação sobre a nota fiscal.",
+     "review_ids": [
+      "96faee6246db4fec85c3133dfd7a8b4f"
+     ]
+    },
+    {
+     "afirmacao": "A nota fiscal veio com um valor muito diferente do que foi pago.",
+     "review_ids": [
+      "e6c76551447474a66f5f93684ec26412"
+     ]
+    },
+    {
+     "afirmacao": "A nota fiscal não veio contando o valor do frete pago.",
+     "review_ids": [
+      "747e8c48ec69d0b01b84f102168d14e3"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "30592db4d4b8e6ad84a5663103847af7",
+     "texto": "Nota fiscal. Boa noite\r\nO único problema foi que a nota fiscal não mostra o pagamento do frete, que deveria.\r\nGrato.\r\nGilson",
+     "nota": 5,
+     "categoria": "portateis_cozinha_e_preparadores_de_alimentos",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.059
+    },
+    {
+     "review_id": "b5c740c823b348cfeb5edebc623e9c8a",
+     "texto": "Bom. Faltou a nota fiscal que não chegou com o produto ,e nao esta no email, que informa \r\n que já foi emitida ,e não recebi de maneira nem uma , fico no aguardo ...",
+     "nota": 4,
+     "categoria": "portateis_cozinha_e_preparadores_de_alimentos",
+     "mes_compra": 201808,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.034
+    },
+    {
+     "review_id": "96faee6246db4fec85c3133dfd7a8b4f",
+     "texto": "Meu produto não foi entregue e não há informação sequer se foi emitida a nota fiscal. Não recomendo a loja, não dá assistência ao cliente.",
+     "nota": 1,
+     "categoria": "sem_categoria",
+     "mes_compra": 201802,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.034
+    },
+    {
+     "review_id": "bb5efdb064be56f4abbb502f4e8ae2b6",
+     "texto": "Deixem bem informado ao cliente que o produto nao esta disponivel no estoque,pois vocês esperam o cliente fazer a compra e emitem nota fiscal de um produto que nao esta disponivel mais e nao avisam .",
+     "nota": 1,
+     "categoria": "esporte_lazer",
+     "mes_compra": 201803,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.02
+    },
+    {
+     "review_id": "e6c76551447474a66f5f93684ec26412",
+     "texto": "Nota fiscal. Então,o produto veio corretamente, mas a nota fiscal veio com um valor muito diferente do que foi pago .\r\nPaguei no total 95 reais a nota veio com valor de 8,00.",
+     "nota": 2,
+     "categoria": "beleza_saude",
+     "mes_compra": 201808,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.02
+    },
+    {
+     "review_id": "747e8c48ec69d0b01b84f102168d14e3",
+     "texto": "Embora não tenha meu problema resolvido, em relação com a nota fiscal , que não veio contando o valor do frete pago , estou sem solução até agora...",
+     "nota": 3,
+     "categoria": "moveis_decoracao",
+     "mes_compra": 201803,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.01
+    },
+    {
+     "review_id": "40bc22bc121a5d1a6ed5b5334aa04e14",
+     "texto": "A compra foi de 2 produtos e até o momento apenas 1 dos chegou na minha residencia dia 18/12, estou aguardando um retorno sobre o outro pois na nota fiscal esta constando 2 produtos.",
+     "nota": 1,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201712,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.006
+    },
+    {
+     "review_id": "5ed4c18881046a7d91c62009e9494ac4",
+     "texto": "VEJO UM EXCELENTE DESEMPENHO EM ATENDER E DE SATISFAZER SEUS CLIENTES,PORTANTO A NOTA PARA O VENDEDOR É 10.",
+     "nota": 5,
+     "categoria": "automotivo",
+     "mes_compra": 201705,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.002
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "nota fiscal problema reclamação",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.88,
+    "busca": 9.28,
+    "geracao": 3.05
+   }
+  },
+  {
+   "id": "E11",
+   "trace_id": "fb2ef16c8044",
+   "pergunta": "Quais reclamações existem sobre pedidos que chegaram incompletos, faltando itens?",
+   "status": "ok",
+   "resposta": "As avaliações recuperadas mostram que alguns clientes relataram receber pedidos incompletos, faltando itens. Esses clientes expressaram insatisfação e, em alguns casos, mencionaram que não receberam resposta da loja após reclamações.",
+   "insights": [
+    {
+     "afirmacao": "Pedido chegou faltando um item.",
+     "review_ids": [
+      "d100adcddcef25bfa83bb819d562211c"
+     ]
+    },
+    {
+     "afirmacao": "O pedido chegou faltando um item.",
+     "review_ids": [
+      "e6ad4763e83667ce38442f2e07308c7c"
+     ]
+    },
+    {
+     "afirmacao": "Chegou meu pedido incompleto.",
+     "review_ids": [
+      "ce770c1287ea78ef3cf11e4a461ea50e"
+     ]
+    },
+    {
+     "afirmacao": "Pedido entregue incompleto.",
+     "review_ids": [
+      "ee36eb06005e20daece65976bd9990e4"
+     ]
+    },
+    {
+     "afirmacao": "produto com itens faltando",
+     "review_ids": [
+      "33cd8babd3676ce892ff1d862b223aba"
+     ]
+    },
+    {
+     "afirmacao": "Primeira vez que recebi os produtos faltando alguns itens",
+     "review_ids": [
+      "7ac9c2640e377b0ba0b0b054396e2bac"
+     ]
+    },
+    {
+     "afirmacao": "Pedido veio incompleto. Vieram faltando produtos e até agora ninguém respondeu meus e-mails.",
+     "review_ids": [
+      "8cbd43b45179c8a12c3485edb697c56f"
+     ]
+    },
+    {
+     "afirmacao": "Entrega incompleta. Realizei um pedido com dois itens e apenas 1 deles foi entregue. Fiz algumas reclamações e até agora ninguém entrou em contato comigo pra entregar o outro produto ou para devolver o dinheiro.",
+     "review_ids": [
+      "5148ad2bdca65375e9504355d79c6ad4"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "d100adcddcef25bfa83bb819d562211c",
+     "texto": "Pedido incompleto. Meu pedido chegou faltando um item.",
+     "nota": 2,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.995
+    },
+    {
+     "review_id": "e6ad4763e83667ce38442f2e07308c7c",
+     "texto": "O pedido chegou porém veio faltando um item.",
+     "nota": 1,
+     "categoria": "moveis_decoracao",
+     "mes_compra": 201711,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.977
+    },
+    {
+     "review_id": "ce770c1287ea78ef3cf11e4a461ea50e",
+     "texto": "Chegou meu pedido incompleto",
+     "nota": 1,
+     "categoria": "beleza_saude",
+     "mes_compra": 201711,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.959
+    },
+    {
+     "review_id": "ee36eb06005e20daece65976bd9990e4",
+     "texto": "Pedido entregue incompleto.",
+     "nota": 1,
+     "categoria": "pet_shop",
+     "mes_compra": 201707,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.891
+    },
+    {
+     "review_id": "33cd8babd3676ce892ff1d862b223aba",
+     "texto": "produto com itens faltando",
+     "nota": 1,
+     "categoria": "sem_categoria",
+     "mes_compra": 201710,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.83
+    },
+    {
+     "review_id": "7ac9c2640e377b0ba0b0b054396e2bac",
+     "texto": "Primeira vez que recebi os produtos faltando alguns itens",
+     "nota": 3,
+     "categoria": "esporte_lazer",
+     "mes_compra": 201711,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.828
+    },
+    {
+     "review_id": "8cbd43b45179c8a12c3485edb697c56f",
+     "texto": "Pedido veio incompleto. Vieram faltando produtos e até agora ninguém respondeu meus e-mails.",
+     "nota": 1,
+     "categoria": "automotivo",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.72
+    },
+    {
+     "review_id": "5148ad2bdca65375e9504355d79c6ad4",
+     "texto": "Entrega incompleta. Realizei um pedido com dois itens e apenas 1 deles foi entregue. Fiz algumas reclamações e até agora ninguém entrou em contato comigo pra entregar o outro produto ou para devolver o dinheiro.",
+     "nota": 1,
+     "categoria": "beleza_saude",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.715
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "pedido incompleto falta item",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.8,
+    "busca": 13.56,
+    "geracao": 5.07
+   }
+  },
+  {
+   "id": "E12",
+   "trace_id": "2e925f5b36d1",
+   "pergunta": "O que os clientes comentam sobre o valor do frete?",
+   "status": "ok",
+   "resposta": "As avaliações recuperadas mostram que os clientes comentam sobre o valor do frete, mencionando que é muito caro, desestimulante para a compra e, em alguns casos, maior que o valor do produto.",
+   "insights": [
+    {
+     "afirmacao": "O cliente acha o valor do frete muito caro e não recomenda.",
+     "review_ids": [
+      "795ffd774dbcbb981bf85766f8e2a953"
+     ]
+    },
+    {
+     "afirmacao": "O cliente discorda do valor do frete, que é muito alto, e desiste de comprar por causa disso.",
+     "review_ids": [
+      "d67fd1f0f0dd4f25eb5342e1cee7ef5c"
+     ]
+    },
+    {
+     "afirmacao": "O cliente acha o frete caro e desiste de comprar algumas coisas por causa do valor.",
+     "review_ids": [
+      "6ed25b76ef4db72e7e854f158b7f25b8"
+     ]
+    },
+    {
+     "afirmacao": "O cliente acha o valor do frete maior que o valor do produto, o que desestimula a compra.",
+     "review_ids": [
+      "1621e329cd9d39762dada45d504a2f30"
+     ]
+    },
+    {
+     "afirmacao": "O cliente acha o valor do frete um absurdo, mas chegou antes do prazo.",
+     "review_ids": [
+      "581bebeac6205c1ed53d5ac804452a3c"
+     ]
+    },
+    {
+     "afirmacao": "O cliente pagou frete, teve que buscar o produto e acha que o frete deveria ser mais barato.",
+     "review_ids": [
+      "8e06903374b7ee0504efcc83be9ae806"
+     ]
+    },
+    {
+     "afirmacao": "O cliente acha absurdo cobrar dois fretes para duas unidades do mesmo produto.",
+     "review_ids": [
+      "bfb704388d9333cef09a4fd69bdbd774"
+     ]
+    },
+    {
+     "afirmacao": "O cliente gostaria de saber o valor real do frete, que muda constantemente.",
+     "review_ids": [
+      "21ce70c1fdc9f840ad7aff98de6c2703"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "795ffd774dbcbb981bf85766f8e2a953",
+     "texto": "O produto é bom. O produto é bom só que o valor do frete é muito caro não recomendo.",
+     "nota": 3,
+     "categoria": "pet_shop",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.159
+    },
+    {
+     "review_id": "d67fd1f0f0dd4f25eb5342e1cee7ef5c",
+     "texto": "O serviço pela internet que vocês oferecem e muito bom. Só discordo com o valor do frete, muito alto. Eu ia comprar um tonner e umas canetas para cd, acabei desistindo. Daqui pra frente, só na loja.",
+     "nota": 5,
+     "categoria": "automotivo",
+     "mes_compra": 201808,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.157
+    },
+    {
+     "review_id": "6ed25b76ef4db72e7e854f158b7f25b8",
+     "texto": "10. Só acho o frete aqui pra minha cidade caro, algumas coisas desisto de comprar por causa do valor do frete. Mas fora isso tudo beleza",
+     "nota": 4,
+     "categoria": "cool_stuff",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.092
+    },
+    {
+     "review_id": "1621e329cd9d39762dada45d504a2f30",
+     "texto": "Por se tratar de um produto de simples transporte e ter o valor do frete maior que o valor do produto. E desestimulante a compra",
+     "nota": 3,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201803,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.075
+    },
+    {
+     "review_id": "581bebeac6205c1ed53d5ac804452a3c",
+     "texto": "Valor do frete é um absurdo...mas ainda bem que chegou antes do prazo que era de um mês.\r\nMas chegou tudo certo conforme a descrição.",
+     "nota": 5,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201711,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.073
+    },
+    {
+     "review_id": "8e06903374b7ee0504efcc83be9ae806",
+     "texto": "Paguei frete e tive que buscar o produto. Sem falar q o frete foi caro. Demorou para chegar.\r\nSó acho que o frete tinha que ser mas barato. O frete acaba saindo no valor do produto ou mas caro.",
+     "nota": 1,
+     "categoria": "beleza_saude",
+     "mes_compra": 201802,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.056
+    },
+    {
+     "review_id": "bfb704388d9333cef09a4fd69bdbd774",
+     "texto": "O que achei péssimo foi cobrar dois frete para duas unidades do mesmo produto, vierem em caixas separadas, o valor do frete foi um pouco a menos que o valor de uma unidade do produto. Absurdo",
+     "nota": 3,
+     "categoria": "beleza_saude",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.046
+    },
+    {
+     "review_id": "21ce70c1fdc9f840ad7aff98de6c2703",
+     "texto": "gostei muito de compra com voces, so gostaria de saber o valor mesmo do frete de Benevides,quando eu coloco venda no carinho vai mundando o valor do frete, teve frete que a te 160,mim pata de compra",
+     "nota": 5,
+     "categoria": "beleza_saude",
+     "mes_compra": 201802,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.039
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "frete valor",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.92,
+    "busca": 7.99,
+    "geracao": 4.53
+   }
+  },
+  {
+   "id": "F01",
+   "trace_id": "65d4ab7d9924",
+   "pergunta": "Quais os problemas relatados nas avaliações nota 1 da categoria cama_mesa_banho?",
+   "status": "ok",
+   "resposta": "As avaliações nota 1 da categoria cama_mesa_banho relatam problemas como falta de peças no pedido produto de péssima qualidade item errado enviado toalhas finas que não enxugam cancelamento impossível após despacho e atraso na entrega.",
+   "insights": [
+    {
+     "afirmacao": "Falta de peças no pedido.",
+     "review_ids": [
+      "c79568f6ba3ebe150500e1bb2dfb09f0"
+     ]
+    },
+    {
+     "afirmacao": "Produto de péssima qualidade.",
+     "review_ids": [
+      "2a03aecc66750484006123ff8358fe16"
+     ]
+    },
+    {
+     "afirmacao": "Item errado enviado.",
+     "review_ids": [
+      "4d26fa37a1e5d23b0d477f2c080a69c3"
+     ]
+    },
+    {
+     "afirmacao": "Toalhas finas que não enxugam.",
+     "review_ids": [
+      "65082ae4066f3c86efb919b4969c7dad"
+     ]
+    },
+    {
+     "afirmacao": "Cancelamento impossível após despacho.",
+     "review_ids": [
+      "e1245ee2f8e4a7aa2335bbabfda985a0"
+     ]
+    },
+    {
+     "afirmacao": "Atraso na entrega.",
+     "review_ids": [
+      "40368ae04cbf5e00a388b6a924b99039",
+      "2b2a270315cee9d67f55a02c96cce8ee"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "c79568f6ba3ebe150500e1bb2dfb09f0",
+     "texto": "Faltando uma peça. Comprei 2 e recebi apenas 1.\r\n\r\nNa nota fiscal consta 2 peças e quantidade de VOLUME 1, sendo que dentro do volume só tem um cobertor, que por sinal de qualidade PÉSSIMA.",
+     "nota": 1,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.006
+    },
+    {
+     "review_id": "2a03aecc66750484006123ff8358fe16",
+     "texto": "Pessimo produto. Produto de pessima qualidade!!!!\r\nNao se encaixa na categoria ?capacho?, espessura fina, material horrivel! PESSIMO em todos os sentidos!\r\nNAO foi isso que comprei!!!!",
+     "nota": 1,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201808,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.006
+    },
+    {
+     "review_id": "4d26fa37a1e5d23b0d477f2c080a69c3",
+     "texto": "Boa tarde! \r\nTive problemas com meu pedido sim! \r\nVeio o mosqueteiro errado. \r\nPedi um de tamanho Queen, que arrastasse até o chão e com o círculo em cima bem grande. Veio pequeno de cama de casal nor",
+     "nota": 1,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201712,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.003
+    },
+    {
+     "review_id": "65082ae4066f3c86efb919b4969c7dad",
+     "texto": "Toalhas de banho. Nao gostei do produto. As toalhas sao muito finas, nao enxugam!!! Infelizmente vou pensar se vale a pena comprar pela internet sem manusear o produto, principalmente toalhas de banho.",
+     "nota": 1,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "fb83f879a7eff7a6bdc9c9860bc72615",
+     "texto": "nao recomendo esta loja, como nunca tinha tido problema em comprar pelo baratheon n atentei a pesquisar sobre o fornecedor,depois do prazo da entrega ter passado fui pesquisar e existe varias reclamçao",
+     "nota": 1,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201711,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "40368ae04cbf5e00a388b6a924b99039",
+     "texto": "O produto não foi entregue. Gostaria de saber a nova previsão de entrega. O processo de entrega está na situação de Nota Fiscal emitida desde 26/NOV/2017 sem ter nunca ido para transportadora.",
+     "nota": 1,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201711,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "2b2a270315cee9d67f55a02c96cce8ee",
+     "texto": "negativa. utilizo o site das amaericanas a muitos anos, sempre tive um bom retorno, as vezes demora,mas os produtos chegam sempre embalados. mas dessa vez não recebi, por isso a avaliação negativa.",
+     "nota": 1,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201808,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "e1245ee2f8e4a7aa2335bbabfda985a0",
+     "texto": "Incompetência. Solicitei o cancelamento da compra após comprar, a nota fainda não tinha sido emitida e me retornaram no dia seguinte dizendo que não seria possível cancelar pois o produto já tinha sido despachado",
+     "nota": 1,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "problema reclamação cama mesa banho",
+   "filtros_aplicados": {
+    "review_score_max": 1,
+    "categoria_pt": "cama_mesa_banho"
+   },
+   "n_no_recorte": 873,
+   "tempos": {
+    "analise": 0.87,
+    "busca": 11.64,
+    "geracao": 5.2
+   }
+  },
+  {
+   "id": "F02",
+   "trace_id": "4328fd86b029",
+   "pergunta": "O que os clientes elogiaram nas compras feitas em 2018?",
+   "status": "ok",
+   "resposta": "As avaliações recuperadas mostram que os clientes elogiaram a agilidade da entrega a clareza das informações e o acompanhamento do pedido a atenção e preocupação com os clientes e a ausência de burocracia para resolver pendências.",
+   "insights": [
+    {
+     "afirmacao": "Os clientes elogiaram a agilidade da entrega.",
+     "review_ids": [
+      "405e42533d6d5877b984706c1d9b7773",
+      "ca8268e52130a8c373fccf43c7118d8f"
+     ]
+    },
+    {
+     "afirmacao": "Os clientes elogiaram a clareza das informações e o acompanhamento do pedido.",
+     "review_ids": [
+      "cfe7d64cc425081de2a64935c2414c69",
+      "d768c5525408c9da63b901b8a03d7b8f"
+     ]
+    },
+    {
+     "afirmacao": "Os clientes elogiaram a atenção e preocupação com os clientes.",
+     "review_ids": [
+      "ca8268e52130a8c373fccf43c7118d8f",
+      "38a982cbe0fc0d4815c0ec8f582ad35c"
+     ]
+    },
+    {
+     "afirmacao": "Os clientes elogiaram a ausência de burocracia para resolver pendências.",
+     "review_ids": [
+      "4bebff15fbb347cea8de0087b29e5dcd"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "405e42533d6d5877b984706c1d9b7773",
+     "texto": "Fiquei muito feliz pela compra / atendimento e a entrega q foi bem antes do previsto tanto q no mesmo dia incentivei minha mãe tbm comprar com vcs. Estão de parabéns ! Ganharam fiéis clientes !",
+     "nota": 5,
+     "categoria": "livros_tecnicos",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.013
+    },
+    {
+     "review_id": "cfe7d64cc425081de2a64935c2414c69",
+     "texto": "Top. Adoro comprar na lannister pela clareza das informaçoes, acompanhamento do pedido, tempo que chega, muito rápido!\r\nCada vez melhor, estão de Parabéns!\r\nSempre fui e sempre serei cliente lannister.c",
+     "nota": 5,
+     "categoria": "telefonia",
+     "mes_compra": 201808,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.007
+    },
+    {
+     "review_id": "c5a706b5eb7a8d635ade0fc66534b6ca",
+     "texto": "muito bom! Tenho comprado com você e tem sido bom! Espero que novas compras possam ser feitas e os resultados sejam os mesmo..",
+     "nota": 4,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.003
+    },
+    {
+     "review_id": "38a982cbe0fc0d4815c0ec8f582ad35c",
+     "texto": "Super recomendo. Loja atenciosa com os clientes super recomendo; alem de toda atençao com os clientes produto chegou antes do prazo",
+     "nota": 5,
+     "categoria": "automotivo",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.002
+    },
+    {
+     "review_id": "ca8268e52130a8c373fccf43c7118d8f",
+     "texto": "ótimo. Fiquei contente com a agilidade de vocês e a preocupação que vocês tem com os clientes. Parabéns.",
+     "nota": 5,
+     "categoria": "esporte_lazer",
+     "mes_compra": 201808,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "d768c5525408c9da63b901b8a03d7b8f",
+     "texto": "bom. Só compro eletrônicos e eletros no stark , nunca tive problemas, as ofertas são feitas com clareza .",
+     "nota": 5,
+     "categoria": "automotivo",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "4bebff15fbb347cea8de0087b29e5dcd",
+     "texto": "PRIMEIRAMENTE O lannister.COM É EXCELENTE PARA SE COMPRAR, POIS NÃO HÁ BUROCRACIA PARA RESOLVER QUALQUER PENDÊNCIA. A LOJA PARCEIRO TAMBÉM CORRESPONDE COM O CONTRATADO, E O PRODUTO CHEGOU NO PRAZO.",
+     "nota": 4,
+     "categoria": "fashion_bolsas_e_acessorios",
+     "mes_compra": 201803,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "09cd9ab158cbf326586ffa077934c025",
+     "texto": "Entrega parceladas. Não gostei da entrega em várias datas diferentes! Diferente de todas compras feitas on-line que utilizo!",
+     "nota": 4,
+     "categoria": "beleza_saude",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "gostei recomendo ótimo produto entrega",
+   "filtros_aplicados": {
+    "review_score_min": 4,
+    "ano_mes_compra_min": 201801,
+    "ano_mes_compra_max": 201812
+   },
+   "n_no_recorte": 15264,
+   "tempos": {
+    "analise": 1.01,
+    "busca": 11.18,
+    "geracao": 5.59
+   }
+  },
+  {
+   "id": "F03",
+   "trace_id": "0712b4ddff7d",
+   "pergunta": "Quais temas aparecem nas avaliações de pedidos entregues com atraso?",
+   "status": "ok",
+   "resposta": "As avaliações de pedidos entregues com atraso mencionam temas como a falta de esclarecimento sobre o atraso, a incerteza sobre a responsabilidade pelo atraso (fornecedor ou entregador), a ausência de suporte durante o atraso e a comparação com outros pedidos que foram entregues no prazo.",
+   "insights": [
+    {
+     "afirmacao": "Falta de esclarecimento sobre o atraso na entrega.",
+     "review_ids": [
+      "7c4c2d10a57d4aab58a570a5a8ac9f2c",
+      "e7598a361c83affd0b7a71bf86805c29"
+     ]
+    },
+    {
+     "afirmacao": "Incerteza sobre a responsabilidade pelo atraso (fornecedor ou entregador).",
+     "review_ids": [
+      "315ea2c8288b411d1bd2d46496e37b87"
+     ]
+    },
+    {
+     "afirmacao": "Ausência de suporte durante o atraso.",
+     "review_ids": [
+      "c21f1718d8a4c69d377ce82a79d51c42"
+     ]
+    },
+    {
+     "afirmacao": "Comparação com outros pedidos que foram entregues no prazo.",
+     "review_ids": [
+      "66179b1ca078cdb08c6ca238a0a4c654"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "06de6ba90c81c318f9f08196c369ded5",
+     "texto": "Entrega em atraso",
+     "nota": 2,
+     "categoria": "sem_categoria",
+     "mes_compra": 201803,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.448
+    },
+    {
+     "review_id": "8692515cb18ecfbfc9a57777ddcef331",
+     "texto": "O produto está em atraso.",
+     "nota": 1,
+     "categoria": "relogios_presentes",
+     "mes_compra": 201803,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.328
+    },
+    {
+     "review_id": "889a749fd6a0f84073b53da01122fe3a",
+     "texto": "como posso avaliar o produto? só posso avaliar o tempo de entrega que por sinal está atrasado.",
+     "nota": 1,
+     "categoria": "esporte_lazer",
+     "mes_compra": 201704,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.311
+    },
+    {
+     "review_id": "7c4c2d10a57d4aab58a570a5a8ac9f2c",
+     "texto": "Gostaria de esclarecimentos acerca da entrega que está em atraso",
+     "nota": 1,
+     "categoria": "relogios_presentes",
+     "mes_compra": 201711,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.28
+    },
+    {
+     "review_id": "315ea2c8288b411d1bd2d46496e37b87",
+     "texto": "Tenho dúvidas se o problema é com o fornecedor ou com o entregador, pois na operacionalização da compra beleza, já quanto ao tempo de entrega (via correios) tudo atrasado.",
+     "nota": 1,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201803,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.01
+    },
+    {
+     "review_id": "c21f1718d8a4c69d377ce82a79d51c42",
+     "texto": "Cancelei esse pedido, nem era para chegar o e-mail em questão e tenho outros 2 pedidos pendentes, com atraso na entrega, sem qualquer suporte das lannister.",
+     "nota": 1,
+     "categoria": "esporte_lazer",
+     "mes_compra": 201802,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.004
+    },
+    {
+     "review_id": "66179b1ca078cdb08c6ca238a0a4c654",
+     "texto": "Se realmente tivenssem preocupação com os clientes nao deixariam a desejar em questao as entrega pois como que outros pedidos que foram feito no mesmo lugar e dia chegaram e eles colocam dificuldades.",
+     "nota": 1,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201803,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.004
+    },
+    {
+     "review_id": "e7598a361c83affd0b7a71bf86805c29",
+     "texto": "não Recebi meu produto , ninguém entrou em contato comigo para me explicar o porque e quais as providências a serem tomadas, solicito informações urgente",
+     "nota": 1,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201803,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "agregada",
+   "pergunta_reescrita": "entrega atrasada",
+   "filtros_aplicados": {
+    "entregue_com_atraso": true
+   },
+   "n_no_recorte": 3810,
+   "tempos": {
+    "analise": 1.34,
+    "busca": 9.35,
+    "geracao": 2.98
+   }
+  },
+  {
+   "id": "F04",
+   "trace_id": "763d12ec63da",
+   "pergunta": "Quais problemas aparecem em pedidos cancelados?",
+   "status": "ok",
+   "resposta": "As avaliações recuperadas mostram que os problemas em pedidos cancelados incluem cancelamentos não solicitados pelo cliente, falta de comunicação sobre o cancelamento, ausência de estorno do pagamento, e falta de acompanhamento e controle de estoque. Os clientes expressam insatisfação e frustração com a falta de transparência e suporte por parte da loja.",
+   "insights": [
+    {
+     "afirmacao": "Cancelamentos não solicitados pelo cliente",
+     "review_ids": [
+      "d7aab6a7134b55c71503d87cb1bf2206",
+      "b9125397675acce7ad3d969b3f337f5e"
+     ]
+    },
+    {
+     "afirmacao": "Falta de comunicação sobre o cancelamento",
+     "review_ids": [
+      "c2f7b59188bbbbcd2e6c8e877212a160",
+      "29ce62ce6feebab2f393ddaeb687072c"
+     ]
+    },
+    {
+     "afirmacao": "Ausência de estorno do pagamento",
+     "review_ids": [
+      "b9125397675acce7ad3d969b3f337f5e"
+     ]
+    },
+    {
+     "afirmacao": "Falta de acompanhamento e controle de estoque",
+     "review_ids": [
+      "a62a003390fcdcaf2eaa2faa524ab517",
+      "42ee317fa88dad6a0a963bddbd0194b6"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "d7aab6a7134b55c71503d87cb1bf2206",
+     "texto": "Cade meu PEDIDO ??? No pedido esta como cancelado confome pedido, mas eu nao pedi. Desejo meu PRODUTO.. segunda entrarei em contato com o PROCON",
+     "nota": 1,
+     "categoria": "pet_shop",
+     "mes_compra": 201804,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.024
+    },
+    {
+     "review_id": "b9125397675acce7ad3d969b3f337f5e",
+     "texto": "Meu pedido foi cancelado sem a minha solicitação no dia 20/11 e até agora não estornaram meu dinheiro! \r\nEra presente, foi muita falta de proficionalismo.",
+     "nota": 1,
+     "categoria": "fashion_bolsas_e_acessorios",
+     "mes_compra": 201711,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.018
+    },
+    {
+     "review_id": "a62a003390fcdcaf2eaa2faa524ab517",
+     "texto": "Falta de acompanhamento. Maior controle de estoque.... colocar l produto como indisponível antes do cliente comprar para q não tenhamos todo esse transtorno no cancelamento.",
+     "nota": 1,
+     "categoria": "brinquedos",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.007
+    },
+    {
+     "review_id": "980c2e3dd817cf894f405841d7f5db0a",
+     "texto": "Como assim entregue? É a segunda vez que encontro problema com esse produto! primeiro, ele me é cancelado unilateralmente pela lojas lannister e agora ele é entregue? E o meu reembolso????",
+     "nota": 1,
+     "categoria": "sem_categoria",
+     "mes_compra": 201710,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.002
+    },
+    {
+     "review_id": "c2f7b59188bbbbcd2e6c8e877212a160",
+     "texto": "Insatisfação. Fiz uma compra q foi cancelada por vcs. Tentei por diversas vezes falar com vcs contudo não fui atendido. Não sei pq minha compra foi cancelada? Ninguém entrou em contato e não consigo ser atendido",
+     "nota": 1,
+     "categoria": "consoles_games",
+     "mes_compra": 201804,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.002
+    },
+    {
+     "review_id": "42ee317fa88dad6a0a963bddbd0194b6",
+     "texto": "No ultimo dia do prazo,disseram pelo sistema do pedido que a peça estava indisponível,e já vim alertando vocês da americana por email,que tava vencendo prazo e não tinha nem gerado nota fiscal ainda,m",
+     "nota": 1,
+     "categoria": "automotivo",
+     "mes_compra": 201703,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "29ce62ce6feebab2f393ddaeb687072c",
+     "texto": "gostaria de ter ficado sabendo oq aconteceu com o pedido...fiz o pag, me enviaram o prazo e a encomenda não foi concluída mesmo com o prazo de entrega, e tbm não me deram retorno",
+     "nota": 1,
+     "categoria": "consoles_games",
+     "mes_compra": 201711,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "e97be4601a6fa63ed4bb9f20a944a396",
+     "texto": "Sempre comprei na americas.com e os pedidos chegavam antes da data prevista, mais este ainda n chegou e nem mandou email nenhum avisando nada.",
+     "nota": 1,
+     "categoria": "portateis_cozinha_e_preparadores_de_alimentos",
+     "mes_compra": 201808,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "problema pedido cancelado",
+   "filtros_aplicados": {
+    "order_status": "canceled"
+   },
+   "n_no_recorte": 404,
+   "tempos": {
+    "analise": 0.98,
+    "busca": 6.62,
+    "geracao": 3.67
+   }
+  },
+  {
+   "id": "F05",
+   "trace_id": "6d01cbef56c8",
+   "pergunta": "O que reclamam os clientes em pedidos acima de R$ 500?",
+   "status": "ok",
+   "resposta": "As avaliações recuperadas mostram que os clientes reclamam de não receber o produto receber o produto errado receber apenas parte do pedido e atraso na entrega de parte do pedido.",
+   "insights": [
+    {
+     "afirmacao": "Clientes reclamam de não receber o produto.",
+     "review_ids": [
+      "3a43535b8e8dff67ff565d934272612b",
+      "525140af26db0f66313291ef73dd7087",
+      "49d2adc9f4769531d15b81e461e4e82e"
+     ]
+    },
+    {
+     "afirmacao": "Clientes reclamam de receber o produto errado.",
+     "review_ids": [
+      "162be7af72150512d0f5033c45115e06"
+     ]
+    },
+    {
+     "afirmacao": "Clientes reclamam de receber apenas parte do pedido.",
+     "review_ids": [
+      "d825c774380ba364bf48d9d8e0ff3f42",
+      "9a17ad5180e758678a42a436a69797a8",
+      "49d2adc9f4769531d15b81e461e4e82e"
+     ]
+    },
+    {
+     "afirmacao": "Clientes reclamam de atraso na entrega de parte do pedido.",
+     "review_ids": [
+      "2456e7efff67f311120496a395833db6"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "3a43535b8e8dff67ff565d934272612b",
+     "texto": "Não recebi o produto e ainda não tive nenhuma resposta da minha reclamação. E o pior é que seria presente de 1 ano do avô da criança, o qual pagou mais de R$500,00 pela mesma.",
+     "nota": 1,
+     "categoria": "bebes",
+     "mes_compra": 201802,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.017
+    },
+    {
+     "review_id": "162be7af72150512d0f5033c45115e06",
+     "texto": "Produto errado. Mais responsabilidade com os clientes quanto origem do produto,qualidade,certeza de que o produto entregue é de acordo com o pedido",
+     "nota": 1,
+     "categoria": "relogios_presentes",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.003
+    },
+    {
+     "review_id": "d825c774380ba364bf48d9d8e0ff3f42",
+     "texto": "não recomendo. fiz uma compra de duas garrafas super caras, recebi apenas uma. e o principal o filtro de quase 600,00 reais não vieram estar no meu e-mail como entregue. so tento recebido uma garrafa. gostaria resp.",
+     "nota": 1,
+     "categoria": "eletroportateis",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "525140af26db0f66313291ef73dd7087",
+     "texto": "Todo meu pedido foi cancelado, então não recebi meu headset e o estorno já foi realizado. Isto posto, não posso avaliar de maneira digna a loja supracitada.",
+     "nota": 1,
+     "categoria": "consoles_games",
+     "mes_compra": 201701,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "9a17ad5180e758678a42a436a69797a8",
+     "texto": "De acordo com meus pedidos Ainda não recebi as Toalhas de Jogo De Banho Florença Bordado 5 Peças 100% Algodão Branco, recebi apenas Kit Jogo De Cama Florença Queen Com Toalhas De Banho 9 Peças",
+     "nota": 1,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201801,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "49d2adc9f4769531d15b81e461e4e82e",
+     "texto": "AINDA NÃO ENTREGOU TODO O PEDIDO, ALÉM DE TER MANDADO A NOTA FISCAL COM O TOTAL DOS ITENS, MANDOU NO FISICO EMBALAGENS SEPARADAS PARA 05UN. 03 CHEGARAM NUM DIA, 01 EM OUTRO E ESTÁ FALTANDO 01UN.",
+     "nota": 1,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201802,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "06cf157639219745df82b72bd4b703df",
+     "texto": "Paguei um frete de 388,00 e tive que retirar o produto nos correios, sendo submetida a uma fila enorme, o que ocasional uma perda de tempo.",
+     "nota": 1,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201709,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "2456e7efff67f311120496a395833db6",
+     "texto": "Mercadoria ok. A cadeira veio ok e no prazo. Dei apenas duas estrelas pois os demais produtos pedidos chegaram com uma semana de atraso na entrega!",
+     "nota": 2,
+     "categoria": "beleza_saude",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "problema reclamação",
+   "filtros_aplicados": {
+    "review_score_max": 2,
+    "valor_min": 500.0
+   },
+   "n_no_recorte": 674,
+   "tempos": {
+    "analise": 1.53,
+    "busca": 10.2,
+    "geracao": 5.21
+   }
+  },
+  {
+   "id": "F06",
+   "trace_id": "a4d0421f6055",
+   "pergunta": "O que os clientes de informatica_acessorios elogiam?",
+   "status": "ok",
+   "resposta": "As avaliações recuperadas mostram que os clientes elogiam a praticidade do sistema, a variedade de opções, a rapidez das entregas, a qualidade dos produtos e o atendimento ao cliente.",
+   "insights": [
+    {
+     "afirmacao": "Os clientes elogiam a praticidade do sistema e a variedade de opções.",
+     "review_ids": [
+      "0f17bbdc1b8c7dd65620b3ed0e75c391"
+     ]
+    },
+    {
+     "afirmacao": "Os clientes elogiam a rapidez das entregas.",
+     "review_ids": [
+      "03f8fc8978a0174c9aae55fab444415c",
+      "cf4d031aaf9efe5dc3ebec9a8671d80d"
+     ]
+    },
+    {
+     "afirmacao": "Os clientes elogiam a qualidade dos produtos.",
+     "review_ids": [
+      "cf4d031aaf9efe5dc3ebec9a8671d80d"
+     ]
+    },
+    {
+     "afirmacao": "Os clientes elogiam o atendimento ao cliente.",
+     "review_ids": [
+      "4abdf4481ee26a1fae266035ae8f1e75",
+      "592708846f5a04477bc99dd6d1fe7857"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "0f17bbdc1b8c7dd65620b3ed0e75c391",
+     "texto": "Muito bom. O sistema é prático, e procura tirar as duvidas do cliente. Com várias opções.",
+     "nota": 4,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.003
+    },
+    {
+     "review_id": "03f8fc8978a0174c9aae55fab444415c",
+     "texto": "MARAVILHOSO!!! TODOS OS PRODUTOS QUE PRECISO COMPRAR VIA INTERNET, SÓ FAÇO PELA lannister.COM.\r\nEXCELENTE TODOS OS SERVIÇOS!!!!!\r\nAS ENTREGAS SEMPRE CHEGAM ANTES DO PRAZO E ISSO É MUITO BOM!!!!",
+     "nota": 5,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "cf4d031aaf9efe5dc3ebec9a8671d80d",
+     "texto": "Muito satisfeito. Fiquei super satisfeito, o produto é ÓTIMO ao contrário das últimas HP\"s que comprei este realmente atende. \r\nA entrega FOI SUPER RÁPIDA bem antes do prazo estipulado.Sou 1 consumidor muito satisfeito",
+     "nota": 5,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "6aece619f3fd4452b01e7f11682b3f70",
+     "texto": "sou cliente da lannister há muitos anos, é um site de confiança, sempre respeitou os prazos e os produtos vieram sempre como escolhido, estou muito satisfeito.",
+     "nota": 5,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201712,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "4abdf4481ee26a1fae266035ae8f1e75",
+     "texto": "excelente tenho sempre preferencia pelas compras online com a lannister. empresa 100% comprometida com os cliente. muito satisfeito com as compras já efetuadas.",
+     "nota": 5,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201711,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "4cc4198a3f0546d3c760cf526f9e2787",
+     "texto": "Parabéns lannister.com. Qualquer produto que eu compre com você ,recebo dentro do prazo e das qualificações.Continuem assim.É a seriedade do trabalho que fará o Brasil virar um país de excelência na prestação de serviços.",
+     "nota": 5,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201808,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "592708846f5a04477bc99dd6d1fe7857",
+     "texto": "Super recomendo ; para mim, foi uma agradável surpresa, o nível de atendimento da Amaricanas.com\r\nSensacional!!!",
+     "nota": 5,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201709,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "e3d67130271ae31bc120c334892279d7",
+     "texto": "A lannister.com está na minha lista mais TOP! Quase tudo que tenho comprei por ela sem problemas!! Recomendo a todos, pois durante estes mais de 10 anos nunca tive problemas.",
+     "nota": 5,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201712,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "elogios informatica_acessorios",
+   "filtros_aplicados": {
+    "review_score_min": 4,
+    "categoria_pt": "informatica_acessorios"
+   },
+   "n_no_recorte": 1718,
+   "tempos": {
+    "analise": 0.95,
+    "busca": 7.55,
+    "geracao": 2.83
+   }
+  },
+  {
+   "id": "A01",
+   "trace_id": "4ce4cbd92b1c",
+   "pergunta": "Quais são os principais problemas relatados pelos clientes?",
+   "status": "ok",
+   "resposta": "Os principais problemas relatados pelos clientes incluem divergências e problemas na entrega, como produtos faltando ou atrasos na entrega. Além disso, há menções a cancelamentos de pedidos devido à falta de controle de estoque e produtos que não atendem às expectativas de qualidade.",
+   "insights": [
+    {
+     "afirmacao": "Problemas na entrega, como produtos faltando.",
+     "review_ids": [
+      "42a3a3e2b79465364e24f6f4c642bc23",
+      "c9aadb1be0fd9dd281a5aedc058a8e9a"
+     ]
+    },
+    {
+     "afirmacao": "Atrasos na entrega.",
+     "review_ids": [
+      "fb7754a572dc6779cd15cd6a1c7aad75",
+      "a0a3535ba5de64434f49701505c48592",
+      "64dc335ac723ebe7761555e5b636489f"
+     ]
+    },
+    {
+     "afirmacao": "Cancelamentos de pedidos devido à falta de controle de estoque.",
+     "review_ids": [
+      "a62a003390fcdcaf2eaa2faa524ab517"
+     ]
+    },
+    {
+     "afirmacao": "Produtos que não atendem às expectativas de qualidade.",
+     "review_ids": [
+      "b8aede0025092b06cb9de77a12f24c36"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "42a3a3e2b79465364e24f6f4c642bc23",
+     "texto": "Em partes. Sou cliente há anos, porém sempre há divergências e problemas na entrega, consta como produto entregue, porém foi entregue apenas 1 produto, aguardo solução!",
+     "nota": 1,
+     "categoria": "cool_stuff",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.043
+    },
+    {
+     "review_id": "c9aadb1be0fd9dd281a5aedc058a8e9a",
+     "texto": "PEDIDO PARCIAL. o unico problema é que comprei dois produtos identicos e recebi apenas um, a loja alega que o pedido sera enviado separado, isso não é bom... Mas alem disso nao tenho o que reclamar!",
+     "nota": 3,
+     "categoria": "esporte_lazer",
+     "mes_compra": 201808,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.02
+    },
+    {
+     "review_id": "fb7754a572dc6779cd15cd6a1c7aad75",
+     "texto": "Sou cliente e essa é a primeira vez que houve problemas, até o momento não recebi a mercadoria.\r\nAguardo retorno urgente!!",
+     "nota": 3,
+     "categoria": "moveis_decoracao",
+     "mes_compra": 201702,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.007
+    },
+    {
+     "review_id": "a62a003390fcdcaf2eaa2faa524ab517",
+     "texto": "Falta de acompanhamento. Maior controle de estoque.... colocar l produto como indisponível antes do cliente comprar para q não tenhamos todo esse transtorno no cancelamento.",
+     "nota": 1,
+     "categoria": "brinquedos",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.006
+    },
+    {
+     "review_id": "a0a3535ba5de64434f49701505c48592",
+     "texto": "JÁ SOU CLIENTE DA AMERICAS FAZ TEMPO, NUNCA TIVE PROBLEMAS. PORÉM, ESTA LOJA \"targaryen\", FOI A MINHA PRIMEIRA COMPRA E NÃO RECOMENDO, POIS NÃO CUMPREM PARA DE ENTREGA ESTABELECIDO.",
+     "nota": 1,
+     "categoria": "fashion_bolsas_e_acessorios",
+     "mes_compra": 201803,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.003
+    },
+    {
+     "review_id": "b8aede0025092b06cb9de77a12f24c36",
+     "texto": "Sem problemas. Sem problemas com a entrega e com a compatibilidade do produto. Em relação ao uso o controle não possui teclas ao apertar ?macias? como um original.",
+     "nota": 4,
+     "categoria": "eletronicos",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "64dc335ac723ebe7761555e5b636489f",
+     "texto": "Sempre comprei com vocês e estou tendo muito problemas que antes eu não tinha. Solicito receber meu produto o quanto antes,.",
+     "nota": 1,
+     "categoria": "moveis_decoracao",
+     "mes_compra": 201803,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "38a982cbe0fc0d4815c0ec8f582ad35c",
+     "texto": "Super recomendo. Loja atenciosa com os clientes super recomendo; alem de toda atençao com os clientes produto chegou antes do prazo",
+     "nota": 5,
+     "categoria": "automotivo",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "agregada",
+   "pergunta_reescrita": "problema reclamação produto entrega",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.81,
+    "busca": 11.29,
+    "geracao": 3.61
+   }
+  },
+  {
+   "id": "A02",
+   "trace_id": "83f89e885e18",
+   "pergunta": "O que os clientes mais elogiam em suas experiências de compra?",
+   "status": "ok",
+   "resposta": "Os clientes elogiam a experiência de compra, a honestidade e a atenção com os clientes, a clareza das informações, o acompanhamento do pedido, a rapidez da entrega, o zelo na embalagem dos produtos e o trato com os clientes.",
+   "insights": [
+    {
+     "afirmacao": "Os clientes elogiam a experiência de compra.",
+     "review_ids": [
+      "0d65bf6c54e217b5ba5d38b2f4edfd0d"
+     ]
+    },
+    {
+     "afirmacao": "Os clientes elogiam a honestidade e a atenção com os clientes.",
+     "review_ids": [
+      "382d855ffdd4f5e66594dbfb1566e96f"
+     ]
+    },
+    {
+     "afirmacao": "Os clientes elogiam a clareza das informações e o acompanhamento do pedido.",
+     "review_ids": [
+      "cfe7d64cc425081de2a64935c2414c69"
+     ]
+    },
+    {
+     "afirmacao": "Os clientes elogiam a rapidez da entrega.",
+     "review_ids": [
+      "27f37811c893d1829a0bbd0c1611703c"
+     ]
+    },
+    {
+     "afirmacao": "Os clientes elogiam o zelo na embalagem dos produtos e o trato com os clientes.",
+     "review_ids": [
+      "6ec6279e3883f19972abfe28cd9c0336"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "0d65bf6c54e217b5ba5d38b2f4edfd0d",
+     "texto": "Adorei a experiência de compra",
+     "nota": 5,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201712,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.199
+    },
+    {
+     "review_id": "382d855ffdd4f5e66594dbfb1566e96f",
+     "texto": "10. Cada vez que compro mais fico satisfeita parabéns pela honestidade com seus clientes 👏👏👏👏?",
+     "nota": 5,
+     "categoria": "moveis_decoracao",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.08
+    },
+    {
+     "review_id": "27f37811c893d1829a0bbd0c1611703c",
+     "texto": "Recomendo. Muito bom o processo de compra, sem imprevistos, com destaque para entrega que ocorreu antes do prazo e o brinde que incluíram.",
+     "nota": 5,
+     "categoria": "fashion_bolsas_e_acessorios",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.049
+    },
+    {
+     "review_id": "cfe7d64cc425081de2a64935c2414c69",
+     "texto": "Top. Adoro comprar na lannister pela clareza das informaçoes, acompanhamento do pedido, tempo que chega, muito rápido!\r\nCada vez melhor, estão de Parabéns!\r\nSempre fui e sempre serei cliente lannister.c",
+     "nota": 5,
+     "categoria": "telefonia",
+     "mes_compra": 201808,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.03
+    },
+    {
+     "review_id": "6ec6279e3883f19972abfe28cd9c0336",
+     "texto": "Confiança, ,. Adoro comprar aqui.\r\nTenho o que necessito, em prazo mínimo. É de se ressaltar o zelo dos funcionários na embalagem dos produtos , e no trato com os clientes. Nota Mil !",
+     "nota": 5,
+     "categoria": "esporte_lazer",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.027
+    },
+    {
+     "review_id": "19e2eb31a3f08d2bc158fa313a4bdc71",
+     "texto": "A satisfação. Desde 2007 sou cliente de vocês fico muito feliz em receber os produtos do baratheon, sempre que possível faço a propaganda de vocês aos amigos e familiares!",
+     "nota": 5,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.01
+    },
+    {
+     "review_id": "38a982cbe0fc0d4815c0ec8f582ad35c",
+     "texto": "Super recomendo. Loja atenciosa com os clientes super recomendo; alem de toda atençao com os clientes produto chegou antes do prazo",
+     "nota": 5,
+     "categoria": "automotivo",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.006
+    },
+    {
+     "review_id": "4abdf4481ee26a1fae266035ae8f1e75",
+     "texto": "excelente tenho sempre preferencia pelas compras online com a lannister. empresa 100% comprometida com os cliente. muito satisfeito com as compras já efetuadas.",
+     "nota": 5,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201711,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.004
+    }
+   ],
+   "tipo": "agregada",
+   "pergunta_reescrita": "elogios",
+   "filtros_aplicados": {
+    "review_score_min": 4
+   },
+   "n_no_recorte": 27682,
+   "tempos": {
+    "analise": 0.69,
+    "busca": 7.5,
+    "geracao": 3.38
+   }
+  },
+  {
+   "id": "A03",
+   "trace_id": "751cf01038b2",
+   "pergunta": "Quais padrões podem ser identificados nas avaliações de clientes insatisfeitos?",
+   "status": "ok",
+   "resposta": "As avaliações de clientes insatisfeitos mostram padrões de problemas com a entrega de produtos errados ou de qualidade inferior falta de comprometimento com prazos de entrega e problemas com a emissão de notas fiscais incompletas. Além disso, há menções à insatisfação com o tempo de entrega para certas regiões.",
+   "insights": [
+    {
+     "afirmacao": "Problemas com a entrega de produtos errados ou de qualidade inferior.",
+     "review_ids": [
+      "162be7af72150512d0f5033c45115e06",
+      "08e0b7588f3a3594735949d6528783f4",
+      "0ed5802ea93f04e9bf2364c664dadbbd"
+     ]
+    },
+    {
+     "afirmacao": "Falta de comprometimento com prazos de entrega.",
+     "review_ids": [
+      "e884f18df1f1eaf5cd40c370ca2d7387"
+     ]
+    },
+    {
+     "afirmacao": "Problemas com a emissão de notas fiscais incompletas.",
+     "review_ids": [
+      "2829506c98c605aa0ed85066a3ab0004"
+     ]
+    },
+    {
+     "afirmacao": "Insatisfação com o tempo de entrega para certas regiões.",
+     "review_ids": [
+      "5814216a79c16218907f1b48f9cf5e00"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "b5f1ecee3ada2c5b5fa05ca47b576bbc",
+     "texto": "Cliente super insatisfeit. Quero informar que acho uma falta de respeito com consumir final ficar aguardando algo que já foi pago e não entregue, favor resolver essa situação urgente ou estarei acionando minha ADVOGADA.",
+     "nota": 1,
+     "categoria": "sem_categoria",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.041
+    },
+    {
+     "review_id": "92b3097ba1639ecbd0d32d8977c37176",
+     "texto": "Péssima. Comprei pq pensei que estava comprando com as Américas.\r\nAté agora aainda não tiraram a nota.\r\nParcerias podem ajudar uma empresa a crescer .\r\nMas pode tirar também seus clientes fiéis.\r\nInsatisfação",
+     "nota": 1,
+     "categoria": "sem_categoria",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.002
+    },
+    {
+     "review_id": "162be7af72150512d0f5033c45115e06",
+     "texto": "Produto errado. Mais responsabilidade com os clientes quanto origem do produto,qualidade,certeza de que o produto entregue é de acordo com o pedido",
+     "nota": 1,
+     "categoria": "relogios_presentes",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "e884f18df1f1eaf5cd40c370ca2d7387",
+     "texto": "Sem comprometimento. Sem previsão de recebimento, a lannister deveria não fazer qualquer tipo de negócio e prezar pelo clientes da lannister que são fiéis.",
+     "nota": 1,
+     "categoria": "moveis_decoracao",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "08e0b7588f3a3594735949d6528783f4",
+     "texto": "PESSIMO. O PRODUTO O QUAL CHEGOU EM MINHA RESIDENCIA , ERA SIM O PRODUTO O QUAL EU HAVIA FEITO O PEDIDO, POREM O PRODUTO NAO ESTAVA NOS PADROES O QUAL DEVERIA SE ENCONTRAR , FOI UMA FALTA TOTAL DE RESPEITO .",
+     "nota": 1,
+     "categoria": "pet_shop",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "0ed5802ea93f04e9bf2364c664dadbbd",
+     "texto": "Fornecedor targaryen me mandou um massageador completamente diferente do que comprei, de preço inferior e cheio de avaliações negativas. Ninguém erra mandando um superior né, curioso..Ou seja, n recomendo",
+     "nota": 1,
+     "categoria": "beleza_saude",
+     "mes_compra": 201610,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "5814216a79c16218907f1b48f9cf5e00",
+     "texto": "Sé melhorassem o tempo de entrega para região norte tenho sertesa que aumentariam as vendas é teriam clientes muito mais satisfeitos. Obrigado é até próxima.",
+     "nota": 2,
+     "categoria": "automotivo",
+     "mes_compra": 201709,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "2829506c98c605aa0ed85066a3ab0004",
+     "texto": "Como podem emitir uma nota com os dois produtos e só enviarem 1 pedi a troca explicando o.motivo ,mas até agora nada",
+     "nota": 1,
+     "categoria": "bebidas",
+     "mes_compra": 201801,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "agregada",
+   "pergunta_reescrita": "padrões insatisfeitos",
+   "filtros_aplicados": {
+    "review_score_max": 2
+   },
+   "n_no_recorte": 10841,
+   "tempos": {
+    "analise": 1.21,
+    "busca": 8.14,
+    "geracao": 5.56
+   }
+  },
+  {
+   "id": "A04",
+   "trace_id": "57b49f1d110e",
+   "pergunta": "Quais aspectos da experiência de compra são mais elogiados pelos clientes?",
+   "status": "ok",
+   "resposta": "As avaliações recuperadas mostram que os clientes elogiam principalmente a rapidez e eficiência do processo de compra, a clareza das informações, o atendimento ao cliente, a qualidade do produto e a entrega no prazo.",
+   "insights": [
+    {
+     "afirmacao": "Os clientes elogiam a rapidez e eficiência do processo de compra.",
+     "review_ids": [
+      "27f37811c893d1829a0bbd0c1611703c",
+      "5407e1832e9e3234e3368638973551c1"
+     ]
+    },
+    {
+     "afirmacao": "Os clientes destacam a clareza das informações fornecidas durante a compra.",
+     "review_ids": [
+      "cfe7d64cc425081de2a64935c2414c69"
+     ]
+    },
+    {
+     "afirmacao": "O atendimento ao cliente é elogiado por ser excelente e comprometido.",
+     "review_ids": [
+      "cd57254f4b7a989f09850107984b1890"
+     ]
+    },
+    {
+     "afirmacao": "A qualidade do produto e a entrega no prazo são aspectos frequentemente elogiados.",
+     "review_ids": [
+      "9f0dadfb538e4553d0c9753563b7f88c",
+      "6ec6279e3883f19972abfe28cd9c0336"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "0d65bf6c54e217b5ba5d38b2f4edfd0d",
+     "texto": "Adorei a experiência de compra",
+     "nota": 5,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201712,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.345
+    },
+    {
+     "review_id": "27f37811c893d1829a0bbd0c1611703c",
+     "texto": "Recomendo. Muito bom o processo de compra, sem imprevistos, com destaque para entrega que ocorreu antes do prazo e o brinde que incluíram.",
+     "nota": 5,
+     "categoria": "fashion_bolsas_e_acessorios",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.041
+    },
+    {
+     "review_id": "cd57254f4b7a989f09850107984b1890",
+     "texto": "Atendimento e compromisso com o cliente excelente...sou cliente à muitos anos e nada tenho a reclamar, ótimo site de compras!! 😍",
+     "nota": 5,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201801,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.022
+    },
+    {
+     "review_id": "cfe7d64cc425081de2a64935c2414c69",
+     "texto": "Top. Adoro comprar na lannister pela clareza das informaçoes, acompanhamento do pedido, tempo que chega, muito rápido!\r\nCada vez melhor, estão de Parabéns!\r\nSempre fui e sempre serei cliente lannister.c",
+     "nota": 5,
+     "categoria": "telefonia",
+     "mes_compra": 201808,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.012
+    },
+    {
+     "review_id": "6ec6279e3883f19972abfe28cd9c0336",
+     "texto": "Confiança, ,. Adoro comprar aqui.\r\nTenho o que necessito, em prazo mínimo. É de se ressaltar o zelo dos funcionários na embalagem dos produtos , e no trato com os clientes. Nota Mil !",
+     "nota": 5,
+     "categoria": "esporte_lazer",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.011
+    },
+    {
+     "review_id": "e25cd5d1b87ed4de8b8bf4855588452d",
+     "texto": "Ainda não testei o produto, mas a experiência de realizar a compra foi muito boa..\r\nNão conheço nenhum ecommerce q forneça a mesma experiência",
+     "nota": 5,
+     "categoria": "consoles_games",
+     "mes_compra": 201708,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.006
+    },
+    {
+     "review_id": "5407e1832e9e3234e3368638973551c1",
+     "texto": "O processo de compra foi super rápido e a entrega aconteceu no prazo. Quanto ao produto ainda nao utilizei e não posso avaliar, mas o serviço da lannister foi muito bom.",
+     "nota": 5,
+     "categoria": "fashion_underwear_e_moda_praia",
+     "mes_compra": 201803,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.002
+    },
+    {
+     "review_id": "9f0dadfb538e4553d0c9753563b7f88c",
+     "texto": "Minha experiência com essa loja tem sido satisfatória. O produto é de qualidade, e entrega no prazo. Recomendo d+ os dois!",
+     "nota": 5,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201801,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    }
+   ],
+   "tipo": "agregada",
+   "pergunta_reescrita": "elogios",
+   "filtros_aplicados": {
+    "review_score_min": 4
+   },
+   "n_no_recorte": 27682,
+   "tempos": {
+    "analise": 0.94,
+    "busca": 5.79,
+    "geracao": 3.29
+   }
+  },
+  {
+   "id": "A05",
+   "trace_id": "62c1a564b471",
+   "pergunta": "Existem padrões recorrentes nas avaliações relacionadas à qualidade dos produtos?",
+   "status": "ok",
+   "resposta": "As avaliações recuperadas mostram padrões recorrentes relacionados à qualidade dos produtos, como produtos que atendem às expectativas produtos com som baixo e produtos que não atendem aos padrões nacionais.",
+   "insights": [
+    {
+     "afirmacao": "Produtos que atendem às expectativas de qualidade.",
+     "review_ids": [
+      "9e6ee2e8c50d95466d01144f8076c25c"
+     ]
+    },
+    {
+     "afirmacao": "Produtos com som baixo, afetando a qualidade percebida.",
+     "review_ids": [
+      "ef8aa48087495ca0ecf32e3375e09d45"
+     ]
+    },
+    {
+     "afirmacao": "Produtos que não atendem aos padrões nacionais, afetando a utilidade.",
+     "review_ids": [
+      "c0e1bbeec590fe39a9e7e18e539f3266"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "9e6ee2e8c50d95466d01144f8076c25c",
+     "texto": "O PRODUTO ESTÁ DENTRO DOS PADRÕES DE QUALIDADE,ATENDENDO MINHA EXPECTATIVA",
+     "nota": 5,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201703,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.158
+    },
+    {
+     "review_id": "17cb92836635f20656a6abaeb06df150",
+     "texto": "Produtos entregues no prazo. Avaliação quanto à qualidade, somente com uso. Sugiro repensarem a forma de empacotamento. Sinceramente não me agradou. Produto muito exposto.",
+     "nota": 4,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201708,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.035
+    },
+    {
+     "review_id": "ef8aa48087495ca0ecf32e3375e09d45",
+     "texto": "BOM. De forma geral o produto é bom, porém, som sai muito baixo o que torna produto em um produto de média qualidade.",
+     "nota": 4,
+     "categoria": "brinquedos",
+     "mes_compra": 201808,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.011
+    },
+    {
+     "review_id": "d3c62500417e7eeab7c6ac2151b67357",
+     "texto": "Um produto como uma carteira somente poderia ser avaliado depois de algum tempo de uso, No entanto, o produto é bem acabado e de couro conforme o especificado pela empresa.",
+     "nota": 4,
+     "categoria": "fashion_bolsas_e_acessorios",
+     "mes_compra": 201712,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.006
+    },
+    {
+     "review_id": "778c1c88259213fca022b83911cfba27",
+     "texto": "Precisa ter esta avaliação em todos os produtos q se compra pq ainda tenho compras a receber",
+     "nota": 2,
+     "categoria": "esporte_lazer",
+     "mes_compra": 201702,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.005
+    },
+    {
+     "review_id": "2c90f4e50406662ea1bb173d439a2256",
+     "texto": "Bom Produto recomendo. Um produto que satisfaz a necessidade de quem quer um relógio funcionando conforme os padrões da categoria.",
+     "nota": 5,
+     "categoria": "relogios_presentes",
+     "mes_compra": 201808,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.002
+    },
+    {
+     "review_id": "3d68425b05abfcb80277f9615fda60c2",
+     "texto": "Sei que o produto é de ótima qualidade, até pq a marca não deixa a desejar, mas não tem como eu avaliar pois o mesmo ainda não chagou!!!",
+     "nota": 1,
+     "categoria": "relogios_presentes",
+     "mes_compra": 201803,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "c0e1bbeec590fe39a9e7e18e539f3266",
+     "texto": "Fora dos padroes nacionais, não cabe nenhum documento e poucos cartões.",
+     "nota": 2,
+     "categoria": "fashion_bolsas_e_acessorios",
+     "mes_compra": 201705,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "agregada",
+   "pergunta_reescrita": "padrões qualidade produto",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 1.28,
+    "busca": 6.11,
+    "geracao": 3.16
+   }
+  },
+  {
+   "id": "A06",
+   "trace_id": "f9a64d2c41dd",
+   "pergunta": "Quais reclamações relacionadas à entrega aparecem com maior frequência?",
+   "status": "ok",
+   "resposta": "As reclamações relacionadas à entrega que aparecem com maior frequência são sobre a embalagem do produto violada e mal embalada, entrega em duplicidade e cobrança indevida no cartão, e atraso na entrega.",
+   "insights": [
+    {
+     "afirmacao": "A embalagem do produto veio violada e mal embalada.",
+     "review_ids": [
+      "f5591674643f81d9983ebac5292f3a49"
+     ]
+    },
+    {
+     "afirmacao": "Entrega em duplicidade e cobrança indevida no cartão.",
+     "review_ids": [
+      "056b3ad0eea6283fb5d5671ef40d2a0d"
+     ]
+    },
+    {
+     "afirmacao": "Atraso na entrega.",
+     "review_ids": [
+      "e7716f13c06657822fb53afb521bad2d"
+     ]
+    }
+   ],
+   "evidencias": [
+    {
+     "review_id": "f5591674643f81d9983ebac5292f3a49",
+     "texto": "Recomendo. A unica reclamação enquanto a entrega, é a embalagem do produto que veio violada e mal embalada",
+     "nota": 4,
+     "categoria": "automotivo",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.443
+    },
+    {
+     "review_id": "056b3ad0eea6283fb5d5671ef40d2a0d",
+     "texto": "Reclamcao. A entrega foi correta ,porém vocês entregaram em duplicidade é passaram duas vezes o meu cartão,quero ver como podemos resolver isso ,pq eu não preciso de 2\r\nFico no aguardo",
+     "nota": 5,
+     "categoria": "ferramentas_jardim",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.038
+    },
+    {
+     "review_id": "18fd8314a11f9a00cb85e8ef9aa70042",
+     "texto": "O status da entrega é ruim, sempre desatualizado, mostra que teve erro na entrega, mudam o prazo e no fim entregam antes.",
+     "nota": 4,
+     "categoria": "automotivo",
+     "mes_compra": 201712,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.038
+    },
+    {
+     "review_id": "e7716f13c06657822fb53afb521bad2d",
+     "texto": "Logo na primeira compra , ja estou tendo problema com a entrega. Comprei pq confiei no site da lannister, mas seus parceiros estao deixando a desejar e compromentendo a imagem da lannister.",
+     "nota": 1,
+     "categoria": "bebes",
+     "mes_compra": 201803,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "601269563463601b0b1b1f09bea7d013",
+     "texto": "Comprei 02 computadores, e um deles veio com defeito.\r\nMesmo abrindo 02 reclamações, nem a baratheon e nem a targaryen sequer responderam as minhas reclamações",
+     "nota": 1,
+     "categoria": "pcs",
+     "mes_compra": 201712,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "391940700d8b65290f334bd930b8e8b6",
+     "texto": "Tamanho do Produto. O tamanho poderia ser um pouco maior pelas referências que aparecem de tamanho.",
+     "nota": 4,
+     "categoria": "pet_shop",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "caa54ced32d431c04458697e0790bba1",
+     "texto": "A frequência do produto está incompatível com a rede elétrica brasileira e não foi mostrado na descrição do produto antes de ser comprado",
+     "nota": 1,
+     "categoria": "beleza_saude",
+     "mes_compra": 201801,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "97d740f8ca06ba26408af07cdb552438",
+     "texto": "O produto chegou antes do tempo! Os quadros são lindos, do jeitinho q aparecem! Estou muito feliz!",
+     "nota": 5,
+     "categoria": "moveis_decoracao",
+     "mes_compra": 201802,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "agregada",
+   "pergunta_reescrita": "reclamacoes entrega",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 1.17,
+    "busca": 7.75,
+    "geracao": 2.58
+   }
+  },
+  {
+   "id": "A07",
+   "trace_id": "ab8a051ef17f",
+   "pergunta": "O que os clientes mais reclamam do atendimento?",
+   "status": "sem_evidencia",
+   "resposta": "Não encontrei avaliações que tratem desse assunto na base (nenhuma passou do limiar de relevância).",
+   "insights": [],
+   "evidencias": [
+    {
+     "review_id": "51a71df77bff4a4ff75ca87c7550fe1c",
+     "texto": "O atendimento pela central é horrível. Ninguém atende o telefone, meu produto chego errado! Vou reclamar nas redes sociais ( não sei como essa loja ainda funciona) é melhor fechar com um serviço",
+     "nota": 1,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201803,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.119
+    },
+    {
+     "review_id": "3ad650dcbe0dd0a09359cd3f660b7dec",
+     "texto": "atendimento ruim. a falta de respeito e considderação para com os clientes, essa perceira da das lannister, sempre comprei com as lannister, mais ultimentente não recomendo.",
+     "nota": 1,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201807,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.101
+    },
+    {
+     "review_id": "cd57254f4b7a989f09850107984b1890",
+     "texto": "Atendimento e compromisso com o cliente excelente...sou cliente à muitos anos e nada tenho a reclamar, ótimo site de compras!! 😍",
+     "nota": 5,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201801,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.078
+    },
+    {
+     "review_id": "b5f1ecee3ada2c5b5fa05ca47b576bbc",
+     "texto": "Cliente super insatisfeit. Quero informar que acho uma falta de respeito com consumir final ficar aguardando algo que já foi pago e não entregue, favor resolver essa situação urgente ou estarei acionando minha ADVOGADA.",
+     "nota": 1,
+     "categoria": "sem_categoria",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.034
+    },
+    {
+     "review_id": "5dddfbd7c02c4b525c553c66687a7e85",
+     "texto": "recomendo. Sempre fui bem atendida, entregaram no prazo.\r\nAcredito que por causa das greves dos caminhoneiros e dos petroleiros, isso afetou o atendimento aos clientes.",
+     "nota": 4,
+     "categoria": "cool_stuff",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.005
+    },
+    {
+     "review_id": "58f2a64617ca91372c2dd0fa2b6e1a58",
+     "texto": "1. Sou cliente da lannister a muito conforme comprova nos pedidos agora receboo meu pedido faltando itens. Comprei 6 itens e veio apenas 5, como que envia faltando. Quero uma solução rápida e imediato.",
+     "nota": 1,
+     "categoria": "moveis_decoracao",
+     "mes_compra": 201804,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.005
+    },
+    {
+     "review_id": "4052167093c358cd9b4e8c223ef55ff2",
+     "texto": "Precisa melhorar a atenção ao cliente, pois os produtos que comprei vieram pela metade e não enviaram nenhum e-mail para avisar. \r\nMesmo assim, agradeço ao serviço prestado!",
+     "nota": 4,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201707,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.003
+    },
+    {
+     "review_id": "405e42533d6d5877b984706c1d9b7773",
+     "texto": "Fiquei muito feliz pela compra / atendimento e a entrega q foi bem antes do previsto tanto q no mesmo dia incentivei minha mãe tbm comprar com vcs. Estão de parabéns ! Ganharam fiéis clientes !",
+     "nota": 5,
+     "categoria": "livros_tecnicos",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.002
+    }
+   ],
+   "tipo": "agregada",
+   "pergunta_reescrita": "atendimento reclamação problema",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 1.11,
+    "busca": 7.18
+   }
+  },
+  {
+   "id": "I01",
+   "trace_id": "d4be06b2d00c",
+   "pergunta": "O que os clientes acham dos drones vendidos na loja?",
+   "status": "sem_evidencia",
+   "resposta": "Não encontrei avaliações que tratem desse assunto na base (nenhuma passou do limiar de relevância).",
+   "insights": [],
+   "evidencias": [
+    {
+     "review_id": "8d764e6df440be059c28fef5e0f41cfa",
+     "texto": "Em relação a loja que vendeu entregou tudo direitinho e rápido. Ainda não testei o produto, mas em relação a compra e entrega recomendo.",
+     "nota": 5,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201705,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "a0a3535ba5de64434f49701505c48592",
+     "texto": "JÁ SOU CLIENTE DA AMERICAS FAZ TEMPO, NUNCA TIVE PROBLEMAS. PORÉM, ESTA LOJA \"targaryen\", FOI A MINHA PRIMEIRA COMPRA E NÃO RECOMENDO, POIS NÃO CUMPREM PARA DE ENTREGA ESTABELECIDO.",
+     "nota": 1,
+     "categoria": "fashion_bolsas_e_acessorios",
+     "mes_compra": 201803,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "bde9690c5e5c3b960a58b1114b007753",
+     "texto": "Infelizmente, encontramos na internet, lojas que para poderem vender, dizem que tem o produto pedido. Ao finalizar o pedido, o cliente fica à mercê do prazo de entrega que, nem sempre é cumprido.",
+     "nota": 2,
+     "categoria": "fashion_underwear_e_moda_praia",
+     "mes_compra": 201703,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "422ccb5d17ee5cccef76d52a56feb576",
+     "texto": "Já sou cliente a anos das Lojas lannister, bem como suas parceiras. Nunca tive problema algum nas entregas e prazo. Quanto ao MP3 gostei. Simples e fácil de usar. Aprovado!",
+     "nota": 4,
+     "categoria": "audio",
+     "mes_compra": 201706,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "4bebff15fbb347cea8de0087b29e5dcd",
+     "texto": "PRIMEIRAMENTE O lannister.COM É EXCELENTE PARA SE COMPRAR, POIS NÃO HÁ BUROCRACIA PARA RESOLVER QUALQUER PENDÊNCIA. A LOJA PARCEIRO TAMBÉM CORRESPONDE COM O CONTRATADO, E O PRODUTO CHEGOU NO PRAZO.",
+     "nota": 4,
+     "categoria": "fashion_bolsas_e_acessorios",
+     "mes_compra": 201803,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "90eedf0f8432743709657b373978410f",
+     "texto": "0. Irresponsável,não tem nenhuma preocupação com o cliente pois cancela a venda na véspera da entrega após esperar 45dias.Fui Obrigada a colocar uma coroa para poder deixar aqui minha opinião",
+     "nota": 1,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "40a4a1753d4d0ec9b3369d23d31decda",
+     "texto": "Chegou bem antes do prazo previsto, porém,para o drone H18 entrada não foi compatível. A entrada do meu drone é a JST. Existe algum adaptador para ser adquirido para a ulitização do produto comprado?",
+     "nota": 2,
+     "categoria": "market_place",
+     "mes_compra": 201712,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "1cff169938927ffb0a12e47398ca63f5",
+     "texto": "Eles são excelentes!! È o terceiro cubo que eu compro da targaryen via stark, e todos os três chegaram como deviam bem antes do prazo.",
+     "nota": 5,
+     "categoria": "brinquedos",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "drones",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.94,
+    "busca": 6.87
+   }
+  },
+  {
+   "id": "I02",
+   "trace_id": "d09cdb4132dd",
+   "pergunta": "Quais problemas os clientes relatam com login ou senha no site?",
+   "status": "sem_evidencia",
+   "resposta": "Não encontrei avaliações que tratem desse assunto na base (nenhuma passou do limiar de relevância).",
+   "insights": [],
+   "evidencias": [
+    {
+     "review_id": "ec5e2cc5dbca98cfd4933300a0d5fa37",
+     "texto": "o site é muito difícil de usar, não atualiza, fica dando problema toda hora, nada funcional. E o copo tive problemas quanto ao meu frete grátis, cancelei para tentar o prime e não deu certo",
+     "nota": 3,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201803,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.008
+    },
+    {
+     "review_id": "e74dfb84ac092e19ccba38ed93ee0554",
+     "texto": "Cliente consegue efetuar a compra pelo site da lannister e o produto não tem disponibilidade. Se não tem em estoque, deixe bloqueado a compra no site.",
+     "nota": 1,
+     "categoria": "sem_categoria",
+     "mes_compra": 201710,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "5cb8aa8877c576eeb29c4972daad0db3",
+     "texto": "nem um pouco satisfeito pois compramos os produtos,não chegou na data prevista,estamos bastante chateados com o site,precisamos de uma resposta urgente de vocês?????????",
+     "nota": 1,
+     "categoria": "beleza_saude",
+     "mes_compra": 201711,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "94476348a0c7c3bfaa048e51b3348a8d",
+     "texto": "Esqueci minha senha e não consegui entrar na minha conta para pegar meu código de rastreio, meu produto ainda não chegou e não sei onde ele está \r\nObrigado!",
+     "nota": 1,
+     "categoria": "brinquedos",
+     "mes_compra": 201805,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "b1e7afe68a2dc955f201f36160a509bf",
+     "texto": "O preço aqui no site esta bem mais em conta do que no site oficial do produto, não tive problemas nenhum, desde a compra à entrega.",
+     "nota": 5,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201705,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "44e413e08988468ddf832b186e3c76b2",
+     "texto": "A loja é muito boa, nunca tive problema, só agora comprei um produto é recebi outro parecido mais acho que vão resolver o meu problema, pelo a competência que aloja tem.",
+     "nota": 5,
+     "categoria": "fashion_calcados",
+     "mes_compra": 201705,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "a51b17cc0ae35deec0466cbf057b6700",
+     "texto": "Talvez recomendaria. A empresa deveria responder aos e-mail dos cliente \r\nDeveria revê essa questão, porque empresa que se comunica com seus cliente passa mais credibilidade e demostra que esta atento ao seu cliente.",
+     "nota": 3,
+     "categoria": "beleza_saude",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "fc3d71df1271c96ac8e11f97d4e71c83",
+     "texto": "Boa noite fui pedalar hj usando uma das lanternas e ao chegar em casa percebi que a lente que protege a lâmpada saiu usei apenas duas vezes vcs podem resolver isso nunca tive problemas com o site",
+     "nota": 3,
+     "categoria": "esporte_lazer",
+     "mes_compra": 201709,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "problema login senha",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.77,
+    "busca": 8.78
+   }
+  },
+  {
+   "id": "I03",
+   "trace_id": "2e0f5e8888ec",
+   "pergunta": "Como os clientes avaliam o atendimento pelo WhatsApp?",
+   "status": "sem_evidencia",
+   "resposta": "Não encontrei avaliações que tratem desse assunto na base (nenhuma passou do limiar de relevância).",
+   "insights": [],
+   "evidencias": [
+    {
+     "review_id": "e1612aae7badf14a38e1c56964318094",
+     "texto": "excelente atendimento. Não dei 5 estrelas, porque o produto ainda não foi instalado e não usei.\r\nPorém a responsabilidade com o cliente, nota 10.\r\nO produto chegou super rápido.",
+     "nota": 4,
+     "categoria": "construcao_ferramentas_construcao",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.002
+    },
+    {
+     "review_id": "405e42533d6d5877b984706c1d9b7773",
+     "texto": "Fiquei muito feliz pela compra / atendimento e a entrega q foi bem antes do previsto tanto q no mesmo dia incentivei minha mãe tbm comprar com vcs. Estão de parabéns ! Ganharam fiéis clientes !",
+     "nota": 5,
+     "categoria": "livros_tecnicos",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "ce7a16e80aa1e21556a46329f0b1d21b",
+     "texto": "falta de respeito como cliente estou insatisfeita com o pó-venda, não consigo atendimento em nenhum doos canais de atendimento, alias só há um canal, fone, só que por meio de atendimento eletronico;;;",
+     "nota": 1,
+     "categoria": "alimentos_bebidas",
+     "mes_compra": 201711,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "9427600fa36cf3f0ca3ceee6b856be48",
+     "texto": "Bom dia\r\nQueria agradecer a atenção e comprometimento com os clientes, meu tapete chegou antes da data prevista, e eu amei 👏👏?? muito obrigada mesmo super recomendo 😍👏",
+     "nota": 5,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201707,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "5dddfbd7c02c4b525c553c66687a7e85",
+     "texto": "recomendo. Sempre fui bem atendida, entregaram no prazo.\r\nAcredito que por causa das greves dos caminhoneiros e dos petroleiros, isso afetou o atendimento aos clientes.",
+     "nota": 4,
+     "categoria": "cool_stuff",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "a51b17cc0ae35deec0466cbf057b6700",
+     "texto": "Talvez recomendaria. A empresa deveria responder aos e-mail dos cliente \r\nDeveria revê essa questão, porque empresa que se comunica com seus cliente passa mais credibilidade e demostra que esta atento ao seu cliente.",
+     "nota": 3,
+     "categoria": "beleza_saude",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "90eedf0f8432743709657b373978410f",
+     "texto": "0. Irresponsável,não tem nenhuma preocupação com o cliente pois cancela a venda na véspera da entrega após esperar 45dias.Fui Obrigada a colocar uma coroa para poder deixar aqui minha opinião",
+     "nota": 1,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "d4a0432285cf2d7aadd290a77083cedf",
+     "texto": "O atendimento foi muito atencioso. No momento do pedido esqueci de verificar a voltagem, mas o pessoal da Gatolino entrou em contato comigo pra confirmar e deu tudo certo! Os gatinhos estão amando!",
+     "nota": 5,
+     "categoria": "pet_shop",
+     "mes_compra": 201808,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "atendimento whatsapp",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.81,
+    "busca": 6.19
+   }
+  },
+  {
+   "id": "I04",
+   "trace_id": "0a736e3493a3",
+   "pergunta": "Os clientes de Roraima reclamam mais de atraso do que os de São Paulo?",
+   "status": "sem_evidencia",
+   "resposta": "Não encontrei avaliações que tratem desse assunto na base (nenhuma passou do limiar de relevância).",
+   "insights": [],
+   "evidencias": [
+    {
+     "review_id": "4966a0af44d9ad8f87d9263c8bacc9dc",
+     "texto": "Falta de compromisso com o cliente. O meu produto nunca chegou apesar das minhas reclamações.",
+     "nota": 1,
+     "categoria": "beleza_saude",
+     "mes_compra": 201710,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.003
+    },
+    {
+     "review_id": "cef1ee03ded4d6272894a2eead6e1328",
+     "texto": "1 mes de atraso na entrega !!! ultima compra q faço",
+     "nota": 1,
+     "categoria": "moveis_decoracao",
+     "mes_compra": 201609,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.002
+    },
+    {
+     "review_id": "cbd7f62d085bf1759a652d548a6fec40",
+     "texto": "comunico que o produto acima mencionado ainda não chegou em minha residência.",
+     "nota": 1,
+     "categoria": "eletrodomesticos",
+     "mes_compra": 201804,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "bce7d0d68dbf441217cfb4ce595a82d0",
+     "texto": "Não recebi o produto, não obtive nenhuma resposta da targaryen apesar de ter enviado dois emails à empresa e os atendentes da lannister não resolvem nada.",
+     "nota": 1,
+     "categoria": "beleza_saude",
+     "mes_compra": 201711,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "fdde7e081267adc5445fc4e9f4eac7f7",
+     "texto": "Entrega incompleta, faltou duas peças",
+     "nota": 2,
+     "categoria": "bebes",
+     "mes_compra": 201803,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "d2ec6783c3e68a13a592d5f29b085589",
+     "texto": "Não entregue. Como resolver???",
+     "nota": 1,
+     "categoria": "bebes",
+     "mes_compra": 201802,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "fff423fa29671178879573a06995b199",
+     "texto": "Aguardo receber o produto",
+     "nota": 2,
+     "categoria": "papelaria",
+     "mes_compra": 201801,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "6dbfe359f8c1a54383f49856a89df4e2",
+     "texto": "Comprei 02 recebi 01 lona. Comprei 02 produtos (lonas para esteiras LX 150 da MOVEMENT) faturados no meu cartão de crédito e apenas 01 chegou na minha residência.\r\nTenho a nota fiscal. Se quiser envio.",
+     "nota": 1,
+     "categoria": "esporte_lazer",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "reclamam atraso Roraima São Paulo",
+   "filtros_aplicados": {
+    "review_score_max": 2,
+    "uf_cliente": "RR"
+   },
+   "n_no_recorte": 8,
+   "tempos": {
+    "analise": 1.5,
+    "busca": 1.9
+   }
+  },
+  {
+   "id": "V01",
+   "trace_id": "f0188dff90a0",
+   "pergunta": "O que reclamaram os clientes que compraram em novembro de 2016?",
+   "status": "filtro_sem_resultado",
+   "resposta": "Não há nenhuma avaliação com comentário no recorte pedido (confira os filtros aplicados).",
+   "insights": [],
+   "evidencias": [],
+   "tipo": "especifica",
+   "pergunta_reescrita": "reclamacao novembro 2016",
+   "filtros_aplicados": {
+    "review_score_max": 2,
+    "ano_mes_compra_min": 201611,
+    "ano_mes_compra_max": 201611
+   },
+   "n_no_recorte": 0,
+   "tempos": {
+    "analise": 1.27
+   }
+  },
+  {
+   "id": "V02",
+   "trace_id": "7f165e15e0c1",
+   "pergunta": "Quais problemas foram relatados em compras de pc_gamer feitas em 2017?",
+   "status": "filtro_sem_resultado",
+   "resposta": "Não há nenhuma avaliação com comentário no recorte pedido (confira os filtros aplicados).",
+   "insights": [],
+   "evidencias": [],
+   "tipo": "especifica",
+   "pergunta_reescrita": "problema pc gamer",
+   "filtros_aplicados": {
+    "categoria_pt": "pc_gamer",
+    "ano_mes_compra_min": 201701,
+    "ano_mes_compra_max": 201712
+   },
+   "n_no_recorte": 0,
+   "tempos": {
+    "analise": 0.99
+   }
+  },
+  {
+   "id": "S01",
+   "trace_id": "4a78e1e87d67",
+   "pergunta": "Quais reclamações existem sobre pagamento via Pix?",
+   "status": "sem_evidencia",
+   "resposta": "Não encontrei avaliações que tratem desse assunto na base (nenhuma passou do limiar de relevância).",
+   "insights": [],
+   "evidencias": [
+    {
+     "review_id": "be1cee44c2abf15520f359b6adef6b45",
+     "texto": "Comprei duas cadeiras, Nota Fiscal faturada as duas, já estou pagamento via Cartão de Crédito as duas e recebi tão somente uma. Já realizei reclamação junto ao baratheon e a Elo e até agora nada.",
+     "nota": 1,
+     "categoria": "moveis_escritorio",
+     "mes_compra": 201801,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.004
+    },
+    {
+     "review_id": "47e7ec9382d118983a7bc963586cac40",
+     "texto": "Não verifiquei sobre a essa empresa targaryen antes, após a compra vi que é uma péssima empresa, muitas reclamações, americas porque vocês ainda tem uma empresa tão irresponsável como parceiro??",
+     "nota": 1,
+     "categoria": "sem_categoria",
+     "mes_compra": 201803,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "ef00c01556e69a80786308b35a36f2c6",
+     "texto": "Recebi um violão no lugar da câmera e fiz uma reclamação no site.\r\nAgora vocês ão tenho como ir ao correio, e preciso que a troca seja realizada o mais rápido possivel",
+     "nota": 1,
+     "categoria": "cool_stuff",
+     "mes_compra": 201702,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "8cfd16cb42030ade9c35b2e614c62c9b",
+     "texto": "não recomendo. eu recebi o produto com defeito quero devolver e receber vale compra, ou o estorno do pagamento,\r\neu ja tenho outro produto no carrinho pra resolver esse problema , porem não consigo um atendimento",
+     "nota": 1,
+     "categoria": "moveis_decoracao",
+     "mes_compra": 201804,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "3259959e9e52ef23e30b75f259285c5f",
+     "texto": "Horrivel. Não sei como nos dias atuais ainda existem lojas assim. O prazo de entrega já é muito extenso. E o maior problema de todos: o item não foi entregue!",
+     "nota": 1,
+     "categoria": "eletronicos",
+     "mes_compra": 201804,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "8eac7eee5652b4d635d31fdbe99259ef",
+     "texto": "o produto que pedi não condiz com a foto, pior é enviar ao cliente uma borracha de vedaçao que vc entra com o valor de 3,00. É uma tiraçao",
+     "nota": 1,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201801,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "e7598a361c83affd0b7a71bf86805c29",
+     "texto": "não Recebi meu produto , ninguém entrou em contato comigo para me explicar o porque e quais as providências a serem tomadas, solicito informações urgente",
+     "nota": 1,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201803,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "a49e16a5cdf1e2320bf8ac81deef225f",
+     "texto": "Ja mandei o cancelamento e pedido de devolução, pois paguei pelo Kraken 7.1 V2 e recebi o Kraken 7.1 Chroma em média 200 reais mais barato",
+     "nota": 1,
+     "categoria": "cool_stuff",
+     "mes_compra": 201703,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "pagamento pix",
+   "filtros_aplicados": {
+    "review_score_max": 2
+   },
+   "n_no_recorte": 10841,
+   "tempos": {
+    "analise": 0.76,
+    "busca": 7.9
+   }
+  },
+  {
+   "id": "S02",
+   "trace_id": "57af21f3a5e3",
+   "pergunta": "O que os clientes acham do provador de realidade aumentada no aplicativo?",
+   "status": "sem_evidencia",
+   "resposta": "Não encontrei avaliações que tratem desse assunto na base (nenhuma passou do limiar de relevância).",
+   "insights": [],
+   "evidencias": [
+    {
+     "review_id": "89799b1c881bd0eb834de3dd5ce94090",
+     "texto": "Gostei do produto, pois era o que tinha visualizado e não tive problemas.. espero continuar sendo cliente e sendo bem atendida..\r\nGosto da praticidade e da agilidade nas entregas e da qualidade dos ´p",
+     "nota": 5,
+     "categoria": "construcao_ferramentas_construcao",
+     "mes_compra": 201801,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "6e05299c0f5cfd1a0d616eb726e803d8",
+     "texto": "Gostei de comprar nas lannister, os tramites no APP atualizam dentro dos prazos.O Produto chegou bem antes do prazo estimado.\r\n\r\n\r\n\r\nrecomendo comprar na loja virtual, bem seguro.",
+     "nota": 5,
+     "categoria": "ferramentas_jardim",
+     "mes_compra": 201710,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "c2bb636b1a202d68a30556f51203cf84",
+     "texto": "A primeira vista nada q não tenha atendido aos requisitos achei q fosse uma câmera q VC tivesse acesso em tempo real mais me enganei, mais o produto é bom, indico",
+     "nota": 4,
+     "categoria": "eletronicos",
+     "mes_compra": 201709,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "5db31cd43a1d7254dd3bbc466a618e12",
+     "texto": "Diferente do esperado. Tem um bom aumento, mas ainda não é o que procuro pois, vc tem que ficar muito próximo, tem que quase encostar no objeto que observa.",
+     "nota": 5,
+     "categoria": "papelaria",
+     "mes_compra": 201804,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "ff77e689593e261a118f2227b72976f3",
+     "texto": "Já sou cliente a um bom tempo e entendo o atraso mais esse deveria ser o diferencial os produtos já sabemos da qualidade exelente...",
+     "nota": 2,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201711,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "22df22bfe7c5c9f4c2fc57c76da60c2f",
+     "texto": "cumpre o q promete. Já sou cliente a muitos anos, é uma empresa séria q tem compromisso com seus clientes, por isso recomendo.",
+     "nota": 5,
+     "categoria": "papelaria",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "8baff063de69d06a84503f77e1da124f",
+     "texto": "Aprovado. Produto entregue antes do prazo, + n considero fenômeno, já q pediram 20 dias pra entregar. Já testei o controle, td ok, o bluetooth já estava funcionando, aparenta ser mesmo original. Satisfeito.",
+     "nota": 4,
+     "categoria": "consoles_games",
+     "mes_compra": 201808,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "6b95d92af036371c6be96566e4ead156",
+     "texto": "De modo geral, é satisfatório por ser gravação em laser. Mas justamente por ser a laser, deixa a desejar quanto a centralização do pingente com a marca, bem como da qualidade da gravação.",
+     "nota": 3,
+     "categoria": "artigos_de_natal",
+     "mes_compra": 201803,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "provador realidade aumentada",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.82,
+    "busca": 6.78
+   }
+  },
+  {
+   "id": "S03",
+   "trace_id": "3aa43bd5dd6e",
+   "pergunta": "Como os clientes avaliam o programa de cashback?",
+   "status": "evidencia_fraca",
+   "resposta": "Não há evidência suficiente nas avaliações fornecidas para responder à pergunta sobre o programa de cashback.",
+   "insights": [],
+   "evidencias": [
+    {
+     "review_id": "27029b02842d6d1e636c1b1cfdf5d4c7",
+     "texto": "O stark é show para compras na internet, fácil de comprar, tem meios seguros para efetuar o pagamento, é rápido na entrega.\r\n\r\nO único problema é esse programa de avaliação do vendedor que fica t",
+     "nota": 5,
+     "categoria": "beleza_saude",
+     "mes_compra": 201803,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.002
+    },
+    {
+     "review_id": "19e2eb31a3f08d2bc158fa313a4bdc71",
+     "texto": "A satisfação. Desde 2007 sou cliente de vocês fico muito feliz em receber os produtos do baratheon, sempre que possível faço a propaganda de vocês aos amigos e familiares!",
+     "nota": 5,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "0b3f4e2e9f63f05eab04d64f02a81be0",
+     "texto": "ALÉM DE RECEBER O PRODUTO ERRADO,VEIO DENTRO DA CX UMA CARTA DE UMA OUTRA CLIENTE INSATISFEITA POR TB TER RECEBIDO O PRODUTO ERRADO,CANCELEI MINHA COMPRA DEPOIS DESSE OCORRIDO DEU PVER A CREDIBILIDADE",
+     "nota": 1,
+     "categoria": "beleza_saude",
+     "mes_compra": 201709,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "90eedf0f8432743709657b373978410f",
+     "texto": "0. Irresponsável,não tem nenhuma preocupação com o cliente pois cancela a venda na véspera da entrega após esperar 45dias.Fui Obrigada a colocar uma coroa para poder deixar aqui minha opinião",
+     "nota": 1,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "92b3097ba1639ecbd0d32d8977c37176",
+     "texto": "Péssima. Comprei pq pensei que estava comprando com as Américas.\r\nAté agora aainda não tiraram a nota.\r\nParcerias podem ajudar uma empresa a crescer .\r\nMas pode tirar também seus clientes fiéis.\r\nInsatisfação",
+     "nota": 1,
+     "categoria": "sem_categoria",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "c39a21a55e7947dd3907470ffa879808",
+     "texto": "A minha opinião é: tenham mais organização, eu ainda não recebi e essa é a primeira vez que um site de compra me pé pede pra avaliar algo que eu ainda não prevenir, estou muito insatisfeita!",
+     "nota": 1,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201802,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "422ccb5d17ee5cccef76d52a56feb576",
+     "texto": "Já sou cliente a anos das Lojas lannister, bem como suas parceiras. Nunca tive problema algum nas entregas e prazo. Quanto ao MP3 gostei. Simples e fácil de usar. Aprovado!",
+     "nota": 4,
+     "categoria": "audio",
+     "mes_compra": 201706,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "501eecdc6fa64c2baca4a806374c390a",
+     "texto": "Entrega 100%. Muito bom comprar mas lannister, entrega antes do prazo e produto em perfeitas condições, além do ótimo preço! Estou muito satisfeito, ótimo negócio, muito obrigado!",
+     "nota": 5,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "cashback",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.73,
+    "busca": 8.13,
+    "geracao": 1.23
+   }
+  },
+  {
+   "id": "S04",
+   "trace_id": "33b0cd32c424",
+   "pergunta": "Quais problemas os clientes relatam com o chatbot de atendimento?",
+   "status": "sem_evidencia",
+   "resposta": "Não encontrei avaliações que tratem desse assunto na base (nenhuma passou do limiar de relevância).",
+   "insights": [],
+   "evidencias": [
+    {
+     "review_id": "8899ca945efd951c97107b4966289227",
+     "texto": "Prezados que porcaria de atendimento ao cliente não se consegue falar com um atendente, só uma máquina burra e ignorante.\r\nVocês não me enviaram o kit de vedação da cafeteira e o filtro e se só isso n",
+     "nota": 1,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201708,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.004
+    },
+    {
+     "review_id": "b5f1ecee3ada2c5b5fa05ca47b576bbc",
+     "texto": "Cliente super insatisfeit. Quero informar que acho uma falta de respeito com consumir final ficar aguardando algo que já foi pago e não entregue, favor resolver essa situação urgente ou estarei acionando minha ADVOGADA.",
+     "nota": 1,
+     "categoria": "sem_categoria",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "b8aede0025092b06cb9de77a12f24c36",
+     "texto": "Sem problemas. Sem problemas com a entrega e com a compatibilidade do produto. Em relação ao uso o controle não possui teclas ao apertar ?macias? como um original.",
+     "nota": 4,
+     "categoria": "eletronicos",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "67a4563ca78d50a9de6edb6481c91774",
+     "texto": "Problemas na comunicação. Bom dia. Não veio manual de instrução, estou com dúvidas de como usar. Já enviei email, whatsapp e telefonemas e ninguém responde. Como podemos resolver isso?",
+     "nota": 3,
+     "categoria": "moveis_decoracao",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "d88b669e42b716d5f7313dc358a14e0a",
+     "texto": "A loja fisica onde fiz o pedido temnum dos puores atendimentos que ja recebi na minha vida como consumidor, os funcionarios mal olham na cara dos clientes e não tem interese em prestar um bom atendime",
+     "nota": 4,
+     "categoria": "cool_stuff",
+     "mes_compra": 201708,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "405e42533d6d5877b984706c1d9b7773",
+     "texto": "Fiquei muito feliz pela compra / atendimento e a entrega q foi bem antes do previsto tanto q no mesmo dia incentivei minha mãe tbm comprar com vcs. Estão de parabéns ! Ganharam fiéis clientes !",
+     "nota": 5,
+     "categoria": "livros_tecnicos",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "5dddfbd7c02c4b525c553c66687a7e85",
+     "texto": "recomendo. Sempre fui bem atendida, entregaram no prazo.\r\nAcredito que por causa das greves dos caminhoneiros e dos petroleiros, isso afetou o atendimento aos clientes.",
+     "nota": 4,
+     "categoria": "cool_stuff",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "a51b17cc0ae35deec0466cbf057b6700",
+     "texto": "Talvez recomendaria. A empresa deveria responder aos e-mail dos cliente \r\nDeveria revê essa questão, porque empresa que se comunica com seus cliente passa mais credibilidade e demostra que esta atento ao seu cliente.",
+     "nota": 3,
+     "categoria": "beleza_saude",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "problema chatbot atendimento",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.8,
+    "busca": 10.14
+   }
+  },
+  {
+   "id": "S05",
+   "trace_id": "47bbd0a771db",
+   "pergunta": "O que os clientes reclamam sobre a cobrança de juros no parcelamento?",
+   "status": "sem_evidencia",
+   "resposta": "Não encontrei avaliações que tratem desse assunto na base (nenhuma passou do limiar de relevância).",
+   "insights": [],
+   "evidencias": [
+    {
+     "review_id": "bc92ed3d84d82719069e8ab1e9e2e38f",
+     "texto": "FRETE EM DOBRO- ABUSO. GOSTARIA DE FAZER UMA RECLAMAÇÃO:\r\nO CLIENTE COMPROU O MESMO PRODUTO, MAS COMPROU 2 (DUAS UNIDADES).\r\nO CORRETO É COLOCAR OS DOIS PRODUTOS EM UMA EMBALAGEM SÓ E COBRAR SOMENTE UM VALOR DE FRETE.",
+     "nota": 4,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.006
+    },
+    {
+     "review_id": "ff77e689593e261a118f2227b72976f3",
+     "texto": "Já sou cliente a um bom tempo e entendo o atraso mais esse deveria ser o diferencial os produtos já sabemos da qualidade exelente...",
+     "nota": 2,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201711,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "11ef0a68b4f16f04e4ca18c6977b719e",
+     "texto": "Moito imatura essa loja, não cumpre com seus clientes o que promete, atraso e ainda cobra um frete muito caro, para não ser entregue, estou aguardando o produto chegar.",
+     "nota": 1,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201708,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "91f30fe56a84d369d913e7bf6d1d85a5",
+     "texto": "Eu realizei a compra de 4 unidades e só chegaram 2 unidades na minha residência, porém, no meu cartão foi cobrado o valor referente as 4 unidades, ninguém resolve o problema. NÃO RECOMENDO!",
+     "nota": 1,
+     "categoria": "moveis_decoracao",
+     "mes_compra": 201610,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "c797cdf562a84f928ad9c420c9e9930b",
+     "texto": "A empresa não tem o produto pra entregar e cancelou a compra mas a cobrança veio em minha fatura do cartão de crédito e não deram nem uma satisfação sobre o estorno da cobrança .",
+     "nota": 1,
+     "categoria": "eletrodomesticos",
+     "mes_compra": 201708,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "657b5f73f4db6c2cf81479a49ac090dc",
+     "texto": "Tudo perfeito, ficaria melhor se tivesse parcelamento. Pelo menos em 3 vzs. \r\nMesmo assim agradeço pelo produto. Era do jeito que estava pensando.",
+     "nota": 4,
+     "categoria": "esporte_lazer",
+     "mes_compra": 201708,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "6b94c4fa2b44775c175116d45c5c867d",
+     "texto": "Bom dia!\r\njá sou cliente da baratheon a alguns anos,não tive reclamação... mas esta cortina que comprei não gostei péssimo em acabamento, fica tudo engovinhado gostaria de trocar produto.",
+     "nota": 3,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201701,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "7aa233fd42c2a8ec0d3b7da3336598f5",
+     "texto": "Decepção. Infelizmente, virou regra no Brasil, o consumidor comprar, pagar e não receber o produto. Prazo tem que ser cumprido e, a responsabilidade é do vendedor.",
+     "nota": 1,
+     "categoria": "automotivo",
+     "mes_compra": 201808,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "juros parcelamento",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.71,
+    "busca": 10.4
+   }
+  },
+  {
+   "id": "S06",
+   "trace_id": "544a691e9d91",
+   "pergunta": "Os clientes reclamam do clube de assinatura mensal?",
+   "status": "sem_evidencia",
+   "resposta": "Não encontrei avaliações que tratem desse assunto na base (nenhuma passou do limiar de relevância).",
+   "insights": [],
+   "evidencias": [
+    {
+     "review_id": "986ab1a30d3177315ed0f6433996eabb",
+     "texto": "Respeitem mais os cliente. Vcs são todos enrolados não teem respeito com p cliente até hoje meu produto não chegou só sabem mentir entregar que é bom nada mais de 20 dias e não me entregaram nada",
+     "nota": 1,
+     "categoria": "esporte_lazer",
+     "mes_compra": 201807,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "bc92ed3d84d82719069e8ab1e9e2e38f",
+     "texto": "FRETE EM DOBRO- ABUSO. GOSTARIA DE FAZER UMA RECLAMAÇÃO:\r\nO CLIENTE COMPROU O MESMO PRODUTO, MAS COMPROU 2 (DUAS UNIDADES).\r\nO CORRETO É COLOCAR OS DOIS PRODUTOS EM UMA EMBALAGEM SÓ E COBRAR SOMENTE UM VALOR DE FRETE.",
+     "nota": 4,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "6b94c4fa2b44775c175116d45c5c867d",
+     "texto": "Bom dia!\r\njá sou cliente da baratheon a alguns anos,não tive reclamação... mas esta cortina que comprei não gostei péssimo em acabamento, fica tudo engovinhado gostaria de trocar produto.",
+     "nota": 3,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201701,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "157390d883410873d8214971283014e6",
+     "texto": "A empresa nao entra em contato com o cliente é evasiva nos seus argumentos...convence uma crinça de 3 anos que a mohila que ela sonhou em ter não chegou?",
+     "nota": 1,
+     "categoria": "papelaria",
+     "mes_compra": 201801,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "e79f0a6e8494e7ba43b8b23a05009837",
+     "texto": "Irritante. Minha opinião é a mais triste de todas falta compromisso com cliente stark que também não fez nada. Perdeu minha familia como cliente geral.",
+     "nota": 1,
+     "categoria": "beleza_saude",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "a0a3535ba5de64434f49701505c48592",
+     "texto": "JÁ SOU CLIENTE DA AMERICAS FAZ TEMPO, NUNCA TIVE PROBLEMAS. PORÉM, ESTA LOJA \"targaryen\", FOI A MINHA PRIMEIRA COMPRA E NÃO RECOMENDO, POIS NÃO CUMPREM PARA DE ENTREGA ESTABELECIDO.",
+     "nota": 1,
+     "categoria": "fashion_bolsas_e_acessorios",
+     "mes_compra": 201803,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "141650c5df700236a391532d4fcf6350",
+     "texto": "Fizeram confusão. A entrega foi feita para o Minas Tenis Clube e não em meu nome.Eu mencio ei o Minas, como referência da minha residência.",
+     "nota": 5,
+     "categoria": "alimentos",
+     "mes_compra": 201803,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "8cdfc07d586b120ef327e7e3c02e388f",
+     "texto": "A empresa cancelou meu produto mesmo eu esperando um mês, e não me deram um parecer. Aguardando o produto, será primeira e última compra! Com um frete caríssimo!",
+     "nota": 1,
+     "categoria": "esporte_lazer",
+     "mes_compra": 201801,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "clube de assinatura mensal",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.86,
+    "busca": 10.74
+   }
+  },
+  {
+   "id": "S07",
+   "trace_id": "f3b8ae6966cf",
+   "pergunta": "O que os clientes comentam sobre a compra de NFTs na loja?",
+   "status": "fora_escopo",
+   "resposta": "Essa pergunta está fora do escopo: a base contém apenas avaliações de clientes sobre compras na Olist (2016 a 2018).",
+   "insights": [],
+   "evidencias": [],
+   "tipo": "especifica",
+   "pergunta_reescrita": "comentários sobre compra de NFTs",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 1.08
+   }
+  },
+  {
+   "id": "S08",
+   "trace_id": "35608fc02f9b",
+   "pergunta": "Quais reclamações existem sobre pagamento com bitcoin?",
+   "status": "sem_evidencia",
+   "resposta": "Não encontrei avaliações que tratem desse assunto na base (nenhuma passou do limiar de relevância).",
+   "insights": [],
+   "evidencias": [
+    {
+     "review_id": "2cf9e6725bd381e3f980474d6c797fe1",
+     "texto": "A UNICA RECLAMAÇÃO COM baratheon É DE QUE CADA PRODUTO É COBRADO FRETE INDIVIDUAL, COMPREI 4 PRODUTO NA MESMA COMPRA, PAGUEI 4 FRETE, ISSO NÃO É BOM.",
+     "nota": 5,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201701,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.007
+    },
+    {
+     "review_id": "47e7ec9382d118983a7bc963586cac40",
+     "texto": "Não verifiquei sobre a essa empresa targaryen antes, após a compra vi que é uma péssima empresa, muitas reclamações, americas porque vocês ainda tem uma empresa tão irresponsável como parceiro??",
+     "nota": 1,
+     "categoria": "sem_categoria",
+     "mes_compra": 201803,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "0faafc75d5cdf1d616942b2a8fd111ba",
+     "texto": "Quero meu dinheiro paguei e não recebi meu dinheiro hoje vou fazer moletin de ocorrência ...não fizerao nem nota fiz passarão a mão no meu dio targaryen cuidado gente vcs vão se arrepender ...lixoooo",
+     "nota": 1,
+     "categoria": "esporte_lazer",
+     "mes_compra": 201711,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "220a3a8d2e0fcb134a50748d33cd8a73",
+     "texto": "Porem enviei um email para vcs contestando a forma de pagamento, pois comprei tudo em 10x e 2 dos 3 produtos vieram com pagamento de 3x . Só fiz uma autorização de pagamento. Gostaria de uma resposta.",
+     "nota": 4,
+     "categoria": "telefonia",
+     "mes_compra": 201711,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "f378e67bfa5f051d4066c80396107422",
+     "texto": "eu fiz o pedido de 3 cone pagando 150,00 reais e so me entregaram 1.quero saber se vao me entregar caso contrario recorrerei a justiça.",
+     "nota": 2,
+     "categoria": "moveis_decoracao",
+     "mes_compra": 201804,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "8cfd16cb42030ade9c35b2e614c62c9b",
+     "texto": "não recomendo. eu recebi o produto com defeito quero devolver e receber vale compra, ou o estorno do pagamento,\r\neu ja tenho outro produto no carrinho pra resolver esse problema , porem não consigo um atendimento",
+     "nota": 1,
+     "categoria": "moveis_decoracao",
+     "mes_compra": 201804,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "fe22285802148b2ab1817d59467dcd21",
+     "texto": "Só não gostei porque não vem manual de instruções,Deveria vir explicando pra quais áreas do corpo devem ser usadas, obrigada",
+     "nota": 5,
+     "categoria": "beleza_saude",
+     "mes_compra": 201707,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "f013f60f4407d4d027c89a2076feed68",
+     "texto": "Tive que ir aos correios para retirar meu produto, sendo que paguei o frete de R$ 7,52, os quais requeiro o seu reembolso, como medida da mais lídima justiça!",
+     "nota": 3,
+     "categoria": "informatica_acessorios",
+     "mes_compra": 201808,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "especifica",
+   "pergunta_reescrita": "pagamento bitcoin",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.85,
+    "busca": 9.12
+   }
+  },
+  {
+   "id": "S09",
+   "trace_id": "2ee1b4191bfa",
+   "pergunta": "Quais são os principais problemas com pagamento via Pix?",
+   "status": "sem_evidencia",
+   "resposta": "Não encontrei avaliações que tratem desse assunto na base (nenhuma passou do limiar de relevância).",
+   "insights": [],
+   "evidencias": [
+    {
+     "review_id": "10d5985d79e320e861162f2b7f4763d2",
+     "texto": "Houve problemas. enviaram um email falando que não tinham no estoque, eles deveriam confirmar se tinham ou não no estoque no momento da compra e não depois que efetuei o pagamento.Falta de organização no estoque",
+     "nota": 1,
+     "categoria": "sem_categoria",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.019
+    },
+    {
+     "review_id": "eb3f3c5f3cabe7860e20a96732b810be",
+     "texto": "Tivemos que retirar nos correios , maior burocracia , sempre comprei com a lannister e nunca tive esse problema , , não fiquei satisfeito , espero que na peoxima seje diferente .",
+     "nota": 1,
+     "categoria": "brinquedos",
+     "mes_compra": 201712,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "315ea2c8288b411d1bd2d46496e37b87",
+     "texto": "Tenho dúvidas se o problema é com o fornecedor ou com o entregador, pois na operacionalização da compra beleza, já quanto ao tempo de entrega (via correios) tudo atrasado.",
+     "nota": 1,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201803,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "1183a732a40bcbb78ad519b4e8a509e0",
+     "texto": "Foi a primeira vez que comprei pela internet, mesmo desconfiada resolvi arriscar.Espero que meu problema se resolva o mais rápido possível,pra futuramente poder fazer novas compras.Aguardo resposta.",
+     "nota": 1,
+     "categoria": "cool_stuff",
+     "mes_compra": 201803,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "765e77727f9e2f992854535a9679952b",
+     "texto": "Vendedor Horrivel. O produto teve o pagamento aprovado 1 dia depois do pagamento, porem o vendedor esperou 6 dias depois para enviar faltando apenas 1 dia para vencer o prazo de entrega e o produto não chegou ainda.",
+     "nota": 1,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201807,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "dc00d448b2330228c324e1962950b886",
+     "texto": "Tive problema. Mandei e-mail e ninguém me retorna. \r\nSem querer paguei 2 vezes o mesmo pedido pedi estorno de um pagamento e ninguém me retorna",
+     "nota": 1,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201804,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "be1cee44c2abf15520f359b6adef6b45",
+     "texto": "Comprei duas cadeiras, Nota Fiscal faturada as duas, já estou pagamento via Cartão de Crédito as duas e recebi tão somente uma. Já realizei reclamação junto ao baratheon e a Elo e até agora nada.",
+     "nota": 1,
+     "categoria": "moveis_escritorio",
+     "mes_compra": 201801,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "8eac7eee5652b4d635d31fdbe99259ef",
+     "texto": "o produto que pedi não condiz com a foto, pior é enviar ao cliente uma borracha de vedaçao que vc entra com o valor de 3,00. É uma tiraçao",
+     "nota": 1,
+     "categoria": "utilidades_domesticas",
+     "mes_compra": 201801,
+     "entregue_com_atraso": true,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "agregada",
+   "pergunta_reescrita": "problema pagamento pix",
+   "filtros_aplicados": {
+    "review_score_max": 2
+   },
+   "n_no_recorte": 10841,
+   "tempos": {
+    "analise": 1.05,
+    "busca": 9.31
+   }
+  },
+  {
+   "id": "S10",
+   "trace_id": "73d00bdaa8d2",
+   "pergunta": "O que os clientes mais reclamam do cashback?",
+   "status": "sem_evidencia",
+   "resposta": "Não encontrei avaliações que tratem desse assunto na base (nenhuma passou do limiar de relevância).",
+   "insights": [],
+   "evidencias": [
+    {
+     "review_id": "b5f1ecee3ada2c5b5fa05ca47b576bbc",
+     "texto": "Cliente super insatisfeit. Quero informar que acho uma falta de respeito com consumir final ficar aguardando algo que já foi pago e não entregue, favor resolver essa situação urgente ou estarei acionando minha ADVOGADA.",
+     "nota": 1,
+     "categoria": "sem_categoria",
+     "mes_compra": 201806,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.005
+    },
+    {
+     "review_id": "26a88078cce2d9bd73845342e6a30d26",
+     "texto": "O. A loja me entregou um produto trocado ,inferior ao valor q paguei na compra, quero a devoluçao do produto e meu dinheiro de volta. Descaso com o cliente !\r\n Procurar o procon.",
+     "nota": 1,
+     "categoria": "relogios_presentes",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.003
+    },
+    {
+     "review_id": "6b94c4fa2b44775c175116d45c5c867d",
+     "texto": "Bom dia!\r\njá sou cliente da baratheon a alguns anos,não tive reclamação... mas esta cortina que comprei não gostei péssimo em acabamento, fica tudo engovinhado gostaria de trocar produto.",
+     "nota": 3,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201701,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "0b3f4e2e9f63f05eab04d64f02a81be0",
+     "texto": "ALÉM DE RECEBER O PRODUTO ERRADO,VEIO DENTRO DA CX UMA CARTA DE UMA OUTRA CLIENTE INSATISFEITA POR TB TER RECEBIDO O PRODUTO ERRADO,CANCELEI MINHA COMPRA DEPOIS DESSE OCORRIDO DEU PVER A CREDIBILIDADE",
+     "nota": 1,
+     "categoria": "beleza_saude",
+     "mes_compra": 201709,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.001
+    },
+    {
+     "review_id": "4c48489c297d6f0474d2c3a21be63e37",
+     "texto": "produto devolvido. fui bem atendido, mas o valor cobrado foi divergente do valor apresentado no site(desconto de 5% pela forma de pagamento). mas tudo ja foi resolvido.",
+     "nota": 3,
+     "categoria": "cama_mesa_banho",
+     "mes_compra": 201807,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "38a982cbe0fc0d4815c0ec8f582ad35c",
+     "texto": "Super recomendo. Loja atenciosa com os clientes super recomendo; alem de toda atençao com os clientes produto chegou antes do prazo",
+     "nota": 5,
+     "categoria": "automotivo",
+     "mes_compra": 201805,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "c37988a3362a841ce0a0a8f2232884ab",
+     "texto": "Recebi o produto com cx aberta , sem lacre, sem nota fiscal, sem pedido de compra e com remetente diferente do anuncio. Quero devolucao do dinheiro. Descontentamento",
+     "nota": 1,
+     "categoria": "beleza_saude",
+     "mes_compra": 201711,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    },
+    {
+     "review_id": "45bc8c8cad9e508f40d7c29279e0fde1",
+     "texto": "Não estou satisfeita com essa compra pois deu que foi aprovada e foi descontado o valor no cartão de crédito porém não sei porque cancelaram a compra e não foi devolvido o valor.",
+     "nota": 1,
+     "categoria": "telefonia",
+     "mes_compra": 201710,
+     "entregue_com_atraso": false,
+     "score_rerank": 0.0
+    }
+   ],
+   "tipo": "agregada",
+   "pergunta_reescrita": "cashback reclamação problema",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.81,
+    "busca": 10.95
+   }
+  },
+  {
+   "id": "X01",
+   "trace_id": "e19adf34537c",
+   "pergunta": "Qual é a capital da França?",
+   "status": "fora_escopo",
+   "resposta": "Essa pergunta está fora do escopo: a base contém apenas avaliações de clientes sobre compras na Olist (2016 a 2018).",
+   "insights": [],
+   "evidencias": [],
+   "tipo": "especifica",
+   "pergunta_reescrita": "capital da França",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.82
+   }
+  },
+  {
+   "id": "X02",
+   "trace_id": "4fdc6163cde9",
+   "pergunta": "Qual será a cotação do dólar na semana que vem?",
+   "status": "fora_escopo",
+   "resposta": "Essa pergunta está fora do escopo: a base contém apenas avaliações de clientes sobre compras na Olist (2016 a 2018).",
+   "insights": [],
+   "evidencias": [],
+   "tipo": "especifica",
+   "pergunta_reescrita": "cotação do dólar",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.68
+   }
+  },
+  {
+   "id": "X03",
+   "trace_id": "7d324e038af6",
+   "pergunta": "Escreva um poema sobre o mar.",
+   "status": "fora_escopo",
+   "resposta": "Essa pergunta está fora do escopo: a base contém apenas avaliações de clientes sobre compras na Olist (2016 a 2018).",
+   "insights": [],
+   "evidencias": [],
+   "tipo": "especifica",
+   "pergunta_reescrita": "poema mar",
+   "filtros_aplicados": {},
+   "n_no_recorte": 42121,
+   "tempos": {
+    "analise": 0.86
+   }
+  }
+ ]
+}

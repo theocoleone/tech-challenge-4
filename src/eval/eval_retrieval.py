@@ -18,9 +18,17 @@ from src.eval.julgamentos import ler
 from src.eval.metrics import (cobertura_julgada_at_k, mrr, precisao_at_k, recall_at_k,
                               recall_normalizado_at_k)
 from src.retrieval.hybrid import Buscador
+from src.retrieval.query_transform import analisar
 from src.retrieval.rerank import reordenar
 
 K_CANDIDATOS = 30
+
+
+def _reescrita_rerank(buscador, texto, pergunta, filtros):
+    """Configuração da chain: a busca e o rerank usam a pergunta reescrita pela análise."""
+    q = analisar(pergunta).consulta_reescrita
+    cands = buscador.hibrida(q, K_CANDIDATOS, filtros, dedupe=False)
+    return [rid for rid, _ in reordenar(q, [(r.review_id, texto[r.review_id]) for r in cands])]
 
 
 def main() -> None:
@@ -36,8 +44,9 @@ def main() -> None:
         "Denso (Titan)": lambda p, f: titan.denso(p, K_CANDIDATOS, f),
         "Denso (local)": lambda p, f: local.denso(p, K_CANDIDATOS, f),
         "Híbrida (Titan + BM25)": lambda p, f: [r.review_id for r in titan.hibrida(p, K_CANDIDATOS, f, dedupe=False)],
-        "Híbrida + rerank": lambda p, f: [rid for rid, _ in reordenar(
+        "Híbrida + rerank (pergunta)": lambda p, f: [rid for rid, _ in reordenar(
             p, [(r.review_id, texto[r.review_id]) for r in titan.hibrida(p, K_CANDIDATOS, f, dedupe=False)])],
+        "Reescrita + híbrida + rerank": lambda p, f: _reescrita_rerank(titan, texto, p, f),
     }
 
     linhas, por_pergunta = [], []
