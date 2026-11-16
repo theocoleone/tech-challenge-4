@@ -6,14 +6,14 @@ nota do rerank. Como na chain, a busca usa a pergunta original e o portão de
 relevância compara as avaliações com a busca reescrita (só o assunto): com a
 pergunta inteira ("Quais reclamações existem sobre...") as notas ficavam baixas
 até para perguntas com evidência. O limiar escolhido é o que melhor separa os dois grupos (maior F1
-da recusa). O golden set não é usado aqui: ele fica só para o teste final.
+da recusa). O golden set não escolhe o limiar; ele é usado como suíte de
+regressão de ponta a ponta.
 
 Também mede, no nível do par (pergunta, avaliação), a nota do rerank das
 avaliações julgadas relevantes e não relevantes em eval/julgamentos.csv.
 
 Uso: python -m src.eval.calibrar
 """
-import json
 from datetime import date
 
 import matplotlib.pyplot as plt
@@ -22,7 +22,8 @@ import pandas as pd
 
 from src.config import ROOT
 from src.eval.check_golden import carregar
-from src.eval.julgamentos import ler
+from src.eval.json_utils import salvar_json
+from src.eval.julgamentos import somente_rotulados
 from src.generation.chain import K_CANDIDATOS, _buscador
 from src.retrieval.query_transform import analisar
 from src.retrieval.rerank import reordenar
@@ -71,7 +72,7 @@ def main() -> None:
     ponto = curva[curva.limiar == limiar].iloc[0]
 
     # nível do par: notas do rerank dos julgamentos
-    j = ler()
+    j = somente_rotulados()
     pares = []
     for (pid, pergunta), g in j.groupby(["pergunta_id", "pergunta"]):
         notas = dict(reordenar(analisar(pergunta).consulta_reescrita, list(zip(g.review_id, g.texto))))
@@ -94,7 +95,7 @@ def main() -> None:
              "pares_nao_relevantes_acima_do_limiar": float((pares[~pares.relevante].score >= limiar).mean()),
              "perguntas": res}
     (ROOT / "eval" / "results").mkdir(parents=True, exist_ok=True)
-    (ROOT / "eval" / "results" / f"{date.today():%Y-%m-%d}_calibracao_limiar.json").write_text(json.dumps(saida, ensure_ascii=False, indent=1, default=float))
+    salvar_json(ROOT / "eval" / "results" / f"{date.today():%Y-%m-%d}_calibracao_limiar.json", saida)
     print(f"\nlimiar = {limiar} | {ponto.round(3).to_dict()}")
     print({k: round(v, 3) for k, v in saida.items() if k.startswith("pares")})
 

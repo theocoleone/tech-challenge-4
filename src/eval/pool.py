@@ -1,8 +1,8 @@
 """Monta a planilha de julgamentos de relevância (pooling).
 
 Para cada pergunta com evidência e com filtro do golden set, junta o top-20 de
-três buscadores diferentes (BM25, Titan e modelo local). O Theo marca cada par
-pergunta x avaliação como relevante (1) ou não (0), na coluna "relevante". Com isso dá para medir
+três buscadores diferentes (BM25, Titan e modelo local). A coluna "relevante"
+recebe 1 ou 0 para cada par pergunta × avaliação. Com isso dá para medir
 recall e MRR de qualquer configuração depois, sem rotular a base inteira.
 
 O recall medido é relativo a esse conjunto ("pool"): uma avaliação relevante que

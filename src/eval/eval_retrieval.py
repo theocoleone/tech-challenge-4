@@ -5,7 +5,6 @@ com RRF), híbrida + re-ranking. Saída: tabela no terminal e JSON em eval/resul
 
 Uso: python -m src.eval.eval_retrieval
 """
-import json
 import time
 from datetime import date
 
@@ -14,7 +13,8 @@ import pandas as pd
 
 from src.config import ROOT
 from src.eval.check_golden import carregar
-from src.eval.julgamentos import ler
+from src.eval.json_utils import salvar_json
+from src.eval.julgamentos import ler, somente_rotulados
 from src.eval.metrics import (cobertura_julgada_at_k, mrr, precisao_at_k, recall_at_k,
                               recall_normalizado_at_k)
 from src.retrieval.hybrid import Buscador
@@ -33,9 +33,11 @@ def _reescrita_rerank(buscador, texto, pergunta, filtros):
 
 def main() -> None:
     perguntas = [p for p in carregar(ROOT / "eval" / "golden_set.jsonl") if p["tipo"] in {"especifica", "filtro"}]
-    j = ler()
+    j_todo = ler()
+    j = somente_rotulados(j_todo)
     relevantes = {q: set(g[g.relevante == "1"].review_id) for q, g in j.groupby("pergunta_id")}
     julgados = {q: set(g.review_id) for q, g in j.groupby("pergunta_id")}
+    print(f"julgamentos rotulados: {len(j)}/{len(j_todo)}; vazios não entram nas métricas")
 
     titan, local = Buscador("titan"), Buscador("local")
     texto = titan.por_id.texto_original
@@ -74,9 +76,9 @@ def main() -> None:
     saida = ROOT / "eval" / "results"
     saida.mkdir(parents=True, exist_ok=True)
     arquivo = saida / f"{date.today():%Y-%m-%d}_recuperacao.json"
-    arquivo.write_text(json.dumps({"n_perguntas": len(perguntas), "k_candidatos": K_CANDIDATOS,
-                                   "resumo": tabela.reset_index().to_dict("records"),
-                                   "por_pergunta": por_pergunta}, ensure_ascii=False, indent=1, default=float))
+    salvar_json(arquivo, {"n_perguntas": len(perguntas), "k_candidatos": K_CANDIDATOS,
+                          "resumo": tabela.reset_index().to_dict("records"),
+                          "por_pergunta": por_pergunta})
     print(f"\nsalvo em {arquivo.relative_to(ROOT)}")
 
 

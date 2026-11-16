@@ -1,7 +1,7 @@
 PYTHON ?= python3.12
 PY := .venv/bin/python
 
-.PHONY: setup test smoke data notebooks index temas golden pool julgamentos eval-busca
+.PHONY: setup test smoke data notebooks index temas golden pool julgamentos eval-busca eval-filtros eval-golden calibrar
 
 setup:  ## cria o venv e instala as dependências
 	test -d .venv || $(PYTHON) -m venv .venv
@@ -38,3 +38,12 @@ eval-busca: ## compara BM25, denso, híbrida e híbrida + rerank (eval/results/)
 
 temas:  ## agrupa as avaliações em temas (KMeans + rótulos do LLM)
 	$(PY) -m src.analytics.themes
+
+calibrar: ## calibra o limiar de sem evidência (eval/calibracao.jsonl)
+	$(PY) -m src.eval.calibrar
+
+eval-filtros: ## compara a recuperação com e sem filtros de metadados
+	$(PY) -m src.eval.eval_filtros
+
+eval-golden: ## roda o golden set de ponta a ponta (ramos, citações, latência)
+	$(PY) -m src.eval.run_eval

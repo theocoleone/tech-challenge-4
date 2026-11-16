@@ -22,9 +22,9 @@
 {"id": "A04", "pergunta": "Quais aspectos da experiência de compra são mais elogiados pelos clientes?", "tipo": "agregada", "status_esperado": "ok"}
 {"id": "A05", "pergunta": "Existem padrões recorrentes nas avaliações relacionadas à qualidade dos produtos?", "tipo": "agregada", "status_esperado": "ok"}
 {"id": "A06", "pergunta": "Quais reclamações relacionadas à entrega aparecem com maior frequência?", "tipo": "agregada", "status_esperado": "ok"}
-{"id": "A07", "pergunta": "O que os clientes mais reclamam do atendimento?", "tipo": "agregada", "status_esperado": "ok"}
+{"id": "A07", "pergunta": "O que os clientes mais reclamam do atendimento?", "tipo": "agregada", "status_esperado": "evidencia_fraca", "observacao": "há relatos de atendimento, mas o catálogo atual não separa esse assunto para uma contagem confiável"}
 {"id": "I01", "pergunta": "O que os clientes acham dos drones vendidos na loja?", "tipo": "insuficiente", "status_esperado": "evidencia_fraca", "termos_verificacao": ["\\bdrone"], "observacao": "3 avaliações citam drone"}
-{"id": "I02", "pergunta": "Quais problemas os clientes relatam com login ou senha no site?", "tipo": "insuficiente", "status_esperado": "evidencia_fraca", "termos_verificacao": ["\\blogin|senha"], "observacao": "4 avaliações"}
+{"id": "I02", "pergunta": "Quais problemas os clientes relatam com login ou senha no site?", "tipo": "insuficiente", "status_esperado": "evidencia_fraca", "termos_verificacao": ["\\b(?:login|senha)\\b"], "observacao": "1 avaliação menciona senha; nenhuma menciona login"}
 {"id": "I03", "pergunta": "Como os clientes avaliam o atendimento pelo WhatsApp?", "tipo": "insuficiente", "status_esperado": "evidencia_fraca", "termos_verificacao": ["whatsapp"], "observacao": "3 avaliações"}
 {"id": "I04", "pergunta": "Os clientes de Roraima reclamam mais de atraso do que os de São Paulo?", "tipo": "insuficiente", "status_esperado": "evidencia_fraca", "filtros_esperados": {"uf_cliente": "RR"}, "observacao": "RR tem 22 avaliações com texto; não sustenta comparação"}
 {"id": "V01", "pergunta": "O que reclamaram os clientes que compraram em novembro de 2016?", "tipo": "filtro_vazio", "status_esperado": "filtro_sem_resultado", "filtros_esperados": {"ano_mes_compra": 201611}, "observacao": "nenhuma compra em 201611"}

@@ -13,7 +13,6 @@ para julgamento (`--pool`); a tabela mostra a cobertura julgada.
 
 Uso: python -m src.eval.eval_filtros [--pool]
 """
-import json
 import sys
 from datetime import date
 
@@ -21,6 +20,7 @@ import pandas as pd
 
 from src.config import ROOT
 from src.eval.check_golden import carregar
+from src.eval.json_utils import salvar_json
 from src.eval.julgamentos import escrever, ler
 from src.retrieval.filters import mascara
 from src.retrieval.hybrid import Buscador
@@ -67,8 +67,10 @@ def main(pool: bool = False) -> None:
         novos = pd.DataFrame(novos).drop_duplicates(["pergunta_id", "review_id"])
         escrever(pd.concat([j, novos], ignore_index=True).sort_values("pergunta_id", kind="stable"))
         print(f"\n{len(novos)} pares novos para julgar em eval/julgamentos.xlsx")
-    (ROOT / "eval" / "results" / f"{date.today():%Y-%m-%d}_filtros.json").write_text(
-        json.dumps({"resumo": resumo.reset_index().to_dict("records"), "por_pergunta": linhas}, ensure_ascii=False, indent=1, default=float))
+    salvar_json(
+        ROOT / "eval" / "results" / f"{date.today():%Y-%m-%d}_filtros.json",
+        {"resumo": resumo.reset_index().to_dict("records"), "por_pergunta": linhas},
+    )
 
 
 if __name__ == "__main__":

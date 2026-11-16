@@ -1,8 +1,8 @@
 """Leitura e escrita da planilha de julgamentos de relevância.
 
-O Theo marca em eval/julgamentos.xlsx (abre certo no Excel em qualquer idioma).
-eval/julgamentos.csv é a cópia em texto simples, versionada no git e lida pelas
-métricas. `make julgamentos` atualiza o CSV a partir do Excel.
+As decisões são preenchidas em eval/julgamentos.xlsx (abre certo no Excel em
+qualquer idioma). eval/julgamentos.csv é a cópia em texto simples, versionada no
+git e lida pelas métricas. `make julgamentos` atualiza o CSV a partir do Excel.
 """
 import pandas as pd
 from openpyxl.styles import Alignment, Font, PatternFill
@@ -16,7 +16,7 @@ COLUNAS = ["pergunta_id", "pergunta", "review_id", "nota", "categoria", "pedido"
 
 
 def ler() -> pd.DataFrame:
-    """Lê as marcações: prefere o Excel (onde o Theo marca), senão o CSV."""
+    """Lê as marcações: prefere o Excel de trabalho, senão o CSV versionado."""
     if XLSX.exists():
         df = pd.read_excel(XLSX, dtype=str)
     elif CSV.exists():
@@ -29,6 +29,12 @@ def ler() -> pd.DataFrame:
             df[col] = ""
     df["relevante"] = df["relevante"].str.strip().str.replace(r"\.0$", "", regex=True)
     return df[COLUNAS]
+
+
+def somente_rotulados(df: pd.DataFrame | None = None) -> pd.DataFrame:
+    """Descarta linhas ainda sem decisão; vazio nunca deve contar como não relevante."""
+    base = ler() if df is None else df
+    return base[base.relevante.isin(["0", "1"])].copy()
 
 
 def descrever_pedido(d) -> str:
