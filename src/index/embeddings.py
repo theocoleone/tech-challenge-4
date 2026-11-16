@@ -10,6 +10,7 @@ As duas classes seguem a interface de embeddings do LangChain
 import json
 import time
 from concurrent.futures import ThreadPoolExecutor
+from hashlib import sha256
 from pathlib import Path
 
 import numpy as np
@@ -26,6 +27,18 @@ MODELOS = {
 }
 
 
+def identidade_modelo(nome: str) -> str:
+    """Identidade usada para separar caches e validar o índice carregado."""
+    if nome == "titan":
+        return get_settings().emb_model_id
+    return MODELOS.get(nome, nome)
+
+
+def _arquivo_cache(cache_dir: Path, nome: str, model_id: str) -> Path:
+    sufixo = sha256(model_id.encode()).hexdigest()[:12]
+    return cache_dir / f"embeddings_{nome}_{sufixo}.parquet"
+
+
 class TitanEmbeddings(Embeddings):
     """Titan V2 via invoke_model. A API recebe um texto por chamada, então paraleliza."""
 
@@ -35,7 +48,7 @@ class TitanEmbeddings(Embeddings):
 
         s = get_settings()
         check_aws_account()
-        self.model_id = MODELOS["titan"]
+        self.model_id = s.emb_model_id
         self.dimensoes = dimensoes
         self.workers = workers
         self.client = boto3.Session(profile_name=s.aws_profile, region_name=s.aws_region).client(
@@ -97,8 +110,25 @@ def embeddings_com_cache(nome: str, ids: list[str], textos: list[str], cache_dir
     o vetor é recalculado. Assim o índice pode ser refeito sem pagar de novo.
     """
     cache_dir.mkdir(parents=True, exist_ok=True)
-    arquivo = cache_dir / f"embeddings_{nome}.parquet"
-    cache = pd.read_parquet(arquivo) if arquivo.exists() else pd.DataFrame(columns=["review_id", "texto", "vetor"])
+    model_id = identidade_modelo(nome)
+    arquivo = _arquivo_cache(cache_dir, nome, model_id)
+    legado = cache_dir / f"embeddings_{nome}.parquet"
+    # Caches criados antes da identidade no nome só podem ser reutilizados pelo
+    # modelo padrão que o código antigo usava.
+    origem = arquivo if arquivo.exists() else (
+        legado if legado.exists() and model_id == MODELOS.get(nome) else None
+    )
+    cache = (
+        pd.read_parquet(origem)
+        if origem is not None
+        else pd.DataFrame(columns=["review_id", "texto", "vetor", "model_id"])
+    )
+    if "model_id" in cache and len(cache):
+        encontrados = set(cache.model_id.dropna().astype(str))
+        if encontrados and encontrados != {model_id}:
+            raise RuntimeError(
+                f"cache de {nome} pertence a {sorted(encontrados)}, não a {model_id}"
+            )
     conhecidos = {(r, t): v for r, t, v in zip(cache.review_id, cache.texto, cache.vetor)}
 
     faltando = [(i, t) for i, t in zip(ids, textos) if (i, t) not in conhecidos]
@@ -110,7 +140,12 @@ def embeddings_com_cache(nome: str, ids: list[str], textos: list[str], cache_dir
             for (i, t), v in zip(parte, vetores):
                 conhecidos[(i, t)] = np.asarray(v, dtype=np.float32)
             pd.DataFrame(
-                {"review_id": [k[0] for k in conhecidos], "texto": [k[1] for k in conhecidos], "vetor": list(conhecidos.values())}
+                {
+                    "review_id": [k[0] for k in conhecidos],
+                    "texto": [k[1] for k in conhecidos],
+                    "vetor": list(conhecidos.values()),
+                    "model_id": model_id,
+                }
             ).to_parquet(arquivo, index=False)  # salva a cada lote: uma queda não perde o que já foi pago
             print(f"  {nome}: {min(inicio + lote, len(faltando)):,}/{len(faltando):,} novos vetores")
     return np.vstack([np.asarray(conhecidos[(i, t)], dtype=np.float32) for i, t in zip(ids, textos)])

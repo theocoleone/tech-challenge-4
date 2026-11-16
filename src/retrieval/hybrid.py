@@ -14,7 +14,7 @@ import pandas as pd
 from src.config import get_settings
 from src.data.clean import normalizar
 from src.index.bm25 import IndiceBM25
-from src.index.embeddings import get_embedder
+from src.index.embeddings import MODELOS, get_embedder, identidade_modelo
 from src.index.vector_store import IndiceVetorial
 from src.retrieval.filters import mascara
 
@@ -46,8 +46,14 @@ class Buscador:
         self.por_id = self.docs.set_index("review_id")
         self.bm25 = IndiceBM25.carregar(s.index_dir / "bm25.pkl")
         self.modelo_denso = modelo_denso
+        model_id = identidade_modelo(modelo_denso)
+        self.vetorial = IndiceVetorial.carregar(
+            s.index_dir,
+            modelo_denso,
+            model_id_esperado=model_id,
+            model_id_legado=MODELOS.get(modelo_denso),
+        )
         self.embedder = get_embedder(modelo_denso)
-        self.vetorial = IndiceVetorial.carregar(s.index_dir, modelo_denso)
 
     def lexical(self, consulta: str, k: int = 30, filtros: dict | None = None) -> list[str]:
         return [rid for rid, _ in self.bm25.buscar(normalizar(consulta), k, mascara(self.docs, filtros))]

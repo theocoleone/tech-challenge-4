@@ -1,7 +1,7 @@
 """Análise da pergunta: escopo, tipo, busca reescrita e filtros de metadados.
 
 O LLM faz a análise, e duas regras determinísticas corrigem os erros mais comuns
-dele, que apareceram na avaliação do golden set:
+dele, que apareceram na suíte de regressão:
 - filtro de categoria que a pergunta não citou (ex.: "drones" virava "eletronicos");
 - perguntas sem assunto próprio, em que o recorte vem só dos filtros.
 """
@@ -35,6 +35,20 @@ GENERICAS = set("""problema problemas reclamacao reclamacoes reclamam reclamaram
 elogio elogios elogiam elogiaram elogiar comentario comentarios comentam dizem relatam relatos
 avaliacao avaliacoes cliente clientes compra compras pedido pedidos nota notas loja gostei recomendo
 otimo bom ruim pessimo de da do das dos em no na nos nas e o a os as com para por sobre que""".split())
+
+TERMOS_FILTRO_ATRASO = {
+    "atrasada", "atrasadas", "atrasado", "atrasados", "atraso", "demora",
+    "entrega", "entregas", "entregue",
+}
+TERMOS_STATUS = {
+    "canceled": {"cancelado", "cancelados", "cancelamento"},
+    "delivered": {"entregue", "entregues"},
+    "shipped": {"enviado", "enviados"},
+    "unavailable": {"indisponivel", "indisponiveis"},
+    "invoiced": {"faturado", "faturados"},
+    "processing": {"processamento"},
+    "created": {"criado", "criados"},
+}
 
 
 def _tokens(texto: str) -> set[str]:
@@ -78,6 +92,64 @@ def tem_assunto_proprio(analise: AnaliseDaPergunta) -> bool:
     if analise.filtros.categoria_pt:
         sobra -= set(analise.filtros.categoria_pt.split("_"))
     return bool(sobra)
+
+
+def pede_comparacao(pergunta: str) -> bool:
+    """Detecta perguntas que exigem calcular dois recortes sob o mesmo critério."""
+    texto = unidecode(pergunta.lower())
+    return bool(re.search(
+        r"\b(?:do que|versus|vs\.?|compar(?:e|a|ar|acao|ando|ado)|"
+        r"em comparacao com|diferenca entre)\b",
+        texto,
+    ))
+
+
+def _alvo_redundante_com_filtro(alvo: str, analise: AnaliseDaPergunta) -> bool:
+    tokens = _tokens(alvo) - GENERICAS
+    filtros = analise.filtros
+    if filtros.entregue_com_atraso and tokens and tokens <= TERMOS_FILTRO_ATRASO:
+        return True
+    if filtros.order_status and tokens and tokens <= TERMOS_STATUS[filtros.order_status]:
+        return True
+    if filtros.categoria_pt:
+        categoria = set(filtros.categoria_pt.split("_")) - {"de", "e"}
+        if tokens and tokens <= categoria:
+            return True
+    return False
+
+
+def temas_explicitos(pergunta: str, analise: AnaliseDaPergunta) -> list[str]:
+    """Assuntos que devem restringir a busca ou a contagem.
+
+    Remove assuntos que já viraram filtro. Se o modelo omitir o assunto, recupera
+    apenas construções explícitas da pergunta original; a consulta reescrita não
+    é usada porque pode acrescentar assuntos genéricos.
+    """
+    alvos = [
+        alvo.strip()
+        for alvo in analise.temas_alvo
+        if (
+            alvo.strip()
+            and (_tokens(alvo) - GENERICAS)
+            and not _alvo_redundante_com_filtro(alvo, analise)
+        )
+    ]
+    if alvos:
+        return list(dict.fromkeys(alvos))
+
+    texto = unidecode(pergunta.lower())
+    padroes = (
+        r"\brelacionad(?:o|a|os|as)\s+(?:a|ao|aos)\s+(.+?)(?:[?.!]|$)",
+        r"\bsobre\s+(?:o|a|os|as)?\s*(.+?)(?:[?.!]|$)",
+        r"\b(?:reclamam|reclama|elogiam|elogia)\s+d(?:o|a|os|as)\s+(.+?)(?:[?.!]|$)",
+    )
+    for padrao in padroes:
+        achado = re.search(padrao, texto)
+        if achado:
+            alvo = achado.group(1).strip()
+            if alvo and not _alvo_redundante_com_filtro(alvo, analise):
+                return [alvo]
+    return []
 
 
 def analisar(pergunta: str) -> AnaliseDaPergunta:
