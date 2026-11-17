@@ -1,0 +1,812 @@
+[
+ {
+  "tema_id": "nota_baixa_00",
+  "grupo": "nota_baixa",
+  "nome": "produto diferente ou com defeito",
+  "descricao": "A maioria das avaliações relata que o produto recebido foi diferente do anunciado ou veio com defeito.",
+  "macro": "produto",
+  "n_avaliacoes": 931,
+  "exemplos": [
+   "Um pouco fraca.",
+   "Negativo. Referente ao pedido, é 2° vez que vem falando. Pedi tres n°s 5/0/7 só veio o 0/7.",
+   "Difícil ajuste, cheira muito mal e é muito curto",
+   "Comprei um recibie outro",
+   "Está faltando um relogio."
+  ],
+  "chave": "defeito_diferente_ou_produto",
+  "tema": "nota_baixa:defeito_diferente_ou_produto",
+  "nome_tema": "produto diferente ou com defeito"
+ },
+ {
+  "tema_id": "nota_baixa_01",
+  "grupo": "nota_baixa",
+  "nome": "produto não recebido",
+  "descricao": "Avaliações relatam que os clientes não receberam os produtos comprados e não obtiveram respostas ou esclarecimentos da loja.",
+  "macro": "entrega",
+  "n_avaliacoes": 546,
+  "exemplos": [
+   "Não sei o que aconteceu, mas ainda não recebi o produto!",
+   "Não recebi nem o produto, nem email informando a situação.",
+   "Eu ainda não recebi o produto, gostaria de saber o que aconteceu??",
+   "Não recebi o produto. Olá. Não estou entendo o que está acontecendo. Dizem que o produto foi entregue, mas a principio não recebi nada.",
+   "Bom dia eu não recebi meu produto, gostaria de saber o que aconteceu"
+  ],
+  "chave": "nao_produto_recebido",
+  "tema": "nota_baixa:nao_produto_recebido",
+  "nome_tema": "produto não entregue"
+ },
+ {
+  "tema_id": "nota_baixa_02",
+  "grupo": "nota_baixa",
+  "nome": "Atraso na entrega",
+  "descricao": "A maioria das avaliações relata que o produto ainda não foi entregue, mesmo após o prazo de entrega ter expirado.",
+  "macro": "entrega",
+  "n_avaliacoes": 501,
+  "exemplos": [
+   "Ja passou o prazo de entrega \r\nE o produto ainda nao chegou \r\nO que aconteceu?????",
+   "Estou aguardando a entrega do meu produto. O prazo já expirou e até agora não foi entregue.",
+   "até hoje não recebi o produto,já passou do prazo de entrega e nada ainda",
+   "Atraso na entrega, até o momento nao recebi o meu produto.",
+   "Estou a espera do produto à dias .. E ainda não foi entregue."
+  ],
+  "chave": "atraso_entrega",
+  "tema": "nota_baixa:atraso_entrega",
+  "nome_tema": "atraso na entrega"
+ },
+ {
+  "tema_id": "nota_baixa_03",
+  "grupo": "nota_baixa",
+  "nome": "não recebi",
+  "descricao": "A maioria das avaliações relata que o cliente ainda não recebeu o produto.",
+  "macro": "entrega",
+  "n_avaliacoes": 182,
+  "exemplos": [
+   "não recebi ainda. não recebi",
+   "não recebi ainda!",
+   "Ainda não recebi",
+   "Ainda não recebi",
+   "Ainda não recebi"
+  ],
+  "chave": "nao_produto_recebido",
+  "tema": "nota_baixa:nao_produto_recebido",
+  "nome_tema": "produto não entregue"
+ },
+ {
+  "tema_id": "nota_baixa_04",
+  "grupo": "nota_baixa",
+  "nome": "atraso na entrega",
+  "descricao": "As avaliações relatam que os clientes ainda não receberam o produto.",
+  "macro": "entrega",
+  "n_avaliacoes": 361,
+  "exemplos": [
+   "Não recebi o produto.",
+   "Não recebi o produto.",
+   "Não recebi o produto.",
+   "Não recebi o produto.",
+   "Não recebi o produto."
+  ],
+  "chave": "atraso_entrega",
+  "tema": "nota_baixa:atraso_entrega",
+  "nome_tema": "atraso na entrega"
+ },
+ {
+  "tema_id": "nota_baixa_05",
+  "grupo": "nota_baixa",
+  "nome": "produto falsificado",
+  "descricao": "As avaliações relatam que os produtos recebidos são falsificados, não originais, e que os anúncios enganam os consumidores.",
+  "macro": "produto",
+  "n_avaliacoes": 242,
+  "exemplos": [
+   "O produto é falsificado.",
+   "Produto anunciado como sendo original , porem é uma fraude , o produto é pirata , a impressora não identifica o cartucho e não permite a visualização da quantidade de tinta.",
+   "A propaganda noticiava um produto original, mas recebi um falsificado. Já reclamei faz dois dias e sequer fui respondido.",
+   "O produto não é original, liguei para a EPSON e pelas características foi comprovado que não é verdadeiro, falsificação para enganar o consumidor.",
+   "O produto que veio não é original HP. Fui enganada"
+  ],
+  "chave": "falsificado_produto",
+  "tema": "nota_baixa:falsificado_produto",
+  "nome_tema": "produto falsificado"
+ },
+ {
+  "tema_id": "nota_baixa_06",
+  "grupo": "nota_baixa",
+  "nome": "atraso na entrega",
+  "descricao": "A maioria das avaliações relata atrasos na entrega do produto.",
+  "macro": "entrega",
+  "n_avaliacoes": 449,
+  "exemplos": [
+   "Não recomendo, até o momento não recebi o produto.",
+   "Meu produto não chegou ainda ,por isso não recomendo .Respeito se constrói",
+   "Não recomendo. Ainda aguardando o produto chegar.",
+   "não recomendo porque até o momento não recebi meu produto,nem tive nenhuma informação da empresa responsavél",
+   "não recomendo. O produto não é aquilo que pensei. Parece imitação bem barata."
+  ],
+  "chave": "atraso_entrega",
+  "tema": "nota_baixa:atraso_entrega",
+  "nome_tema": "atraso na entrega"
+ },
+ {
+  "tema_id": "nota_baixa_07",
+  "grupo": "nota_baixa",
+  "nome": "Problemas na entrega",
+  "descricao": "As avaliações relatam problemas com a entrega dos produtos, incluindo atrasos, produtos errados ou danificados, e falta de comunicação com o cliente.",
+  "macro": "entrega",
+  "n_avaliacoes": 665,
+  "exemplos": [
+   "Não posso dizer que não recomendo a loja, pois acredito que o problema na entrega foi com a transportadora (correios). Não deixaria de comprar com a loja por conta deste problema na entrega.",
+   "problemas na entrega. infelizmente essa compra não foi bem sucedida",
+   "Pior possível. Comprei um coisa e recebi outra, já enviei e-mail e até agora ninguém entrou em contato comigo.",
+   "Paguei e não recebi. Essa loja nunca mais",
+   "Decepção. Pessima loja. Vendem recebem e não entregam."
+  ],
+  "chave": "entrega_problema",
+  "tema": "nota_baixa:entrega_problema",
+  "nome_tema": "Problemas na entrega"
+ },
+ {
+  "tema_id": "nota_baixa_08",
+  "grupo": "nota_baixa",
+  "nome": "qualidade do produto",
+  "descricao": "As avaliações mencionam que o produto tem baixa qualidade, não atende às expectativas e é inferior ao anunciado.",
+  "macro": "produto",
+  "n_avaliacoes": 440,
+  "exemplos": [
+   "Produto de baixa qualidade.",
+   "Produto de baixa qualidade.",
+   "O produto não é muito bom.",
+   "Qualidade do produto é ruim.",
+   "produto de má qualidade"
+  ],
+  "chave": "produto_qualidade",
+  "tema": "nota_baixa:produto_qualidade",
+  "nome_tema": "qualidade do produto"
+ },
+ {
+  "tema_id": "nota_baixa_09",
+  "grupo": "nota_baixa",
+  "nome": "Devolução e reembolso",
+  "descricao": "A maioria das avaliações relata problemas com a devolução de produtos e o reembolso do valor pago.",
+  "macro": "troca e devolução",
+  "n_avaliacoes": 398,
+  "exemplos": [
+   "Antes do produto ser entregue eu pedi o cancelamento da compra. Estou aguardando o reembolso. Obrigada.",
+   "Oi, boa noite!\r\nEu quero cancelar minha compra, devolver o produto e ter meu dinheiro reembolsado. Você pode me ajudar? Muito obrigado.",
+   "Estou aguardando. Quero saber o que vão fazer, se vão devolver o dinheiro ou reenviar o produto e não tive uma resposta",
+   "Eu cancelei a compra, estou esperando a devolução do valor conforme o e-mail recebido.",
+   "O produto q eu recebi não funciona, por requeiro a devolução do dinheiro"
+  ],
+  "chave": "devolucao_e_reembolso",
+  "tema": "nota_baixa:devolucao_e_reembolso",
+  "nome_tema": "Devolução e reembolso"
+ },
+ {
+  "tema_id": "nota_baixa_10",
+  "grupo": "nota_baixa",
+  "nome": "atraso na entrega",
+  "descricao": "A maioria das avaliações relata que o produto ainda não foi recebido, indicando um atraso na entrega.",
+  "macro": "entrega",
+  "n_avaliacoes": 376,
+  "exemplos": [
+   "Ainda estou aguardando meu produto chegar.",
+   "Até o momento não recebi o produto. Aguardando.",
+   "Meu produto não chegou ainda .",
+   "Produto ainda não chegou, estou no aguardo",
+   "Ainda estou aguardando o meu produto....ainda não chegou"
+  ],
+  "chave": "atraso_entrega",
+  "tema": "nota_baixa:atraso_entrega",
+  "nome_tema": "atraso na entrega"
+ },
+ {
+  "tema_id": "nota_baixa_11",
+  "grupo": "nota_baixa",
+  "nome": "falta de produtos",
+  "descricao": "As avaliações relatam que os clientes compraram mais de um produto, mas receberam apenas uma parte do pedido.",
+  "macro": "entrega",
+  "n_avaliacoes": 813,
+  "exemplos": [
+   "comprei dois produtos, mas recebi apenas um.",
+   "Bom dia! \r\n\r\nComprei dois produtos, mas só recebi um.",
+   "Comprei dois produtos e recebi somente um.",
+   "Veio faltando um produto eu pedi 2 unidades e chegou somente uma.Gostaria de saber o que aconteceu com o outro porque estou pagando 2 produtos e recebi somente um?",
+   "Comprei dois produtos e recebi apenas um."
+  ],
+  "chave": "incompleto_pedido",
+  "tema": "nota_baixa:incompleto_pedido",
+  "nome_tema": "falta de produtos"
+ },
+ {
+  "tema_id": "nota_baixa_12",
+  "grupo": "nota_baixa",
+  "nome": "produto não entregue",
+  "descricao": "A maioria das avaliações relata que o produto não foi entregue, com alguns casos de produto errado ou com defeito.",
+  "macro": "entrega",
+  "n_avaliacoes": 425,
+  "exemplos": [
+   "0. Sempre comprei na lannister e não tive problemas,mas dessa vez não recebi o produto.",
+   "A empresa não esntregou o produto, a lannister enviou e-mail informando que a empresa não vai entregar o produto e não consigo cancelar a compra.",
+   "Estou aguardando a lojas lannister resolver o problema, solicitei a desistência da compra pois o produto nao chegou",
+   "Ainda não recebi o produto e nem fui comunicada a respeito do motivo do ocorrido. Qual a posição da lannister?",
+   "Lamento informar que ainda não recebi o produto adquirido.\r\nEstou desapontado com as Lojas lannister. Sou cliente antigo e isto nunca aconteceu antes.\r\nPeço prontas providências"
+  ],
+  "chave": "nao_produto_recebido",
+  "tema": "nota_baixa:nao_produto_recebido",
+  "nome_tema": "produto não entregue"
+ },
+ {
+  "tema_id": "nota_baixa_13",
+  "grupo": "nota_baixa",
+  "nome": "atraso na entrega",
+  "descricao": "A maioria das avaliações relata que a mercadoria não foi recebida, mesmo após o prazo de entrega.",
+  "macro": "entrega",
+  "n_avaliacoes": 180,
+  "exemplos": [
+   "Não recebi a mercadoria.",
+   "não recebi a mercadoria ainda.",
+   "não recebi a mercadoria...",
+   "Ainda nao recebi minha mercadoria.",
+   "N recebi a mercadoria!!!"
+  ],
+  "chave": "atraso_entrega",
+  "tema": "nota_baixa:atraso_entrega",
+  "nome_tema": "atraso na entrega"
+ },
+ {
+  "tema_id": "nota_baixa_14",
+  "grupo": "nota_baixa",
+  "nome": "produto com defeito",
+  "descricao": "A maioria das avaliações relata que o produto chegou com defeito.",
+  "macro": "produto",
+  "n_avaliacoes": 227,
+  "exemplos": [
+   "O produto veio com defeito !",
+   "O produto veio com defeito",
+   "O produto veio com defeito",
+   "Produto veio com defeito",
+   "Produto veio com defeito"
+  ],
+  "chave": "defeito_produto",
+  "tema": "nota_baixa:defeito_produto",
+  "nome_tema": "produto com defeito"
+ },
+ {
+  "tema_id": "nota_baixa_15",
+  "grupo": "nota_baixa",
+  "nome": "produto não entregue",
+  "descricao": "As avaliações relatam que os produtos não foram entregues, com muitos casos de cancelamentos e falta de estoque.",
+  "macro": "entrega",
+  "n_avaliacoes": 560,
+  "exemplos": [
+   "Fiquei esperando o produto chegar e nada, mostrava que tava transportando mas nunca saía do mesmo lugar, tive que cancelar a entrega, to esperando pra vê se eu vou ser ressarcido do valor!",
+   "Pedi o cancelamento do produto logo após a compra e mesmo assim ele foi enviado e nem chegou para mim. Não quero o produto.",
+   "A loja entrou em contato comigo quase um mês depois , me dizendo que , não tinha o produto que me foi vendido e por isso não me entregou !",
+   "recebi um email dizendo q não seria possivel entregar o produto pois não tinha estoque do mesmo. Estou aguardando o credito para comprar em outra loja",
+   "Comprei um produto e não entregaram. \r\nPedi o cancelado do produto."
+  ],
+  "chave": "nao_produto_recebido",
+  "tema": "nota_baixa:nao_produto_recebido",
+  "nome_tema": "produto não entregue"
+ },
+ {
+  "tema_id": "nota_baixa_16",
+  "grupo": "nota_baixa",
+  "nome": "Entrega parcial",
+  "descricao": "As avaliações relatam que os pedidos foram entregues apenas parcialmente, faltando itens.",
+  "macro": "entrega",
+  "n_avaliacoes": 508,
+  "exemplos": [
+   "Foi entregue apenas um dos itens. O segundo não foi.",
+   "Meu pedido veio incompleto. Ficou faltando um item.",
+   "O pedido foi entregue parcialmente, ficando faltando ainda três itens.",
+   "Olá!! recebi só parcialmente os produtos; faltou um item.",
+   "Entrega parcial. Recebi somente 1 item.....faltam os 2 jogos de lençol e a compra está no site do baratheon como entrega efetuada. Peço para verificar o ocorrido e informar qusndobirei receber os itens faltantes."
+  ],
+  "chave": "incompleto_pedido",
+  "tema": "nota_baixa:incompleto_pedido",
+  "nome_tema": "falta de produtos"
+ },
+ {
+  "tema_id": "nota_baixa_17",
+  "grupo": "nota_baixa",
+  "nome": "atraso na entrega",
+  "descricao": "As avaliações relatam que os pedidos não foram entregues ou estão atrasados.",
+  "macro": "entrega",
+  "n_avaliacoes": 613,
+  "exemplos": [
+   "Boa tarde, ainda não recebi meu pedido.",
+   "Meu pedido ainda não foi. Meu pedido não foi entregue",
+   "Porque não me entregaram? Gostaria de saber o porquê.",
+   "O meu pedido ainda não chegou",
+   "Até o momento eu não recebi minha entrega."
+  ],
+  "chave": "atraso_entrega",
+  "tema": "nota_baixa:atraso_entrega",
+  "nome_tema": "atraso na entrega"
+ },
+ {
+  "tema_id": "nota_baixa_18",
+  "grupo": "nota_baixa",
+  "nome": "produto diferente do anúncio",
+  "descricao": "As avaliações relatam que o produto recebido difere significativamente do que foi anunciado, com diferenças na cor, modelo, qualidade e embalagem.",
+  "macro": "produto",
+  "n_avaliacoes": 415,
+  "exemplos": [
+   "Não gostei. O produto foi entregue, mas a cor é diferente, é manchado! Parece que jogaram água sanitária. Não é harmônica a cor.",
+   "a cor do produto no site é diferente do produto recebido.",
+   "O produto não é o mesmo da foto, fiquei com o produto porque gostei da cor, mais me senti enganada pois pedi um produto e chegou outro.",
+   "Produto veio com a cor errada.",
+   "O produto recebido não e o mesmo das fotos do anuncio."
+  ],
+  "chave": "anuncio_diferente_produto",
+  "tema": "nota_baixa:anuncio_diferente_produto",
+  "nome_tema": "produto diferente do anúncio"
+ },
+ {
+  "tema_id": "nota_baixa_19",
+  "grupo": "nota_baixa",
+  "nome": "produto não entregue",
+  "descricao": "Todas as avaliações relatam que o produto não foi entregue.",
+  "macro": "entrega",
+  "n_avaliacoes": 370,
+  "exemplos": [
+   "produto n foi entregue",
+   "Não foi entregue o produto .",
+   "Meu produto não foi entregue.",
+   "Meu produto não foi entregue.",
+   "Meu produto nao foi entregue."
+  ],
+  "chave": "nao_produto_recebido",
+  "tema": "nota_baixa:nao_produto_recebido",
+  "nome_tema": "produto não entregue"
+ },
+ {
+  "tema_id": "nota_baixa_20",
+  "grupo": "nota_baixa",
+  "nome": "demora na entrega",
+  "descricao": "As avaliações relatam que a entrega demorou muito, mesmo dentro do prazo.",
+  "macro": "entrega",
+  "n_avaliacoes": 476,
+  "exemplos": [
+   "Muita demora na entrega.",
+   "Muita demora na entrega.",
+   "Muita demora na entrega.",
+   "Muita demora na entrega.",
+   "muita demora na entrega"
+  ],
+  "chave": "atraso_entrega",
+  "tema": "nota_baixa:atraso_entrega",
+  "nome_tema": "atraso na entrega"
+ },
+ {
+  "tema_id": "nota_baixa_21",
+  "grupo": "nota_baixa",
+  "nome": "produto quebrado",
+  "descricao": "A maioria das avaliações relata que o produto chegou quebrado, com alguns mencionando problemas adicionais como embalagem danificada, cor errada, e dificuldades em realizar a troca.",
+  "macro": "produto",
+  "n_avaliacoes": 269,
+  "exemplos": [
+   "O produto chegou quebrado.",
+   "o produto chegou quebrado. estou aguardando contato da loja.",
+   "O produto estava quebrado.",
+   "o produto veio quebrado",
+   "O produto chegou quebrado"
+  ],
+  "chave": "produto_quebrado",
+  "tema": "nota_baixa:produto_quebrado",
+  "nome_tema": "produto quebrado"
+ },
+ {
+  "tema_id": "nota_baixa_22",
+  "grupo": "nota_baixa",
+  "nome": "atraso na entrega",
+  "descricao": "A maioria das avaliações relata que o produto ainda não foi recebido, indicando um atraso na entrega.",
+  "macro": "entrega",
+  "n_avaliacoes": 134,
+  "exemplos": [
+   "não tenho como avaliar pq ainda não recebi o produto.",
+   "Não posso avaliar ainda, pois não recebi o produto.",
+   "Não posso avaliar, pois ainda não recebi o produto.",
+   "Meu produto n chegou ainda ao destino, ainda n recebi n posso avaliar.",
+   "Não recebi meu produto. Não posso avaliar."
+  ],
+  "chave": "atraso_entrega",
+  "tema": "nota_baixa:atraso_entrega",
+  "nome_tema": "atraso na entrega"
+ },
+ {
+  "tema_id": "nota_baixa_23",
+  "grupo": "nota_baixa",
+  "nome": "produto errado",
+  "descricao": "A maioria das avaliações relata que o produto recebido foi diferente do que foi comprado.",
+  "macro": "produto",
+  "n_avaliacoes": 545,
+  "exemplos": [
+   "me foi enviado o produto errado!",
+   "Recebi o produto errado. Mandaram outro produto.",
+   "Enviaram o produto errado.",
+   "Recebi o produto diferente do qual eu comrprei.",
+   "Recebi o produto errado!!!"
+  ],
+  "chave": "errado_produto",
+  "tema": "nota_baixa:errado_produto",
+  "nome_tema": "produto errado"
+ },
+ {
+  "tema_id": "nota_baixa_24",
+  "grupo": "nota_baixa",
+  "nome": "Problemas com nota fiscal",
+  "descricao": "As avaliações relatam problemas com a nota fiscal, como não recebimento, emissão incorreta ou ausência no produto entregue.",
+  "macro": "compra em geral",
+  "n_avaliacoes": 215,
+  "exemplos": [
+   "Só recebi a nota fiscal. O produto não veio",
+   "comprei dois produtos e só recebi um sem nota fiscal",
+   "preciso receber minha compra e ela nao passa de nota fiscal emitida, nao chegou...",
+   "A nota fiscal foi emitida no dia que deram de prazo para entrega. Até agora o produto não chegou!",
+   "Não recebi meu produto. Recebi a nota fiscal sem o meu produto, o status da entrega diz que já foi entregue. Mas me entregaram apenas a nota fiscal."
+  ],
+  "chave": "fiscal_nota_problema",
+  "tema": "nota_baixa:fiscal_nota_problema",
+  "nome_tema": "Problemas com nota fiscal"
+ },
+ {
+  "tema_id": "nota_alta_00",
+  "grupo": "nota_alta",
+  "nome": "entrega antecipada",
+  "descricao": "Avaliações com notas altas que destacam a entrega do produto antes do prazo estipulado.",
+  "macro": "entrega",
+  "n_avaliacoes": 2143,
+  "exemplos": [
+   "Recomendo, produto entregue antes do prazo.",
+   "Produto entregue antes do prazo.\r\nEu recomendo.",
+   "Produto entregue antes do prazo, super recomendo.",
+   "Produto entregue bem antes do prazo. Recomendo",
+   "Produto entregue antes do prazo,recomendo."
+  ],
+  "chave": "entrega_rapida",
+  "tema": "nota_alta:entrega_rapida",
+  "nome_tema": "entrega antecipada"
+ },
+ {
+  "tema_id": "nota_alta_01",
+  "grupo": "nota_alta",
+  "nome": "compra em geral",
+  "descricao": "Avaliações genéricas indicando que tudo está correto.",
+  "macro": "compra em geral",
+  "n_avaliacoes": 442,
+  "exemplos": [
+   "Td certo",
+   "tudo certo",
+   "tudo certo",
+   "tudo certo",
+   "tudo certo"
+  ],
+  "chave": "compra_geral",
+  "tema": "nota_alta:compra_geral",
+  "nome_tema": "compra em geral"
+ },
+ {
+  "tema_id": "nota_alta_02",
+  "grupo": "nota_alta",
+  "nome": "experiência de compra positiva",
+  "descricao": "As avaliações são todas positivas, destacando a qualidade dos produtos, rapidez na entrega, e bom atendimento.",
+  "macro": "compra em geral",
+  "n_avaliacoes": 1199,
+  "exemplos": [
+   "As compras que fiz no site das lannister, sempre deram certo.",
+   "Adoro comprar na lannister.com. Nunca tive problema com as compras.",
+   "super recomendado. muito bom as compras realizadas pela lannister .com",
+   "Comprar na lannister é algo que vale a pena, preço bom, entrega antes do prazo, enfim é bom de mais.",
+   "é muito bom comprar com lannister , pela pontualidades de vcs."
+  ],
+  "chave": "avaliacao_positiva",
+  "tema": "nota_alta:avaliacao_positiva",
+  "nome_tema": "experiência de compra positiva"
+ },
+ {
+  "tema_id": "nota_alta_03",
+  "grupo": "nota_alta",
+  "nome": "compra em geral",
+  "descricao": "Avaliações genéricas sem assunto específico, como 'ótimo'.",
+  "macro": "compra em geral",
+  "n_avaliacoes": 748,
+  "exemplos": [
+   "ótimo",
+   "ótimo",
+   "ótimo",
+   "ótimo",
+   "ótimo"
+  ],
+  "chave": "compra_geral",
+  "tema": "nota_alta:compra_geral",
+  "nome_tema": "compra em geral"
+ },
+ {
+  "tema_id": "nota_alta_04",
+  "grupo": "nota_alta",
+  "nome": "Problemas com entrega",
+  "descricao": "A maioria das avaliações relata problemas com a entrega do produto, como atrasos, entrega incorreta ou ausência de embalagem adequada.",
+  "macro": "entrega",
+  "n_avaliacoes": 2304,
+  "exemplos": [
+   "Eu recebi mas compreo o produto errado,queria ver para poder trocar. obrigado",
+   "Não testei o produto ainda, mas ele veio correto e em boas condições. Apenas a caixa que veio bem amassada e danificada, o que ficará chato, pois se trata de um presente.",
+   "Tive um problema mas pelo visto foi com os correios que entregou o produto em duas etapas!",
+   "O presente é para minha mãe do dia das mães, não foi aberto ainda, mas creio que esteja tudo correto, recebi o produto antes da data prevista para entrega. Se vier com defeito pode trocar.",
+   "O problema da entrega foi comunicado via site da lannister...depois tudo certo, produto entregue perfeito."
+  ],
+  "chave": "entrega_problema",
+  "tema": "nota_alta:entrega_problema",
+  "nome_tema": "Problemas com entrega"
+ },
+ {
+  "tema_id": "nota_alta_05",
+  "grupo": "nota_alta",
+  "nome": "entrega rápida",
+  "descricao": "As avaliações destacam a rapidez da entrega, com muitos clientes expressando surpresa e satisfação com a agilidade.",
+  "macro": "entrega",
+  "n_avaliacoes": 1968,
+  "exemplos": [
+   "A entrega foi super rápida.",
+   "A entrega foi super rápida, Obrigada.",
+   "A entrega rápido e produto muito bom.",
+   "A entrega foi muito rápida.",
+   "A entrega foi muito rápida."
+  ],
+  "chave": "entrega_rapida",
+  "tema": "nota_alta:entrega_rapida",
+  "nome_tema": "entrega antecipada"
+ },
+ {
+  "tema_id": "nota_alta_06",
+  "grupo": "nota_alta",
+  "nome": "recomendação geral",
+  "descricao": "Avaliações genéricas de recomendação do serviço ou produto.",
+  "macro": "compra em geral",
+  "n_avaliacoes": 768,
+  "exemplos": [
+   "Super recomendo.",
+   "Super recomendo....",
+   "Super recomendo .",
+   "Super recomendo.",
+   "Super recomendo. ................"
+  ],
+  "chave": "avaliacao_positiva",
+  "tema": "nota_alta:avaliacao_positiva",
+  "nome_tema": "experiência de compra positiva"
+ },
+ {
+  "tema_id": "nota_alta_07",
+  "grupo": "nota_alta",
+  "nome": "entrega antecipada",
+  "descricao": "Todas as avaliações mencionam que o produto chegou antes do prazo estipulado.",
+  "macro": "entrega",
+  "n_avaliacoes": 2416,
+  "exemplos": [
+   "Entregou antes do prazo.",
+   "Entregou antes do prazo.",
+   "Chegou bem antes do prazo.",
+   "Chegou bem antes do prazo.",
+   "Chegou bem antes do prazo."
+  ],
+  "chave": "entrega_rapida",
+  "tema": "nota_alta:entrega_rapida",
+  "nome_tema": "entrega antecipada"
+ },
+ {
+  "tema_id": "nota_alta_08",
+  "grupo": "nota_alta",
+  "nome": "ótimo produto",
+  "descricao": "Avaliações que destacam a qualidade do produto.",
+  "macro": "produto",
+  "n_avaliacoes": 1604,
+  "exemplos": [
+   "ótimo produto.",
+   "ótimo produto.",
+   "ótimo produto.",
+   "ótimo produto.",
+   "ótimo produto."
+  ],
+  "chave": "produto_qualidade",
+  "tema": "nota_alta:produto_qualidade",
+  "nome_tema": "produto de qualidade"
+ },
+ {
+  "tema_id": "nota_alta_09",
+  "grupo": "nota_alta",
+  "nome": "produto de qualidade",
+  "descricao": "Avaliações positivas sobre a qualidade do produto, com recomendações.",
+  "macro": "produto",
+  "n_avaliacoes": 2252,
+  "exemplos": [
+   "Produto muito bom, eu recomendo.",
+   "Um produto muito bom! gostei muito ...",
+   "produto mt bom,excelente.",
+   "Muito bom o produto.",
+   "Muito bom o produto."
+  ],
+  "chave": "produto_qualidade",
+  "tema": "nota_alta:produto_qualidade",
+  "nome_tema": "produto de qualidade"
+ },
+ {
+  "tema_id": "nota_alta_10",
+  "grupo": "nota_alta",
+  "nome": "compra em geral",
+  "descricao": "Avaliações genéricas sem assunto específico, como 'muito bom', 'recomendo', 'péssimo'.",
+  "macro": "compra em geral",
+  "n_avaliacoes": 464,
+  "exemplos": [
+   "Excelente",
+   "Excelente",
+   "Excelente",
+   "Excelente",
+   "Excelente"
+  ],
+  "chave": "compra_geral",
+  "tema": "nota_alta:compra_geral",
+  "nome_tema": "compra em geral"
+ },
+ {
+  "tema_id": "nota_alta_11",
+  "grupo": "nota_alta",
+  "nome": "compra em geral",
+  "descricao": "Avaliações genéricas sem assunto específico, como 'muito bom' ou 'recomendo'.",
+  "macro": "compra em geral",
+  "n_avaliacoes": 1023,
+  "exemplos": [
+   "Muito bom",
+   "Muito bom",
+   "Muito bom",
+   "Muito bom",
+   "Muito bom"
+  ],
+  "chave": "compra_geral",
+  "tema": "nota_alta:compra_geral",
+  "nome_tema": "compra em geral"
+ },
+ {
+  "tema_id": "nota_alta_12",
+  "grupo": "nota_alta",
+  "nome": "Satisfação geral",
+  "descricao": "Avaliações genéricas expressando satisfação com a compra.",
+  "macro": "compra em geral",
+  "n_avaliacoes": 897,
+  "exemplos": [
+   "Muito satisfeita.",
+   "muito satisfeita.",
+   "Estou muito satisfeita.",
+   "fiquei muito satisfeita.",
+   "Estou satisfeito."
+  ],
+  "chave": "avaliacao_positiva",
+  "tema": "nota_alta:avaliacao_positiva",
+  "nome_tema": "experiência de compra positiva"
+ },
+ {
+  "tema_id": "nota_alta_13",
+  "grupo": "nota_alta",
+  "nome": "compra em geral",
+  "descricao": "Avaliações genéricas com notas altas e comentários positivos sobre a compra.",
+  "macro": "compra em geral",
+  "n_avaliacoes": 3059,
+  "exemplos": [
+   "Ótimo. Gostei muito parabéns",
+   "Bom. Gostei muito",
+   "excelente muito obrigado.",
+   "Muito Bom, adorei e quem recebeu o presente também adorou!",
+   "Gostei muito, obrigado..."
+  ],
+  "chave": "compra_geral",
+  "tema": "nota_alta:compra_geral",
+  "nome_tema": "compra em geral"
+ },
+ {
+  "tema_id": "nota_alta_14",
+  "grupo": "nota_alta",
+  "nome": "entrega no prazo",
+  "descricao": "A maioria das avaliações destaca que o produto foi entregue no prazo.",
+  "macro": "entrega",
+  "n_avaliacoes": 2216,
+  "exemplos": [
+   "recomendo. produto entregue no prazo.",
+   "Produto de qualidade, entregue no prazo",
+   "Produto entregue no prazo.",
+   "Produto entregue no prazo.",
+   "Produto entregue no prazo."
+  ],
+  "chave": "entrega_prazo",
+  "tema": "nota_alta:entrega_prazo",
+  "nome_tema": "entrega no prazo"
+ },
+ {
+  "tema_id": "nota_alta_15",
+  "grupo": "nota_alta",
+  "nome": "compra em geral",
+  "descricao": "Avaliações genéricas sem assunto específico, como 'muito bom', 'recomendo', 'péssimo'.",
+  "macro": "compra em geral",
+  "n_avaliacoes": 394,
+  "exemplos": [
+   "Bom",
+   "Bom",
+   "Bom",
+   "Bom",
+   "Bom"
+  ],
+  "chave": "compra_geral",
+  "tema": "nota_alta:compra_geral",
+  "nome_tema": "compra em geral"
+ },
+ {
+  "tema_id": "nota_alta_16",
+  "grupo": "nota_alta",
+  "nome": "recomendação geral",
+  "descricao": "Avaliações genéricas de notas altas que recomendam a loja e os produtos.",
+  "macro": "compra em geral",
+  "n_avaliacoes": 797,
+  "exemplos": [
+   "ótima loja eu recomendo",
+   "Ótima loja...",
+   "Loja ótima.",
+   "eu recomendo . ótima loja, super rápida na entrega .",
+   "otima loja!!!!"
+  ],
+  "chave": "avaliacao_positiva",
+  "tema": "nota_alta:avaliacao_positiva",
+  "nome_tema": "experiência de compra positiva"
+ },
+ {
+  "tema_id": "nota_alta_17",
+  "grupo": "nota_alta",
+  "nome": "Entrega rápida",
+  "descricao": "Avaliações positivas destacando a entrega antes do prazo e tudo correto.",
+  "macro": "entrega",
+  "n_avaliacoes": 1408,
+  "exemplos": [
+   "Tudo ok. Chegou tudo certinho e antes do prazo!!",
+   "Chegou tudo certo,dentro do prazo.",
+   "chegou tudo bem certinho. e no dentro do prazo descrito no momento da compra.",
+   "Chegou no prazo, tudo certo",
+   "Tudo certo, conforme o esperado"
+  ],
+  "chave": "entrega_rapida",
+  "tema": "nota_alta:entrega_rapida",
+  "nome_tema": "entrega antecipada"
+ },
+ {
+  "tema_id": "nota_alta_18",
+  "grupo": "nota_alta",
+  "nome": "compra em geral",
+  "descricao": "Avaliações genéricas sem assunto específico, como 'muito bom' ou 'recomendo'.",
+  "macro": "compra em geral",
+  "n_avaliacoes": 1127,
+  "exemplos": [
+   "Ok",
+   "Ok",
+   "Ok",
+   "Ok",
+   "Ok"
+  ],
+  "chave": "compra_geral",
+  "tema": "nota_alta:compra_geral",
+  "nome_tema": "compra em geral"
+ },
+ {
+  "tema_id": "nota_alta_19",
+  "grupo": "nota_alta",
+  "nome": "recomendação",
+  "descricao": "Avaliações genéricas que recomendam o produto ou serviço.",
+  "macro": "compra em geral",
+  "n_avaliacoes": 453,
+  "exemplos": [
+   "Recomendo",
+   "Recomendo",
+   "Recomendo",
+   "Recomendo",
+   "Recomendo"
+  ],
+  "chave": "avaliacao_positiva",
+  "tema": "nota_alta:avaliacao_positiva",
+  "nome_tema": "experiência de compra positiva"
+ }
+]

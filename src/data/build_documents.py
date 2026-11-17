@@ -2,10 +2,11 @@
 
 Saídas em data/processed/:
 - reviews.parquet: TODAS as avaliações (com e sem texto) e seus metadados.
-  É a base das contagens (nota, período, categoria), inclusive das perguntas
-  agregadas, e permite declarar o viés "quem comenta".
+  É a base das estatísticas gerais de nota e metadados e permite declarar o
+  viés "quem comenta".
 - documents.parquet: só as avaliações com texto informativo. 1 avaliação =
-  1 documento, sem chunking (as avaliações têm no máximo ~45 palavras).
+  1 documento, sem chunking (as avaliações têm no máximo ~45 palavras). Junto
+  de temas.parquet, é a base das contagens temáticas.
 
 Uso: python -m src.data.build_documents
 """

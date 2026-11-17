@@ -1,9 +1,11 @@
+import json
+
 import numpy as np
 import pandas as pd
 
 import src.index.embeddings as emb
 from src.index.bm25 import IndiceBM25, tokenizar
-from src.index.vector_store import IndiceVetorial
+from src.index.vector_store import IndiceVetorial, IndiceVetorialIncompativel
 from src.retrieval.filters import mascara
 
 
@@ -31,9 +33,32 @@ def test_indice_vetorial_busca_exata_com_e_sem_recorte(tmp_path):
     assert [r for r, _ in idx.buscar(np.array([1, 0.1]), k=2)] == ["a", "b"]
     assert [r for r, _ in idx.buscar(np.array([1, 0.1]), k=2, mascara=np.array([False, True, True]))] == ["b", "c"]
     assert idx.buscar(np.array([1, 0]), k=2, mascara=np.array([False, False, False])) == []
-    idx.salvar(tmp_path, "t")
-    novo = IndiceVetorial.carregar(tmp_path, "t")
+    idx.salvar(tmp_path, "t", model_id="modelo-a")
+    novo = IndiceVetorial.carregar(tmp_path, "t", model_id_esperado="modelo-a")
     assert novo.ids == idx.ids and np.allclose(novo.vetores_de(["c"]), [[0, 1]])
+    with np.testing.assert_raises(IndiceVetorialIncompativel):
+        IndiceVetorial.carregar(tmp_path, "t", model_id_esperado="modelo-b")
+
+
+def test_indice_vetorial_recusa_estrutura_e_metadados_incompativeis(tmp_path):
+    idx = IndiceVetorial(["a", "b"], np.array([[1, 0], [0, 1]], dtype=np.float32))
+    idx.salvar(tmp_path, "t", model_id="modelo-a")
+
+    np.save(tmp_path / "vetores_t.npy", np.array([[1, 0]], dtype=np.float32))
+    with np.testing.assert_raises(IndiceVetorialIncompativel):
+        IndiceVetorial.carregar(tmp_path, "t", model_id_esperado="modelo-a")
+
+    idx.salvar(tmp_path, "t", model_id=None)
+    with np.testing.assert_raises(IndiceVetorialIncompativel):
+        IndiceVetorial.carregar(tmp_path, "t", model_id_esperado="modelo-a")
+
+    (tmp_path / "vetores_t_meta.json").write_text(
+        json.dumps({"model_id": "modelo-a", "dimensoes": 2, "documentos": 2}),
+        encoding="utf-8",
+    )
+    np.save(tmp_path / "vetores_t.npy", np.array([[0, 0], [0, 1]], dtype=np.float32))
+    with np.testing.assert_raises(IndiceVetorialIncompativel):
+        IndiceVetorial.carregar(tmp_path, "t", model_id_esperado="modelo-a")
 
 
 class _Falso:
@@ -54,6 +79,16 @@ def test_cache_so_calcula_textos_novos(tmp_path, monkeypatch):
     assert np.allclose(v2[:2], v1)
     emb.embeddings_com_cache("fake", ["a"], ["oi editado"], tmp_path)
     assert _Falso.chamadas == 4  # texto mudou: recalcula
+
+
+def test_cache_muda_quando_muda_a_identidade_do_modelo(tmp_path, monkeypatch):
+    monkeypatch.setattr(emb, "get_embedder", lambda nome: _Falso())
+    monkeypatch.setattr(emb, "identidade_modelo", lambda nome: "modelo-a")
+    _Falso.chamadas = 0
+    emb.embeddings_com_cache("fake", ["a"], ["oi"], tmp_path)
+    monkeypatch.setattr(emb, "identidade_modelo", lambda nome: "modelo-b")
+    emb.embeddings_com_cache("fake", ["a"], ["oi"], tmp_path)
+    assert _Falso.chamadas == 2
 
 
 def test_mmr_evita_quase_duplicatas():

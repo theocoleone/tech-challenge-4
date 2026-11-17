@@ -4,8 +4,9 @@
 - index/vetores_<modelo>.npy: vetores normalizados de cada avaliação, na mesma
   ordem de documents.parquet (os metadados para filtrar vêm do próprio parquet).
 
-Os embeddings ficam em cache (index/embeddings_<modelo>.parquet): refazer o índice
-não chama o Bedrock de novo.
+Os embeddings ficam em cache com a identidade do modelo no nome do arquivo:
+refazer o índice com o mesmo modelo não chama o Bedrock de novo, e trocar o ID
+não mistura vetores incompatíveis.
 
 Uso:
   python -m src.index.build_index                 # titan + local + bm25
@@ -17,7 +18,7 @@ import pandas as pd
 
 from src.config import get_settings
 from src.index.bm25 import IndiceBM25
-from src.index.embeddings import embeddings_com_cache
+from src.index.embeddings import embeddings_com_cache, identidade_modelo
 from src.index.vector_store import IndiceVetorial
 
 
@@ -32,7 +33,9 @@ def build(modelos: list[str]) -> None:
 
     for modelo in modelos:
         vetores = embeddings_com_cache(modelo, ids, textos, s.index_dir)
-        IndiceVetorial(ids, vetores).salvar(s.index_dir, modelo)
+        IndiceVetorial(ids, vetores).salvar(
+            s.index_dir, modelo, model_id=identidade_modelo(modelo)
+        )
         print(f"vetores {modelo}: {vetores.shape[0]:,} x {vetores.shape[1]}")
 
 

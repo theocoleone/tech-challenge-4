@@ -1,12 +1,12 @@
-"""Configuração central do TC4 e fábrica de provedores (LLM e embeddings).
+"""Configuração central do TC4 e fábrica dos modelos usados no Bedrock.
 
 Tudo que varia entre ambientes vem de variáveis de ambiente com prefixo `TC4_`
-ou do `.env` (ver `.env.example`). O resto do código pede o modelo a `get_llm()` e
-`get_embeddings()` e não sabe qual provedor está por trás, então trocar
-Nova por Haiku, ou Bedrock pelo modo local, é só mudar a configuração.
+ou do `.env` (ver `.env.example`). O baseline de embedding local existe para a
+comparação de recuperação, mas a aplicação completa usa o Amazon Bedrock.
 """
 from functools import lru_cache
 from pathlib import Path
+import re
 from typing import Literal
 
 from pydantic import field_validator
@@ -22,11 +22,11 @@ class Settings(BaseSettings):
 
     aws_profile: str = "fiap-tech-challenge"
     aws_region: str = "us-east-1"
-    # Conta pessoal do curso. Qualquer outra (ex.: contas de trabalho) aborta a execução.
-    aws_account_id: str = "286958704145"
+    # Deve ser preenchida no .env. Qualquer outra conta (ex.: trabalho) aborta.
+    aws_account_id: str = ""
 
-    llm_provider: Literal["bedrock", "local"] = "bedrock"
-    emb_provider: Literal["bedrock", "local"] = "bedrock"
+    llm_provider: Literal["bedrock"] = "bedrock"
+    emb_provider: Literal["bedrock"] = "bedrock"
 
     llm_model_id: str = "us.amazon.nova-lite-v1:0"   # análise da pergunta (rápida e barata)
     gen_model_id: str = "us.amazon.nova-pro-v1:0"    # escreve a resposta (mais fiel ao contexto)
@@ -34,7 +34,8 @@ class Settings(BaseSettings):
     llm_fallback_model_id: str = "us.amazon.nova-pro-v1:0"
     gen_fallback_model_id: str = "us.amazon.nova-lite-v1:0"
     llm_timeout_s: int = 20
-    judge_model_id: str = "us.amazon.nova-pro-v1:0"
+    # O juiz da avaliação tem de ser um modelo diferente do que escreve as respostas
+    judge_model_id: str = "us.amazon.nova-lite-v1:0"
     emb_model_id: str = "amazon.titan-embed-text-v2:0"
     llm_temperature: float = 0.0
 
@@ -58,6 +59,10 @@ class ContaAwsErrada(RuntimeError):
     """A credencial resolvida não pertence à conta esperada do projeto."""
 
 
+class ContaAwsNaoConfigurada(RuntimeError):
+    """O ID de conta esperado não foi informado no ambiente do projeto."""
+
+
 @lru_cache
 def check_aws_account() -> str:
     """Confere, uma vez por processo, que a credencial é da conta do curso.
@@ -68,6 +73,10 @@ def check_aws_account() -> str:
     import boto3
 
     s = get_settings()
+    if not re.fullmatch(r"\d{12}", s.aws_account_id):
+        raise ContaAwsNaoConfigurada(
+            "defina TC4_AWS_ACCOUNT_ID com os 12 dígitos da conta do curso no arquivo .env"
+        )
     session = boto3.Session(profile_name=s.aws_profile, region_name=s.aws_region)
     conta = session.client("sts").get_caller_identity()["Account"]
     if conta != s.aws_account_id:
@@ -99,11 +108,10 @@ def get_llm(model_id: str | None = None, estruturado=None, papel: str = "analise
     """LLM do projeto. Com `estruturado` (um modelo pydantic), devolve saída estruturada.
 
     O modelo principal tem uma reserva (`llm_fallback_model_id`) para quando ele
-    demora ou é limitado; o trace registra qual modelo respondeu.
+    demora ou é limitado. O trace registra os modelos configurados, não qual deles
+    efetivamente respondeu.
     """
     s = get_settings()
-    if s.llm_provider == "local":
-        raise NotImplementedError("LLM local (plano B2) entra só se o Bedrock continuar bloqueado")
     check_aws_account()
     padrao, fallback = (s.gen_model_id, s.gen_fallback_model_id) if papel == "geracao" else (s.llm_model_id, s.llm_fallback_model_id)
     principal = _chat_bedrock(model_id or padrao)
@@ -117,8 +125,6 @@ def get_llm(model_id: str | None = None, estruturado=None, papel: str = "analise
 
 def get_embeddings():
     s = get_settings()
-    if s.emb_provider == "local":
-        raise NotImplementedError("Embeddings locais (plano B2) entram só se o Bedrock continuar bloqueado")
     check_aws_account()
     from langchain_aws import BedrockEmbeddings
 
