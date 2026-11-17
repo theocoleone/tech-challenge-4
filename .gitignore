@@ -39,3 +39,6 @@ logs/
 
 # Arquivos temporários do Excel (planilha aberta)
 ~$*
+
+# capturas temporárias do playwright-cli
+.playwright-cli/
