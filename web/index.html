@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voz do Cliente · Olist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/web/style.css">
+</head>
+<body>
+<div class="grao" aria-hidden="true"></div>
+
+<header class="cabecalho">
+  <div class="marca">
+    <span class="selo">Tech Challenge · Fase 4</span>
+    <h1>A voz do <em>cliente</em></h1>
+    <p class="linha-fina">Perguntas em português sobre <strong id="n-documentos">…</strong> avaliações escritas por clientes da Olist entre 2016 e 2018. Cada resposta mostra as avaliações que a sustentam.</p>
+  </div>
+  <dl class="estado" id="estado"></dl>
+</header>
+
+<main>
+  <section class="consulta">
+    <form id="forma">
+      <label class="rotulo" for="pergunta">Pergunta</label>
+      <div class="campo">
+        <textarea id="pergunta" name="pergunta" rows="2" placeholder="O que os clientes reclamam sobre a entrega?" required></textarea>
+        <button type="submit" id="enviar">Perguntar</button>
+      </div>
+      <div class="exemplos" id="exemplos">
+        <span>Exemplos</span>
+        <button type="button" data-q="Quais são os principais problemas relatados pelos clientes?">principais problemas</button>
+        <button type="button" data-q="O que os clientes mais elogiam em suas experiências de compra?">o que mais elogiam</button>
+        <button type="button" data-q="Quais reclamações relacionadas à entrega aparecem com maior frequência?">reclamações de entrega</button>
+        <button type="button" data-q="Quais problemas os clientes relatam ao tentar trocar ou devolver um produto?">troca e devolução</button>
+        <button type="button" data-q="Quais reclamações existem sobre pagamento via Pix?">pagamento via Pix</button>
+        <button type="button" data-q="Qual é a capital da França?">fora do escopo</button>
+      </div>
+
+      <details class="filtros" id="painel-filtros">
+        <summary>Filtros de metadados <span class="dica">a pergunta já preenche sozinha; aqui você força um recorte</span></summary>
+        <div class="grade-filtros">
+          <label>Nota mínima <input type="number" id="review_score_min" min="1" max="5"></label>
+          <label>Nota máxima <input type="number" id="review_score_max" min="1" max="5"></label>
+          <label>Categoria <select id="categoria_pt"><option value="">todas</option></select></label>
+          <label>Compra de <input type="number" id="ano_mes_compra_min" placeholder="201801"></label>
+          <label>Compra até <input type="number" id="ano_mes_compra_max" placeholder="201812"></label>
+          <label>Situação do pedido <select id="order_status">
+            <option value="">todas</option><option value="delivered">entregue</option><option value="canceled">cancelado</option>
+            <option value="shipped">enviado</option><option value="unavailable">indisponível</option>
+            <option value="invoiced">faturado</option><option value="processing">em processamento</option>
+            <option value="created">criado</option></select></label>
+          <label>Entrega <select id="entregue_com_atraso">
+            <option value="">todas</option><option value="true">com atraso</option>
+            <option value="false">sem atraso registrado (inclui não entregues)</option></select></label>
+          <label>Estado <input type="text" id="uf_cliente" maxlength="2" placeholder="SP"></label>
+          <label>Valor de R$ <input type="number" id="valor_min" step="10"></label>
+          <label>Valor até R$ <input type="number" id="valor_max" step="10"></label>
+        </div>
+        <button type="button" class="limpar" id="limpar">limpar filtros</button>
+      </details>
+    </form>
+  </section>
+
+  <section id="saida" hidden>
+    <article class="resposta" id="resposta">
+      <div class="meta-resposta">
+        <span class="situacao" id="situacao"></span>
+        <span class="tempo" id="tempo"></span>
+      </div>
+      <p class="texto-resposta" id="texto-resposta"></p>
+      <ul class="aplicado" id="aplicado"></ul>
+      <ol class="insights" id="insights"></ol>
+    </article>
+
+    <div class="contagem" id="contagem" hidden>
+      <h2>Frequência na base temática</h2>
+      <p class="base" id="base-contagem"></p>
+      <ul class="barras" id="barras"></ul>
+    </div>
+
+    <div class="evidencias" id="bloco-evidencias" hidden>
+      <h2 id="titulo-evidencias">Avaliações usadas como evidência</h2>
+      <p class="base" id="nota-evidencias" hidden></p>
+      <div class="cartoes" id="evidencias"></div>
+    </div>
+  </section>
+
+  <p class="erro" id="erro" hidden></p>
+</main>
+
+<footer>
+  <span>Busca híbrida (Titan + BM25) · re-ranking · recusa quando não há evidência</span>
+  <a href="/docs">documentação da API</a>
+</footer>
+
+<script src="/web/app.js"></script>
+</body>
+</html>
