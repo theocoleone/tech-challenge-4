@@ -1255,7 +1255,7 @@
    "RecallN@8": 0.0,
    "RecallN@20": 0.05,
    "MRR": 0.05555555555555555,
-   "Precisão@8": NaN,
+   "Precisão@8": null,
    "Julgado@8": 0.0
   }
  ]

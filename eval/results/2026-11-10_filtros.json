@@ -25,7 +25,7 @@
    "pergunta": "F01",
    "modo": "sem filtro",
    "conformidade": 0.0,
-   "precisao@8": NaN,
+   "precisao@8": null,
    "julgado@8": 0.0
   },
   {
@@ -81,7 +81,7 @@
    "pergunta": "F05",
    "modo": "sem filtro",
    "conformidade": 0.0,
-   "precisao@8": NaN,
+   "precisao@8": null,
    "julgado@8": 0.0
   },
   {
@@ -95,7 +95,7 @@
    "pergunta": "F06",
    "modo": "sem filtro",
    "conformidade": 0.0,
-   "precisao@8": NaN,
+   "precisao@8": null,
    "julgado@8": 0.0
   }
  ]
