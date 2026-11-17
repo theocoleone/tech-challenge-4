@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A voz do cliente · Tech Challenge Fase 4</title>
+<meta http-equiv="refresh" content="0; url=demo/">
+<link rel="canonical" href="demo/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Figtree:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root { --fundo:#f4f3ee; --mata:#16291f; --sarja:#3f6b55; --laranja:#e07a10; --ambar:#f5be2d; --tinta-fraca:#5d6b64; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; background: var(--fundo); color: var(--mata);
+    font-family: "Figtree", system-ui, sans-serif;
+    display: grid; place-items: center; padding: 8vmin 6vmin;
+  }
+  main { max-width: 34rem; }
+  .selo {
+    font-family: "IBM Plex Mono", monospace; font-size: .78rem; letter-spacing: .18em;
+    text-transform: uppercase; color: var(--sarja);
+  }
+  h1 {
+    font-family: "Outfit", sans-serif; font-weight: 700; font-size: clamp(2.4rem, 7vw, 3.6rem);
+    line-height: 1.04; letter-spacing: -.02em; margin: .6rem 0 1rem;
+  }
+  p { font-size: 1.05rem; line-height: 1.55; color: var(--tinta-fraca); margin: 0 0 1.6rem; }
+  a.botao {
+    display: inline-block; background: var(--mata); color: #fff; text-decoration: none;
+    font-family: "Outfit", sans-serif; font-weight: 600; font-size: 1.02rem;
+    padding: .8rem 1.4rem; border-radius: .7rem;
+  }
+  a.botao:hover { background: var(--sarja); }
+  .pontos { display: flex; gap: .45rem; margin-bottom: 1.8rem; }
+  .pontos i { width: .7rem; height: .7rem; border-radius: 50%; display: block; }
+  footer { margin-top: 2.4rem; font-size: .9rem; color: var(--tinta-fraca); }
+  footer a { color: var(--sarja); }
+</style>
+</head>
+<body>
+<main>
+  <div class="pontos" aria-hidden="true">
+    <i style="background:#16291f"></i><i style="background:#3f6b55"></i>
+    <i style="background:#e07a10"></i><i style="background:#f5be2d"></i>
+  </div>
+  <span class="selo">Tech Challenge · Fase 4</span>
+  <h1>A voz do cliente</h1>
+  <p>Sistema de RAG sobre 42.121 avaliações de clientes de e-commerce. Cada resposta mostra as
+     avaliações que a sustentam, e o sistema recusa responder quando não tem base.</p>
+  <p>Levando você para a demonstração navegável…</p>
+  <a class="botao" href="demo/">Abrir a demonstração</a>
+  <footer>
+    Código, métricas e conjunto de avaliação em
+    <a href="https://github.com/theocoleone/tech-challenge-4">github.com/theocoleone/tech-challenge-4</a>.
+  </footer>
+</main>
+</body>
+</html>
