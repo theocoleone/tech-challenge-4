@@ -1,7 +1,7 @@
 PYTHON ?= python3.12
 PY := .venv/bin/python
 
-.PHONY: setup test smoke data notebooks index temas golden pool julgamentos eval-busca eval-filtros eval-golden calibrar api
+.PHONY: demo setup test smoke data notebooks index temas golden pool julgamentos eval-busca eval-filtros eval-golden calibrar api
 
 setup:  ## cria o venv e instala as dependências
 	test -d .venv || $(PYTHON) -m venv .venv
@@ -50,3 +50,6 @@ eval-golden: ## roda o golden set de ponta a ponta (ramos, citações, latência
 
 api:    ## sobe a API e o front em http://127.0.0.1:8000 (só nesta máquina)
 	$(PY) -m uvicorn src.api.main:app --host 127.0.0.1 --port 8000
+
+demo:   ## exporta as respostas do conjunto de avaliação para a demo estática (docs/demo/)
+	$(PY) -m src.eval.exportar_demo
