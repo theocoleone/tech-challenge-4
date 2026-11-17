@@ -277,11 +277,11 @@ O sistema tem quatro formas de recusar, em vez de inventar:
 | **sem evidência** | zero menções explícitas, ou nenhum apoio semântico suficiente | "reclamações sobre pagamento via Pix" (o Pix é de 2020; a base termina em 2018) |
 | **evidência insuficiente** | 1–3 menções, comparação entre recortes, assunto não modelado ou síntese sem evidência citável | "o que os clientes acham dos drones?" (3 avaliações citam drone) |
 
-![Recusa com as avaliações próximas marcadas como descartadas](docs/imagens/demo_recusa.png)
+![Recusa por falta de evidência: sem apoio na base, o sistema não devolve avaliação nenhuma](docs/imagens/demo_recusa.png)
 
 **O limiar foi calibrado, não escolhido a dedo.** Um conjunto separado (`eval/calibracao.jsonl`), com 20 perguntas que têm resposta na base e 20 que não têm, sem repetir as 44 perguntas da suíte de regressão, produziu a curva em `docs/imagens/curva_limiar.png`. O ponto escolhido (**0,39** na nota do re-ranker) fica no centro do platô de melhor F1: **F1 da recusa 0,95**, recall da recusa 1,00 e 10% de falsa recusa. Ele é usado somente como backstop semântico no **top-1 da pergunta**; nunca serve para contar quantos documentos tratam do assunto. Trocar o re-ranker obriga a recalibrar, porque a escala do score é outra.
 
-Um detalhe que a avaliação revelou: **ordenar e decidir são tarefas diferentes**. O ranking fica melhor usando a pergunta original (precisão@8 de 0,951 contra 0,853), mas a decisão de ter ou não evidência fica melhor comparando as avaliações com a **busca reescrita**, que contém só o assunto. O pipeline usa cada uma onde é melhor.
+Um detalhe que a avaliação revelou: **ordenar e decidir são tarefas diferentes**. O ranking fica melhor usando a pergunta original (precisão@8 de 0,951 contra 0,896), mas a decisão de ter ou não evidência fica melhor comparando as avaliações com a **busca reescrita**, que contém só o assunto. O pipeline usa cada uma onde é melhor.
 
 ## 8. Metadados: o desafio adicional
 
@@ -289,12 +289,12 @@ Os filtros cobrem os cinco grupos pedidos: **nota**, **período da compra**, **i
 
 **Por que eles melhoram a recuperação.** Cada pergunta com recorte foi executada com e sem o filtro (`src/eval/eval_filtros.py`):
 
-| | Evidências dentro do recorte pedido |
-|---|---|
-| **com filtro** | **100%** |
-| sem filtro | 16,7% |
+| | Evidências dentro do recorte pedido | Precisão@8 de relevância |
+|---|---|---|
+| **com filtro** | **100%** | **0,958** |
+| sem filtro | 16,7% | 0,562 |
 
-Em três das seis perguntas, **nenhuma** das 8 avaliações devolvidas sem filtro pertencia ao recorte: a busca encontrava reclamações parecidas, mas de outra categoria, nota ou faixa de valor. Uma resposta montada com elas falaria de outro grupo de clientes. A precisão de relevância com filtro é de 0,958 no conjunto de rótulos de relevância versionado.
+Em três das seis perguntas, **nenhuma** das 8 avaliações devolvidas sem filtro pertencia ao recorte: a busca encontrava reclamações parecidas, mas de outra categoria, nota ou faixa de valor. Uma resposta montada com elas falaria de outro grupo de clientes. Com o pool de relevância inteiramente rotulado, as 8 evidências de cada pergunta têm rótulo nos dois braços, e a precisão cai de **0,958** para **0,562** quando o filtro é desligado.
 
 **Dois achados do cruzamento entre texto e metadados** (`notebooks/03_metadados.ipynb`):
 
@@ -305,19 +305,21 @@ Em três das seis perguntas, **nenhuma** das 8 avaliações devolvidas sem filtr
 
 ### 9.1 Recuperação
 
-Pool de 1.117 pares pergunta × avaliação (`eval/julgamentos.csv`), montado com o top-20 de cada recuperador. Há **1.077 pares rotulados** e **40 pendentes**; as métricas ignoram os vazios. O recall é relativo a esse conjunto: uma avaliação relevante que nenhum recuperador encontrou não entra na conta.
+Pool de 1.117 pares pergunta × avaliação (`eval/julgamentos.csv`), montado com o top-20 de cada recuperador. **Os 1.117 pares estão rotulados** (869 relevantes, 248 não), todos revisados por mim. O recall é relativo a esse conjunto: uma avaliação relevante que nenhum recuperador encontrou não entra na conta.
 
 | Configuração | Recall@10 | RecallN@8 | MRR | Precisão@8 | s/pergunta |
 |---|---|---|---|---|---|
-| BM25 | 0,142 | 0,681 | 0,895 | 0,739 | 0,03 |
-| Denso (Titan) | 0,207 | 0,938 | 0,972 | 0,944 | 0,37 |
-| Denso (modelo local) | 0,164 | 0,764 | 0,835 | 0,764 | 0,05 |
-| Híbrida (Titan + BM25) | 0,193 | 0,910 | **1,000** | 0,910 | 0,34 |
-| **Híbrida + re-ranking** | **0,208** | **0,944** | 0,944 | **0,951** | 4,35 |
+| BM25 | 0,138 | 0,681 | 0,895 | 0,739 | 0,02 |
+| Denso (Titan) | 0,201 | 0,938 | 0,972 | 0,944 | 0,35 |
+| Denso (modelo local) | 0,159 | 0,764 | 0,835 | 0,764 | 0,05 |
+| Híbrida (Titan + BM25) | 0,188 | 0,910 | **1,000** | 0,910 | 0,32 |
+| **Híbrida + re-ranking** | **0,203** | **0,944** | 0,944 | **0,951** | 1,60 |
+
+Execução de **17/11/2026** (`eval/results/2026-11-17_recuperacao.json`), com o pool inteiramente rotulado. A coluna de tempo depende da máquina e do cache do re-ranker; serve para comparar as configurações entre si, não como medida absoluta.
 
 `RecallN@8` é o recall com teto em `min(k, relevantes)`: várias perguntas têm 40 ou mais avaliações relevantes, e nenhum top-8 chegaria a 20% de recall comum, mesmo perfeito.
 
-O **Titan ganhou do modelo local** em todas as métricas, o que justificou usá-lo como embedding principal. O re-ranking entrega a melhor precisão, ao custo de 4 segundos por pergunta.
+O **Titan ganhou do modelo local** em todas as métricas, o que justificou usá-lo como embedding principal. O re-ranking entrega a melhor precisão, ao custo de ser uma ordem de grandeza mais lento que a busca sozinha.
 
 ### 9.2 Decisão de responder ou recusar
 

@@ -61,5 +61,5 @@ Quantidades de cada etapa da preparação, usadas no README e nos notebooks.
 |---|---|
 | `golden_set.jsonl` | 44 perguntas com o comportamento esperado de cada uma. Suíte de regressão usada durante o desenvolvimento; não é um holdout independente |
 | `calibracao.jsonl` | 40 perguntas (20 com evidência, 20 sem) usadas para escolher o limiar de recusa |
-| `julgamentos.csv` | Pool de 1.117 pares pergunta × avaliação: 1.077 rotulados como relevantes ou não e 40 pendentes |
+| `julgamentos.csv` | Pool de 1.117 pares pergunta × avaliação, todos rotulados como relevantes ou não (869 e 248) |
 | `results/` | Resultados datados de cada medição e o catálogo de temas |
