@@ -44,6 +44,14 @@ Empresas de e-commerce recebem milhares de avaliações por mês. A nota resume 
 
 O terceiro ponto é o problema técnico central do desafio e está detalhado na [seção 5.6](#56-perguntas-de-frequência-o-limite-do-top-k).
 
+## 1.1 Demonstração navegável
+
+Quem quiser explorar o sistema sem rodar nada pode abrir a **demonstração navegável**: as 44 perguntas do conjunto de avaliação, com as respostas que o sistema realmente produziu, as evidências citadas, as contagens e os casos de recusa.
+
+👉 **[Abrir a demonstração](https://theocoleone.github.io/tech-challenge-4/demo/)**
+
+A página é estática: ela mostra respostas **já geradas** (`docs/demo/respostas.json`, exportado de `eval/results/` por `make demo`) e não chama a AWS. Para fazer perguntas novas, rode o projeto localmente, como descrito na [seção 12](#12-como-reproduzir).
+
 ## 2. Problema de negócio
 
 O gestor de uma operação de e-commerce precisa responder perguntas como:
