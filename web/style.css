@@ -1,391 +1,845 @@
+/* =============================================================
+   A voz do cliente · interface local servida pela API · TC4
+
+   Mesmo sistema visual do deck e da demonstração pública
+   (docs/demo/style.css): fundo creme, verde escuro como cor de
+   texto e de estrutura, laranja e âmbar só como acento. Cartões
+   brancos de canto generoso com sombra baixa, barra colorida na
+   borda esquerda, pílulas totalmente arredondadas, círculos
+   numerados, ícones de traço e marca d'água circular quase
+   invisível.
+
+   Aqui não é o deck: as medidas são de web (rem, px, %, clamp),
+   não de container query.
+   ============================================================= */
+
 :root {
-  --papel: #f2ede3;
-  --papel-escuro: #e7e0d2;
-  --tinta: #1c1a17;
-  --tinta-fraca: #5c564c;
-  --linha: #c8bfab;
-  --terracota: #a8412a;
-  --verde: #2f5d4a;
-  --mostarda: #a67c00;
-  --azul: #2b4a6f;
-  --borda: 1px solid var(--linha);
-  --sombra: 3px 3px 0 var(--papel-escuro);
+  /* paleta do deck */
+  --fundo: #f4f3ee;
+  --papel: #ffffff;
+  --mata: #16291f;
+  --pinho: #1e3a2c;
+  --sarja: #3f6b55;
+  --salva: #87a596;
+  --laranja: #e07a10;
+  --laranja-claro: #f09b45;
+  --ambar: #f5be2d;
+  --ambar-claro: #f8d273;
+  --areia: #f3e4c4;
+  --tinta: #15201c;
+  --tinta-fraca: #5d6b64;
+  --linha: #ddd9cd;
+
+  /* vocabulário de forma */
+  --sombra: 0 2px 10px rgba(21, 32, 28, .05);
+  --sombra-media: 0 4px 18px rgba(21, 32, 28, .07);
+  --raio: .9rem;
+  --raio-g: 1.25rem;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  --titulo: "Outfit", system-ui, sans-serif;
+  --corpo: "Figtree", system-ui, -apple-system, sans-serif;
+
+  --largura: 92rem;
+  --margem: clamp(1.1rem, 4vw, 3.5rem);
 }
 
 * { box-sizing: border-box; }
 
+/* o seletor de id de #saida venceria o [hidden] do navegador, então o
+   estado escondido é declarado aqui e o display só aparece em :not([hidden]) */
+[hidden] { display: none; }
+
 html { scroll-behavior: smooth; }
 
+/* grade de três faixas: o rodapé desce para a base da janela enquanto a
+   página é só o formulário. Cada faixa declara `width: 100%` porque numa
+   grade a margem automática cancelaria o esticamento e cada uma ficaria
+   com a largura do próprio conteúdo — bordas desalinhadas entre elas. */
 body {
   margin: 0;
-  background: var(--papel);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: var(--fundo);
   color: var(--tinta);
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: var(--corpo);
   font-size: 16px;
   line-height: 1.55;
-  position: relative;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* textura de papel: ruído sutil por cima de tudo */
-.grao {
+strong { font-weight: 600; color: var(--mata); }
+
+/* marca d'água geométrica: dois anéis finos, quase invisíveis */
+.marca-dagua {
   position: fixed;
   inset: 0;
+  z-index: -1;
   pointer-events: none;
-  z-index: 99;
-  opacity: 0.4;
-  mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.22'/%3E%3C/svg%3E");
+  opacity: .035;
+  background-repeat: no-repeat;
+  background-image:
+    radial-gradient(circle at calc(100% - 6rem) 6rem,
+      transparent 0 5rem, var(--mata) 5rem 5.9rem, transparent 5.9rem),
+    radial-gradient(circle at calc(100% - 19rem) 68vh,
+      transparent 0 8rem, var(--mata) 8rem 8.9rem, transparent 8.9rem);
 }
 
-/* ---------- cabeçalho ---------- */
+@keyframes entra {
+  from { opacity: 0; transform: translateY(8px); }
+}
+
+/* ---------------- controles: base comum ---------------- */
+
+button, textarea, input, select { font: inherit; color: inherit; }
+
+:is(button, textarea, input, select, summary):focus-visible {
+  outline: 2px solid var(--laranja);
+  outline-offset: 2px;
+}
+
+/* ---------------- cabeçalho ---------------- */
 
 .cabecalho {
+  width: 100%;
+  max-width: var(--largura);
+  margin-inline: auto;
+  padding: clamp(2rem, 5vw, 3.4rem) var(--margem) 1.7rem;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 2rem 3rem;
   align-items: end;
-  padding: 2.6rem clamp(1.2rem, 5vw, 5rem) 1.4rem;
-  border-bottom: 3px double var(--tinta);
 }
 
 .selo {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.22em;
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .18em;
   text-transform: uppercase;
-  color: var(--terracota);
+  color: var(--sarja);
 }
 
 h1 {
-  font-family: "Fraunces", serif;
-  font-weight: 900;
-  font-size: clamp(2.4rem, 7vw, 4.6rem);
-  line-height: 0.95;
-  margin: 0.25rem 0 0.6rem;
-  letter-spacing: -0.02em;
+  font-family: var(--titulo);
+  font-weight: 800;
+  font-size: clamp(2.3rem, 5.4vw, 3.8rem);
+  line-height: 1.02;
+  letter-spacing: -.03em;
+  color: var(--mata);
+  margin: .5rem 0 .9rem;
 }
 
-h1 em { font-weight: 400; font-style: italic; }
+h1 em { font-style: normal; color: var(--sarja); }
 
 .linha-fina {
   margin: 0;
-  max-width: 54ch;
+  max-width: 58ch;
+  font-size: 1.02rem;
+  line-height: 1.55;
   color: var(--tinta-fraca);
-  font-size: 0.95rem;
 }
 
+.linha-fina strong { box-shadow: inset 0 -3px 0 var(--ambar-claro); }
+
+/* painel de estado: quatro pares em 2x2, cada rótulo com régua colorida */
 .estado {
   margin: 0;
+  padding: 1.15rem 1.5rem 1.25rem;
+  max-width: 34rem;
+  background: var(--papel);
+  border-radius: var(--raio-g);
+  box-shadow: var(--sombra);
   display: grid;
-  grid-template-columns: auto auto;
-  gap: 0.15rem 0.9rem;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.72rem;
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: column;
+  gap: .35rem 2.2rem;
+}
+
+/* se a API não responder, nada de moldura vazia na tela */
+.estado:empty { display: none; }
+
+.estado dt {
+  --cor: var(--sarja);
+  font-family: var(--mono);
+  font-size: .63rem;
+  font-weight: 500;
+  letter-spacing: .15em;
+  text-transform: uppercase;
   color: var(--tinta-fraca);
+  border-top: 3px solid var(--cor);
+  padding-top: .5rem;
   white-space: nowrap;
 }
 
-.estado dt { text-transform: uppercase; letter-spacing: 0.1em; }
-.estado dd { margin: 0; color: var(--tinta); }
+.estado dt:nth-of-type(1) { --cor: var(--mata); }
+.estado dt:nth-of-type(2) { --cor: var(--sarja); }
+.estado dt:nth-of-type(3) { --cor: var(--laranja); }
+.estado dt:nth-of-type(4) { --cor: var(--ambar); }
 
-/* ---------- consulta ---------- */
+.estado dt + dd { margin-bottom: .75rem; }
+.estado dt:nth-of-type(2) + dd,
+.estado dt:nth-of-type(4) + dd { margin-bottom: 0; }
 
-main { padding: 2rem clamp(1.2rem, 5vw, 5rem) 4rem; }
+.estado dd {
+  margin: 0;
+  font-family: var(--titulo);
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  color: var(--mata);
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+/* ---------------- esqueleto ---------------- */
+
+main {
+  width: 100%;
+  max-width: var(--largura);
+  margin-inline: auto;
+  padding: 1.4rem var(--margem) 3.2rem;
+  display: grid;
+  gap: 1.6rem;
+  align-content: start;
+}
+
+/* ---------------- cartão da consulta ---------------- */
+
+.consulta {
+  background: var(--papel);
+  border-left: .4rem solid var(--mata);
+  border-radius: .4rem var(--raio-g) var(--raio-g) .4rem;
+  box-shadow: var(--sombra-media);
+  padding: 1.4rem clamp(1.1rem, 2.4vw, 2rem) 1.5rem;
+}
 
 .rotulo {
   display: block;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
+  font-family: var(--mono);
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .18em;
   text-transform: uppercase;
   color: var(--tinta-fraca);
-  margin-bottom: 0.5rem;
+  margin-bottom: .6rem;
 }
 
-.campo { display: flex; gap: 0.8rem; align-items: stretch; }
-
-textarea, input, select {
-  font-family: inherit;
-  font-size: 1rem;
-  color: var(--tinta);
-  background: #fbf8f1;
-  border: var(--borda);
-  border-radius: 0;
-  padding: 0.7rem 0.85rem;
+.campo {
+  display: flex;
+  align-items: stretch;
+  gap: .7rem;
 }
 
 textarea {
-  flex: 1;
+  flex: 1 1 auto;
+  min-width: 0;
   resize: vertical;
-  font-family: "Fraunces", serif;
-  font-size: clamp(1.05rem, 2.2vw, 1.4rem);
-  line-height: 1.35;
-  box-shadow: var(--sombra);
+  font-family: var(--titulo);
+  font-weight: 600;
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  line-height: 1.32;
+  letter-spacing: -.015em;
+  color: var(--mata);
+  background: var(--fundo);
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  padding: .75rem .95rem;
 }
 
-textarea:focus, input:focus, select:focus {
-  outline: 2px solid var(--terracota);
-  outline-offset: 1px;
-}
+textarea::placeholder { color: var(--tinta-fraca); font-weight: 500; }
 
-button {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+#enviar {
+  flex: none;
   cursor: pointer;
-  border: var(--borda);
-  background: var(--tinta);
-  color: var(--papel);
-  padding: 0 1.6rem;
-  transition: transform 0.12s ease, background 0.12s ease;
+  font-family: var(--mono);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--mata);
+  border: 0;
+  border-radius: var(--raio);
+  padding: 0 1.8rem;
+  transition: background-color .14s ease;
 }
 
-button:hover { background: var(--terracota); }
-button:active { transform: translate(2px, 2px); }
-button[disabled] { opacity: 0.5; cursor: progress; }
+#enviar:hover { background: var(--sarja); }
+
+#enviar[disabled] {
+  cursor: progress;
+  background: var(--salva);
+  color: var(--mata);
+}
 
 .exemplos {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.45rem;
-  margin: 0.9rem 0 1.2rem;
-  font-size: 0.8rem;
+  align-items: center;
+  gap: .45rem;
+  margin-top: .95rem;
 }
 
 .exemplos > span {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
+  font-family: var(--mono);
+  font-size: .63rem;
+  font-weight: 500;
+  letter-spacing: .18em;
   text-transform: uppercase;
   color: var(--tinta-fraca);
-  margin-right: 0.3rem;
+  margin-right: .3rem;
 }
 
 .exemplos button {
-  background: transparent;
-  color: var(--tinta);
-  border: 1px dashed var(--linha);
-  padding: 0.2rem 0.6rem;
-  text-transform: none;
-  letter-spacing: 0;
-  font-family: inherit;
-  font-size: 0.82rem;
+  cursor: pointer;
+  font-size: .84rem;
+  line-height: 1.3;
+  color: var(--sarja);
+  background: var(--fundo);
+  border: 1px solid var(--linha);
+  border-radius: 999px;
+  padding: .3rem .85rem;
+  transition: background-color .14s ease, color .14s ease, border-color .14s ease;
 }
 
-.exemplos button:hover { background: var(--papel-escuro); color: var(--tinta); border-style: solid; }
+.exemplos button:hover {
+  background: var(--mata);
+  border-color: var(--mata);
+  color: #fff;
+}
 
-/* ---------- filtros ---------- */
+/* ---------------- filtros de metadados ---------------- */
 
-.filtros { border-top: var(--borda); padding-top: 0.9rem; }
+.filtros {
+  margin-top: 1.3rem;
+  border-top: 1px solid var(--linha);
+  padding-top: 1rem;
+}
 
 summary {
   cursor: pointer;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
+  display: flex;
+  align-items: baseline;
+  gap: .55rem;
+  list-style: none;
+  font-family: var(--mono);
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .16em;
   text-transform: uppercase;
+  color: var(--mata);
 }
 
+summary::-webkit-details-marker { display: none; }
+
+/* seta de traço, no lugar do triângulo do navegador */
+summary::before {
+  content: "";
+  flex: none;
+  align-self: center;
+  width: .42rem;
+  height: .42rem;
+  border-right: 1.5px solid var(--sarja);
+  border-bottom: 1.5px solid var(--sarja);
+  transform: rotate(-45deg);
+  transition: transform .15s ease;
+}
+
+.filtros[open] > summary::before { transform: rotate(45deg); }
+
 .dica {
-  font-family: "IBM Plex Sans", sans-serif;
-  text-transform: none;
+  font-family: var(--corpo);
+  font-size: .8rem;
+  font-weight: 400;
   letter-spacing: 0;
+  text-transform: none;
   color: var(--tinta-fraca);
-  font-size: 0.78rem;
-  margin-left: 0.5rem;
 }
 
 .grade-filtros {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 0.7rem 1rem;
-  margin: 1rem 0 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: .85rem 1.1rem;
+  margin: 1.1rem 0 1rem;
 }
 
 .grade-filtros label {
   display: grid;
-  gap: 0.25rem;
-  font-size: 0.78rem;
+  grid-template-columns: minmax(0, 1fr);
+  gap: .3rem;
+  min-width: 0;
+  font-family: var(--mono);
+  font-size: .62rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
   color: var(--tinta-fraca);
 }
 
-.grade-filtros input, .grade-filtros select { font-size: 0.9rem; padding: 0.4rem 0.5rem; }
-
-.limpar { background: transparent; color: var(--tinta-fraca); border: 1px dashed var(--linha); padding: 0.25rem 0.8rem; }
-.limpar:hover { background: var(--papel-escuro); color: var(--tinta); }
-
-/* ---------- resposta ---------- */
-
-#saida {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-  gap: 2.4rem 3rem;
-  align-items: start;
-  margin-top: 2.4rem;
-  animation: entra 0.4s ease both;
+.grade-filtros :is(input, select) {
+  width: 100%;
+  min-width: 0;
+  font-family: var(--corpo);
+  font-size: .88rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--mata);
+  background: var(--fundo);
+  border: 1px solid var(--linha);
+  border-radius: .55rem;
+  padding: .42rem .55rem;
 }
 
-@keyframes entra { from { opacity: 0; transform: translateY(10px); } }
+.limpar {
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: .64rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--sarja);
+  background: var(--fundo);
+  border: 1px solid var(--linha);
+  border-radius: 999px;
+  padding: .35rem .9rem;
+  transition: background-color .14s ease, color .14s ease, border-color .14s ease;
+}
 
-@media (prefers-reduced-motion: reduce) {
-  #saida, .cartao { animation: none; }
-  html { scroll-behavior: auto; }
+.limpar:hover { background: var(--mata); border-color: var(--mata); color: #fff; }
+
+/* ---------------- resposta ---------------- */
+
+#saida:not([hidden]) {
+  display: grid;
+  gap: 1.6rem;
+  align-content: start;
+  min-width: 0;
 }
 
 .resposta {
-  grid-column: 1;
-  border-left: 4px solid var(--tinta);
-  padding-left: 1.4rem;
+  background: var(--papel);
+  border-left: .4rem solid var(--sarja);
+  border-radius: .4rem var(--raio-g) var(--raio-g) .4rem;
+  box-shadow: var(--sombra-media);
+  padding: 1.5rem clamp(1.1rem, 2.4vw, 2rem) 1.7rem;
+  animation: entra .34s ease both;
 }
 
-.meta-resposta { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.7rem; }
+/* a barra da esquerda acompanha a situação da resposta */
+.resposta:has(.situacao[data-s="evidencia_fraca"]) { border-left-color: var(--ambar); }
+.resposta:has(.situacao[data-s="sem_evidencia"]) { border-left-color: var(--laranja); }
+.resposta:has(.situacao[data-s="filtro_sem_resultado"]) { border-left-color: var(--laranja-claro); }
+.resposta:has(.situacao[data-s="fora_escopo"]) { border-left-color: var(--ambar-claro); }
+
+.meta-resposta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: .85rem;
+}
 
 .situacao {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  font-family: var(--mono);
+  font-size: .66rem;
+  font-weight: 500;
+  letter-spacing: .14em;
   text-transform: uppercase;
-  padding: 0.22rem 0.6rem;
-  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: .3rem .8rem;
+  background: var(--salva);
+  color: var(--mata);
 }
 
-.situacao[data-s="ok"] { color: var(--verde); }
-.situacao[data-s="sem_evidencia"] { color: var(--terracota); }
-.situacao[data-s="evidencia_fraca"] { color: var(--mostarda); }
-.situacao[data-s="filtro_sem_resultado"] { color: var(--azul); }
-.situacao[data-s="fora_escopo"] { color: var(--tinta-fraca); }
+/* marcador de forma: a diferença entre os estados não depende só da cor */
+.situacao::before {
+  content: "";
+  flex: none;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  background: currentColor;
+}
 
-.tempo { font-family: "IBM Plex Mono", monospace; font-size: 0.7rem; color: var(--tinta-fraca); }
+.situacao[data-s="ok"] { background: var(--sarja); color: #fff; }
+.situacao[data-s="evidencia_fraca"] { background: var(--ambar); color: var(--mata); }
+.situacao[data-s="sem_evidencia"] { background: var(--laranja); color: var(--mata); }
+.situacao[data-s="filtro_sem_resultado"] { background: var(--laranja-claro); color: var(--mata); }
+.situacao[data-s="fora_escopo"] { background: var(--ambar-claro); color: var(--mata); }
+
+.situacao[data-s="evidencia_fraca"]::before {
+  background: linear-gradient(90deg, currentColor 50%, transparent 50%);
+  box-shadow: inset 0 0 0 1px currentColor;
+}
+
+.situacao[data-s="sem_evidencia"]::before {
+  background: none;
+  box-shadow: inset 0 0 0 1.5px currentColor;
+}
+
+.situacao[data-s="filtro_sem_resultado"]::before {
+  background: none;
+  border-radius: .12rem;
+  box-shadow: inset 0 0 0 1.5px currentColor;
+}
+
+.situacao[data-s="fora_escopo"]::before {
+  height: .15rem;
+  border-radius: .1rem;
+}
+
+.situacao:empty { display: none; }
+
+.tempo {
+  font-family: var(--mono);
+  font-size: .68rem;
+  letter-spacing: .06em;
+  color: var(--tinta-fraca);
+}
 
 .texto-resposta {
-  font-family: "Fraunces", serif;
-  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
-  line-height: 1.45;
-  margin: 0 0 1rem;
+  margin: 0 0 1.1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--mata);
+  max-width: 70ch;
 }
 
-.aplicado { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 0; margin: 0 0 1.2rem; }
+.aplicado {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  padding: 0;
+  margin: 0 0 1.3rem;
+}
 
 .aplicado li {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.7rem;
-  background: var(--papel-escuro);
-  padding: 0.2rem 0.55rem;
+  font-family: var(--mono);
+  font-size: .68rem;
+  color: var(--sarja);
+  background: var(--fundo);
   border: 1px solid var(--linha);
+  border-radius: 999px;
+  padding: .25rem .7rem;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
-.insights { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.9rem; }
-.insights li { font-size: 0.97rem; }
+.insights {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: .8rem;
+  counter-reset: ins;
+}
 
-.citacoes { display: inline-flex; flex-wrap: wrap; gap: 0.3rem; margin-left: 0.4rem; vertical-align: middle; }
+.insights li {
+  counter-increment: ins;
+  position: relative;
+  padding-left: 2.35rem;
+  min-height: 1.6rem;
+  font-size: .98rem;
+  line-height: 1.45;
+  color: var(--mata);
+}
+
+.insights li::before {
+  content: counter(ins);
+  position: absolute;
+  left: 0;
+  top: .02rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--sarja);
+  color: #fff;
+  font-family: var(--titulo);
+  font-weight: 700;
+  font-size: .78rem;
+}
+
+.citacoes {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+  margin-left: .4rem;
+}
 
 .citacoes a {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.66rem;
+  font-family: var(--mono);
+  font-size: .64rem;
+  letter-spacing: .04em;
   text-decoration: none;
-  color: var(--papel);
-  background: var(--tinta-fraca);
-  padding: 0.1rem 0.4rem;
+  color: var(--sarja);
+  background: var(--fundo);
+  border: 1px solid var(--linha);
+  border-radius: 999px;
+  padding: .08rem .45rem;
 }
 
-.citacoes a:hover { background: var(--terracota); }
-
-/* ---------- contagem ---------- */
-
-.contagem { grid-column: 1; border-top: var(--borda); padding-top: 1.2rem; }
-
-h2 {
-  font-family: "Fraunces", serif;
-  font-size: 1.05rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  margin: 0 0 0.3rem;
+.citacoes a:hover,
+.citacoes a:focus-visible {
+  background: var(--sarja);
+  color: #fff;
+  border-color: var(--sarja);
 }
 
-.base { font-size: 0.8rem; color: var(--tinta-fraca); margin: 0 0 1rem; }
+/* ---------------- títulos de bloco ---------------- */
 
-.barras { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.55rem; }
+.titulo-bloco {
+  font-family: var(--titulo);
+  font-weight: 700;
+  font-size: 1.12rem;
+  letter-spacing: -.012em;
+  color: var(--mata);
+  margin: 0 0 .4rem;
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+}
 
-.barras li { display: grid; grid-template-columns: minmax(120px, 13rem) 1fr auto; gap: 0.7rem; align-items: center; font-size: 0.85rem; }
+.ico {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: none;
+  fill: none;
+  stroke-width: 1.7;
+  color: var(--sarja);
+}
 
-.barras .trilho { display: block; background: var(--papel-escuro); height: 0.85rem; border: 1px solid var(--linha); }
+.base {
+  margin: 0 0 1.1rem;
+  font-size: .84rem;
+  line-height: 1.5;
+  color: var(--tinta-fraca);
+  max-width: 80ch;
+}
 
-.barras .preenchida { display: block; height: 100%; background: repeating-linear-gradient(45deg, var(--terracota), var(--terracota) 3px, #b9573f 3px, #b9573f 6px); }
+/* ---------------- frequência na base temática ---------------- */
 
-.barras[data-pol="nota_alta"] .preenchida { background: repeating-linear-gradient(45deg, var(--verde), var(--verde) 3px, #3c7460 3px, #3c7460 6px); }
+.contagem {
+  background: var(--papel);
+  border-radius: var(--raio-g);
+  box-shadow: var(--sombra);
+  padding: 1.4rem clamp(1.1rem, 2.4vw, 1.8rem) 1.6rem;
+}
 
-.barras .valor { font-family: "IBM Plex Mono", monospace; font-size: 0.74rem; color: var(--tinta-fraca); white-space: nowrap; }
+.barras {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: .6rem;
+}
 
-/* ---------- evidências ---------- */
+.barras li {
+  display: grid;
+  grid-template-columns: minmax(7rem, 14rem) minmax(0, 1fr) auto;
+  gap: .9rem;
+  align-items: center;
+  font-size: .88rem;
+}
 
-.evidencias { grid-column: 2; grid-row: 1 / span 2; position: sticky; top: 1.5rem; }
+.barras li > span:first-child {
+  color: var(--mata);
+  font-weight: 500;
+  line-height: 1.25;
+}
 
-.cartoes { display: grid; gap: 0.8rem; max-height: 72vh; overflow-y: auto; padding-right: 0.4rem; }
+/* o macro do tema é rótulo pequeno: fica em tinta-fraca (5,6:1 no branco),
+   não no salva do deck, que não passa o contraste nesse tamanho */
+.barras li small {
+  display: block;
+  font-family: var(--mono);
+  font-size: .6rem;
+  font-weight: 400;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--tinta-fraca);
+}
+
+.barras .trilho {
+  display: block;
+  height: .8rem;
+  background: var(--fundo);
+  border: 1px solid var(--linha);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.barras .preenchida {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--laranja);
+}
+
+.barras[data-pol="nota_alta"] .preenchida { background: var(--sarja); }
+.barras[data-pol="todas"] .preenchida { background: var(--pinho); }
+
+.barras .valor {
+  font-family: var(--mono);
+  font-size: .74rem;
+  color: var(--tinta-fraca);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------------- evidências ---------------- */
+
+.evidencias { padding-top: .2rem; }
+
+.cartoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: .9rem;
+}
 
 .cartao {
-  background: #fbf8f1;
-  border: var(--borda);
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+  background: var(--papel);
+  border-left: .28rem solid var(--salva);
+  border-radius: .35rem var(--raio) var(--raio) .35rem;
   box-shadow: var(--sombra);
-  padding: 0.8rem 0.9rem;
-  animation: entra 0.3s ease both;
+  padding: 1rem 1.1rem .85rem;
+  animation: entra .3s ease both;
 }
 
-.cartao:target { outline: 2px solid var(--terracota); outline-offset: 2px; }
+/* a nota do cliente tinge discretamente a barra do cartão */
+.cartao:has(.nota[data-n="1"]),
+.cartao:has(.nota[data-n="2"]) { border-left-color: var(--laranja-claro); }
+.cartao:has(.nota[data-n="4"]),
+.cartao:has(.nota[data-n="5"]) { border-left-color: var(--sarja); }
+
+.cartao:target {
+  outline: 2px solid var(--laranja);
+  outline-offset: 2px;
+}
 
 .cartao blockquote {
-  margin: 0 0 0.6rem;
-  font-family: "Fraunces", serif;
-  font-size: 0.98rem;
-  line-height: 1.4;
+  margin: 0;
+  flex: 1 1 auto;
+  font-size: .95rem;
+  line-height: 1.45;
+  color: var(--mata);
+  overflow-wrap: anywhere;
 }
 
-.cartao blockquote::before { content: "“"; }
-.cartao blockquote::after { content: "”"; }
+.cartao blockquote::before { content: "\201C"; color: var(--salva); }
+.cartao blockquote::after { content: "\201D"; color: var(--salva); }
 
 .cartao-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.66rem;
+  align-items: center;
+  gap: .4rem;
+  font-family: var(--mono);
+  font-size: .64rem;
   color: var(--tinta-fraca);
-  border-top: 1px dotted var(--linha);
-  padding-top: 0.5rem;
+  border-top: 1px solid var(--linha);
+  padding-top: .65rem;
 }
 
-.nota { color: var(--papel); background: var(--tinta); padding: 0.05rem 0.35rem; }
-.nota[data-n="1"], .nota[data-n="2"] { background: var(--terracota); }
-.nota[data-n="4"], .nota[data-n="5"] { background: var(--verde); }
-.atrasado { color: var(--terracota); }
+.nota {
+  font-weight: 500;
+  border-radius: 999px;
+  padding: .1rem .5rem;
+  background: var(--areia);
+  color: var(--mata);
+}
+
+.nota[data-n="1"], .nota[data-n="2"] { background: var(--laranja); color: var(--mata); }
+.nota[data-n="4"], .nota[data-n="5"] { background: var(--sarja); color: #fff; }
+
+.atrasado { color: var(--laranja); font-weight: 500; }
+
+/* ---------------- erro ---------------- */
 
 .erro {
-  margin-top: 2rem;
-  border-left: 4px solid var(--terracota);
-  padding: 0.6rem 1rem;
-  background: #fbf8f1;
-  font-size: 0.9rem;
+  margin: 0;
+  background: var(--papel);
+  border-left: .4rem solid var(--laranja);
+  border-radius: .3rem var(--raio) var(--raio) .3rem;
+  box-shadow: var(--sombra);
+  padding: .95rem 1.15rem;
+  font-size: .92rem;
+  color: var(--mata);
 }
 
+/* ---------------- rodapé ---------------- */
+
 footer {
+  width: 100%;
+  max-width: var(--largura);
+  margin-inline: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1.2rem clamp(1.2rem, 5vw, 5rem) 2rem;
-  border-top: var(--borda);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.7rem;
+  padding: 1.3rem var(--margem) 2.4rem;
+  border-top: 1px solid var(--linha);
+  font-family: var(--mono);
+  font-size: .68rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
   color: var(--tinta-fraca);
 }
 
-footer a { color: var(--terracota); }
+footer a { color: var(--sarja); }
+footer a:hover { color: var(--laranja); }
 
-@media (max-width: 900px) {
-  .cabecalho { grid-template-columns: 1fr; }
-  #saida { grid-template-columns: 1fr; }
-  .resposta, .contagem, .evidencias { grid-column: 1; }
-  .evidencias { position: static; grid-row: auto; }
-  .cartoes { max-height: none; }
+/* ---------------- telas estreitas ---------------- */
+
+@media (max-width: 1060px) {
+  .cabecalho { grid-template-columns: minmax(0, 1fr); align-items: start; }
+  .estado { max-width: none; }
+}
+
+@media (max-width: 720px) {
+  .estado {
+    grid-auto-flow: row;
+    grid-template-rows: none;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: .55rem .9rem;
+  }
+  .estado dt {
+    border-top: 0;
+    border-left: 3px solid var(--cor);
+    padding: .1rem 0 .1rem .6rem;
+    white-space: normal;
+  }
+  .estado dd,
+  .estado dt + dd { margin-bottom: 0; text-align: right; }
+
+  .campo { flex-direction: column; }
+  #enviar { padding: .7rem 1.8rem; }
+
+  .barras li {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "tema valor" "trilho trilho";
+    gap: .3rem .7rem;
+  }
+  .barras li > span:first-child { grid-area: tema; }
+  .barras .valor { grid-area: valor; }
+  .barras .trilho { grid-area: trilho; }
+
+  .cartoes { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resposta, .cartao { animation: none; }
+  html { scroll-behavior: auto; }
 }
