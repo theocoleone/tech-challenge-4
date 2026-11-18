@@ -467,7 +467,8 @@ O repositório ainda não contém capturas do CloudWatch ou Cost Explorer. Inclu
 
 ## 14. Apresentação
 
-**Pendente antes da entrega:** publicar o vídeo de até 7 minutos e substituir `ID_DO_VIDEO` no link abaixo.
+Vídeo de apresentação do projeto, publicado como não listado no YouTube. Ele percorre o problema,
+a arquitetura, a preparação da base, a recuperação e as decisões técnicas, e termina com uma
+demonstração ao vivo das quatro formas de resposta — incluindo as recusas.
 
-<!-- substituir ID pelo vídeo publicado -->
-[![Vídeo de apresentação do Tech Challenge Fase 4](https://img.youtube.com/vi/ID_DO_VIDEO/maxresdefault.jpg)](https://youtu.be/ID_DO_VIDEO)
+[![Vídeo de apresentação do Tech Challenge Fase 4](https://img.youtube.com/vi/f04llLYVcBM/maxresdefault.jpg)](https://youtu.be/f04llLYVcBM)
